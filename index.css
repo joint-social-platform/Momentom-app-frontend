@@ -5,7 +5,9 @@
 }
 
 header {
-  background: radial-gradient(circle at top, #5139df, #000000);
+  background: url(./src/images/header-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
   position: relative;
 }
