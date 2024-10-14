@@ -1,0 +1,42 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.jh{
+    background: linear-gradient(180deg, black 10%, purple 60%);
+    padding: 30px;
+    border-radius: 10px;
+    
+}
+.hj{
+    display: flex;
+    gap: 90px;
+    margin-top: 80px;
+    justify-content: center;
+}
+.hj p{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding-bottom: 50px;
+    padding-top: 15px;
+    color: white;
+}
+.back{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    color: white;
+}
+.logo{
+    height: 90px;
+    margin-left: 110px;
+    margin-top: 40px;
+}
+.con{
+    background-image: url("/src/images/background.png");
+    padding-bottom: 70px;
+}
