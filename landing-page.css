@@ -24,3 +24,101 @@
   margin-top: 10px;
   font-size: 1rem;
 }
+
+.cta-section {
+  background-color: #fadcd9;
+  padding: 50px 0;
+}
+.cta-box {
+  background-color: #4b3cf5;
+  border-radius: 20px;
+  padding: 30px;
+}
+.cta-btn {
+  background-color: #675be5;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: white;
+}
+.image-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.estate img {
+  width: 100%;
+}
+
+.adventure-card {
+  border: none;
+  background-color: #f8f9fa;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.adventure-card h5 {
+  color: white;
+  background-color: #6a0dad;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+}
+
+.adventure-card .btn {
+  background-color: #6a0dad;
+  color: white;
+}
+
+/* Testimonial section */
+.testimonial {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.testimonial img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.social-icons i {
+  font-size: 30px;
+  margin: 0 10px;
+  color: #6a0dad;
+}
+
+.form-container {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.form-container input,
+.form-container textarea {
+  background-color: #d1cdcd;
+  border: none;
+  border-radius: 15px;
+  padding: 15px;
+  width: 100%;
+}
+
+.form-container input::placeholder,
+.form-container textarea::placeholder {
+  color: #6c757d;
+}
+
+.send-btn {
+  background-color: #6a0dad;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+}
+
+.send-btn:hover {
+  background-color: #5e0cac;
+}
