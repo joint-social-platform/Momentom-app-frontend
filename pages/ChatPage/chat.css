@@ -68,8 +68,8 @@ li {
 /* ========================================================= */
 /* nav Logo */
 .logo {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   border-radius: 20px;
@@ -108,8 +108,8 @@ li {
 /* ========================================================= */
 /* icons  */
 .icons {
-  width: 27px;
-  height: 23px;
+  width: 23px;
+  height: 20px;
 }
 
 /* ========================================================= */
@@ -152,7 +152,6 @@ li {
   display: flex;
   overflow: hidden;
   height: calc(100vh - 84px);
-  border: 3px solid lawngreen;
 }
 
 /* ========================================================= */
@@ -182,7 +181,7 @@ li {
 /* ========================================================= */
 /*  message title */
 .message_title {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 800;
   line-height: 32.78px;
   font-family: sans-serif;
@@ -192,8 +191,8 @@ li {
 /* ========================================================= */
 /*  Edit icon*/
 .edit_icon {
-  width: 29.16px;
-  height: 29.14px;
+  width: 25px;
+  height: 25px;
 }
 
 /* ========================================================= */
@@ -223,7 +222,7 @@ li {
   width: 250px;
   height: 32px;
   outline: none;
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 400;
   padding-left: 1rem;
   line-height: 32.78px;
@@ -273,7 +272,7 @@ li {
 /* ========================================================= */
 /*  chat header title*/
 .chat_header_title {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 500;
   text-align: left;
   line-height: 32.78px;
@@ -335,7 +334,7 @@ li {
   gap: 0.5rem;
   display: flex;
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   text-align: center;
   align-items: center;
@@ -363,14 +362,14 @@ li {
 /* ========================================================= */
 /*  camera icon */
 .camera_icon {
-  width: 26px;
-  height: 24px;
+  width: 24px;
+  height: 22px;
 }
 
 /* ========================================================= */
 /*  recent message */
 .recent_message {
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 500;
   color: #ffffff80;
   line-height: 12.24px;
@@ -381,6 +380,445 @@ li {
 /* ========================================================= */
 /* chat container section */
 .chat_container {
-  width: 65%;
-  background-color: blue;
+  width: 70%;
+  overflow: hidden;
+  background: linear-gradient(
+    233.4deg,
+    #161515 72.23%,
+    rgba(214, 24, 206, 0.92) 105.25%
+  );
+
+  border-radius: 15px 0px 0px 0px;
+}
+
+/* ========================================================= */
+/* rooms containe */
+.rooms_container {
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ========================================================= */
+/*room kind  */
+.room_kinds {
+  gap: 4rem;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ========================================================= */
+/* room */
+.room {
+  display: flex;
+  height: 100%;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  position: relative;
+  align-items: center;
+  line-height: 18.15px;
+  flex-direction: column;
+  justify-content: center;
+  text-transform: capitalize;
+  font-family: "Inter", sans-serif;
+}
+
+/* ========================================================= */
+/* open room */
+.open_room {
+  width: 6px;
+  height: 6px;
+  bottom: 10%;
+  position: absolute;
+  border-radius: 50%;
+}
+
+/* ========================================================= */
+/* opened room */
+.opened_room {
+  background-color: white;
+}
+
+/* ========================================================= */
+/* craete room container */
+.create_room_container {
+  width: 30%;
+  display: flex;
+  color: white;
+  font-size: 12px;
+  font-weight: 400;
+  align-items: center;
+  line-height: 18.15px;
+  justify-content: space-evenly;
+  font-family: "Inter", sans-serif;
+}
+
+/* ========================================================= */
+/* add icon */
+.add_icon {
+  color: white;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  font-size: 30px;
+  font-weight: 500;
+  border-radius: 50%;
+  align-items: center;
+  background: #6c49f8;
+  justify-content: center;
+}
+
+/* ========================================================= */
+/* chatting page  container */
+.chatting_page_container {
+  height: 90%;
+  display: flex;
+  border-radius: 15px;
+  background: #28282882;
+}
+
+/* ========================================================= */
+/* chatting page  */
+.chatting_page {
+  width: 70%;
+  padding-right: 2rem;
+  padding-left: 1rem;
+}
+
+/* ========================================================= */
+/* chatting page  */
+.currently_chatting_friend {
+  height: 15%;
+  display: flex;
+  padding-left: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ========================================================= */
+/* current chat detail  */
+.current_chat_detail {
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ========================================================= */
+/* profile picture */
+.profile_picture {
+  width: 60px;
+  height: 60px;
+}
+
+/* ========================================================= */
+/* active user detail */
+.active_user_detail {
+  font-family: sans-serif;
+}
+
+/* ========================================================= */
+/* active user name */
+.active_user_name {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24.48px;
+  margin-bottom: 0.3rem;
+  letter-spacing: -0.01em;
+  text-transform: capitalize;
+}
+
+/* ========================================================= */
+/* last seen */
+.last_seen {
+  font-size: 11px;
+  font-weight: 500;
+  color: #ffffff80;
+  line-height: 12.24px;
+  letter-spacing: -0.01em;
+  text-transform: capitalize;
+}
+
+/* ========================================================= */
+/* all call icons  */
+.all_call_icons {
+  gap: 40px;
+  display: flex;
+}
+
+/* ========================================================= */
+/* call_icon*/
+.call_icon {
+  width: 26px;
+  height: 26px;
+}
+
+/* ========================================================= */
+/* video_call_icon */
+.video_call_icon {
+  width: 31px;
+  height: 26px;
+}
+
+/* ========================================================= */
+/* help_icon  */
+.help_icon {
+  width: 28px;
+  height: 28px;
+}
+
+/* ========================================================= */
+/* chat messages  */
+.chat_messages {
+  gap: 5px;
+  height: 70%;
+  overflow-y: scroll;
+  font-family: sans-serif;
+}
+
+/* ========================================================= */
+/* sender messages  */
+.sender_message {
+  gap: 10px;
+  width: 60%;
+  display: flex;
+  padding: 1rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+  font-size: 18px;
+  font-weight: 600;
+  position: relative;
+  align-items: center;
+  line-height: 20px;
+  border-radius: 25px;
+  background: #5a1656;
+  letter-spacing: -0.01em;
+  text-transform: capitalize;
+  border-bottom-left-radius: 0;
+}
+
+/* ========================================================= */
+/* sender messages box design */
+.sender_message_box_design {
+  left: 0%;
+  top: 98%;
+  width: 90%;
+  height: 20px;
+  position: absolute;
+  background: #5a1656;
+  clip-path: polygon(
+    50% 0%,
+    100% 0,
+    100% 0,
+    15% 100%,
+    0 100%,
+    0% 70%,
+    0% 35%,
+    0 0
+  );
+  border-bottom-left-radius: 20px;
+}
+
+/* ========================================================= */
+/* sender messages , receiver emoji */
+:is(.sender_emoji, .receiver_emoji) {
+  width: 30px;
+  height: 30px;
+}
+
+/* ========================================================= */
+/* receiver messages  */
+.receiver_message {
+  gap: 10px;
+  width: 60%;
+  display: flex;
+  padding: 1rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+  font-size: 18px;
+  font-weight: 600;
+  justify-self: end;
+  position: relative;
+  align-items: center;
+  border-radius: 25px;
+  line-height: 20px;
+  background: #ffffff;
+  letter-spacing: -0.01em;
+  text-transform: capitalize;
+  border-bottom-right-radius: 0;
+}
+
+/* ========================================================= */
+/* receiver messages box design */
+.receiver_message_box_design {
+  top: 98%;
+  width: 90%;
+  right: 0%;
+  height: 20px;
+  position: absolute;
+  background: #ffffff;
+  clip-path: polygon(
+    50% 0%,
+    100% 0,
+    100% 35%,
+    100% 70%,
+    100% 99%,
+    79% 100%,
+    0 0
+  );
+  border-bottom-right-radius: 15px;
+}
+
+/* ========================================================= */
+/* sender message image */
+.sender_message_image {
+  width: 235px;
+  height: 191px;
+}
+
+/* ========================================================= */
+/* typing area container */
+.typing_area_container {
+  height: 15%;
+  display: flex;
+  padding: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ========================================================= */
+/* typing area */
+.typing_area {
+  gap: 20px;
+  width: 68%;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  border-radius: 15px;
+  background: #ffffff24;
+}
+
+/* ========================================================= */
+/* type message input  */
+.type_message_input {
+  width: 86%;
+  height: 36px;
+  border: none;
+  outline: none;
+  padding: 0 1rem;
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 13.26px;
+  font-family: sans-serif;
+  letter-spacing: -0.01em;
+  text-transform: capitalize;
+  background-color: transparent;
+}
+
+/* ========================================================= */
+/*  mic recoder icon  */
+.mic_recoder_icon {
+  width: 12px;
+  height: 15px;
+}
+
+/* ========================================================= */
+/*  typing area  icon  */
+:is(.send_arrow_icon, .gallery_icon, .emoji_icon) {
+  width: 25px;
+  height: 25px;
+}
+
+/* ========================================================= */
+/* active friends list  */
+.active_friends_list {
+  width: 30%;
+  color: #ffffff;
+  padding-left: 1rem;
+  background: linear-gradient(
+    233.4deg,
+    #161515 72.23%,
+    rgba(214, 24, 206, 0.92) 105.25%
+  );
+}
+
+/* ========================================================= */
+/* Direct title */
+.direct_title {
+  height: 15%;
+  display: flex;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32.8px;
+  align-items: center;
+  justify-content: center;
+  font-family: "Catamaran", serif;
+}
+
+/* ========================================================= */
+/* active group list*/
+.active_group_list {
+  gap: 20px;
+  height: 85%;
+  display: flex;
+  overflow-y: scroll;
+  flex-direction: column;
+}
+
+/* ========================================================= */
+/* active group list*/
+.active_group {
+  gap: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* ========================================================= */
+/* group profile container */
+.group_profile_container {
+  position: relative;
+}
+
+/* ========================================================= */
+/* group profile picture  */
+.group_profile_picture {
+  width: 38px;
+  height: 50px;
+}
+
+/* ========================================================= */
+/* group online status  */
+.group_online_status {
+  bottom: 5%;
+  right: 0%;
+  width: 12px;
+  height: 13px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+/* ========================================================= */
+/* group online   */
+.group_online {
+  background: #31b957;
+}
+
+/* ========================================================= */
+/* group offline   */
+.group_offline {
+  background: #646266;
+  border: 3px solid #000000;
+}
+
+/* ========================================================= */
+/*  group name  */
+.group_name {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32.8px;
+  font-family: "Catamaran", serif;
 }
