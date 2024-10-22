@@ -1,0 +1,386 @@
+/* ========================================================= */
+/* General styling & Desktop View */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+  flex-direction: column;
+}
+img {
+  display: block;
+}
+li {
+  position: relative;
+}
+/* ========================================================= */
+/* Scroll bar */
+/* Scroll bar width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Scroll bar Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/*Scroll bar Handle */
+::-webkit-scrollbar-thumb {
+  background: #646266;
+}
+
+/* ========================================================= */
+/* General container */
+.general_container {
+  min-height: 100vh;
+  background: #000000;
+}
+
+/* ========================================================= */
+/* nav container */
+.nav_container {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+/* ========================================================= */
+/* nav bar */
+.nav {
+  width: 95%;
+  height: 81px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ========================================================= */
+/* nav Logo */
+.logo {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  justify-content: center;
+  background-color: white;
+}
+
+/* ========================================================= */
+/* navigation icons */
+.navigation_icons {
+  width: 90%;
+  display: flex;
+  justify-content: end;
+}
+
+/* ========================================================= */
+/* icons container */
+.icons_container {
+  width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* ========================================================= */
+/* icons text and profile name */
+.icon_text,
+.profile_name {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: left;
+  line-height: 18.04px;
+  font-family: "Catamaran", sans-serif;
+}
+
+/* ========================================================= */
+/* icons  */
+.icons {
+  width: 27px;
+  height: 23px;
+}
+
+/* ========================================================= */
+/* new notifications  */
+.new_notifications {
+  top: 0;
+  right: 20%;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  border-radius: 50%;
+  background: #d61818;
+}
+
+/* ========================================================= */
+/* user profile */
+.user_profile {
+  width: 29.74px;
+  height: 28.87px;
+}
+
+/* ========================================================= */
+/* profile name */
+.profile_name {
+  font-size: 14px;
+}
+
+/* ========================================================= */
+/* play icon */
+.play_icon {
+  width: 8px;
+  height: 10px;
+  margin-left: 0.3rem;
+  display: inline-block !important;
+}
+
+/* ========================================================= */
+/* general chat setup container */
+.general_chat_setup_container {
+  display: flex;
+  overflow: hidden;
+  height: calc(100vh - 84px);
+  border: 3px solid lawngreen;
+}
+
+/* ========================================================= */
+/*  freinds section */
+.friends {
+  width: 449px;
+  margin-top: 5rem;
+  padding-left: 2rem;
+  padding-right: 0.5rem;
+  background: #28282882;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+/* ========================================================= */
+/*  message title container */
+.message_title_container {
+  width: 80%;
+  margin: auto;
+  height: 80px;
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ========================================================= */
+/*  message title */
+.message_title {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 32.78px;
+  font-family: sans-serif;
+  text-transform: capitalize;
+}
+
+/* ========================================================= */
+/*  Edit icon*/
+.edit_icon {
+  width: 29.16px;
+  height: 29.14px;
+}
+
+/* ========================================================= */
+/*  search message container*/
+.search_message_container {
+  width: 80%;
+  height: 44px;
+  margin: auto;
+  display: flex;
+  border-radius: 15px;
+  align-items: center;
+  background: #282828;
+  justify-content: space-evenly;
+}
+
+/* ========================================================= */
+/*  search icon*/
+.search_icon {
+  width: 21px;
+  height: 18px;
+}
+
+/* ========================================================= */
+/*  search input */
+.search_input {
+  border: none;
+  width: 250px;
+  height: 32px;
+  outline: none;
+  font-size: 28px;
+  font-weight: 400;
+  padding-left: 1rem;
+  line-height: 32.78px;
+  font-family: sans-serif;
+  text-transform: capitalize;
+  background-color: transparent;
+}
+.search_input:focus {
+  color: white;
+}
+
+/* ========================================================= */
+/*  search icon*/
+.reload_icon {
+  width: 20px;
+  height: 16px;
+}
+
+/* ========================================================= */
+/*  chat header container*/
+.chat_header_container {
+  height: 75px;
+  border: none;
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid white;
+}
+
+/* ========================================================= */
+/*  line */
+.line {
+  height: 100%;
+  display: flex;
+  padding: 0 1rem;
+  margin-top: 0.5rem;
+  align-items: center;
+}
+
+/* ========================================================= */
+/*  active_line funtionality */
+.active_line {
+  border-bottom: 4px solid #50164d;
+}
+
+/* ========================================================= */
+/*  chat header title*/
+.chat_header_title {
+  font-size: 24px;
+  font-weight: 500;
+  text-align: left;
+  line-height: 32.78px;
+  font-family: sans-serif;
+  text-transform: capitalize;
+}
+
+/* ========================================================= */
+/*  active chat message */
+.active_chat_messages {
+  gap: 40px;
+  width: 397px;
+  display: grid;
+  margin-top: 2rem;
+  grid-column: auto;
+  overflow-y: scroll;
+  padding-bottom: 5rem;
+  scroll-behavior: smooth;
+  height: calc(65vh - 5rem);
+}
+
+/* ========================================================= */
+/*  recent friends chat container */
+.recent_friends_chat_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ========================================================= */
+/*  Currently open chat functionality */
+.currently_open_chat {
+  padding: 1rem;
+  background: #5a1656;
+}
+.opened_chat {
+  color: black !important;
+}
+
+/* ========================================================= */
+/* friends_profile */
+.friends_profile {
+  width: 60px;
+  height: 60px;
+}
+
+/* ========================================================= */
+/* about_friend */
+.about_friend {
+  width: 70%;
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========================================================= */
+/* friend name*/
+.friend_name {
+  gap: 0.5rem;
+  display: flex;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  align-items: center;
+  line-height: 16.32px;
+  font-family: sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* ========================================================= */
+/* friend emoji */
+.friend_emoji {
+  width: 20px;
+  height: 20px;
+}
+
+/* ========================================================= */
+/* online status */
+.online_status {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #50164d;
+}
+
+/* ========================================================= */
+/*  camera icon */
+.camera_icon {
+  width: 26px;
+  height: 24px;
+}
+
+/* ========================================================= */
+/*  recent message */
+.recent_message {
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff80;
+  line-height: 12.24px;
+  letter-spacing: -0.01em;
+  font-family: sans-serif;
+}
+
+/* ========================================================= */
+/* chat container section */
+.chat_container {
+  width: 65%;
+  background-color: blue;
+}
