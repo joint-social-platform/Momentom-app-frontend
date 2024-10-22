@@ -111,3 +111,47 @@
     display: flex;
     margin-left: 68px;
 }
+@media (max-width:700px){
+    .ju{
+        display: block;
+    }
+    .nt{
+        display: none;
+    }
+    .fra{
+        width: 200px;
+        margin-left: 40px;
+    }
+    .in{
+        width: 240px;
+    }
+    .up{
+        width: 240px;
+    }
+    .acc{
+        margin-left: auto;
+        text-align: center;
+    }
+    .jq{
+        display: flex;
+        justify-content: center;
+    }
+    .le{
+        margin-left: auto;
+        text-align: center;
+    }
+    .li{
+        margin-left: auto;
+        text-align: center;
+        justify-content: center;
+    }
+    .he{
+        margin-left: auto;
+        margin-left: 0px;
+        justify-content: center;
+    }
+    .hr{
+        padding-top: 50px;
+        padding-bottom: 60px;
+    }
+}
