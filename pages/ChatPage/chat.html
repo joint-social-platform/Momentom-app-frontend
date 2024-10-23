@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./chat.css" />
+    <title>Chat</title>
+    <!-- ================================================= -->
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- =============================================== -->
+    <!-- General container -->
+    <div class="general_container">
+      <!-- =========================================== -->
+      <!-- nav container -->
+      <div class="nav_container">
+        <!-- =========================================== -->
+        <!-- nav bar -->
+        <nav class="nav">
+          <!-- =========================================== -->
+          <!-- nav Logo -->
+          <div class="logo">
+            <img src="./images/nav_logo.png" alt="" />
+          </div>
+          <!-- =========================================== -->
+          <!-- navigation icons -->
+          <div class="navigation_icons">
+            <!-- =========================================== -->
+            <!-- icons container  -->
+            <ul class="icons_container">
+              <li>
+                <!-- =========================================== -->
+                <!-- icons text  -->
+                <a href="" class="icon_text">
+                  <!-- =========================================== -->
+                  <!-- icons  -->
+                  <img src="./images/home_icon.png" alt="" class="icons" />
+                  home
+                </a>
+              </li>
+              <li>
+                <!-- =========================================== -->
+                <!-- icons text  -->
+                <a href="" class="icon_text">
+                  <!-- =========================================== -->
+                  <!-- icons  -->
+                  <img src="./images/contact-search.png" alt="" class="icons" />
+                  peers
+                </a>
+
+                <!-- =========================================== -->
+                <!-- new notifications  -->
+                <div class="new_notifications"></div>
+              </li>
+              <li>
+                <!-- =========================================== -->
+                <!-- icons text  -->
+                <a href="" class="icon_text">
+                  <!-- =========================================== -->
+                  <!-- icons   -->
+                  <img src="./images/notification.png" alt="" class="icons" />
+                  notification
+                </a>
+
+                <!-- =========================================== -->
+                <!-- new notifications  -->
+                <div class="new_notifications"></div>
+              </li>
+              <li>
+                <!-- =========================================== -->
+                <!-- profile name  -->
+                <a href="" class="profile_name">
+                  <!-- =========================================== -->
+                  <!-- user profile  -->
+                  <img
+                    src="./images/user_profile.png"
+                    alt=""
+                    class="user_profile"
+                  />
+                  <div>
+                    Hello , Aditi
+
+                    <!-- =========================================== -->
+                    <!-- play icon  -->
+                    <img
+                      src="./images/play_icon.png"
+                      alt=""
+                      class="play_icon"
+                    />
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <!-- =========================================== -->
+      <!-- general chat setup container -->
+      <div class="general_chat_setup_container">
+        <!-- =========================================== -->
+        <!-- freinds section -->
+        <section class="friends">
+          <!-- =========================================== -->
+          <!-- message title container -->
+          <div class="message_title_container">
+            <!-- =========================================== -->
+            <!-- message title  -->
+            <h2 class="message_title">message</h2>
+
+            <!-- =========================================== -->
+            <!-- edit icon -->
+            <img
+              src="./images/edit_icon.png"
+              alt="edit_icon"
+              class="edit_icon"
+            />
+          </div>
+
+          <!-- =========================================== -->
+          <!-- search message container-->
+          <div class="search_message_container">
+            <!-- =========================================== -->
+            <!-- search icon -->
+            <img
+              src="./images/search_icon.png"
+              alt="search_icon"
+              class="search_icon"
+            />
+
+            <!-- =========================================== -->
+            <!-- search input-->
+            <input
+              type="text"
+              name="search_message"
+              id="search_message"
+              class="search_input"
+              placeholder="search message"
+            />
+
+            <!-- =========================================== -->
+            <!-- reload icon -->
+            <img
+              src="./images/reload_icon.png"
+              alt="reload_icon"
+              class="reload_icon"
+            />
+          </div>
+
+          <!-- =========================================== -->
+          <!-- chat header container -->
+          <div class="chat_header_container">
+            <!-- =========================================== -->
+            <!-- line-->
+            <div class="line active_line">
+              <!-- =========================================== -->
+              <!-- chat header title-->
+              <h1 class="chat_header_title">peers</h1>
+            </div>
+
+            <!-- =========================================== -->
+            <!-- line-->
+            <div class="line">
+              <!-- =========================================== -->
+              <!-- chat header title-->
+              <h1 class="chat_header_title">groups</h1>
+            </div>
+
+            <!-- =========================================== -->
+            <!-- line-->
+            <div class="line">
+              <!-- =========================================== -->
+              <!-- chat header title-->
+              <h1 class="chat_header_title">requests <span>(2)</span></h1>
+            </div>
+          </div>
+
+          <!-- =========================================== -->
+          <!-- active chat message -->
+          <div class="active_chat_messages">
+            <!-- =========================================== -->
+            <!-- recent friends chat container -->
+            <div class="recent_friends_chat_container">
+              <!-- =========================================== -->
+              <!-- friends profile -->
+              <img
+                src="./images/Jhan.png"
+                alt="profile"
+                class="friends_profile"
+              />
+
+              <!-- =========================================== -->
+              <!-- about friend -->
+              <article class="about_friend">
+                <!-- =========================================== -->
+                <!-- friend name -->
+                <h3 class="friend_name">
+                  Jhon
+                  <!-- =========================================== -->
+                  <!-- friend emoji -->
+                  <img
+                    src="./images/Glass_emoji.png"
+                    alt=""
+                    class="friend_emoji"
+                  />
+
+                  <!-- =========================================== -->
+                  <!-- online status -->
+                  <div class="online_status"></div>
+                </h3>
+
+                <!-- =========================================== -->
+                <!-- recent message -->
+                <p class="recent_message">hi,good morning</p>
+              </article>
+
+              <!-- =========================================== -->
+              <!-- camera icon -->
+              <img
+                src="./images/camera_icon.png"
+                alt="camera_icon"
+                class="camera_icon"
+              />
+            </div>
+
+            <!-- =========================================== -->
+            <!-- recent friends chat container -->
+            <div class="recent_friends_chat_container">
+              <!-- =========================================== -->
+              <!-- friends profile -->
+              <img
+                src="./images/Abhilash.png"
+                alt="profile"
+                class="friends_profile"
+              />
+
+              <!-- =========================================== -->
+              <!-- about friend -->
+              <article class="about_friend">
+                <!-- =========================================== -->
+                <!-- friend name -->
+                <h3 class="friend_name">
+                  Abhilash
+                  <!-- =========================================== -->
+                  <!-- friend emoji -->
+                  <img
+                    src="./images/crazy_emoji.png"
+                    alt="profile"
+                    class="friend_emoji"
+                  />
+                </h3>
+
+                <!-- =========================================== -->
+                <!-- recent message -->
+                <p class="recent_message">hey where are you????</p>
+              </article>
+
+              <!-- =========================================== -->
+              <!-- camera icon -->
+              <img
+                src="./images/camera_icon.png"
+                alt="camera_icon"
+                class="camera_icon"
+              />
+            </div>
+
+            <!-- =========================================== -->
+            <!-- recent friends chat container -->
+            <div class="recent_friends_chat_container">
+              <!-- =========================================== -->
+              <!-- friends profile -->
+              <img
+                src="./images/George.png"
+                alt="profile"
+                class="friends_profile"
+              />
+
+              <!-- =========================================== -->
+              <!-- about friend -->
+              <article class="about_friend">
+                <!-- =========================================== -->
+                <!-- friend name -->
+                <h3 class="friend_name">
+                  George Jose
+
+                  <!-- =========================================== -->
+                  <!-- online status -->
+                  <div class="online_status"></div>
+                </h3>
+
+                <!-- =========================================== -->
+                <!-- recent message -->
+                <p class="recent_message">Now im in france</p>
+              </article>
+
+              <!-- =========================================== -->
+              <!-- camera icon -->
+              <img
+                src="./images/camera_icon.png"
+                alt="camera_icon"
+                class="camera_icon"
+              />
+            </div>
+
+            <!-- =========================================== -->
+            <!-- recent friends chat container -->
+            <div class="recent_friends_chat_container currently_open_chat">
+              <!-- =========================================== -->
+              <!-- friends profile -->
+              <img
+                src="./images/Aman.png"
+                alt="profile"
+                class="friends_profile"
+              />
+
+              <!-- =========================================== -->
+              <!-- about friend -->
+              <article class="about_friend">
+                <!-- =========================================== -->
+                <!-- friend name -->
+                <h3 class="friend_name opened_chat">Aman</h3>
+
+                <!-- =========================================== -->
+                <!-- recent message -->
+                <p class="recent_message opened_chat">hlo How do you do</p>
+              </article>
+
+              <!-- =========================================== -->
+              <!-- camera icon -->
+              <img
+                src="./images/camera_icon.png"
+                alt="camera_icon"
+                class="camera_icon"
+              />
+            </div>
+
+            <!-- =========================================== -->
+            <!-- recent friends chat container -->
+            <div class="recent_friends_chat_container">
+              <!-- =========================================== -->
+              <!-- friends profile -->
+              <img
+                src="./images/Hani.png"
+                alt="profile"
+                class="friends_profile"
+              />
+
+              <!-- =========================================== -->
+              <!-- about friend -->
+              <article class="about_friend">
+                <!-- =========================================== -->
+                <!-- friend name -->
+                <h3 class="friend_name">
+                  Hani Rahman
+
+                  <!-- =========================================== -->
+                  <!-- online status -->
+                  <div class="online_status"></div>
+                </h3>
+
+                <!-- =========================================== -->
+                <!-- recent message -->
+                <p class="recent_message">hi,good morning</p>
+              </article>
+
+              <!-- =========================================== -->
+              <!-- camera icon -->
+              <img
+                src="./images/camera_icon.png"
+                alt="camera_icon"
+                class="camera_icon"
+              />
+            </div>
+
+            <!-- =========================================== -->
+            <!-- recent friends chat container -->
+            <div class="recent_friends_chat_container">
+              <!-- =========================================== -->
+              <!-- friends profile -->
+              <img
+                src="./images/Jhan.png"
+                alt="profile"
+                class="friends_profile"
+              />
+
+              <!-- =========================================== -->
+              <!-- about friend -->
+              <article class="about_friend">
+                <!-- =========================================== -->
+                <!-- friend name -->
+                <h3 class="friend_name">
+                  Jhon
+                  <!-- =========================================== -->
+                  <!-- friend emoji -->
+                  <img
+                    src="./images/Glass_emoji.png"
+                    alt=""
+                    class="friend_emoji"
+                  />
+
+                  <!-- =========================================== -->
+                  <!-- online status -->
+                  <div class="online_status"></div>
+                </h3>
+
+                <!-- =========================================== -->
+                <!-- recent message -->
+                <p class="recent_message">hi,good morning</p>
+              </article>
+
+              <!-- =========================================== -->
+              <!-- camera icon -->
+              <img
+                src="./images/camera_icon.png"
+                alt="camera_icon"
+                class="camera_icon"
+              />
+            </div>
+
+            <!-- =========================================== -->
+            <!-- recent friends chat container -->
+            <div class="recent_friends_chat_container">
+              <!-- =========================================== -->
+              <!-- friends profile -->
+              <img
+                src="./images/Abhilash.png"
+                alt="profile"
+                class="friends_profile"
+              />
+
+              <!-- =========================================== -->
+              <!-- about friend -->
+              <article class="about_friend">
+                <!-- =========================================== -->
+                <!-- friend name -->
+                <h3 class="friend_name">
+                  Abhilash
+                  <!-- =========================================== -->
+                  <!-- friend emoji -->
+                  <img
+                    src="./images/crazy_emoji.png"
+                    alt="profile"
+                    class="friend_emoji"
+                  />
+                </h3>
+
+                <!-- =========================================== -->
+                <!-- recent message -->
+                <p class="recent_message">hey where are you????</p>
+              </article>
+
+              <!-- =========================================== -->
+              <!-- camera icon -->
+              <img
+                src="./images/camera_icon.png"
+                alt="camera_icon"
+                class="camera_icon"
+              />
+            </div>
+
+            <!-- =========================================== -->
+            <!-- recent friends chat container -->
+            <div class="recent_friends_chat_container">
+              <!-- =========================================== -->
+              <!-- friends profile -->
+              <img
+                src="./images/George.png"
+                alt="profile"
+                class="friends_profile"
+              />
+
+              <!-- =========================================== -->
+              <!-- about friend -->
+              <article class="about_friend">
+                <!-- =========================================== -->
+                <!-- friend name -->
+                <h3 class="friend_name">
+                  George Jose
+
+                  <!-- =========================================== -->
+                  <!-- online status -->
+                  <div class="online_status"></div>
+                </h3>
+
+                <!-- =========================================== -->
+                <!-- recent message -->
+                <p class="recent_message">Now im in france</p>
+              </article>
+
+              <!-- =========================================== -->
+              <!-- camera icon -->
+              <img
+                src="./images/camera_icon.png"
+                alt="camera_icon"
+                class="camera_icon"
+              />
+            </div>
+
+            <!-- =========================================== -->
+            <!-- recent friends chat container -->
+            <div class="recent_friends_chat_container">
+              <!-- =========================================== -->
+              <!-- friends profile -->
+              <img
+                src="./images/Aman.png"
+                alt="profile"
+                class="friends_profile"
+              />
+
+              <!-- =========================================== -->
+              <!-- about friend -->
+              <article class="about_friend">
+                <!-- =========================================== -->
+                <!-- friend name -->
+                <h3 class="friend_name">Aman</h3>
+
+                <!-- =========================================== -->
+                <!-- recent message -->
+                <p class="recent_message">hlo How do you do</p>
+              </article>
+
+              <!-- =========================================== -->
+              <!-- camera icon -->
+              <img
+                src="./images/camera_icon.png"
+                alt="camera_icon"
+                class="camera_icon"
+              />
+            </div>
+
+            <!-- =========================================== -->
+            <!-- recent friends chat container -->
+            <div class="recent_friends_chat_container">
+              <!-- =========================================== -->
+              <!-- friends profile -->
+              <img
+                src="./images/Hani.png"
+                alt="profile"
+                class="friends_profile"
+              />
+
+              <!-- =========================================== -->
+              <!-- about friend -->
+              <article class="about_friend">
+                <!-- =========================================== -->
+                <!-- friend name -->
+                <h3 class="friend_name">
+                  Hani Rahman
+
+                  <!-- =========================================== -->
+                  <!-- online status -->
+                  <div class="online_status"></div>
+                </h3>
+
+                <!-- =========================================== -->
+                <!-- recent message -->
+                <p class="recent_message">hi,good morning</p>
+              </article>
+
+              <!-- =========================================== -->
+              <!-- camera icon -->
+              <img
+                src="./images/camera_icon.png"
+                alt="camera_icon"
+                class="camera_icon"
+              />
+            </div>
+          </div>
+        </section>
+        <!-- =========================================== -->
+        <!-- chat container section -->
+        <section class="chat_container"></section>
+      </div>
+    </div>
+  </body>
+</html>
