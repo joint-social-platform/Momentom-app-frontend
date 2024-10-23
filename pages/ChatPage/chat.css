@@ -289,7 +289,7 @@ li {
   margin-top: 2rem;
   grid-column: auto;
   overflow-y: scroll;
-  padding-bottom: 5rem;
+  padding-bottom: 10rem;
   scroll-behavior: smooth;
   height: calc(65vh - 5rem);
 }
