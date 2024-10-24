@@ -588,9 +588,127 @@ video {
   }
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.contents {
+  display: contents;
+}
+
+.h-\[0\.05rem\] {
+  height: 0.05rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.max-w-full {
+  max-width: 100%;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-gray-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+
 .bg-red-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(248 113 113 / var(--tw-bg-opacity));
+}
+
+.p-3 {
+  padding: 0.75rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 * {
@@ -607,7 +725,7 @@ header {
   position: relative;
 }
 
-/* header nav {
+header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -620,7 +738,7 @@ header {
   left: 50%;
   transform: translateX(-50%);
   margin-top: 1rem;
-} */
+}
 
 .nav-logo {
   width: 15rem;
@@ -636,7 +754,7 @@ ul li {
   cursor: pointer;
 }
 
-button {
+nav button {
   padding: 0.8rem 1.5rem;
   background-color: black;
   color: white;
@@ -673,4 +791,153 @@ button {
   border: 1px solid white;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.zara img {
+  width: 100%;
+  height: 355px;
+}
+
+.faq-section {
+  background-color: #fadcd9;
+  padding: 50px 0;
+}
+
+.faq {
+  margin-left: 160px;
+}
+
+.faq-card {
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.faq-answer {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.cta-section {
+  background-color: #fadcd9;
+  padding: 50px 0;
+}
+
+.cta-box {
+  background-color: #4b3cf5;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.cta-btn {
+  background-color: #675be5;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.image-grid img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+}
+
+.estate img {
+  width: 100%;
+}
+
+.learn {
+  border-radius: 40px;
+  width: 85px;
+}
+
+.adventure-card {
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 250px;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.adventure-card h5 {
+  color: white;
+  background-color: #4b3cf5;
+  padding: 25px;
+  border-radius: 10px 10px 0 0;
+}
+
+.adventure-card .btn {
+  background-color: #4b3cf5;
+  color: white;
+}
+
+/* Testimonial section */
+
+.testimonial {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.testimonial img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.social-icons i {
+  font-size: 30px;
+  margin: 0 10px;
+}
+
+.instagram {
+  color: purple;
+}
+
+.form-container {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.form-container input,
+.form-container textarea {
+  background-color: #d1cdcd;
+  border: none;
+  border-radius: 15px;
+  padding: 15px;
+  width: 100%;
+}
+
+.form-container input::-moz-placeholder, .form-container textarea::-moz-placeholder {
+  color: white;
+}
+
+.form-container input::placeholder,
+.form-container textarea::placeholder {
+  color: white;
+}
+
+.send-btn {
+  background-color: #4b3cf5;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+}
+
+a {
+  text-decoration: none;
 }
