@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,6 +8,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+body {
+  font-family: "Catamaran", sans-serif;
 }
 
 header {
@@ -45,7 +50,7 @@ ul li {
   cursor: pointer;
 }
 
-nav button {
+nav a button {
   padding: 0.8rem 1.5rem;
   background-color: black;
   color: white;

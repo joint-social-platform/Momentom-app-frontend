@@ -22,7 +22,7 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="max-md:hidden">
         <div>
           <img
             src="./src/images/momentom-logo.png"
@@ -45,7 +45,9 @@
       <section class="head-section">
         <h1>Join Momentom</h1>
         <p>Where your moment becomes masterpiece across all platforms!</p>
-        <button>Get Started</button>
+        <a href="./pages/createAccountPage/create.html"
+          ><button>Get Started</button></a
+        >
       </section>
     </header>
 
@@ -493,9 +495,11 @@
       </form>
     </div>
     <!-- footer -->
-    <footer class="bg-black text-white flex flex-col">
-      <div class="flex justify-between">
-        <div class="flex flex-col space-y-4">
+    <footer class="bg-black text-white flex flex-col p-10 max-md:p-6">
+      <div
+        class="flex justify-between space-x-4 [&_h2]:font-bold max-md:flex-col max-md:space-x-0 max-md:space-y-4"
+      >
+        <div class="flex flex-col space-y-4 w-full">
           <h2>Company Info</h2>
           <div>
             <p>About Momentom</p>
@@ -506,7 +510,7 @@
           </div>
         </div>
 
-        <div class="flex flex-col space-y-4">
+        <div class="flex flex-col space-y-4 w-full">
           <h2>Customer Service</h2>
           <div>
             <p>Return and Refund Policy</p>
@@ -516,7 +520,7 @@
           </div>
         </div>
 
-        <div class="flex flex-col space-y-4">
+        <div class="flex flex-col space-y-4 w-full">
           <h2>Help</h2>
           <div>
             <p>Support Center and FAQ</p>
@@ -526,19 +530,62 @@
           </div>
         </div>
 
-        <div class="mt-auto">
-          <div>
-            <h2>New to Momentom</h2>
+        <div class="lg:mt-auto w-full">
+          <div class="space-y-4">
+            <h2>New to Momentom ?</h2>
             <p>
               Subscribe to our newsletter to get updates on our latest offers!
             </p>
-            <input type="text" name="email" />
-            <button>Subscribe</button>
+            <div class="space-x-2">
+              <input
+                type="text"
+                name="email"
+                placeholder="Email Address"
+                class="p-2 rounded-[5px]"
+              />
+              <button
+                class="bg-gradient-to-r from-[#D618CE] to-[#161515] p-2 rounded-[5px] uppercase"
+              >
+                Subscribe
+              </button>
+            </div>
           </div>
         </div>
       </div>
       <div class="w-full max-w-full h-[0.05rem] bg-gray-300 mx-auto my-5"></div>
-      <div></div>
+
+      <div
+        class="flex justify-between max-md:flex-col max-md:justify-center max-md:items-center max-md:space-y-14"
+      >
+        <div
+          class="space-y-3 max-md:flex max-md:flex-col max-md:justify-center max-md:items-center"
+        >
+          <p>We accept</p>
+          <div class="flex gap-2">
+            <img src="./src/images/visa.png" alt="visa-card" />
+            <img src="./src/images/mastercard.png" alt="mastercard" />
+            <img src="./src/images/zelle.png" alt="zelle" />
+            <img
+              src="./src/images/apple-google-pay.png"
+              alt="apple-google-pay"
+            />
+          </div>
+        </div>
+
+        <div
+          class="space-y-4 max-md:flex max-md:flex-col max-md:justify-center max-md:items-center"
+        >
+          <div class="flex gap-2">
+            <img src="./src/images/google-play.png" alt="google-play" />
+            <img src="./src/images/apple-store.png" alt="apple-store" />
+          </div>
+          <div>
+            <p class="text-2xl font-extrabold text-center">
+              &copy; 2024 Momentom. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
