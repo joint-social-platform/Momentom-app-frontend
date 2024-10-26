@@ -10,13 +10,16 @@
     <style type="text/tailwindcss">
         @layer components {
             body{
-                @apply bg-[url('/src/images/background.png')] bg-cover bg-no-repeat h-screen md:gap-[10rem] text-white md:flex
+                @apply bg-[url('/src/images/background.png')] bg-cover bg-no-repeat h-screen md:gap-16  md:flex  lg:gap-20 
+            }
+            .bodyContent{
+                @apply text-white
             }
             .container{
                 @apply grid justify-center items-center
             }
             .container fieldset{
-                @apply mt-[3rem] p-8 w-auto  border-white border-2 lg:w-[400px]
+                @apply mt-[3rem] p-8 w-auto  border-white border-2 md:ml-6 md:w-[350px] lg:w-[400px] lg:ml-40
             }
             .container fieldset legend{
                 @apply text-center text-[2rem]
@@ -31,9 +34,9 @@
                 @apply bg-transparent border-solid border-blue-600 focus:ring-0
             }
             .imgBox{
-                @apply w-full hidden md:flex
+                @apply w-full hidden md:flex md:justify-end
             }
-            .container fieldset form .checkbox{
+            /* .container fieldset form .checkbox{
                 @apply flex items-center gap-2 mt-8
             }
             .container fieldset form button{
@@ -47,35 +50,39 @@
             }
             .container fieldset form button:hover{
                 text-shadow: 1px 2px 1px blue;
-            }
+            } */
         }
     </style>
 
 </head>
 <body>
-    <img src="/src/images/momentom-logo.png" class="h-[60px]">
-    <div class="container"> 
-        <fieldset>
-            <legend>WELCOME BACK</legend>
-            <form>
-                <div class="inputBox">
-                    <label for="email">Email</label><br>
-                    <input type="email" id="email"><br><br>
-        
-                    <label for="password">Password</label><br>
-                    <input type="password" id="password" maxlength="15"><br>
-                    <a href="#" class="float-end">Forgotten password ? </a>
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" name="" id="">
-                    <p>Remember me</p>
-                </div><br>
 
-                <button>SignIn</button>
-            </form>
-        </fieldset>
-   
+    <div class="bodyContent">
+        <img src="/src/images/momentom-logo.png" class="h-[60px]">
+        <div class="container"> 
+            <fieldset>
+                <legend>WELCOME BACK</legend>
+                <form>
+                    <div class="inputBox">
+                        <label for="email">Email</label><br>
+                        <input type="email" id="email"><br><br>
+            
+                        <label for="password">Password</label><br>
+                        <input type="password" id="password" maxlength="15"><br>
+                        <a href="#" class="float-end">Forgotten password ? </a>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="" id="">
+                        <p>Remember me</p>
+                    </div><br>
+
+                    <button>SignIn</button>
+                </form>
+            </fieldset>
+    
+        </div>
     </div>
+
     <div class="imgBox">
         <img src="/src/images/girl-on-glasses.webp" alt="">
     </div>
