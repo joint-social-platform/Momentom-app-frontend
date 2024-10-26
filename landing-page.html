@@ -3,54 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Momentom App</title>
+    <title>Landing page</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-
-    <link rel="stylesheet" href="./src/style.css" />
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./landing-page.css" />
   </head>
   <body>
-    <header>
-      <nav class="max-md:hidden">
-        <div>
-          <img
-            src="./src/images/momentom-logo.png"
-            alt="momentom-logo"
-            class="nav-logo"
-          />
-        </div>
-        <div>
-          <ul>
-            <li>Video</li>
-            <li>Photo</li>
-            <li>E-commerce</li>
-          </ul>
-        </div>
-        <div>
-          <button>Join Us</button>
-        </div>
-      </nav>
-
-      <section class="head-section">
-        <h1>Join Momentom</h1>
-        <p>Where your moment becomes masterpiece across all platforms!</p>
-        <a href="./pages/createAccountPage/create.html"
-          ><button>Get Started</button></a
-        >
-      </section>
-    </header>
-
+    <!-- Meet Us Section -->
     <section class="py-5 text-center">
       <div class="container">
         <h2 class="fw-bold">Meet Us</h2>
@@ -62,8 +24,8 @@
               class="rounded img-fluid"
               alt="Max"
             />
-            <h5 class="mt-3 fw-bolder">Max</h5>
-            <h6 class="text-dark">Chief Moment Officer</h6>
+            <h5 class="mt-3 fw-bold">Max</h5>
+            <p class="text-dark">Chief Moment Officer</p>
           </div>
 
           <!-- Team Member 2 -->
@@ -73,8 +35,8 @@
               class="rounded img-fluid"
               alt="Luna"
             />
-            <h5 class="mt-3 fw-bolder">Luna</h5>
-            <h6 class="text-dark">Social Media Manager</h6>
+            <h5 class="mt-3">Luna</h5>
+            <p class="text-muted">Social Media Manager</p>
           </div>
 
           <!-- Team Member 3 -->
@@ -84,20 +46,19 @@
               class="rounded img-fluid"
               alt="Leo"
             />
-            <h5 class="mt-3 fw-bolder">Leo</h5>
-            <h6 class="text-dark">Economic Wizard</h6>
+            <h5 class="mt-3">Leo</h5>
+            <p class="text-muted">Economic Wizard</p>
           </div>
 
           <!-- Team Member 4 -->
-          <div class="zara col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
             <img
               src="./src/images/meet-us-zara.webp"
               class="rounded img-fluid"
               alt="Zara"
-              width="300px"
             />
-            <h5 class="mt-3 fw-bolder">Zara</h5>
-            <h6 class="text-dark">Creative Genius</h6>
+            <h5 class="mt-3">Zara</h5>
+            <p class="text-muted">Creative Genius</p>
           </div>
         </div>
 
@@ -105,15 +66,15 @@
         <div class="row text-center my-5">
           <div class="col-lg-4">
             <h3 class="fw-bold text-danger">1,000,000+</h3>
-            <p class="fw-bolder fs-5">Happy Users</p>
+            <p>Happy Users</p>
           </div>
           <div class="col-lg-4">
             <h3 class="fw-bold text-danger">400,000+</h3>
-            <p class="fw-bolder fs-5">Videos Uploaded</p>
+            <p>Videos Uploaded</p>
           </div>
           <div class="col-lg-4">
             <h3 class="fw-bold text-danger">500,000+</h3>
-            <p class="fw-bolder fs-5">Photos Shared</p>
+            <p>Photos Shared</p>
           </div>
         </div>
 
@@ -168,19 +129,15 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq-section">
+    <section class="faq-section text-center">
       <div class="container">
-        <h2 class="faq fw-bold mb-5">
-          <strong> Frequently Asked Questions </strong>
-        </h2>
+        <h2 class="fw-bold mb-5">Frequently Asked Questions</h2>
 
         <!-- FAQ Item 1 -->
         <div class="row justify-content-center">
           <div class="col-lg-8">
             <div class="faq-card p-3">
-              <div class="faq-question fs-5">
-                <strong>What is Momentom all about? </strong>
-              </div>
+              <div class="faq-question">What is Momentom all about?</div>
               <div class="faq-answer">
                 Momentom is your ultimate social hub!
               </div>
@@ -192,9 +149,7 @@
         <div class="row justify-content-center">
           <div class="col-lg-8">
             <div class="faq-card p-3">
-              <div class="faq-question fs-5">
-                <strong> How do I join Momentom? </strong>
-              </div>
+              <div class="faq-question">How do I join Momentom?</div>
               <div class="faq-answer">Simply sign up and dive in!</div>
             </div>
           </div>
@@ -204,9 +159,7 @@
         <div class="row justify-content-center">
           <div class="col-lg-8">
             <div class="faq-card p-3">
-              <div class="faq-question fs-5">
-                <strong> What platform does Momentom offer? </strong>
-              </div>
+              <div class="faq-question">What platform does Momentom offer?</div>
               <div class="faq-answer">
                 We have videos, photos, and e-commerce!
               </div>
@@ -218,9 +171,7 @@
         <div class="row justify-content-center">
           <div class="col-lg-8">
             <div class="faq-card p-3">
-              <div class="faq-question fs-5">
-                <strong>Is momentum free to use? </strong>
-              </div>
+              <div class="faq-question">Is momentum free to use?</div>
               <div class="faq-answer">
                 Absolutely, join and have fun for free!
               </div>
@@ -232,9 +183,7 @@
         <div class="row justify-content-center">
           <div class="col-lg-8">
             <div class="faq-card p-3">
-              <div class="faq-question fs-5">
-                <strong> Can I monetize my platform? </strong>
-              </div>
+              <div class="faq-question">Can I monetize my platform?</div>
               <div class="faq-answer">
                 Yes, earn while you create amazing contents!
               </div>
@@ -248,9 +197,8 @@
     <section class="cta-section text-center mb-5">
       <div class="container">
         <div class="cta-box text-white py-5 px-4">
-          <h2 class="fw-bold text-white">Join the Social Media</h2>
-          <h2 class="fw-bold text-white">Revolution!</h2>
-          <p class="mt-3 text-white fw-bold">
+          <h2 class="fw-bold text-dark">Join the Social Media Revolution!</h2>
+          <p class="mt-3 text-dark fw-bold">
             Dive into the world of Momentom, where creativity meets community!
             Whether you're a video wizard, a photo fanatic, or an e-commerce
             entrepreneur, we have the perfect platform for you. Don’t just
@@ -305,13 +253,7 @@
             <h5 class="mt-2 fw-bold">Launches New</h5>
             <h5 class="mt-2 fw-bold">Features!</h5>
 
-            <p class="text-dark mt-4">
-              September 15, 2024 <br />
-              Explore our latest features designed to enhance your experience!
-              Get ready to create like never before!
-            </p>
-
-            <a href="#" class="learn btn cta-btn mt-4">Learn</a>
+            <p class="text-dark">Chief Moment Officer</p>
           </div>
 
           <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
@@ -323,12 +265,7 @@
             <h5 class="mt-2 fw-bold">Join Our Video</h5>
             <h5 class="mt-2 fw-bold">Challenge!</h5>
 
-            <p class="text-dark mt-5">
-              September 10, 2024 <br />
-              Show off your skills and win amazing prizes! Are you up for the
-              challenge?
-            </p>
-            <a href="#" class="learn btn cta-btn mt-5">Learn</a>
+            <p class="text-muted">Social Media Manager</p>
           </div>
 
           <!-- Team Member 3 -->
@@ -341,12 +278,7 @@
             <h5 class="mt-2 fw-bold">Photo Contest</h5>
             <h5 class="mt-2 fw-bold">Now Open!</h5>
 
-            <p class="text-dark mt-5">
-              September 5, 2024 <br />
-              Capture the moment and share your best shots! Prizes await the
-              most creative minds!
-            </p>
-            <a href="#" class="learn btn cta-btn mt-4">Learn</a>
+            <p class="text-muted">Economic Wizard</p>
           </div>
 
           <!-- Team Member 4 -->
@@ -360,38 +292,15 @@
             <h5 class="mt-2 fw-bold">Platform</h5>
             <h5 class="mt-2 fw-bold">Launches</h5>
 
-            <p class="text-dark mt-3">
-              August 30, 2024 <br />
-              Shop, sell and connect with others! Your e-commerce journey starts
-              here!
-            </p>
-            <a href="#" class="learn btn cta-btn mt-4">Learn</a>
+            <p class="text-muted">Creative Genius</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Repeating Header Text   -->
-    <div class="header-text text-center mt-5">
-      Snap & Share * Shop & Socialize * Connect & Create * Engage & Inspire *
-      Explore & Discover * <br />
-      Video Magic *Snap & Share * Shop & Socialize * Connect & Create * Engage &
-      Inspire * Explore & Discover *
-    </div>
-
-    <div class="container mt-4">
-      <div class="image-container">
-        <img
-          src="./src/images/girl-on-red.webp "
-          alt="Person Image"
-          width="100%"
-        />
-      </div>
-    </div>
-
     <!-- Title Section -->
     <div class="container text-center my-5">
-      <h1><strong> Choose Your Adventure </strong></h1>
+      <h1>Choose Your Adventure</h1>
     </div>
 
     <!-- Cards Section -->
@@ -434,30 +343,30 @@
 
     <!-- Testimonial Section -->
     <div class="testimonial">
-      <p class="fw-bolder">
+      <p>
         Momentum transformed my social life! I can’t imagine being without it!
       </p>
-      <img src="./src/images/sarah-james.webp " alt="User Image" />
+      <img src="https://via.placeholder.com/50" alt="User Image" />
       <h5>Sarah James</h5>
     </div>
 
     <!-- Join Revolution Section -->
     <div class="container text-center my-5">
-      <h2><strong> Join the Momentum Revolution! </strong></h2>
+      <h2>Join the Momentum Revolution!</h2>
     </div>
 
     <!-- Social Icons Section -->
     <div class="container text-center mb-5">
       <div class="social-icons">
         <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-twitter text-info"></i></a>
-        <a href="#"><i class="instagram fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-tiktok text-dark"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
       </div>
     </div>
 
     <div class="container form-container">
-      <h2 class="mb-5"><strong> Get in Touch Now! </strong></h2>
+      <h2 class="mb-5">Get in Touch Now!</h2>
       <form>
         <div class="row mb-4">
           <!-- Name input -->
@@ -491,102 +400,12 @@
           </div>
         </div>
         <!-- Submit button -->
-        <button type="submit" class="btn send-btn mb-5">Send it!</button>
+        <button type="submit" class="btn send-btn">Send it!</button>
       </form>
     </div>
-    <!-- footer -->
-    <footer class="bg-black text-white flex flex-col p-10 max-md:p-6">
-      <div
-        class="flex justify-between space-x-4 [&_h2]:font-bold max-md:flex-col max-md:space-x-0 max-md:space-y-4"
-      >
-        <div class="flex flex-col space-y-4 w-full">
-          <h2>Company Info</h2>
-          <div>
-            <p>About Momentom</p>
-            <p>Affliate & Influencer Earn Commission</p>
-            <p>Contact Us</p>
-            <p>Press</p>
-            <p>Careers</p>
-          </div>
-        </div>
 
-        <div class="flex flex-col space-y-4 w-full">
-          <h2>Customer Service</h2>
-          <div>
-            <p>Return and Refund Policy</p>
-            <p>Shippping Info</p>
-            <p>Report Suspicious Actvity</p>
-            <p>Intellectual Property Policy</p>
-          </div>
-        </div>
-
-        <div class="flex flex-col space-y-4 w-full">
-          <h2>Help</h2>
-          <div>
-            <p>Support Center and FAQ</p>
-            <p>Safety Center</p>
-            <p>Partner with Momentom</p>
-            <p>Shippping Info</p>
-          </div>
-        </div>
-
-        <div class="lg:mt-auto w-full">
-          <div class="space-y-4">
-            <h2>New to Momentom ?</h2>
-            <p>
-              Subscribe to our newsletter to get updates on our latest offers!
-            </p>
-            <div class="space-x-2">
-              <input
-                type="text"
-                name="email"
-                placeholder="Email Address"
-                class="p-2 rounded-[5px]"
-              />
-              <button
-                class="bg-gradient-to-r from-[#D618CE] to-[#161515] p-2 rounded-[5px] uppercase"
-              >
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="w-full max-w-full h-[0.05rem] bg-gray-300 mx-auto my-5"></div>
-
-      <div
-        class="flex justify-between max-md:flex-col max-md:justify-center max-md:items-center max-md:space-y-14"
-      >
-        <div
-          class="space-y-3 max-md:flex max-md:flex-col max-md:justify-center max-md:items-center"
-        >
-          <p>We accept</p>
-          <div class="flex gap-2">
-            <img src="./src/images/visa.png" alt="visa-card" />
-            <img src="./src/images/mastercard.png" alt="mastercard" />
-            <img src="./src/images/zelle.png" alt="zelle" />
-            <img
-              src="./src/images/apple-google-pay.png"
-              alt="apple-google-pay"
-            />
-          </div>
-        </div>
-
-        <div
-          class="space-y-4 max-md:flex max-md:flex-col max-md:justify-center max-md:items-center"
-        >
-          <div class="flex gap-2">
-            <img src="./src/images/google-play.png" alt="google-play" />
-            <img src="./src/images/apple-store.png" alt="apple-store" />
-          </div>
-          <div>
-            <p class="text-2xl font-extrabold text-center">
-              &copy; 2024 Momentom. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <!-- FontAwesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   </body>
