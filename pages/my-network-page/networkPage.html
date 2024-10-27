@@ -8,20 +8,629 @@
       src="https://kit.fontawesome.com/a076d05399.js"
       crossorigin="anonymous"
     ></script>
-
-    <title>Document</title>
+    <link rel="stylesheet" href="./networkPage.css" />
+    <!-- ========================================= -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>My Network</title>
   </head>
   <body>
-    <nav>
-      <div>
-        <img
-          src="../../src/images/momentom-logo-small.png"
-          alt="momentom-logo"
-        />
+    <!-- =================================================== -->
+    <!-- main container -->
+    <main class="main_container">
+      <!-- =================================================== -->
+      <!-- nav container -->
+      <div class="nav_container">
+        <!-- =================================================== -->
+        <!-- Nav -->
+        <nav class="nav">
+          <!-- =================================================== -->
+          <!-- Nav Logo container -->
+          <div class="nav_logo_container">
+            <!-- =================================================== -->
+            <!-- Nav Logo -->
+            <img
+              src="../../src/images/nav_logo.png"
+              alt="nav_logo"
+              class="nav_logo"
+            />
+          </div>
+
+          <!-- =================================================== -->
+          <!-- Search container-->
+          <div class="search_container">
+            <!-- =================================================== -->
+            <!-- Search Icon -->
+            <img
+              src="../../src/images/white_search_icon.png"
+              alt="search_icon"
+              class="search_icon"
+            />
+          </div>
+          <!-- =================================================== -->
+          <!-- Navigation Links Container -->
+          <div class="navigation_link_container">
+            <!-- Link Container -->
+            <ul class="link_container">
+              <li>
+                <!-- =================================================== -->
+                <!-- Link -->
+                <a href="" class="link">
+                  <!-- =================================================== -->
+                  <!-- Link icon -->
+                  <img
+                    src="../../src/images/home_icon.png"
+                    alt="home_icon"
+                    class="link_icon"
+                  />
+
+                  <!-- =================================================== -->
+                  <!-- Link name -->
+                  <h2 class="link_name">Home</h2>
+                </a>
+              </li>
+
+              <li>
+                <!-- =================================================== -->
+                <!-- Link -->
+                <a href="" class="link">
+                  <!-- =================================================== -->
+                  <!-- contact search link icon -->
+                  <img
+                    src="../../src/images/contact-search.png"
+                    alt="contact-search"
+                    class="contact_serach_icon"
+                  />
+
+                  <!-- =================================================== -->
+                  <!-- Link name -->
+                  <h2 class="link_name">Peers</h2>
+
+                  <!-- =================================================== -->
+                  <!-- new notifcations-->
+                  <div class="new_notifications"></div>
+                </a>
+              </li>
+
+              <li>
+                <!-- =================================================== -->
+                <!-- Link  -->
+                <a href="" class="link">
+                  <!-- =================================================== -->
+                  <!-- Link icon -->
+                  <img
+                    src="../../src/images/notification.png"
+                    alt="notification"
+                    class="link_icon"
+                  />
+
+                  <!-- =================================================== -->
+                  <!-- Link name -->
+                  <h2 class="link_name">Notification</h2>
+
+                  <!-- =================================================== -->
+                  <!-- new notifcations-->
+                  <div class="new_notifications"></div>
+                </a>
+              </li>
+
+              <li>
+                <!-- =================================================== -->
+                <!-- Link -->
+                <a href="" class="link">
+                  <!-- =================================================== -->
+                  <!-- Link icon -->
+                  <img
+                    src="../../src/images/video-icon.png"
+                    alt="video-icon"
+                    class="link_icon"
+                  />
+
+                  <!-- =================================================== -->
+                  <!-- Link name -->
+                  <h2 class="link_name">Videos</h2>
+                </a>
+              </li>
+
+              <!-- =================================================== -->
+              <!-- Drop down container -->
+              <div class="drop_down_container">
+                <!-- =================================================== -->
+                <!-- drop down icon -->
+                <img
+                  src="../../src/images/drop_down_icon.png"
+                  alt="drop_down_container"
+                  class="drop_down_icon"
+                />
+              </div>
+
+              <!-- =================================================== -->
+              <!-- Profile Picture container -->
+              <div class="profile_picture_container">
+                <!-- =================================================== -->
+                <!--  profile picture-->
+                <img
+                  src="../../src/images/user_profile.png"
+                  alt="user_profile"
+                  class="profile_picture"
+                />
+
+                <!-- =================================================== -->
+                <!-- user name -->
+                <h2 class="user_name">Hello , Aditi</h2>
+              </div>
+            </ul>
+          </div>
+        </nav>
       </div>
-      <div>
-        <input type="text" name="search" class="bg-red-400" />
+
+      <!-- =================================================== -->
+      <!-- General section -->
+      <div class="general_section">
+        <!-- =================================================== -->
+        <!-- side bar container -->
+        <section class="side_bar_container">
+          <!-- =================================================== -->
+          <!-- user -->
+          <div class="user">
+            <!-- =================================================== -->
+            <!-- privacy container list -->
+            <div class="privacy_container_list">
+              <!-- =================================================== -->
+              <!-- privacy item -->
+              <div class="privacy_item">
+                <!-- =================================================== -->
+                <!-- item icon -->
+                <img
+                  src="../../src/images/E_commerce_icon.png"
+                  alt="E_commerce_icon"
+                  class="item_icon"
+                />
+
+                <!-- =================================================== -->
+                <!-- item name-->
+                <h2 class="item_name">E Commerce</h2>
+              </div>
+
+              <!-- =================================================== -->
+              <!-- privacy item -->
+              <div class="privacy_item">
+                <!-- =================================================== -->
+                <!-- item icon -->
+                <img
+                  src="../../src/images/Photo_icon.png"
+                  alt="Photo_icon"
+                  class="item_icon"
+                />
+
+                <!-- =================================================== -->
+                <!-- item name-->
+                <h2 class="item_name">Photos</h2>
+              </div>
+
+              <!-- =================================================== -->
+              <!-- privacy item -->
+              <div class="privacy_item">
+                <!-- =================================================== -->
+                <!-- item icon -->
+                <img
+                  src="../../src/images/settings-icon.png"
+                  alt="settings-icon"
+                  class="item_icon"
+                />
+
+                <!-- =================================================== -->
+                <!-- item name-->
+                <h2 class="item_name">Setting</h2>
+              </div>
+
+              <!-- =================================================== -->
+              <!-- privacy item -->
+              <div class="privacy_item">
+                <!-- =================================================== -->
+                <!-- item icon -->
+                <img
+                  src="../../src/images/group-chats-icon.png"
+                  alt="group-chats-icon"
+                  class="item_icon"
+                />
+
+                <!-- =================================================== -->
+                <!-- item name-->
+                <h2 class="item_name">Group chats</h2>
+              </div>
+            </div>
+
+            <!-- =================================================== -->
+            <!-- user channels -->
+            <div class="user_channels">
+              <!-- =================================================== -->
+              <!-- channels title -->
+              <h2 class="channel_title">Your Channels</h2>
+
+              <!-- =================================================== -->
+              <!-- list of user channels -->
+              <div class="list_of_user_channels">
+                <!-- =================================================== -->
+                <!-- channel-->
+                <div class="channel">
+                  <!-- =================================================== -->
+                  <!-- channel profile -->
+                  <div class="channel_profile"></div>
+
+                  <!-- =================================================== -->
+                  <!-- channel name -->
+                  <h2 class="channel_name">SRM University of .....</h2>
+                </div>
+
+                <!-- =================================================== -->
+                <!-- channel-->
+                <div class="channel">
+                  <!-- =================================================== -->
+                  <!-- channel profile-->
+                  <div class="channel_profile"></div>
+
+                  <!-- =================================================== -->
+                  <!-- channel name-->
+                  <h2 class="channel_name">IIT Madras</h2>
+                </div>
+
+                <!-- =================================================== -->
+                <!-- channel -->
+                <div class="channel">
+                  <!-- =================================================== -->
+                  <!-- channel profile-->
+                  <div class="channel_profile"></div>
+
+                  <!-- =================================================== -->
+                  <!-- channel name-->
+                  <h2 class="channel_name">SRMIST RMP</h2>
+                </div>
+
+                <!-- =================================================== -->
+                <!-- channel-->
+                <div class="channel">
+                  <!-- =================================================== -->
+                  <!-- channel profile-->
+                  <div class="channel_profile"></div>
+
+                  <!-- =================================================== -->
+                  <!-- channel name-->
+                  <h2 class="channel_name">The Chennai Intern...</h2>
+                </div>
+
+                <!-- =================================================== -->
+                <!-- channel -->
+                <div class="channel">
+                  <!-- =================================================== -->
+                  <!-- channel profile-->
+                  <div class="channel_profile"></div>
+
+                  <!-- =================================================== -->
+                  <!-- channel name-->
+                  <h2 class="channel_name">Python Community</h2>
+                </div>
+
+                <!-- =================================================== -->
+                <!-- channel -->
+                <div class="channel">
+                  <!-- =================================================== -->
+                  <!-- channel profile-->
+                  <div class="channel_profile"></div>
+
+                  <!-- =================================================== -->
+                  <!-- channel name-->
+                  <h2 class="channel_name">Stanford University</h2>
+                </div>
+
+                <!-- =================================================== -->
+                <!-- channel-->
+                <div class="channel">
+                  <!-- =================================================== -->
+                  <!-- channel profile-->
+                  <div class="channel_profile"></div>
+
+                  <!-- =================================================== -->
+                  <!-- channel name-->
+                  <h2 class="channel_name">Memes</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- =================================================== -->
+          <!-- Terms & condition container -->
+          <div class="terms_and_condition_container">
+            <h3>Terms and conditions</h3>
+          </div>
+        </section>
+
+        <!-- =================================================== -->
+        <!--  Network container -->
+        <section class="network_container">
+          <!-- =================================================== -->
+          <!-- network nav -->
+          <div class="network_nav">
+            <!-- =================================================== -->
+            <!-- open page container -->
+            <div class="open_page_container">
+              <!-- =================================================== -->
+              <!-- open page list-->
+              <ul class="open_page_list">
+                <!-- =================================================== -->
+                <!-- post page / page -->
+                <li class="post_page page">Posts</li>
+
+                <!-- =================================================== -->
+                <!-- communities page /page-->
+                <li class="communities_page page">Communities</li>
+
+                <!-- =================================================== -->
+                <!-- my network page / page -->
+                <li class="my_network_page page">
+                  My Network
+
+                  <!-- =================================================== -->
+                  <!-- currently open page -->
+                  <div class="currently_open_page"></div>
+                </li>
+
+                <!-- =================================================== -->
+                <!-- collaboration page / page -->
+                <li class="collaboration_page page">Collaborations</li>
+              </ul>
+            </div>
+
+            <!-- =================================================== -->
+            <!-- create post container -->
+            <div class="create_post_container">
+              <!-- =================================================== -->
+              <!-- create post -->
+              <h3 class="create_post">Create a post</h3>
+
+              <!-- =================================================== -->
+              <!-- add post -->
+              <div class="add_post">+</div>
+            </div>
+          </div>
+
+          <!-- =================================================== -->
+          <!-- user network -->
+          <div class="user_network">
+            <!-- =================================================== -->
+            <!-- network -->
+            <div class="networks">
+              <!-- =================================================== -->
+              <!-- about user network -->
+              <div class="about_user_network">
+                <!-- =================================================== -->
+                <!-- user network details-->
+                <article class="user_network_details">
+                  <!-- =================================================== -->
+                  <!-- user network profile-->
+                  <div class="user_network_profile"></div>
+
+                  <!-- =================================================== -->
+                  <!-- user detail-->
+                  <div class="user_detail">
+                    <!-- =================================================== -->
+                    <!-- user network name-->
+                    <h2 class="user_network_name">Sandra Smith</h2>
+
+                    <!-- =================================================== -->
+                    <!-- user network mail-->
+                    <p class="user_network_mail">@s_smith27</p>
+                  </div>
+                </article>
+
+                <!-- =================================================== -->
+                <!-- message user container-->
+                <button class="message_user_container">
+                  <!-- =================================================== -->
+                  <!-- message-->
+                  <h2 class="message">Message</h2>
+
+                  <!-- =================================================== -->
+                  <!-- message send icon-->
+                  <img
+                    src="../../src/images/message_send_icon.png"
+                    alt="message_send_icon"
+                    class="message_send_icon"
+                  />
+                </button>
+
+                <!-- =================================================== -->
+                <!-- remove-->
+                <h2 class="remove">Remove</h2>
+              </div>
+
+              <!-- =================================================== -->
+              <!-- about user network -->
+              <div class="about_user_network">
+                <!-- =================================================== -->
+                <!-- user network details-->
+                <article class="user_network_details">
+                  <!-- =================================================== -->
+                  <!-- user network profile-->
+                  <div class="user_network_profile"></div>
+
+                  <!-- =================================================== -->
+                  <!-- user detail-->
+                  <div class="user_detail">
+                    <!-- =================================================== -->
+                    <!-- user network name-->
+                    <h2 class="user_network_name">Wayne Rodney</h2>
+
+                    <!-- =================================================== -->
+                    <!-- user network mail-->
+                    <p class="user_network_mail">@Rodney2024</p>
+                  </div>
+                </article>
+
+                <!-- =================================================== -->
+                <!-- message user container-->
+                <button class="message_user_container">
+                  <!-- =================================================== -->
+                  <!-- message-->
+                  <h2 class="message">Message</h2>
+
+                  <!-- =================================================== -->
+                  <!-- message send icon-->
+                  <img
+                    src="../../src/images/message_send_icon.png"
+                    alt="message_send_icon"
+                    class="message_send_icon"
+                  />
+                </button>
+
+                <!-- =================================================== -->
+                <!-- remove-->
+                <h2 class="remove">Remove</h2>
+              </div>
+
+              <!-- =================================================== -->
+              <!-- about user network -->
+              <div class="about_user_network">
+                <!-- =================================================== -->
+                <!-- user network details-->
+                <article class="user_network_details">
+                  <!-- =================================================== -->
+                  <!-- user network profile-->
+                  <div class="user_network_profile"></div>
+
+                  <!-- =================================================== -->
+                  <!-- user detail-->
+                  <div class="user_detail">
+                    <!-- =================================================== -->
+                    <!-- user network name-->
+                    <h2 class="user_network_name">David Bones</h2>
+
+                    <!-- =================================================== -->
+                    <!-- user network mail-->
+                    <p class="user_network_mail">@Daveb</p>
+                  </div>
+                </article>
+
+                <!-- =================================================== -->
+                <!-- message user container-->
+                <button class="message_user_container">
+                  <!-- =================================================== -->
+                  <!-- message-->
+                  <h2 class="message">Message</h2>
+
+                  <!-- =================================================== -->
+                  <!-- message send icon-->
+                  <img
+                    src="../../src/images/message_send_icon.png"
+                    alt="message_send_icon"
+                    class="message_send_icon"
+                  />
+                </button>
+
+                <!-- =================================================== -->
+                <!-- remove-->
+                <h2 class="remove">Remove</h2>
+              </div>
+
+              <!-- =================================================== -->
+              <!-- about user network -->
+              <div class="about_user_network">
+                <!-- =================================================== -->
+                <!-- user network details-->
+                <article class="user_network_details">
+                  <!-- =================================================== -->
+                  <!-- user network profile-->
+                  <div class="user_network_profile"></div>
+
+                  <!-- =================================================== -->
+                  <!-- user detail-->
+                  <div class="user_detail">
+                    <!-- =================================================== -->
+                    <!-- user network name-->
+                    <h2 class="user_network_name">Jack Drill</h2>
+
+                    <!-- =================================================== -->
+                    <!-- user network mail-->
+                    <p class="user_network_mail">@Jacky23</p>
+                  </div>
+                </article>
+
+                <!-- =================================================== -->
+                <!-- message user container-->
+                <button class="message_user_container">
+                  <!-- =================================================== -->
+                  <!-- message-->
+                  <h2 class="message">Message</h2>
+
+                  <!-- =================================================== -->
+                  <!-- message send icon-->
+                  <img
+                    src="../../src/images/message_send_icon.png"
+                    alt="message_send_icon"
+                    class="message_send_icon"
+                  />
+                </button>
+
+                <!-- =================================================== -->
+                <!-- remove-->
+                <h2 class="remove">Remove</h2>
+              </div>
+
+              <!-- =================================================== -->
+              <!-- about user network -->
+              <div class="about_user_network">
+                <!-- =================================================== -->
+                <!-- user network details-->
+                <article class="user_network_details">
+                  <!-- =================================================== -->
+                  <!-- user network profile-->
+                  <div class="user_network_profile"></div>
+
+                  <!-- =================================================== -->
+                  <!-- user detail-->
+                  <div class="user_detail">
+                    <!-- =================================================== -->
+                    <!-- user network name-->
+                    <h2 class="user_network_name">Amos Willer</h2>
+
+                    <!-- =================================================== -->
+                    <!-- user network mail-->
+                    <p class="user_network_mail">@willera</p>
+                  </div>
+                </article>
+                <!-- =================================================== -->
+                <!-- message user container-->
+                <button class="message_user_container">
+                  <!-- =================================================== -->
+                  <!-- message-->
+                  <h2 class="message">Message</h2>
+
+                  <!-- =================================================== -->
+                  <!-- message send icon-->
+                  <img
+                    src="../../src/images/message_send_icon.png"
+                    alt="message_send_icon"
+                    class="message_send_icon"
+                  />
+                </button>
+
+                <!-- =================================================== -->
+                <!-- remove-->
+                <h2 class="remove">Remove</h2>
+              </div>
+            </div>
+
+            <!-- =================================================== -->
+            <!-- load more -->
+            <h4 class="loadmore">Load more</h4>
+          </div>
+        </section>
       </div>
-    </nav>
+    </main>
   </body>
 </html>
