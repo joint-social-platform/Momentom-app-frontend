@@ -556,3 +556,13 @@ html {
   justify-content: center;
   font-family: "Catamaran", serif;
 }
+
+/* ================================================ */
+
+/* ================================================ */
+/* Mobile View */
+@media screen and (width <= 764px) {
+  body {
+    background-color: red;
+  }
+}

@@ -414,7 +414,6 @@ html {
   );
 
   border-radius: 15px 0px 0px 0px;
-  border: 3px solid yellow;
 }
 
 /* ========================================================= */
@@ -504,7 +503,6 @@ html {
   display: flex;
   border-radius: 15px;
   background: #28282882;
-  border: 3px solid red;
 }
 
 /* ========================================================= */
