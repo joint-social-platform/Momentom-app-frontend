@@ -37,9 +37,12 @@ html {
   background: #646266;
 }
 
+/* ============================================= */
+/* main container*/
 .main_container {
   height: 100vh;
   padding: 0 2rem;
+  overflow: hidden;
   padding-bottom: 1rem;
   background: #000000;
 }
@@ -165,7 +168,7 @@ html {
 }
 
 /* ============================================= */
-/* Profile Picture container*/
+/*Desktop view  Profile Picture container*/
 .profile_picture_container {
   height: 100%;
   display: flex;
@@ -173,6 +176,12 @@ html {
   align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
+}
+
+/* ============================================= */
+/*Mobile view  Profile Picture container*/
+.mobile_profile_container {
+  display: none;
 }
 
 /* ============================================= */
@@ -189,6 +198,18 @@ html {
   font-weight: 600;
   line-height: 22.96px;
   font-family: "Catamaran", serif;
+}
+
+/* ============================================= */
+/* Mobile bar icon */
+.nav_toggle_container {
+  display: none;
+}
+
+/* ============================================= */
+/*  nav cancel container*/
+.nav_cancel_container {
+  display: none;
 }
 
 /* ============================================= */
@@ -346,6 +367,8 @@ html {
     #531650 80.04%,
     #d618ce 98.42%
   );
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 /* ============================================= */
@@ -384,6 +407,12 @@ html {
   position: relative;
   justify-content: center;
   font-family: sans-serif;
+}
+
+/* ============================================= */
+/*  Mobile View Go back icon  back icon */
+.back_icon {
+  display: none;
 }
 
 /* ============================================= */
@@ -507,6 +536,7 @@ html {
   gap: 1rem;
   height: 40px;
   display: flex;
+  padding: 1rem;
   align-items: center;
   background: linear-gradient(
     234.5deg,
@@ -561,8 +591,442 @@ html {
 
 /* ================================================ */
 /* Mobile View */
-@media screen and (width <= 764px) {
-  body {
-    background-color: red;
+@media screen and (width <= 1023px) {
+  /* ============================================= */
+  /*main container*/
+  .main_container {
+    padding: 0;
+  }
+
+  /* ============================================= */
+  /* nav*/
+  .nav {
+    padding: 0.6rem;
+    position: relative;
+  }
+
+  /* ============================================= */
+  /* Search container*/
+  .search_container {
+    padding: 0;
+    width: max-content;
+  }
+
+  /* ============================================= */
+  /* Navigation Links Container*/
+  .navigation_link_container {
+    top: 0%;
+    right: 0%;
+    width: 60%;
+    z-index: 22;
+    height: 99vh;
+    overflow: hidden;
+    position: absolute;
+    border-radius: 15px;
+    border: 3px solid gray;
+    transition: all 2s linear;
+    transform: translate(110%);
+    background-color: #000000;
+  }
+
+  .open_nav {
+    transform: translate(0%);
+  }
+
+  /* ============================================= */
+  /*Link Container*/
+  .link_container {
+    padding-top: 3rem;
+    position: relative;
+    justify-content: unset;
+    flex-direction: column;
+  }
+
+  /* ============================================= */
+  /*link icon*/
+  .link_icon {
+    width: 22px;
+    height: 18px;
+  }
+
+  /* ============================================= */
+  /*contact serach link icon*/
+  .contact_serach_icon {
+    width: 24px;
+    height: 20px;
+  }
+
+  /* ============================================= */
+  /*Link name*/
+  .link_name {
+    font-size: 1rem;
+  }
+
+  /* ============================================= */
+  /*drop down icon*/
+  .drop_down_icon {
+    display: none;
+  }
+
+  /* ============================================= */
+  /*Desktop view  Profile Picture container*/
+  .profile_picture_container {
+    display: none;
+  }
+
+  /* ============================================= */
+  /*Mobile view  Profile Picture container*/
+  .mobile_profile_container {
+    gap: 0.2rem;
+    display: flex;
+    height: max-content;
+  }
+
+  /* ============================================= */
+  /* Profile Picture */
+  .profile_picture {
+    width: 25px;
+    height: 20px;
+  }
+
+  /* ============================================= */
+  /* user name */
+  .user_name {
+    font-size: 0.8rem;
+  }
+
+  /* ============================================= */
+  /*nav toggle container */
+  .nav_toggle_container {
+    display: block;
+    color: #ffffff;
+    font-size: 1.1rem;
+  }
+
+  /* ============================================= */
+  /*  nav cancel container*/
+  .nav_cancel_container {
+    top: 2%;
+    right: 6%;
+    color: red;
+    display: block;
+    font-size: 1.1rem;
+    position: absolute;
+  }
+
+  /* ============================================= */
+  /*General section */
+  .general_section {
+    height: 89.5%;
+    position: relative;
+  }
+
+  /* ============================================= */
+  /*side bar container */
+  .side_bar_container {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* ============================================= */
+  /* item icon  */
+  .item_icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* ============================================= */
+  /* item name */
+  .item_name {
+    font-size: 1rem;
+  }
+
+  /* ============================================= */
+  /*channels title  */
+  .channel_title {
+    font-size: 1.3rem;
+  }
+
+  /* ============================================= */
+  /*  channel profile */
+  .channel_profile {
+    width: 46px;
+    height: 46px;
+  }
+
+  /* ============================================= */
+  /*  channel name*/
+  .channel_name {
+    font-size: 1rem;
+  }
+
+  /* ============================================= */
+  /*Network container */
+  .network_container {
+    padding: 0;
+    z-index: 5;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    position: absolute;
+    transition: all 1s linear;
+    transform: translate(100%);
+  }
+
+  .open_network_container {
+    opacity: 1;
+    transform: translate(0%);
+  }
+
+  /* ============================================= */
+  /*network nav */
+  .network_nav {
+    gap: 4rem;
+    height: 15%;
+    padding: 0 1rem;
+    overflow-x: scroll;
+    justify-content: space-evenly;
+  }
+
+  /* ============================================= */
+  /*  Mobile View Go back icon  back icon */
+  .back_icon {
+    display: block;
+  }
+
+  /* ============================================= */
+  /*   page */
+  .page {
+    width: max-content;
+    font-size: 0.9rem;
+  }
+
+  /* ============================================= */
+  /*   create post */
+  .create_post {
+    font-size: 0.9rem;
+    width: max-content;
+  }
+
+  /* ============================================= */
+  /*user network */
+  .user_network {
+    height: 85%;
+  }
+
+  /* ============================================= */
+  /*networks */
+  .networks {
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+
+  /* ============================================= */
+  /*about user network */
+  .about_user_network {
+    padding: 0.6rem;
+  }
+
+  /* ============================================= */
+  /*user network details */
+  .user_network_details {
+    min-width: 55%;
+  }
+
+  /* ============================================= */
+  /*user network profile*/
+  .user_network_profile {
+    width: 70px;
+    height: 65px;
+    border-radius: 50%;
+    background: #d9d9d9;
+  }
+
+  /* ============================================= */
+  /*user network name*/
+  .user_network_name {
+    font-size: 0.9rem;
+  }
+
+  /* ============================================= */
+  /*message user container*/
+  .message_user_container {
+    gap: 0.5rem;
+    height: 30px;
+    padding: 0.4rem;
+  }
+
+  /* ============================================= */
+  /*message*/
+  .message {
+    font-size: 0.7rem;
+  }
+
+  /* ============================================= */
+  /*message send icon*/
+  .message_send_icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* ============================================= */
+  /* remove*/
+  .remove {
+    font-size: 0.9rem;
+  }
+}
+
+/* ================================================ */
+
+/* ================================================ */
+/* Ipad View */
+@media screen and (764px <= width <= 1024px) {
+  /* ============================================= */
+  /* Nav logo*/
+  .nav_logo {
+    width: 50px;
+    height: 45px;
+  }
+
+  /* ============================================= */
+  /* search icon*/
+  .search_icon {
+    width: 24px;
+    height: 20px;
+  }
+
+  /* ============================================= */
+  /* profile picture*/
+  .profile_picture {
+    width: 32px;
+    height: 27px;
+  }
+
+  /* ============================================= */
+  /* user name */
+  .user_name {
+    font-size: 0.9rem;
+  }
+
+  /* ============================================= */
+  /* Navigation Links Container*/
+  .navigation_link_container {
+    height: 90vh;
+  }
+
+  /* ============================================= */
+  /*link icon*/
+  .link_icon {
+    width: 24px;
+    height: 20px;
+  }
+
+  /* ============================================= */
+  /*contact serach link icon*/
+  .contact_serach_icon {
+    width: 26px;
+    height: 24px;
+  }
+
+  /* ============================================= */
+  /*Link name*/
+  .link_name {
+    font-size: 1.1rem;
+  }
+
+  /* ============================================= */
+  /*new notification*/
+  .new_notifications {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* ============================================= */
+  /*nav toggle container */
+  .nav_toggle_container {
+    font-size: 1.2rem;
+  }
+
+  /* ============================================= */
+  /* item icon  */
+  .item_icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* ============================================= */
+  /* item name */
+  .item_name {
+    font-size: 1.2rem;
+  }
+
+  /* ============================================= */
+  /*channels title  */
+  .channel_title {
+    font-size: 1.5rem;
+  }
+
+  /* ============================================= */
+  /*  channel profile */
+  .channel_profile {
+    width: 48px;
+    height: 48px;
+  }
+
+  /* ============================================= */
+  /*  channel name*/
+  .channel_name {
+    font-size: 1.2rem;
+  }
+
+  /* ============================================= */
+  /*   page */
+  .page {
+    font-size: 1rem;
+  }
+
+  /* ============================================= */
+  /*   create post */
+  .create_post {
+    font-size: 1rem;
+  }
+
+  /* ============================================= */
+  /*user network profile*/
+  .user_network_profile {
+    width: 72px;
+    height: 67px;
+  }
+
+  /* ============================================= */
+  /*user network name*/
+  .user_network_name {
+    font-size: 1.3rem;
+  }
+
+  /* ============================================= */
+  /*user network mail*/
+  .user_network_mail {
+    font-size: 1rem;
+  }
+
+  /* ============================================= */
+  /*message user container*/
+  .message_user_container {
+    gap: 1rem;
+    height: 40px;
+  }
+
+  /* ============================================= */
+  /*message*/
+  .message {
+    font-size: 1.4rem;
+  }
+
+  /* ============================================= */
+  /* remove*/
+  .remove {
+    font-size: 1.4rem;
   }
 }
