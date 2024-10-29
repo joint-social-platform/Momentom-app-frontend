@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../src/style.css" />
     <script
-      src="https://kit.fontawesome.com/a076d05399.js"
+      src="https://kit.fontawesome.com/f1c61101fc.js"
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="./networkPage.css" />
@@ -150,7 +150,7 @@
               </div>
 
               <!-- =================================================== -->
-              <!-- Profile Picture container -->
+              <!--Desktop View Profile Picture container -->
               <div class="profile_picture_container">
                 <!-- =================================================== -->
                 <!--  profile picture-->
@@ -164,7 +164,39 @@
                 <!-- user name -->
                 <h2 class="user_name">Hello , Aditi</h2>
               </div>
+
+              <!-- =================================================== -->
+              <!-- nav cancel container -->
+              <div class="nav_cancel_container">
+                <!-- =================================================== -->
+                <!-- Mobile bar icon -->
+                <i class="fa-solid fa-x"></i>
+              </div>
             </ul>
+          </div>
+
+          <!-- =================================================== -->
+          <!--Mobile view  Profile Picture container -->
+          <div class="profile_picture_container mobile_profile_container">
+            <!-- =================================================== -->
+            <!--  profile picture-->
+            <img
+              src="../../src/images/user_profile.png"
+              alt="user_profile"
+              class="profile_picture"
+            />
+
+            <!-- =================================================== -->
+            <!-- user name -->
+            <h2 class="user_name">Hello , Aditi</h2>
+          </div>
+
+          <!-- =================================================== -->
+          <!-- nav toggle container -->
+          <div class="nav_toggle_container">
+            <!-- =================================================== -->
+            <!-- Mobile bar icon -->
+            <i class="fa-solid fa-bars"></i>
           </div>
         </nav>
       </div>
@@ -231,13 +263,14 @@
 
               <!-- =================================================== -->
               <!-- privacy item -->
-              <div class="privacy_item">
+              <div class="privacy_item" id="group_chat_btn">
                 <!-- =================================================== -->
                 <!-- item icon -->
                 <img
                   src="../../src/images/group-chats-icon.png"
                   alt="group-chats-icon"
                   class="item_icon"
+                  id="group_chat_btn"
                 />
 
                 <!-- =================================================== -->
@@ -362,6 +395,12 @@
               <!-- =================================================== -->
               <!-- open page list-->
               <ul class="open_page_list">
+                <!-- =================================================== -->
+                <!-- Mobile View Go back icon / page -->
+                <div class="back_icon page">
+                  <i class="fa-solid fa-arrow-left"></i>
+                </div>
+
                 <!-- =================================================== -->
                 <!-- post page / page -->
                 <li class="post_page page">Posts</li>
@@ -632,5 +671,6 @@
         </section>
       </div>
     </main>
+    <script src="./networkPage.js"></script>
   </body>
 </html>
