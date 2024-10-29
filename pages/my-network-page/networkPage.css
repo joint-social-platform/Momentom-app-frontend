@@ -624,8 +624,8 @@ html {
     position: absolute;
     border-radius: 15px;
     border: 3px solid gray;
-    transition: all 2s linear;
     transform: translate(110%);
+    transition: all 0.5s linear;
     background-color: #000000;
   }
 
@@ -770,8 +770,8 @@ html {
     height: 100%;
     border-radius: 0;
     position: absolute;
-    transition: all 1s linear;
     transform: translate(100%);
+    transition: all 0.5s linear;
   }
 
   .open_network_container {
