@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./chat.css" />
     <title>Chat</title>
+    <!-- =========================================== -->
+    <!-- font awesome icon link -->
+    <script
+      src="https://kit.fontawesome.com/f1c61101fc.js"
+      crossorigin="anonymous"
+    ></script>
+
     <!-- ================================================= -->
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -39,6 +46,13 @@
             <!-- =========================================== -->
             <!-- icons container  -->
             <ul class="icons_container">
+              <!-- =========================================== -->
+              <!-- mobile viewcancel nav toggle icon  -->
+              <div class="cancel_nav_toggle_icon">
+                <!-- Mobile veiw close nav toggle -->
+                <i class="fa-solid fa-x"></i>
+              </div>
+
               <li>
                 <!-- =========================================== -->
                 <!-- icons text  -->
@@ -53,6 +67,7 @@
                   home
                 </a>
               </li>
+
               <li>
                 <!-- =========================================== -->
                 <!-- icons text  -->
@@ -71,6 +86,7 @@
                 <!-- new notifications  -->
                 <div class="new_notifications"></div>
               </li>
+
               <li>
                 <!-- =========================================== -->
                 <!-- icons text  -->
@@ -89,7 +105,10 @@
                 <!-- new notifications  -->
                 <div class="new_notifications"></div>
               </li>
-              <li>
+
+              <!-- ======================================= -->
+              <!-- Desktop View Profile Picture container -->
+              <li class="user_profile_picture_container">
                 <!-- =========================================== -->
                 <!-- profile name  -->
                 <a href="" class="profile_name">
@@ -117,6 +136,44 @@
                 </a>
               </li>
             </ul>
+          </div>
+
+          <!-- ======================================= -->
+          <!-- Mobile View Profile Picture container -->
+          <li class="user_profile_picture_container mobile">
+            <!-- =========================================== -->
+            <!-- profile name  -->
+            <a href="" class="profile_name">
+              <!-- =========================================== -->
+              <!-- user profile  -->
+              <img
+                src="../../src/images/user_profile.png"
+                alt="user_profile"
+                class="user_profile"
+              />
+
+              <!-- =========================================== -->
+              <!-- user name  -->
+              <div class="user_profile_name">
+                Hello , Aditi
+
+                <!-- =========================================== -->
+                <!-- play icon  -->
+                <img
+                  src="../../src/images/play_icon.png"
+                  alt="play_icon"
+                  class="play_icon"
+                />
+              </div>
+            </a>
+          </li>
+
+          <!-- =========================================== -->
+          <!-- mobile view nav toggle icon -->
+          <div class="nav_toggle">
+            <!-- ==================================== -->
+            <!-- mobile view bar icon  -->
+            <i class="fa-solid fa-bars"></i>
           </div>
         </nav>
       </div>
@@ -601,6 +658,13 @@
           <!-- rooms container  -->
           <div class="rooms_container">
             <!-- =========================================== -->
+            <!--mobile view back icon -->
+            <div class="back_icon">
+              <!-- back page icon -->
+              <i class="fa-solid fa-arrow-left"></i>
+            </div>
+
+            <!-- =========================================== -->
             <!-- room kind -->
             <div class="room_kinds">
               <!-- =========================================== -->
@@ -620,11 +684,22 @@
             </div>
 
             <!-- =========================================== -->
+            <!-- mobile view see active friends container-->
+            <div class="see_active_friend_container">
+              <!-- =========================================== -->
+              <!-- see active friends-->
+              <h2 class="see_active_friends">see active friends</h2>
+
+              <!--  active green div -->
+              <div class="active_green_div"></div>
+            </div>
+
+            <!-- =========================================== -->
             <!-- craete room container-->
             <div class="create_room_container">
               <!-- =========================================== -->
               <!-- chat container section -->
-              <h2>create room</h2>
+              <h2 class="create_room">create room</h2>
 
               <!-- =========================================== -->
               <!-- add icon -->
@@ -1052,5 +1127,6 @@
         </section>
       </div>
     </div>
+    <script src="./ChatPage.js"></script>
   </body>
 </html>
