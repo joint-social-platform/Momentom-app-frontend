@@ -105,6 +105,12 @@ html {
 }
 
 /* ========================================================= */
+/*mobile viewcancel nav toggle icon */
+.cancel_nav_toggle_icon {
+  display: none;
+}
+
+/* ========================================================= */
 /* icons text and profile name */
 .icon_text,
 .profile_name {
@@ -138,6 +144,12 @@ html {
   position: absolute;
   border-radius: 50%;
   background: #d61818;
+}
+
+/* ========================================================= */
+/* Mobile View Profile Picture container */
+.mobile {
+  display: none;
 }
 
 /* ========================================================= */
@@ -315,6 +327,7 @@ html {
   margin-top: 2rem;
   grid-column: auto;
   overflow-y: scroll;
+  padding-bottom: 5rem;
   scroll-behavior: smooth;
   height: calc(65% - 5rem);
 }
@@ -424,6 +437,13 @@ html {
   justify-content: space-between;
 }
 
+/*
+========================================================= */
+/* mobile view back icon */
+.back_icon {
+  display: none;
+}
+
 /* ========================================================= */
 /*room kind  */
 .room_kinds {
@@ -465,6 +485,12 @@ html {
 /* opened room */
 .opened_room {
   background-color: white;
+}
+
+/* ========================================================= */
+/*  mobile view see active friends container */
+.see_active_friend_container {
+  display: none;
 }
 
 /* ========================================================= */
@@ -847,4 +873,683 @@ html {
   font-size: 0.9rem;
   line-height: 32.8px;
   font-family: "Catamaran", serif;
+}
+
+/* ============================================================= */
+
+/* ============================================================= */
+/* Mobile View */
+@media screen and (width <= 1023px) {
+  /* ========================================================= */
+  /* scroll bar width */
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  /* ========================================================= */
+  /* General container */
+  .general_container {
+    overflow: hidden;
+  }
+  /* ========================================================= */
+  /* nav bar */
+  .nav {
+    position: relative;
+  }
+
+  /* ========================================================= */
+  /*  Desktop View Profile Picture container*/
+  .user_profile_picture_container {
+    display: none;
+  }
+
+  /* ========================================================= */
+  /* Mobile View Profile Picture container */
+  .mobile {
+    display: block;
+  }
+
+  /* ========================================================= */
+  /* user profile */
+  .user_profile {
+    width: 35px;
+    height: 30px;
+  }
+
+  /* ========================================================= */
+  /* user profile name */
+  .user_profile_name {
+    font-size: 0.8rem;
+  }
+
+  /* ========================================================= */
+  /* play icon */
+  .play_icon {
+    display: none;
+  }
+
+  /* ========================================================= */
+  /* navigation icons */
+  .navigation_icons {
+    top: 0%;
+    right: 0;
+    width: 70%;
+    z-index: 22;
+    height: 98vh;
+    padding: 3rem 1rem;
+    position: absolute;
+    border-radius: 15px;
+    flex-direction: column;
+    justify-content: start;
+    transform: translate(110%);
+    transition: all 300ms linear;
+    background-color: #000000;
+    box-shadow: -3px 3px 4px lightgray;
+  }
+
+  /* ========================================================= */
+  /* open nav */
+  .open_nav {
+    transform: translate(0%);
+  }
+
+  /* ========================================================= */
+  /* icons container */
+  .icons_container {
+    gap: 1.5rem;
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+  }
+
+  /* ========================================================= */
+  /*mobile viewcancel nav toggle icon */
+  .cancel_nav_toggle_icon {
+    top: -20%;
+    right: 3%;
+    color: red;
+    display: block;
+    position: absolute;
+  }
+
+  /* ========================================================= */
+  /* icons text */
+  .icon_text {
+    font-size: 0.8rem;
+  }
+
+  /* ========================================================= */
+  /* icons  */
+  .icons {
+    width: 24px;
+    height: 20px;
+  }
+
+  /* ============================================= */
+  /*contact serach link icon*/
+  .contact_serach_icon {
+    width: 26px;
+    height: 22px;
+  }
+
+  /* ========================================================= */
+  /* new notifications  */
+  .new_notifications {
+    right: 20%;
+    width: 10px;
+    height: 10px;
+  }
+
+  /* ========================================================= */
+  /* mobile view nav toggle icon */
+  .nav_toggle {
+    width: 10%;
+    color: #ffffff;
+    font-size: 1.1rem;
+  }
+
+  /* ========================================================= */
+  /* general chat setup container */
+  .general_chat_setup_container {
+    height: 88vh;
+    flex-direction: column;
+  }
+
+  /* ========================================================= */
+  /*  freinds section */
+  .friends {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  /* ========================================================= */
+  /*  open freinds section */
+  .close_friends_list {
+    display: none;
+  }
+
+  /* ========================================================= */
+  /*  message title container */
+  .message_title_container {
+    height: 14%;
+    width: 90%;
+  }
+
+  /* ========================================================= */
+  /*  search message container*/
+  .search_message_container {
+    height: 8%;
+    width: 90%;
+  }
+
+  /* ========================================================= */
+  /*  active chat message */
+  .active_chat_messages {
+    width: 100%;
+    height: 63%;
+    margin-top: 0;
+    padding: 0.6rem;
+  }
+
+  /* ========================================================= */
+  /*  recent friends chat container */
+  .recent_friends_chat_container {
+    padding: 0.4rem;
+  }
+
+  /* ========================================================= */
+  /* chat container section */
+  .chat_container {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 0;
+    transform: translate(100%);
+    transition: all 300ms linear;
+  }
+
+  /* ========================================================= */
+  /* open chat container section */
+  .open_chat {
+    opacity: 1;
+    transform: translate(0);
+  }
+
+  /* ========================================================= */
+  /* rooms container */
+  .rooms_container {
+    gap: 2rem;
+    width: 100%;
+    padding: 0 0.5rem;
+    overflow-y: hidden;
+    overflow-x: scroll;
+  }
+
+  /* ========================================================= */
+  /* mobile view back icon */
+  .back_icon {
+    display: flex;
+    color: #ffffff;
+    align-items: center;
+  }
+
+  /* ========================================================= */
+  /*room kind  */
+  .room_kinds {
+    gap: 2rem;
+    width: max-content;
+  }
+
+  /* ========================================================= */
+  /* room */
+  .room {
+    width: max-content;
+    font-size: 0.8rem;
+  }
+
+  /* ========================================================= */
+  /* craete room container */
+  .create_room_container {
+    gap: 1rem;
+    width: max-content;
+  }
+
+  /* ========================================================= */
+  /* craete room */
+  .create_room {
+    font-size: 0.95rem;
+    width: max-content;
+  }
+
+  /* ========================================================= */
+  /* add icon */
+  .add_icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  /* ========================================================= */
+  /*  see active friends container */
+  .see_active_friend_container {
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  /* ========================================================= */
+  /*  see active friends */
+  .see_active_friends {
+    color: white;
+    font-weight: 600;
+    width: max-content;
+    font-size: 0.85rem;
+    line-height: 18.15px;
+    text-transform: capitalize;
+    font-family: "Inter", sans-serif;
+  }
+
+  /* ========================================================= */
+  /*  active green div */
+  .active_green_div {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #31b957;
+  }
+
+  /* ========================================================= */
+  /* chatting page  container */
+  .chatting_page_container {
+    border-radius: 0;
+  }
+
+  /* ========================================================= */
+  /* chatting page  */
+  .chatting_page {
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+  }
+
+  /* ========================================================= */
+  /* chatting page  */
+  .close_chatting_page {
+    display: none;
+  }
+
+  /* ========================================================= */
+  /* chatting page  */
+  .currently_chatting_friend {
+    padding: 0;
+  }
+
+  /* ========================================================= */
+  /* sender messages  */
+  .sender_message {
+    font-size: 0.8rem;
+  }
+
+  /* ========================================================= */
+  /* receiver messages  */
+  .receiver_message {
+    font-size: 0.8rem;
+  }
+
+  /* ========================================================= */
+  /* call_icon*/
+  .call_icon {
+    width: 17px;
+    height: 17px;
+  }
+
+  /* ========================================================= */
+  /* video_call_icon */
+  .video_call_icon {
+    width: 20px;
+    height: 18px;
+  }
+
+  /* ========================================================= */
+  /* help_icon  */
+  .help_icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* ========================================================= */
+  /* typing area container */
+  .typing_area_container {
+    padding: 0.5rem;
+  }
+
+  /* ========================================================= */
+  /* typing area */
+  .typing_area {
+    width: 70%;
+    padding: 0 0.5rem;
+  }
+
+  /* ========================================================= */
+  /*  mic recoder icon  */
+  .mic_recoder_icon {
+    width: 12px;
+    height: 15px;
+  }
+
+  /* ========================================================= */
+  /*  typing area  icon  */
+  :is(.send_arrow_icon, .gallery_icon, .emoji_icon) {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* ========================================================= */
+  /* active friends list  */
+  .active_friends_list {
+    width: 100%;
+    display: none;
+  }
+
+  /* ========================================================= */
+  /* open active friends list  */
+  .open_active_friends_list {
+    display: block;
+  }
+
+  /* ========================================================= */
+  /* Direct title */
+  .direct_title {
+    font-size: 1.2rem;
+  }
+
+  /* ========================================================= */
+  /* active group list*/
+  .active_group_list {
+    padding: 0.5rem 0;
+  }
+
+  /* ========================================================= */
+  /* group profile picture  */
+  .group_profile_picture {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* ========================================================= */
+  /* group online status  */
+  .group_online_status {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* ========================================================= */
+  /*  group name  */
+  .group_name {
+    font-size: 1rem;
+  }
+}
+
+/* ============================================================= */
+
+/* ============================================================= */
+/* Ipad View */
+@media screen and (764px <= width <= 1023px) {
+  /* ========================================================= */
+  /* nav logo */
+  .nav_logo {
+    width: 50px;
+    height: 45px;
+  }
+
+  /* ========================================================= */
+  /* user profile */
+  .user_profile {
+    width: 40px;
+    height: 34px;
+  }
+
+  /* ========================================================= */
+  /* user profile name */
+  .user_profile_name {
+    font-size: 1rem;
+  }
+
+  /* ========================================================= */
+  /*mobile viewcancel nav toggle icon */
+  .cancel_nav_toggle_icon {
+    top: -10%;
+    font-size: 1.3rem;
+  }
+
+  /* ========================================================= */
+  /* icons text */
+  .icon_text {
+    font-size: 1rem;
+  }
+
+  /* ========================================================= */
+  /* icons  */
+  .icons {
+    width: 28px;
+    height: 24px;
+  }
+
+  /* ============================================= */
+  /*contact serach link icon*/
+  .contact_serach_icon {
+    width: 30px;
+    height: 26px;
+  }
+
+  /* ========================================================= */
+  /* new notifications  */
+  .new_notifications {
+    width: 15px;
+    height: 15px;
+  }
+
+  /* ========================================================= */
+  /*  message title  */
+  .message_title {
+    font-size: 1.5rem;
+  }
+
+  /* ========================================================= */
+  /*  edit icon  */
+  .edit_icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  /* ========================================================= */
+  /*  search icon */
+  .search_icon {
+    width: 23px;
+    height: 20px;
+  }
+
+  /* ========================================================= */
+  /*  search input  */
+  .search_input {
+    font-size: 1.3rem;
+  }
+
+  /* ========================================================= */
+  /*  reload icon  */
+  .reload_icon {
+    width: 21px;
+    height: 18px;
+  }
+
+  /* ========================================================= */
+  /*  chat header title  */
+  .chat_header_title {
+    font-size: 1.2rem;
+  }
+
+  /* ========================================================= */
+  /* friends profile */
+  .friends_profile {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* ========================================================= */
+  /* friend name */
+  .friend_name {
+    font-size: 1.1rem;
+  }
+
+  /* ========================================================= */
+  /* friends emoji */
+  .friend_emoji {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* ========================================================= */
+  /* recent message*/
+  .recent_message {
+    font-size: 0.9rem;
+  }
+
+  /* ========================================================= */
+  /* camera icon*/
+  .camera_icon {
+    width: 23px;
+    height: 21px;
+  }
+
+  /* ========================================================= */
+  /* mobile view back icon */
+  .back_icon {
+    font-size: 1.2rem;
+  }
+
+  /* ========================================================= */
+  /* rooms container */
+  .rooms_container {
+    padding: 1rem;
+    align-items: center;
+  }
+
+  /* ========================================================= */
+  /* room */
+  .room {
+    font-size: 0 1rem;
+    width: max-content;
+  }
+
+  /* ========================================================= */
+  /* craete room */
+  .create_room {
+    font-size: 1.1rem;
+  }
+
+  /* ========================================================= */
+  /*  see active friends */
+  .see_active_friends {
+    font-size: 1rem;
+  }
+
+  /* ========================================================= */
+  /* chatting page  */
+  .chatting_page {
+    padding: 1rem;
+  }
+
+  /* ========================================================= */
+  /* profile picture  */
+  .profile_picture {
+    width: 55px;
+    height: 55px;
+  }
+
+  /* ========================================================= */
+  /* active user name  */
+  .active_user_name {
+    font-size: 1.3rem;
+  }
+
+  /* ========================================================= */
+  /* last seen */
+  .last_seen {
+    font-size: 0.8rem;
+  }
+
+  /* ========================================================= */
+  /* call_icon*/
+  .call_icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* ========================================================= */
+  /* video_call_icon */
+  .video_call_icon {
+    width: 22px;
+    height: 20px;
+  }
+
+  /* ========================================================= */
+  /* help_icon  */
+  .help_icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* ========================================================= */
+  /* sender messages  */
+  .sender_message {
+    font-size: 1rem;
+  }
+
+  /* ========================================================= */
+  /* receiver messages  */
+  .receiver_message {
+    font-size: 1rem;
+  }
+
+  /* ========================================================= */
+  /*  mic recoder icon  */
+  .mic_recoder_icon {
+    width: 14px;
+    height: 18px;
+  }
+
+  /* ========================================================= */
+  /*  typing area  icon  */
+  :is(.send_arrow_icon, .gallery_icon, .emoji_icon) {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* ========================================================= */
+  /* Direct title */
+  .direct_title {
+    font-size: 1.6rem;
+  }
+
+  /* ========================================================= */
+  /* group profile picture  */
+  .group_profile_picture {
+    width: 48px;
+    height: 48px;
+  }
+
+  /* ========================================================= */
+  /* group online status  */
+  .group_online_status {
+    width: 15px;
+    height: 15px;
+  }
+
+  /* ========================================================= */
+  /*  group name  */
+  .group_name {
+    font-size: 1.3rem;
+  }
 }
