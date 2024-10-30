@@ -1,0 +1,12 @@
+@import "../../index.css";
+
+body {
+  background: url("../../src/images/background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100dvh;
+}
+
+.icons {
+  font-size: 30px;
+}
