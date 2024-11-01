@@ -3,6 +3,7 @@
 body {
   background: url("../../src/images/background.png");
   background-repeat: no-repeat;
+  background-size: cover;
   background-attachment: fixed;
   height: 100dvh;
 }
