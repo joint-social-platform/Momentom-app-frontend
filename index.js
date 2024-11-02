@@ -11,3 +11,8 @@ closeIcon.addEventListener("click", function () {
   navLinks.classList.remove("translate-x-0");
   navLinks.classList.add("translate-x-full");
 });
+
+document.addEventListener("scroll", function () {
+  navLinks.classList.remove("translate-x-0");
+  navLinks.classList.add("translate-x-full");
+});

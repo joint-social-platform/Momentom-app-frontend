@@ -12,17 +12,20 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script defer src="./login.js"></script>
     <title>Login</title>
   </head>
   <body>
     <div class="flex flex-col lg:flex-row h-screen">
       <div class="relative flex flex-col lg:w-1/2 p-4 lg:p-10">
         <div class="absolute top-4 left-4 lg:left-10">
-          <img
-            src="../../src/images/momentom-logo.png"
-            alt="momentom-logo"
-            class="h-12 lg:h-16"
-          />
+          <a href="../../index.html">
+            <img
+              src="../../src/images/momentom-logo.png"
+              alt="momentom-logo"
+              class="h-12 lg:h-16"
+            />
+          </a>
         </div>
 
         <div
@@ -35,13 +38,14 @@
           </h1>
 
           <form
-            class="flex flex-col [&_label]:text-white [&_input]:outline-none space-y-3 w-full max-w-xs lg:max-w-sm"
+            class="form-login flex flex-col [&_label]:text-white [&_input]:outline-none space-y-3 w-full max-w-xs lg:max-w-sm"
           >
             <label for="email">Email</label>
             <input
               type="email"
               name="email"
               id="email"
+              value="test@gmail.com"
               class="p-2 border rounded"
             />
 
@@ -51,6 +55,7 @@
               name="password"
               id="password"
               class="p-2 border rounded"
+              value="test"
             />
 
             <p class="text-sm text-white ml-auto hover:underline">
@@ -87,11 +92,17 @@
               <i class="fa-brands fa-twitter" style="color: #1da1f2"></i>
               <i class="fa-brands fa-tiktok" style="color: #010101"></i>
             </div>
+            <p class="text-white">
+              Don't have an account?
+              <a class="text-purple-900" href="../createAccountPage/create.html"
+                >Create an Account</a
+              >
+            </p>
           </div>
         </div>
 
         <p
-          class="absolute bottom-4 lg:left-2 w-full text-center text-white text-sm"
+          class="absolute bottom-0 lg:left-2 w-full text-center text-white text-sm"
         >
           &copy; 2024 Momentom. All rights reserved.
         </p>
