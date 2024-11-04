@@ -50,7 +50,7 @@ ul li {
   cursor: pointer;
 }
 
-nav button {
+header nav button {
   padding: 0.8rem 1.5rem;
   background-color: black;
   color: white;
