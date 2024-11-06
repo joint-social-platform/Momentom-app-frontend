@@ -1,23 +1,946 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ================================================ -->
+    <!-- index css -->
+    <link rel="stylesheet" href="../../index.css" />
+
+    <script
+      src="https://kit.fontawesome.com/f1c61101fc.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- ============================================== -->
+    <!-- profile page css -->
+    <link rel="stylesheet" href="./profile.css" />
+
+    <!-- ========================================= -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Profile Page</title>
-</head>
-<body>
-    <div class="">
-        <h1>WELCOME BACK</h1>
-        <div class="box">
-            <label for="email">Email</label><br>
-            <input type="email" id="email"><br><br>
+  </head>
+  <body>
+    <!-- =================================================== -->
+    <!-- main container -->
+    <main class="main_container">
+      <!-- =================================================== -->
+      <!-- nav container -->
+      <div class="nav_container">
+        <!-- =================================================== -->
+        <!-- Nav -->
+        <nav class="nav">
+          <!-- =================================================== -->
+          <!-- Nav Logo container -->
+          <div class="nav_logo_container">
+            <!-- =================================================== -->
+            <!-- Nav Logo -->
+            <img
+              src="../../src/images/nav_logo.png"
+              alt="nav_logo"
+              class="nav_logo"
+            />
+          </div>
 
-            <label for="password">Password</label><br>
-            <input type="password" id="password">
-            <a href="#">Forgotten </a>
+          <!-- =================================================== -->
+          <!-- Search container-->
+          <div class="search_container">
+            <!-- =================================================== -->
+            <!-- Search Icon -->
+            <img
+              src="../../src/images/white_search_icon.png"
+              alt="search_icon"
+              class="search_icon"
+            />
+          </div>
+          <!-- =================================================== -->
+          <!-- Navigation Links Container -->
+          <div class="navigation_link_container">
+            <!-- Link Container -->
+            <ul class="link_container">
+              <li>
+                <!-- =================================================== -->
+                <!-- Link -->
+                <a href="" class="link">
+                  <!-- =================================================== -->
+                  <!-- Link icon -->
+                  <img
+                    src="../../src/images/home_icon.png"
+                    alt="home_icon"
+                    class="link_icon"
+                  />
 
-            <button>click</button>
+                  <!-- =================================================== -->
+                  <!-- Link name -->
+                  <h2 class="link_name">Home</h2>
+                </a>
+              </li>
+
+              <li>
+                <!-- =================================================== -->
+                <!-- Link -->
+                <a href="" class="link">
+                  <!-- =================================================== -->
+                  <!-- contact search link icon -->
+                  <img
+                    src="../../src/images/contact-search.png"
+                    alt="contact-search"
+                    class="contact_serach_icon"
+                  />
+
+                  <!-- =================================================== -->
+                  <!-- Link name -->
+                  <h2 class="link_name">Peers</h2>
+
+                  <!-- =================================================== -->
+                  <!-- new notifcations-->
+                  <div class="new_notifications"></div>
+                </a>
+              </li>
+
+              <li>
+                <!-- =================================================== -->
+                <!-- Link  -->
+                <a href="" class="link">
+                  <!-- =================================================== -->
+                  <!-- Link icon -->
+                  <img
+                    src="../../src/images/notification.png"
+                    alt="notification"
+                    class="link_icon"
+                  />
+
+                  <!-- =================================================== -->
+                  <!-- Link name -->
+                  <h2 class="link_name">Notification</h2>
+
+                  <!-- =================================================== -->
+                  <!-- new notifcations-->
+                  <div class="new_notifications"></div>
+                </a>
+              </li>
+
+              <li>
+                <!-- =================================================== -->
+                <!-- Link -->
+                <a href="" class="link">
+                  <!-- =================================================== -->
+                  <!-- Link icon -->
+                  <img
+                    src="../../src/images/E_commerce_icon.png"
+                    alt="E_commerce_icon"
+                    class="E_commerce_icon"
+                  />
+
+                  <!-- =================================================== -->
+                  <!-- Link name -->
+                  <h2 class="link_name">E-Commence</h2>
+                </a>
+              </li>
+
+              <!-- =================================================== -->
+              <!-- Drop down container -->
+              <div class="drop_down_container">
+                <!-- =================================================== -->
+                <!-- drop down icon -->
+                <img
+                  src="../../src/images/drop_down_icon.png"
+                  alt="drop_down_container"
+                  class="drop_down_icon"
+                />
+              </div>
+
+              <!-- =================================================== -->
+              <!--Desktop View Profile Picture container -->
+              <div class="profile_picture_container">
+                <!-- =================================================== -->
+                <!--  profile picture-->
+                <img
+                  src="../../src/images/user_profile.png"
+                  alt="user_profile"
+                  class="profile_picture"
+                />
+
+                <!-- =================================================== -->
+                <!-- user name -->
+                <h2 class="user_name">Hello , Aditi</h2>
+              </div>
+
+              <!-- =================================================== -->
+              <!-- nav cancel container -->
+              <div class="nav_cancel_container">
+                <!-- =================================================== -->
+                <!-- Mobile bar icon -->
+                <i class="fa-solid fa-x"></i>
+              </div>
+            </ul>
+          </div>
+
+          <!-- =================================================== -->
+          <!--Mobile view  Profile Picture container -->
+          <div class="profile_picture_container mobile_profile_container">
+            <!-- =================================================== -->
+            <!--  profile picture-->
+            <img
+              src="../../src/images/user_profile.png"
+              alt="user_profile"
+              class="profile_picture"
+            />
+
+            <!-- =================================================== -->
+            <!-- user name -->
+            <h2 class="user_name">Hello , Aditi</h2>
+          </div>
+
+          <!-- =================================================== -->
+          <!-- nav toggle container -->
+          <div class="nav_toggle_container">
+            <!-- =================================================== -->
+            <!-- Mobile bar icon -->
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </nav>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- General section container -->
+      <section class="general_section_container">
+        <!-- ======================================== -->
+        <!-- side bar container -->
+        <div class="side_bar_container">
+          <!-- ======================================== -->
+          <!-- side bar content-->
+          <div class="side_bar_content">
+            <!-- ======================================== -->
+            <!--  side bar icon container-->
+            <div class="side_bar_icon_container">
+              <!-- ======================================== -->
+              <!-- side bar icon-->
+              <img
+                src="../../src/images/your_profile_icon.png"
+                alt="your_profile-icon"
+                class="your_profile-icon side_bar_icon"
+              />
+            </div>
+
+            <!-- ======================================== -->
+            <!-- side bar icon name-->
+            <h2 class="side_bar_icon_name">your profile</h2>
+          </div>
+
+          <!-- ======================================== -->
+          <!-- side bar content-->
+          <div class="side_bar_content opened_side_bar_content">
+            <!-- ======================================== -->
+            <!--  side bar icon container-->
+            <div class="side_bar_icon_container">
+              <!-- ======================================== -->
+              <!--  side bar icon-->
+              <img
+                src="../../src/images/dashboard.png"
+                alt="dashboard-icon"
+                class="side_bar_icon"
+              />
+            </div>
+
+            <!-- ======================================== -->
+            <!-- side bar icon name-->
+            <h2 class="side_bar_icon_name">dashboard</h2>
+          </div>
+
+          <!-- ======================================== -->
+          <!-- side bar content-->
+          <div class="side_bar_content">
+            <!-- ======================================== -->
+            <!--  side bar icon container-->
+            <div class="side_bar_icon_container">
+              <!-- ======================================== -->
+              <!-- side bar icon-->
+              <img
+                src="../../src/images/settings-icon.png"
+                alt="search_icon"
+                class="side_bar_icon"
+              />
+            </div>
+
+            <!-- ======================================== -->
+            <!-- side bar icon name-->
+            <h2 class="side_bar_icon_name">setting and privacy</h2>
+          </div>
+
+          <!-- ======================================== -->
+          <!-- side bar content-->
+          <div class="side_bar_content">
+            <!-- ======================================== -->
+            <!--  side bar icon container-->
+            <div class="side_bar_icon_container">
+              <!-- ======================================== -->
+              <!--side bar icon-->
+              <img
+                src="../../src/images/Activity_icon.png"
+                alt="Activity_icon"
+                class="side_bar_icon"
+              />
+            </div>
+
+            <!-- ======================================== -->
+            <!-- side bar icon name-->
+            <h2 class="side_bar_icon_name">your activity</h2>
+          </div>
+
+          <!-- ======================================== -->
+          <!-- side bar content-->
+          <div class="side_bar_content">
+            <!-- ======================================== -->
+            <!--  side bar icon container-->
+            <div class="side_bar_icon_container">
+              <!-- ======================================== -->
+              <!-- side bar icon-->
+              <img
+                src="../../src/images/saved_icon.png"
+                alt="saved_icon"
+                class="side_bar_icon"
+              />
+            </div>
+
+            <!-- ======================================== -->
+            <!-- side bar icon name-->
+            <h2 class="side_bar_icon_name">saved</h2>
+          </div>
+
+          <!-- ======================================== -->
+          <!-- side bar content-->
+          <div class="side_bar_content">
+            <!-- ======================================== -->
+            <!--  side bar icon container-->
+            <div class="side_bar_icon_container">
+              <!-- ======================================== -->
+              <!-- side bar icon-->
+              <img
+                src="../../src/images/supervision_icon.png"
+                alt="supervision_icon"
+                class="side_bar_icon"
+              />
+            </div>
+
+            <!-- ======================================== -->
+            <!-- side bar icon name-->
+            <h2 class="side_bar_icon_name">supervision</h2>
+          </div>
+
+          <!-- ======================================== -->
+          <!-- side bar content-->
+          <div class="side_bar_content">
+            <!-- ======================================== -->
+            <!--  side bar icon container-->
+            <div class="side_bar_icon_container">
+              <!-- ======================================== -->
+              <!-- side bar icon-->
+              <img
+                src="../../src/images/support_icon.png"
+                alt="support_icon"
+                class="side_bar_icon"
+              />
+            </div>
+
+            <!-- ======================================== -->
+            <!-- side bar icon name-->
+            <h2 class="side_bar_icon_name">support</h2>
+          </div>
+
+          <!-- ======================================== -->
+          <!--  play store container-->
+          <div class="play_store_container">
+            <!-- ======================================== -->
+            <!--  google play  img-->
+            <img
+              src="../../src/images/google-play.png"
+              alt="google-play"
+              class="google_play_img"
+            />
+
+            <!-- ======================================== -->
+            <!--  apple store  img-->
+            <img
+              src="../../src/images/apple-store.png"
+              alt="apple-store"
+              class="apple_store_img"
+            />
+          </div>
         </div>
-    </div>
-</body>
+
+        <!-- ======================================== -->
+        <!-- section body content container -->
+        <section class="section_body_content_container">
+          <!-- ======================================== -->
+          <!-- cover photo and profile picture container -->
+          <div class="cover_photo_and_profile_picture_container">
+            <!-- ======================================== -->
+            <!-- cover photo  -->
+            <img
+              src="../../src/images/cover_photo.png"
+              alt="cover_photo"
+              class="cover_photo"
+            />
+
+            <!-- ======================================== -->
+            <!-- user details container -->
+            <div class="user_details_container">
+              <!-- ======================================== -->
+              <!-- user profile picture container -->
+              <div class="user_profile_picture_container">
+                <!-- ======================================== -->
+                <!-- user profile  picture-->
+                <img
+                  src="../../src/images/big-user_profile_picture.jpg"
+                  alt="user_profile_picture"
+                  class="user_profile_picture"
+                />
+
+                <!-- ======================================== -->
+                <!-- edit user profile container -->
+                <div class="edit_user_profile_container">
+                  <!-- ======================================== -->
+                  <!-- edit profile icon -->
+                  <h1 class="edit_profile_icon">+</h1>
+                </div>
+              </div>
+
+              <!-- ======================================== -->
+              <!-- user detail -->
+              <article class="user_detail">
+                <!-- ======================================== -->
+                <!-- user name -->
+                <h2 class="user_profile_name">Aditi Agarwal</h2>
+
+                <!-- ======================================== -->
+                <!-- user email -->
+                <p class="user_email">@AgarwalAditi04</p>
+
+                <!-- ======================================== -->
+                <!-- user education status -->
+                <h4 class="user_education_status">
+                  2nd Year EKE Student at Arrancar University
+                </h4>
+
+                <!-- ======================================== -->
+                <!-- followers container -->
+                <div class="followers_container">
+                  <!-- ======================================== -->
+                  <!-- followers -->
+                  <div class="followers">
+                    <!-- ======================================== -->
+                    <!-- total number of followers -->
+                    <h2 class="num_of_followers">210</h2>
+
+                    <!-- ======================================== -->
+                    <!-- followers text -->
+                    <p class="followers_text">Followers</p>
+                  </div>
+
+                  <!-- ======================================== -->
+                  <!-- following -->
+                  <div class="following">
+                    <!-- ======================================== -->
+                    <!-- total number of following -->
+                    <h2 class="num_of_following">200</h2>
+
+                    <!-- ======================================== -->
+                    <!-- following text -->
+                    <p class="following_text">Following</p>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ======================================== -->
+              <!-- make public container -->
+              <div class="make_public_container">
+                <!-- ======================================== -->
+                <!-- edit text -->
+                <h2 class="edit_text">Edit Profile</h2>
+
+                <!-- ======================================== -->
+                <!-- share profile text -->
+                <h2 class="share_profile_text">Share Profile</h2>
+              </div>
+            </div>
+          </div>
+
+          <!-- ======================================== -->
+          <!-- about user container -->
+          <div class="about_user_container">
+            <!-- ======================================== -->
+            <!-- about user -->
+            <div class="about_user">
+              <!-- ======================================== -->
+              <!-- about user nav -->
+              <div class="about_user_nav">
+                <!-- ======================================== -->
+                <!-- about user nav container -->
+                <div class="about_user_nav_container">
+                  <!-- ======================================== -->
+                  <!-- about pages -->
+                  <div class="about_pages">
+                    <!-- ======================================== -->
+                    <!-- pages -->
+                    <h2 class="page">Profile</h2>
+
+                    <!-- ======================================== -->
+                    <!-- about opened page -->
+                    <div class="about_opened_page active_about_page"></div>
+                  </div>
+
+                  <!-- ======================================== -->
+                  <!-- about pages -->
+                  <div class="about_pages">
+                    <!-- ======================================== -->
+                    <!-- pages -->
+                    <h2 class="page">Posts</h2>
+
+                    <!-- ======================================== -->
+                    <!-- about opened page -->
+                    <div class="about_opened_page"></div>
+                  </div>
+
+                  <!-- ======================================== -->
+                  <!-- about pages -->
+                  <div class="about_pages">
+                    <!-- ======================================== -->
+                    <!-- pages -->
+                    <h2 class="page">Awards</h2>
+
+                    <!-- ======================================== -->
+                    <!-- about opened page -->
+                    <div class="about_opened_page"></div>
+                  </div>
+
+                  <!-- ======================================== -->
+                  <!-- about pages -->
+                  <div class="about_pages">
+                    <!-- ======================================== -->
+                    <!-- pages -->
+                    <h2 class="page">My Work</h2>
+
+                    <!-- ======================================== -->
+                    <!-- about opened page -->
+                    <div class="about_opened_page"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ======================================== -->
+              <!-- about text area container -->
+              <div class="about_text_area_container">
+                <!-- ======================================== -->
+                <!-- about title container -->
+                <div class="about_title_container">
+                  <!-- ======================================== -->
+                  <!-- about title -->
+                  <h2 class="about_title">About</h2>
+
+                  <!-- ======================================== -->
+                  <!-- edit about icon -->
+                  <img
+                    src="../../src/images/pencil_edit_icon.png"
+                    class="edit_about_icon"
+                    alt="edit_icon"
+                  />
+                </div>
+
+                <!-- ======================================== -->
+                <!-- about user text -->
+                <p class="about_user_text">
+                  Hello! I am currently an Electronics and Computer Engineering
+                  student at Arrancar University, where I am eagerly immersing
+                  myself in the world of technology and innovation. With a keen
+                  interest in automotive engineering, UI/UX designing, data
+                  science, and machine learning.
+                </p>
+
+                <!-- ======================================== -->
+                <!-- show_more_container -->
+                <div class="show_more_container">
+                  <!-- ======================================== -->
+                  <!-- dots -->
+                  <p class="dots">...</p>
+
+                  <!-- ======================================== -->
+                  <!-- show more text -->
+                  <p class="show_more_text">...See More</p>
+                </div>
+              </div>
+
+              <!-- ======================================== -->
+              <!-- E commerce profile container -->
+              <div class="e_commernce_prfoile_container">
+                <!-- ======================================== -->
+                <!-- e commerce profile title -->
+                <h2 class="e_commerce_profile_title">E Commerce Profile</h2>
+
+                <!-- ======================================== -->
+                <!-- view more btn -->
+                <button class="view_more_btn">View</button>
+              </div>
+
+              <!-- ======================================== -->
+              <!-- user education section -->
+              <div class="users_education_section">
+                <!-- ======================================== -->
+                <!-- education title container -->
+                <div class="education_title_container">
+                  <!-- ======================================== -->
+                  <!-- education title -->
+                  <h2 class="education_title">Education</h2>
+
+                  <!-- ======================================== -->
+                  <!-- education edit icon -->
+                  <img
+                    src="../../src/images/pencil_edit_icon.png"
+                    alt="edit_icon"
+                    class="education_edit_icon"
+                  />
+                </div>
+
+                <!-- ======================================== -->
+                <!-- university container -->
+                <div class="university">
+                  <!-- ======================================== -->
+                  <!-- school container -->
+                  <div class="school-container">
+                    <!-- ======================================== -->
+                    <!-- school profile picture -->
+                    <img
+                      src="../../src/images/Arrancar_profile_picture.jpg"
+                      alt="school_profile_picture"
+                      class="school_profile_picture"
+                    />
+
+                    <!-- ======================================== -->
+                    <!-- school name -->
+                    <h3 class="school_name">Arrancar University</h3>
+
+                    <!-- ======================================== -->
+                    <!-- Greater than icon -->
+                    <h2 class="greater_than_icon">></h2>
+
+                    <!-- ======================================== -->
+                    <!-- user course -->
+                    <div class="user_course">
+                      <!-- ======================================== -->
+                      <!--  course -->
+                      <h4 class="course">
+                        Bachelors Degree , Electronics and Computer Engineering
+                      </h4>
+
+                      <!-- ======================================== -->
+                      <!-- date -->
+                      <p class="date">(2022-2026)</p>
+                    </div>
+                  </div>
+
+                  <!-- ======================================== -->
+                  <!-- school container -->
+                  <div class="school-container">
+                    <!-- ======================================== -->
+                    <!-- school profile picture -->
+                    <img
+                      src="../../src/images/uni_profile_picture.jpg"
+                      alt="school_profile_picture"
+                      class="school_profile_picture"
+                    />
+
+                    <!-- ======================================== -->
+                    <!-- school name -->
+                    <h3 class="school_name">Senbonzakura High</h3>
+
+                    <!-- ======================================== -->
+                    <!-- Greater than icon -->
+                    <h2 class="greater_than_icon">></h2>
+
+                    <!-- ======================================== -->
+                    <!-- user course -->
+                    <div class="user_course">
+                      <!-- ======================================== -->
+                      <!--  course -->
+                      <h4 class="course">Computer Science</h4>
+
+                      <!-- ======================================== -->
+                      <!-- date -->
+                      <p class="date">(2010-2022)</p>
+                    </div>
+                  </div>
+
+                  <!-- ======================================== -->
+                  <!-- school container -->
+                  <div class="school-container">
+                    <!-- ======================================== -->
+                    <!-- school profile picture -->
+                    <img
+                      src="../../src/images/uni_profile_picture.jpg"
+                      alt="school_profile_picture"
+                      class="school_profile_picture"
+                    />
+
+                    <!-- ======================================== -->
+                    <!-- school name -->
+                    <h3 class="school_name">Senbonzakura High</h3>
+
+                    <!-- ======================================== -->
+                    <!-- Greater than icon -->
+                    <h2 class="greater_than_icon">></h2>
+
+                    <!-- ======================================== -->
+                    <!-- user course -->
+                    <div class="user_course">
+                      <!-- ======================================== -->
+                      <!--  course -->
+                      <h4 class="course">Grade 1 - Grade 10</h4>
+
+                      <!-- ======================================== -->
+                      <!-- date -->
+                      <p class="date"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ======================================== -->
+            <!-- user communities -->
+            <div class="user_communities">
+              <!-- ======================================== -->
+              <!-- community title -->
+              <h2 class="community_title">Community Awards</h2>
+
+              <!-- ======================================== -->
+              <!-- communities -->
+              <div class="communities">
+                <!-- ======================================== -->
+                <!-- community container -->
+                <div class="community_container">
+                  <!-- ======================================== -->
+                  <!-- community logo -->
+                  <img
+                    src="../../src/images/start_club_logo.png"
+                    alt=""
+                    class="community_logo"
+                  />
+
+                  <!-- ======================================== -->
+                  <!-- community name -->
+                  <h2 class="community_name">Star Platinum Club</h2>
+                </div>
+
+                <!-- ======================================== -->
+                <!-- community container -->
+                <div class="community_container">
+                  <!-- ======================================== -->
+                  <!-- community logo -->
+                  <img
+                    src="../../src/images/verified_logo.png"
+                    alt="verified_logo"
+                    class="community_logo"
+                  />
+
+                  <!-- ======================================== -->
+                  <!-- community name -->
+                  <h2 class="community_name">Verified Pro - UI/UX</h2>
+                </div>
+
+                <!-- ======================================== -->
+                <!-- community container -->
+                <div class="community_container">
+                  <!-- ======================================== -->
+                  <!-- community logo -->
+                  <img
+                    src="../../src/images/lone_wolf_logo.png"
+                    alt="lone_wolf_logo"
+                    class="community_logo"
+                  />
+
+                  <!-- ======================================== -->
+                  <!-- community name -->
+                  <h2 class="community_name">Lone wolf award</h2>
+                </div>
+
+                <!-- ======================================== -->
+                <!-- community container -->
+                <div class="community_container">
+                  <!-- ======================================== -->
+                  <!-- community logo -->
+                  <img
+                    src="../../src/images/arrancar-logo.png"
+                    alt="arrancar_logo"
+                    class="community_logo"
+                  />
+
+                  <!-- ======================================== -->
+                  <!-- community name -->
+                  <h2 class="community_name">
+                    Arrancar University Hackathon 2024
+                  </h2>
+                </div>
+
+                <!-- ======================================== -->
+                <!-- community container -->
+                <div class="community_container">
+                  <!-- ======================================== -->
+                  <!-- community logo -->
+                  <img
+                    src="../../src/images/nit_logo.png"
+                    alt="nit_logo"
+                    class="community_logo"
+                  />
+
+                  <!-- ======================================== -->
+                  <!-- community name -->
+                  <h2 class="community_name">
+                    NIT Trichy Research Presentation award
+                  </h2>
+                </div>
+                <!-- ======================================== -->
+                <!-- community container -->
+                <div class="community_container">
+                  <!-- ======================================== -->
+                  <!-- community logo -->
+                  <img
+                    src="../../src/images/start_club_logo.png"
+                    alt=""
+                    class="community_logo"
+                  />
+
+                  <!-- ======================================== -->
+                  <!-- community name -->
+                  <h2 class="community_name">Star Platinum Club</h2>
+                </div>
+
+                <!-- ======================================== -->
+                <!-- community container -->
+                <div class="community_container">
+                  <!-- ======================================== -->
+                  <!-- community logo -->
+                  <img
+                    src="../../src/images/verified_logo.png"
+                    alt="verified_logo"
+                    class="community_logo"
+                  />
+
+                  <!-- ======================================== -->
+                  <!-- community name -->
+                  <h2 class="community_name">Verified Pro - UI/UX</h2>
+                </div>
+
+                <!-- ======================================== -->
+                <!-- community container -->
+                <div class="community_container">
+                  <!-- ======================================== -->
+                  <!-- community logo -->
+                  <img
+                    src="../../src/images/lone_wolf_logo.png"
+                    alt="lone_wolf_logo"
+                    class="community_logo"
+                  />
+
+                  <!-- ======================================== -->
+                  <!-- community name -->
+                  <h2 class="community_name">Lone wolf award</h2>
+                </div>
+
+                <!-- ======================================== -->
+                <!-- community container -->
+                <div class="community_container">
+                  <!-- ======================================== -->
+                  <!-- community logo -->
+                  <img
+                    src="../../src/images/arrancar-logo.png"
+                    alt="arrancar_logo"
+                    class="community_logo"
+                  />
+
+                  <!-- ======================================== -->
+                  <!-- community name -->
+                  <h2 class="community_name">
+                    Arrancar University Hackathon 2024
+                  </h2>
+                </div>
+
+                <!-- ======================================== -->
+                <!-- community container -->
+                <div class="community_container">
+                  <!-- ======================================== -->
+                  <!-- community logo -->
+                  <img
+                    src="../../src/images/nit_logo.png"
+                    alt="nit_logo"
+                    class="community_logo"
+                  />
+
+                  <!-- ======================================== -->
+                  <!-- community name -->
+                  <h2 class="community_name">
+                    NIT Trichy Research Presentation award
+                  </h2>
+                </div>
+
+                <!-- ======================================== -->
+                <!-- show more -->
+                <h4 class="show_more">+8 More...</h4>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- footer -->
+      <footer class="footer">
+        <!-- ============================================== -->
+        <!-- info container -->
+        <div class="info_container">
+          <!-- ============================================== -->
+          <!-- company container -->
+          <div class="company_container"></div>
+
+          <!-- ============================================== -->
+          <!-- customer service container -->
+          <div class="customer_service_container"></div>
+
+          <!-- ============================================== -->
+          <!--help container -->
+          <div class="help_container"></div>
+
+          <!-- ============================================== -->
+          <!-- invite container -->
+          <div class="invite_container"></div>
+        </div>
+
+        <!-- ============================================== -->
+        <!-- Gray line -->
+        <div class="gray_line"></div>
+
+        <!-- ============================================== -->
+        <!-- we accept text -->
+        <p class="we_accept_text"></p>
+
+        <!-- ============================================== -->
+        <!-- acceptable items container -->
+        <div class="acceptable_items_container">
+          <!-- ============================================== -->
+          <!-- cards container -->
+          <div class="cards_container"></div>
+
+          <!-- ============================================== -->
+          <!-- play store container -->
+          <div class="play_store_container"></div>
+        </div>
+      </footer>
+    </main>
+    <script src="./profile.js"></script>
+  </body>
 </html>
