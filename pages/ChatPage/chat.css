@@ -297,6 +297,7 @@ html {
   height: 100%;
   display: flex;
   padding: 0 1rem;
+  cursor: pointer;
   margin-top: 0.5rem;
   align-items: center;
 }
@@ -310,9 +311,12 @@ html {
 /* ========================================================= */
 /*  chat header title*/
 .chat_header_title {
+  height: 80%;
+  display: flex;
   font-size: 1rem;
   font-weight: 500;
   text-align: left;
+  align-items: center;
   line-height: 32.78px;
   font-family: sans-serif;
   text-transform: capitalize;
@@ -320,10 +324,11 @@ html {
 
 /* ========================================================= */
 /*  active chat message */
+
 .active_chat_messages {
   gap: 40px;
   width: 397px;
-  display: grid;
+  display: none;
   margin-top: 2rem;
   grid-column: auto;
   overflow-y: scroll;
@@ -333,8 +338,27 @@ html {
 }
 
 /* ========================================================= */
+/*  active group chat message */
+.active_group_chat_message {
+  display: none;
+}
+
+/* ========================================================= */
+/*  request chat message */
+.request_chat_message {
+  display: none;
+}
+
+/* ========================================================= */
+/*  active message */
+.active_message {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========================================================= */
 /*  recent friends chat container */
-.recent_friends_chat_container {
+:is(.recent_friends_chat_container, .group_recent_friends_chat_container) {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -355,6 +379,13 @@ html {
 .friends_profile {
   width: 40px;
   height: 40px;
+  object-fit: cover;
+}
+
+/* ========================================================= */
+/* group_profile */
+.group_profile {
+  border-radius: 10px;
 }
 
 /* ========================================================= */
@@ -379,6 +410,7 @@ html {
   line-height: 16.32px;
   font-family: sans-serif;
   letter-spacing: -0.01em;
+  text-transform: capitalize;
 }
 
 /* ========================================================= */
@@ -413,6 +445,13 @@ html {
   line-height: 12.24px;
   letter-spacing: -0.01em;
   font-family: sans-serif;
+}
+
+/* ========================================================= */
+/*  recent group message */
+.recent_group_message {
+  color: #ffffff;
+  text-transform: capitalize;
 }
 
 /* ========================================================= */
@@ -460,6 +499,7 @@ html {
   display: flex;
   height: 100%;
   color: white;
+  cursor: pointer;
   font-weight: 600;
   font-size: 0.7rem;
   position: relative;
@@ -535,12 +575,25 @@ html {
 /* chatting page  */
 .chatting_page {
   width: 70%;
+  display: none;
   padding-left: 1rem;
   padding-right: 2rem;
 }
 
 /* ========================================================= */
-/* chatting page  */
+/* group chatting page  */
+.group_chatting-page {
+  display: none;
+}
+
+/* ========================================================= */
+/* chatting page open  */
+.chatting_page_open {
+  display: block;
+}
+
+/* ========================================================= */
+/*currently chatting friend  */
 .currently_chatting_friend {
   height: 15%;
   display: flex;
@@ -563,6 +616,7 @@ html {
 .profile_picture {
   width: 45px;
   height: 45px;
+  border-radius: 10px;
 }
 
 /* ========================================================= */
@@ -638,7 +692,7 @@ html {
   width: 60%;
   display: flex;
   padding: 1rem;
-  margin: 2rem 0;
+  margin: 3rem 0;
   flex-wrap: wrap;
   font-weight: 600;
   font-size: 0.9rem;
@@ -675,10 +729,37 @@ html {
 }
 
 /* ========================================================= */
-/* sender messages , receiver emoji */
+/* sender details */
 :is(.sender_emoji, .receiver_emoji) {
   width: 20px;
   height: 20px;
+}
+
+/* ========================================================= */
+/* sender details */
+.sender_details {
+  left: 0%;
+  gap: 0.5rem;
+  width: 100%;
+  bottom: 100%;
+  display: flex;
+  color: #ffffff;
+  align-items: end;
+  position: absolute;
+}
+
+/* ========================================================= */
+/* sender profile picture */
+.sender_profile_picture {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+/* ========================================================= */
+/* sender name */
+.sender_name {
+  font-size: 0.7rem;
 }
 
 /* ========================================================= */
@@ -722,6 +803,19 @@ html {
     0 0
   );
   border-bottom-right-radius: 15px;
+}
+
+/* ========================================================= */
+/* receiver details */
+.receiver_details {
+  padding-right: 1rem;
+  justify-content: end;
+}
+
+/* ========================================================= */
+/* sender message image container*/
+.sender_message_image_container {
+  position: relative;
 }
 
 /* ========================================================= */
@@ -1022,6 +1116,7 @@ html {
     padding: 0;
     width: 100%;
     height: 100%;
+    /* height: 100vh; */
     border-radius: 0;
   }
 
@@ -1049,9 +1144,10 @@ html {
   /*  active chat message */
   .active_chat_messages {
     width: 100%;
-    height: 63%;
     margin-top: 0;
     padding: 0.6rem;
+    min-height: 54vh;
+    padding-bottom: 1rem;
   }
 
   /* ========================================================= */
@@ -1414,6 +1510,10 @@ html {
   /* recent message*/
   .recent_message {
     font-size: 0.9rem;
+  }
+
+  .active_chat_messages {
+    padding-bottom: 5rem;
   }
 
   /* ========================================================= */
