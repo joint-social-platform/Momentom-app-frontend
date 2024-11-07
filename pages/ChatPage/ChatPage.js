@@ -93,52 +93,35 @@ chat_header_container.addEventListener("click", (e) => {
 });
 
 // // ============================================================
-// // private and public room functionality
-// const rooms = document.querySelectorAll(".room");
-// const room_kind = document.querySelector(".room_kinds");
-// const chatting_pages = document.querySelectorAll(".chatting_page");
-
-// // ============================================================
-// // private and public room functionality
-// room_kind.addEventListener("click", (e) => {
-//   const Id = e.target.dataset.id;
-
-//   if (e.target.classList.contains("room")) {
-//     // remove opened css from all rooms
-//     rooms.forEach((each_room) => {
-//       each_room.children[0].classList.remove("opened_room");
-//       e.target.children[0].classList.add("opened_room");
-//     });
-
-//     // different chatting page
-//     chatting_pages.forEach((each_page) => {
-//       const id = each_page.dataset.id;
-//       const element = document.getElementById(Id);
-//       each_page.classList.remove("chatting_page_open");
-//       if (id == Id) {
-//         element.classList.add("chatting_page_open");
-//       }
-//     });
-//   }
-// });
-
-// // ============================================================
 // // public room
 const private_chat = document.querySelector("#private");
 const public_group_chat = document.querySelector("#public");
 const public_room = document.querySelectorAll("#group_chat");
 const active_room_public = document.querySelector("#active_room_public");
 const active_room_private = document.querySelector("#active_room_private");
+const current_chat_details = document.querySelector(".current_chat_detail");
+const current_chat_detail = document.querySelector("#current_chat_detail");
 
 // public room functionality
 public_room.forEach((each_public_room) => {
-  each_public_room.addEventListener("click", () => {
+  each_public_room.addEventListener("click", (e) => {
     const private_active_dot = active_room_private.children[0];
     const public_active_dot = active_room_public.children[0];
     public_active_dot.classList.add("opened_room");
     private_active_dot.classList.remove("opened_room");
     private_chat.classList.remove("chatting_page_open");
     public_group_chat.classList.add("chatting_page_open");
+
+    // Dynamic get user name and profile
+    const target = e.currentTarget;
+    if (target) {
+      const img = target.children[0].src;
+      let user_chat_img = current_chat_detail.children[0];
+      const name = target.children[1].children[0].textContent;
+      let user_chat_name = current_chat_detail.children[1].children[0];
+      user_chat_name.textContent = name;
+      user_chat_img.src = img;
+    }
   });
 });
 
@@ -148,12 +131,23 @@ const private_room = document.querySelectorAll("#friendly_chat");
 
 // private functionality
 private_room.forEach((each_private_room) => {
-  each_private_room.addEventListener("click", () => {
+  each_private_room.addEventListener("click", (e) => {
     const private_active_dot = active_room_private.children[0];
     const public_active_dot = active_room_public.children[0];
     public_active_dot.classList.remove("opened_room");
     private_active_dot.classList.add("opened_room");
     private_chat.classList.add("chatting_page_open");
     public_group_chat.classList.remove("chatting_page_open");
+
+    // Dynamic get user name and profile
+    const target = e.currentTarget;
+    if (target) {
+      const img = target.children[0].src;
+      let user_chat_img = current_chat_details.children[0];
+      const name = target.children[1].children[0].textContent;
+      let user_chat_name = current_chat_details.children[1].children[0];
+      user_chat_name.textContent = name;
+      user_chat_img.src = img;
+    }
   });
 });
