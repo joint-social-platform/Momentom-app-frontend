@@ -1,3 +1,4 @@
+@import "../../src/modal/modal.css";
 /* ============================================= */
 /* General styling */
 *,
@@ -444,7 +445,7 @@ html {
 
 /* ============================================= */
 /*   add post */
-.add_post {
+.add_post{
   width: 40px;
   height: 40px;
   display: flex;

@@ -1,0 +1,108 @@
+.overlay{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    z-index: 30;
+    inset: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.modal {
+    background-color: black;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  .modal-head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .modal-head h2 {
+    color: #6c49f8;
+  }
+  
+  .modal-head p {
+    color: white;
+  }
+  
+  .modal-body {
+    background-color: #373638;
+    position: relative;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+  }
+  
+  .modal-body button {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+  }
+  
+  .modal-body .add-photos {
+    color: white;
+  }
+  
+  .modal-body .drag-drop {
+    color: #535354;
+  }
+  
+  .modal-foot {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin-top: 2rem;
+  }
+  
+  .add-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  .add-text-img {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .share {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  .share button {
+    height: 2rem;
+    margin-left: 5px;
+  }
+  
+  .next-btn {
+    width: 80%;
+    border-radius: 5px;
+    height: 2rem;
+    margin-top: 1rem;
+  }
