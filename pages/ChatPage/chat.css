@@ -360,6 +360,7 @@ html {
 /*  recent friends chat container */
 :is(.recent_friends_chat_container, .group_recent_friends_chat_container) {
   display: flex;
+  cursor: pointer;
   align-items: center;
   justify-content: space-between;
 }
@@ -459,6 +460,7 @@ html {
 .chat_container {
   width: 70%;
   overflow: hidden;
+  cursor: pointer;
   background: linear-gradient(
     233.4deg,
     #161515 72.23%,
