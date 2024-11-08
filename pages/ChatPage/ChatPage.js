@@ -80,16 +80,17 @@ chat_header_container.addEventListener("click", (e) => {
       each_title.classList.remove("active_line");
       parent_container.classList.add("active_line");
     });
+
+    // active chat message functionality
+    active_chat_messages.forEach((active_chat) => {
+      const id = active_chat.dataset.id;
+      const element = document.getElementById(Id);
+      active_chat.classList.remove("active_message");
+      if (Id == id) {
+        element.classList.add("active_message");
+      }
+    });
   }
-  // active chat message functionality
-  active_chat_messages.forEach((active_chat) => {
-    const id = active_chat.dataset.id;
-    const element = document.getElementById(Id);
-    active_chat.classList.remove("active_message");
-    if (Id == id) {
-      element.classList.add("active_message");
-    }
-  });
 });
 
 // // ============================================================
@@ -121,6 +122,25 @@ public_room.forEach((each_public_room) => {
       let user_chat_name = current_chat_detail.children[1].children[0];
       user_chat_name.textContent = name;
       user_chat_img.src = img;
+
+      // opened chat active
+
+      public_room.forEach((active_room) => {
+        const name = active_room.children[1].children[0].classList;
+        const message = active_room.children[1].children[1].classList;
+        active_room.classList.remove("currently_open_chat");
+        name.remove("opened_chat");
+        message.remove("opened_chat");
+
+        if (e.currentTarget) {
+          e.currentTarget.classList.add("currently_open_chat");
+          e.currentTarget.children[1].children[0].classList.add("opened_chat");
+          e.currentTarget.children[1].children[1].classList.add("opened_chat");
+        }
+      });
+      // ========================================================
+      // group chatting page see friendlist display none
+      see_friends_list.style.display = "none";
     }
   });
 });
@@ -149,5 +169,33 @@ private_room.forEach((each_private_room) => {
       user_chat_name.textContent = name;
       user_chat_img.src = img;
     }
+
+    // opened chat active
+
+    private_room.forEach((active_room) => {
+      const name = active_room.children[1].children[0].classList;
+      const message = active_room.children[1].children[1].classList;
+      active_room.classList.remove("currently_open_chat");
+      name.remove("opened_chat");
+      message.remove("opened_chat");
+
+      if (e.currentTarget) {
+        e.currentTarget.classList.add("currently_open_chat");
+        e.currentTarget.children[1].children[0].classList.add("opened_chat");
+        e.currentTarget.children[1].children[1].classList.add("opened_chat");
+      }
+    });
+
+    // ========================================================
+    // chatting page see friendlist display
+    see_friends_list.style.display = "block";
   });
+});
+
+// ============================================================
+// group current chat detail functionality
+current_chat_detail.addEventListener("click", () => {
+  chatting_page.classList.add("close_chatting_page");
+  group_chatting_page.classList.add("close_chatting_page");
+  active_friends_list.classList.add("open_active_friends_list");
 });
