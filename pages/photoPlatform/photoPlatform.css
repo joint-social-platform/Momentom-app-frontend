@@ -1,0 +1,110 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.image-background{
+    background-color: blanchedalmond;
+    width: 60px;
+    padding-top: 5px;
+    height: 47px;
+    border-radius: 15px;
+}
+.image-background img{
+    align-items: center;
+}
+.search-button{
+    display: flex;
+    width: 500px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    height: 20px;
+    background-color: yellow;
+    border-radius: 20px;
+    gap: 20px;
+    padding-left: 10px;
+}
+.search-button input{
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+.nav-button{
+    display: flex;
+    gap: 50px;
+}
+.nav-button button{
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    color: white;
+
+}
+.nav-button p{
+    font-size: 9px;
+    text-align: center;
+}
+.navBar{
+    display: flex;
+    gap: 180px;
+    justify-content: center;
+    padding-top: 10px;
+    background-color: black;
+    padding-bottom: 10px;
+}
+.navbar2{
+    display: flex;
+    gap: 70px;
+}
+.search{
+    position: relative;
+}
+.search img{ 
+    position: absolute;
+    right: 8px;
+    width: 10px;
+}
+.image1 img{
+    height: 30px;
+}
+.image1 p{
+    font-size: 9px;
+}
+.search button img{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 20px;
+    position: relative;
+    
+}
+.search p{
+    position: absolute;
+    top: 30px;
+}
+.seach{
+    position: relative;
+}
+.seach img{ 
+    position: absolute;
+    right: -5px;
+    width: 10px;
+}
+.seach p{
+    position: absolute;
+    top: 30px;
+    left: -4px;
+}
+.seach button img{
+    width: 28px;
+    height: 30px;
+    margin-bottom: 20px;
+    position: relative;
+    
+}
+.navBar p{
+    color: white;
+}
+.buttton{
+    display: flex;
+    gap: 10px;
+}
