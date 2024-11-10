@@ -1,0 +1,1030 @@
+/* ============================================= */
+/* General styling */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  display: block;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* ========================================================= */
+/* Scroll bar */
+html {
+  scroll-behavior: smooth;
+}
+/* Scroll bar width */
+::-webkit-scrollbar {
+  width: 0;
+}
+
+/* ============================================= */
+/* main container*/
+.main_container {
+  padding: 0 2rem;
+  padding-right: 0;
+  overflow: hidden;
+  min-height: 100vh;
+  padding-bottom: 1rem;
+  background: #000000;
+}
+
+/* ============================================= */
+/* Desktop View */
+
+/* ============================================= */
+/* nav container*/
+.nav_container {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+
+/* ============================================= */
+/* nav*/
+.nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ============================================= */
+/* Nav Logo container*/
+.nav_logo_container {
+  border-radius: 15px;
+  background: #ffffff;
+}
+
+/* ============================================= */
+/* Nav Logo */
+.nav_logo {
+  width: 47px;
+  height: 42px;
+}
+
+/* ============================================= */
+/* Search container*/
+.search_container {
+  width: 40%;
+  padding-left: 3rem;
+}
+
+/* ============================================= */
+/* Search Icon*/
+.search_icon {
+  width: 21px;
+  height: 18px;
+}
+
+/* ============================================= */
+/* Navigation Links Container*/
+.navigation_link_container {
+  height: 100%;
+}
+
+/* ============================================= */
+/*Link Container*/
+.link_container {
+  height: 100%;
+  display: flex;
+  padding: 0 1rem;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* ============================================= */
+/*Link */
+.link {
+  gap: 5px;
+  display: flex;
+  color: white;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ============================================= */
+/*link icon*/
+.link_icon {
+  width: 18px;
+  height: 14px;
+}
+
+/* ============================================= */
+/*E commence icon*/
+.E_commerce_icon {
+  width: 22px;
+  height: 18px;
+}
+
+/* ============================================= */
+/*contact serach link icon*/
+.contact_serach_icon {
+  width: 22px;
+  height: 18px;
+}
+
+/* ============================================= */
+/*new notifications*/
+.new_notifications {
+  top: 0;
+  width: 7px;
+  right: 23%;
+  height: 7px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #d61818;
+}
+
+/* ============================================= */
+/*Link name*/
+.link_name {
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 18.04px;
+  font-family: "Catamaran", serif;
+}
+
+/* ============================================= */
+/*drop down icon*/
+.drop_down_icon {
+  width: 12px;
+  height: 7px;
+}
+
+/* ============================================= */
+/*Desktop view  Profile Picture container*/
+.profile_picture_container {
+  height: 100%;
+  display: flex;
+  color: white;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+/* ============================================= */
+/*Mobile view  Profile Picture container*/
+.mobile_profile_container {
+  display: none;
+}
+
+/* ============================================= */
+/* Profile Picture */
+.profile_picture {
+  width: 30px;
+  height: 25px;
+}
+
+/* ============================================= */
+/* user name */
+.user_name {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 22.96px;
+  font-family: "Catamaran", serif;
+}
+
+/* ============================================= */
+/* Mobile bar icon */
+.nav_toggle_container {
+  display: none;
+}
+
+/* ============================================= */
+/*  nav cancel container*/
+.nav_cancel_container {
+  display: none;
+}
+
+/* ============================================= */
+/*  general section container*/
+.general_section_container {
+  display: flex;
+  padding-top: 1rem;
+}
+
+/* ============================================= */
+/*  side bar container*/
+.side_bar_container {
+  gap: 1rem;
+  width: 20%;
+  display: flex;
+  background: linear-gradient(
+    194.24deg,
+    #000000 57.09%,
+    rgba(214, 24, 206, 0.92) 100.34%
+  );
+
+  flex-direction: column;
+}
+
+/* ============================================= */
+/*  side bar content*/
+.side_bar_content {
+  gap: 1rem;
+  display: flex;
+  color: #ffffff;
+  align-items: center;
+  padding: 0.8rem 0.5rem;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+/* ============================================= */
+/*  opened side bar content*/
+.opened_side_bar_content {
+  color: #6c49f8;
+  background: #373638;
+}
+
+/* ============================================= */
+/*  side bar icon*/
+.side_bar_icon {
+  width: 22px;
+  height: 24px;
+}
+
+/* ============================================= */
+/* side bar icon name*/
+.side_bar_icon_name {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 14.52px;
+  font-family: sans-serif;
+  text-transform: capitalize;
+}
+
+/* ============================================= */
+/* play store container*/
+.play_store_container {
+  gap: 1.5rem;
+  display: flex;
+  padding-block: 0.5rem;
+  flex-direction: column;
+}
+
+/* ============================================= */
+/*  google play  img & apple store  img*/
+:is(.google_play_img, .apple_store_img) {
+  width: 55%;
+  height: 90%;
+}
+
+/* ============================================= */
+/*  section body content container*/
+.section_body_content_container {
+  width: 80%;
+  background: #161515;
+}
+
+/* ============================================= */
+/* cover photo and profile picture container*/
+.cover_photo_and_profile_picture_container {
+  min-height: 65vh;
+}
+
+/* ============================================= */
+/*  cover photo*/
+.cover_photo {
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
+  object-position: 0% 0%;
+}
+
+/* ============================================= */
+/*   user details container*/
+.user_details_container {
+  gap: 1rem;
+  display: flex;
+  color: white;
+}
+
+/* ============================================= */
+/*   user profile picture container */
+.user_profile_picture_container {
+  width: 25%;
+  position: relative;
+}
+
+/* ============================================= */
+/*   user profile picture  */
+.user_profile_picture {
+  right: 5%;
+  top: -10%;
+  z-index: 2;
+  width: 110px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  position: absolute;
+  object-position: 0% 30%;
+  border: 3px solid blue;
+}
+
+/* ============================================= */
+/*   edit user profile container */
+.edit_user_profile_container {
+  top: 25%;
+  right: 5%;
+  width: 25px;
+  z-index: 10;
+  height: 25px;
+  overflow: hidden;
+  border-radius: 50%;
+  position: absolute;
+  background: linear-gradient(
+    180deg,
+    #6c49f8 0%,
+    rgba(255, 0, 101, 0.479494) 99.98%,
+    rgba(242, 58, 0, 0.0572917) 99.99%,
+    rgba(255, 108, 2, 0) 100%
+  );
+}
+
+/* ============================================= */
+/*   edit profile icon*/
+.edit_profile_icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  font-weight: 900;
+  font-size: 1.2rem;
+  align-items: center;
+  justify-content: center;
+  font-family: "Catamaran", serif;
+}
+
+/* ============================================= */
+/*   user detail  */
+.user_detail {
+  width: 50%;
+  gap: 0.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================================= */
+/*   user name   */
+.user_profile_name {
+  font-weight: 600;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  font-family: "Catamaran", serif;
+}
+
+/* ============================================= */
+/*   user email  */
+.user_email {
+  font-weight: 200;
+  font-size: 0.8rem;
+  font-family: "Catamaran", serif;
+}
+
+/* ============================================= */
+/*   user education status  */
+.user_education_status {
+  font-weight: 700;
+  font-size: 0.75rem;
+  font-family: sans-serif;
+}
+
+/* ============================================= */
+/*    followers container */
+.followers_container {
+  gap: 2rem;
+  display: flex;
+}
+
+/* ============================================= */
+/*   total number of followers  & total number of following */
+:is(.num_of_followers, .num_of_following) {
+  font-weight: 800;
+  font-size: 0.9rem;
+  font-family: sans-serif;
+}
+
+/* ============================================= */
+/*    followers text & following text*/
+:is(.followers_text, .following_text) {
+  font-weight: 400;
+  font-size: 0.9rem;
+  font-family: sans-serif;
+}
+
+/* ============================================= */
+/*    make public container*/
+.make_public_container {
+  gap: 1rem;
+  width: 25%;
+  display: flex;
+  padding-top: 1rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* ============================================= */
+/*   edit text*/
+.edit_text {
+  font-weight: 600;
+  font-size: 0.8rem;
+  border-radius: 10px;
+  background: #6c49f8;
+  padding: 0.2rem 0.6rem;
+  font-family: sans-serif;
+}
+
+/* ============================================= */
+/*    share profile text */
+.share_profile_text {
+  font-weight: 600;
+  font-size: 0.8rem;
+  border-radius: 10px;
+  padding: 0.2rem 0.6rem;
+  font-family: sans-serif;
+  background: #d618ceeb;
+}
+
+/* ============================================= */
+/*    about user container */
+.about_user_container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* ============================================= */
+/*    about user  */
+.about_user {
+  width: 68%;
+  gap: 1rem;
+  display: flex;
+  overflow: hidden;
+  color: #ffffff;
+  align-items: center;
+  background: #000000;
+  flex-direction: column;
+  border-radius: 22px 22px 0px 0px;
+}
+
+/* ============================================= */
+/*   about user nav */
+.about_user_nav {
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================================= */
+/*   about user nav container*/
+.about_user_nav_container {
+  gap: 3rem;
+  display: flex;
+  padding: 0.2rem;
+}
+
+/* ============================================= */
+/*   about pages*/
+.about_pages {
+  gap: 0.3rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* ============================================= */
+/*   page*/
+.page {
+  font-weight: 600;
+  font-size: 0.8rem;
+  font-family: sans-serif;
+}
+
+/* ============================================= */
+/*   about opened page */
+.about_opened_page {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+}
+
+/* ============================================= */
+/*   active about page */
+.active_about_page {
+  background-color: #ffffff;
+}
+
+/* ============================================= */
+/*    about text area container */
+.about_text_area_container {
+  width: 95%;
+  gap: 0.8rem;
+  padding: 1rem;
+  display: flex;
+  overflow: hidden;
+  border-radius: 20px;
+  flex-direction: column;
+  background: #3736388c;
+}
+
+/* ============================================= */
+/*    about title container */
+.about_title_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ============================================= */
+/*    about title */
+.about_title {
+  font-weight: 550;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+  text-transform: capitalize;
+}
+
+/* ============================================= */
+/*    edit about icon */
+.edit_about_icon {
+  width: 15px;
+  height: 15px;
+}
+
+/* ============================================= */
+/*    about user text*/
+.about_user_text {
+  width: 85%;
+  font-weight: 400;
+  font-size: 0.74rem;
+  font-family: sans-serif;
+}
+
+/* ============================================= */
+/*   show_more_container*/
+.show_more_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ============================================= */
+/*   dots */
+.dots {
+  font-weight: 400;
+  font-size: 0.8rem;
+  font-family: sans-serif;
+}
+
+/* ============================================= */
+/*  show more text */
+.show_more_text {
+  font-weight: 500;
+  font-size: 0.75rem;
+  font-family: sans-serif;
+  text-transform: capitalize;
+}
+
+/* ============================================= */
+/* E commerce profile container  */
+.e_commernce_prfoile_container {
+  width: 95%;
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  border-radius: 40px;
+  background: #3736388c;
+  justify-content: space-between;
+}
+
+/* ============================================= */
+/*e commerce profile title */
+.e_commerce_profile_title {
+  font-size: 1rem;
+  font-weight: 550;
+  font-family: sans-serif;
+  text-transform: capitalize;
+}
+
+/* ============================================= */
+/*view more btn */
+.view_more_btn {
+  width: 102px;
+  height: 29px;
+  color: #6c49f8;
+  font-weight: 700;
+  font-size: 0.7rem;
+  border-radius: 15px;
+  background: #ffffff;
+  font-family: sans-serif;
+}
+
+/* ============================================= */
+/*user education section  */
+.users_education_section {
+  width: 95%;
+  gap: 1.2rem;
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  background: #3736388c;
+}
+
+/* ============================================= */
+/*education title container  */
+.education_title_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ============================================= */
+/*education title  */
+.education_title {
+  font-weight: 550;
+  font-size: 1.1rem;
+  font-family: sans-serif;
+  text-transform: capitalize;
+}
+
+/* ============================================= */
+/*education edit icon  */
+.education_edit_icon {
+  width: 15px;
+  height: 15px;
+}
+
+/* ============================================= */
+/*university container */
+.university {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================================= */
+/* school container */
+.school-container {
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+/* ============================================= */
+/* school profile picture */
+.school_profile_picture {
+  width: 50px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* ============================================= */
+/* school name */
+.school_name {
+  font-weight: 600;
+  font-size: 0.8rem;
+  font-family: sans-serif;
+}
+
+/* ============================================= */
+/*  Greater than icon*/
+.greater_than_icon {
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+
+/* ============================================= */
+/*  course*/
+.course {
+  font-weight: 0;
+  font-size: 0.7rem;
+  font-family: sans-serif;
+}
+
+/* ============================================= */
+/*  date*/
+.date {
+  font-weight: 400;
+  font-size: 0.7rem;
+  font-family: sans-serif;
+}
+
+/* ============================================= */
+/*   user communities */
+.user_communities {
+  width: 28%;
+  gap: 0.8rem;
+  height: 80vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    23.97deg,
+    #000000 35.55%,
+    #49227b 84.96%,
+    #9747ff 108.28%
+  );
+  border-radius: 22px 22px 0px 0px;
+}
+
+/* ============================================= */
+/*   community title */
+.community_title {
+  padding: 0.5rem;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+/* ============================================= */
+/*   communities */
+.communities {
+  gap: 0.8rem;
+  height: 86%;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 5rem;
+  flex-direction: column;
+}
+
+/* ============================================= */
+/*   community container*/
+.community_container {
+  gap: 0.5rem;
+  display: flex;
+  color: white;
+  align-items: center;
+}
+
+/* ============================================= */
+/* community logo*/
+.community_logo {
+  width: 25px;
+  height: 29px;
+}
+
+/* ============================================= */
+/* community name*/
+.community_name {
+  font-weight: 500;
+  font-size: 0.8rem;
+  font-family: sans-serif;
+}
+
+/* ============================================= */
+/* show more*/
+.show_more {
+  bottom: 0%;
+  width: 100%;
+  height: 18%;
+  display: grid;
+  align-items: end;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 0.7rem;
+  text-align: right;
+  position: absolute;
+  font-family: sans-serif;
+  text-transform: capitalize;
+  background-color: #000000;
+}
+
+/* ============================================= */
+/*  footer*/
+.footer {
+  border: 3px solid yellow;
+}
+
+/* ================================================ */
+
+/* ================================================ */
+/* Mobile View */
+@media screen and (width <= 1023px) {
+  /* ============================================= */
+  /*main container*/
+  .main_container {
+    padding: 0;
+  }
+
+  /* ============================================= */
+  /* nav*/
+  .nav {
+    padding: 0.6rem;
+    position: relative;
+  }
+
+  /* ============================================= */
+  /* Search container*/
+  .search_container {
+    padding: 0;
+    width: max-content;
+  }
+
+  /* ============================================= */
+  /* Navigation Links Container*/
+  .navigation_link_container {
+    top: 0%;
+    right: 0%;
+    width: 60%;
+    z-index: 22;
+    height: 99vh;
+    overflow: hidden;
+    position: absolute;
+    border-radius: 15px;
+    border: 3px solid gray;
+    transform: translate(110%);
+    transition: all 0.5s linear;
+    background-color: #000000;
+  }
+
+  .open_nav {
+    transform: translate(0%);
+  }
+
+  /* ============================================= */
+  /*Link Container*/
+  .link_container {
+    padding-top: 3rem;
+    position: relative;
+    justify-content: unset;
+    flex-direction: column;
+  }
+
+  /* ============================================= */
+  /*link icon*/
+  .link_icon {
+    width: 22px;
+    height: 18px;
+  }
+
+  /* ============================================= */
+  /*E commence icon*/
+  .E_commerce_icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* ============================================= */
+  /*contact serach link icon*/
+  .contact_serach_icon {
+    width: 24px;
+    height: 20px;
+  }
+
+  /* ============================================= */
+  /*Link name*/
+  .link_name {
+    font-size: 1rem;
+  }
+
+  /* ============================================= */
+  /*drop down icon*/
+  .drop_down_icon {
+    display: none;
+  }
+
+  /* ============================================= */
+  /*Desktop view  Profile Picture container*/
+  .profile_picture_container {
+    display: none;
+  }
+
+  /* ============================================= */
+  /*Mobile view  Profile Picture container*/
+  .mobile_profile_container {
+    gap: 0.2rem;
+    display: flex;
+    height: max-content;
+  }
+
+  /* ============================================= */
+  /* Profile Picture */
+  .profile_picture {
+    width: 25px;
+    height: 20px;
+  }
+
+  /* ============================================= */
+  /* user name */
+  .user_name {
+    font-size: 0.8rem;
+  }
+
+  /* ============================================= */
+  /*nav toggle container */
+  .nav_toggle_container {
+    display: block;
+    color: #ffffff;
+    font-size: 1.1rem;
+  }
+
+  /* ============================================= */
+  /*  nav cancel container*/
+  .nav_cancel_container {
+    top: 2%;
+    right: 6%;
+    color: red;
+    display: block;
+    font-size: 1.1rem;
+    position: absolute;
+  }
+}
+
+/* ================================================ */
+
+/* ================================================ */
+/* Ipad View */
+@media screen and (764px <= width <= 1024px) {
+  /* ============================================= */
+  /* Nav logo*/
+  .nav_logo {
+    width: 50px;
+    height: 45px;
+  }
+
+  /* ============================================= */
+  /* search icon*/
+  .search_icon {
+    width: 24px;
+    height: 20px;
+  }
+
+  /* ============================================= */
+  /* profile picture*/
+  .profile_picture {
+    width: 32px;
+    height: 27px;
+  }
+
+  /* ============================================= */
+  /* user name */
+  .user_name {
+    font-size: 0.9rem;
+  }
+
+  /* ============================================= */
+  /* Navigation Links Container*/
+  .navigation_link_container {
+    height: 90vh;
+  }
+
+  /* ============================================= */
+  /*link icon*/
+  .link_icon {
+    width: 24px;
+    height: 20px;
+  }
+
+  /* ============================================= */
+  /*E commence icon*/
+  .E_commerce_icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* ============================================= */
+  /*contact serach link icon*/
+  .contact_serach_icon {
+    width: 26px;
+    height: 24px;
+  }
+
+  /* ============================================= */
+  /*Link name*/
+  .link_name {
+    font-size: 1.1rem;
+  }
+
+  /* ============================================= */
+  /*new notification*/
+  .new_notifications {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* ============================================= */
+  /*nav toggle container */
+  .nav_toggle_container {
+    font-size: 1.2rem;
+  }
+}

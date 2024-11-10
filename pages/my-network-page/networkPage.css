@@ -1,0 +1,1033 @@
+@import "../../src/modal/modal.css";
+/* ============================================= */
+/* General styling */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  display: block;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* ========================================================= */
+/* Scroll bar */
+html {
+  scroll-behavior: smooth;
+}
+/* Scroll bar width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Scroll bar Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/*Scroll bar Handle */
+::-webkit-scrollbar-thumb {
+  background: #646266;
+}
+
+/* ============================================= */
+/* main container*/
+.main_container {
+  height: 100vh;
+  padding: 0 2rem;
+  overflow: hidden;
+  padding-bottom: 1rem;
+  background: #000000;
+}
+
+/* ============================================= */
+/* Desktop View */
+
+/* ============================================= */
+/* nav container*/
+.nav_container {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+
+/* ============================================= */
+/* nav*/
+.nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ============================================= */
+/* Nav Logo container*/
+.nav_logo_container {
+  border-radius: 15px;
+  background: #ffffff;
+}
+
+/* ============================================= */
+/* Nav Logo */
+.nav_logo {
+  width: 47px;
+  height: 42px;
+}
+
+/* ============================================= */
+/* Search container*/
+.search_container {
+  width: 40%;
+  padding-left: 3rem;
+}
+
+/* ============================================= */
+/* Search Icon*/
+.search_icon {
+  width: 21px;
+  height: 18px;
+}
+
+/* ============================================= */
+/* Navigation Links Container*/
+.navigation_link_container {
+  height: 100%;
+}
+
+/* ============================================= */
+/*Link Container*/
+.link_container {
+  height: 100%;
+  display: flex;
+  padding: 0 1rem;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* ============================================= */
+/*Link */
+.link {
+  gap: 5px;
+  display: flex;
+  color: white;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ============================================= */
+/*link icon*/
+.link_icon {
+  width: 18px;
+  height: 14px;
+}
+
+/* ============================================= */
+/*contact serach link icon*/
+.contact_serach_icon {
+  width: 22px;
+  height: 18px;
+}
+
+/* ============================================= */
+/*new notifications*/
+.new_notifications {
+  top: 0;
+  width: 7px;
+  right: 23%;
+  height: 7px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #d61818;
+}
+
+/* ============================================= */
+/*Link name*/
+.link_name {
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 18.04px;
+  font-family: "Catamaran", serif;
+}
+
+/* ============================================= */
+/*drop down icon*/
+.drop_down_icon {
+  width: 12px;
+  height: 7px;
+}
+
+/* ============================================= */
+/*Desktop view  Profile Picture container*/
+.profile_picture_container {
+  height: 100%;
+  display: flex;
+  color: white;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+/* ============================================= */
+/*Mobile view  Profile Picture container*/
+.mobile_profile_container {
+  display: none;
+}
+
+/* ============================================= */
+/* Profile Picture */
+.profile_picture {
+  width: 30px;
+  height: 25px;
+}
+
+/* ============================================= */
+/* user name */
+.user_name {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 22.96px;
+  font-family: "Catamaran", serif;
+}
+
+/* ============================================= */
+/* Mobile bar icon */
+.nav_toggle_container {
+  display: none;
+}
+
+/* ============================================= */
+/*  nav cancel container*/
+.nav_cancel_container {
+  display: none;
+}
+
+/* ============================================= */
+/* General section  */
+.general_section {
+  display: flex;
+  height: calc(100vh - 10vh);
+}
+
+/* ============================================= */
+/*side bar container */
+.side_bar_container {
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ============================================= */
+/* user  */
+.user {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ============================================= */
+/*privacy container  */
+.privacy_container_list {
+  height: 30%;
+  display: flex;
+  color: #ffffff;
+  padding: 0 0.5rem;
+  border-radius: 15px;
+  background: #161515;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+/* ============================================= */
+/* privacy item  */
+.privacy_item {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* ============================================= */
+/* item icon  */
+.item_icon {
+  width: 17px;
+  height: 17px;
+}
+
+/* ============================================= */
+/* item name */
+.item_name {
+  font-weight: 800;
+  font-size: 0.85rem;
+  padding-top: 0.15rem;
+  text-transform: capitalize;
+  font-family: "Catamaran", serif;
+}
+
+/* ============================================= */
+/*user channels  */
+.user_channels {
+  height: 66%;
+  display: flex;
+  padding: 0 0.5rem;
+  border-radius: 15px;
+  background: #161515;
+  flex-direction: column;
+}
+
+/* ============================================= */
+/*channels title  */
+.channel_title {
+  height: 25%;
+  display: flex;
+  padding: 0.4rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #ffffff85;
+  line-height: 32.8px;
+  justify-content: center;
+  text-transform: capitalize;
+  font-family: "Catamaran", serif;
+}
+
+/* ============================================= */
+/* list of user channels */
+.list_of_user_channels {
+  gap: 1rem;
+  display: flex;
+  overflow-y: scroll;
+  flex-direction: column;
+  height: calc(100% - 25%);
+  justify-content: space-evenly;
+}
+
+/* ============================================= */
+/* channel */
+.channel {
+  gap: 0.5rem;
+  display: flex;
+  color: #ffffff;
+  padding: 0.5rem 0;
+  align-items: center;
+}
+
+/* ============================================= */
+/*  channel profile */
+.channel_profile {
+  width: 43px;
+  height: 43px;
+  border-radius: 15px;
+  background: #d9d9d9;
+}
+
+/* ============================================= */
+/*  channel name*/
+.channel_name {
+  font-weight: 800;
+  font-size: 0.75rem;
+  text-transform: capitalize;
+  font-family: "Catamaran", serif;
+}
+
+/* ============================================= */
+/*Terms & condition container   */
+.terms_and_condition_container {
+  height: 5%;
+  display: flex;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  font-size: 0.65rem;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  text-decoration: underline;
+  font-family: "Catamaran", serif;
+}
+
+/* ============================================= */
+/*Network container */
+.network_container {
+  padding: 0 3rem;
+  width: calc(100% - 22%);
+  background: linear-gradient(
+    234.5deg,
+    #161515 52.64%,
+    #531650 80.04%,
+    #d618ce 98.42%
+  );
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+/* ============================================= */
+/*network nav */
+.network_nav {
+  gap: 5rem;
+  height: 20%;
+  display: flex;
+  color: #ffffff;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================================= */
+/* open page container  */
+.open_page_container {
+  height: 70%;
+}
+
+/* ============================================= */
+/*  open page list*/
+.open_page_list {
+  gap: 2rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ============================================= */
+/*   page */
+.page {
+  display: flex;
+  font-weight: 600;
+  font-size: 0.8rem;
+  position: relative;
+  justify-content: center;
+  font-family: sans-serif;
+}
+
+/* ============================================= */
+/*  Mobile View Go back icon  back icon */
+.back_icon {
+  display: none;
+}
+
+/* ============================================= */
+/*   currently open page*/
+.currently_open_page {
+  top: 120%;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+/* ============================================= */
+/*   create post container */
+.create_post_container {
+  gap: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+/* ============================================= */
+/*   create post */
+.create_post {
+  font-weight: 700;
+  font-size: 0.8rem;
+  font-family: sans-serif;
+}
+
+/* ============================================= */
+/*   add post */
+.add_post{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-align: center;
+  border-radius: 50%;
+  background: #6c49f8;
+  justify-content: center;
+}
+
+/* ============================================= */
+/*user network */
+.user_network {
+  gap: 1rem;
+  height: 80%;
+  display: flex;
+  color: #ffffff;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ============================================= */
+/*networks */
+.networks {
+  gap: 1.5rem;
+  height: 90%;
+  display: flex;
+  padding-top: 3rem;
+  overflow-y: scroll;
+  flex-direction: column;
+}
+
+/* ============================================= */
+/*about user network */
+.about_user_network {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ============================================= */
+/*user network details */
+.user_network_details {
+  gap: 1rem;
+  display: flex;
+  min-width: 30%;
+  align-items: center;
+}
+
+/* ============================================= */
+/*user network profile*/
+.user_network_profile {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #d9d9d9;
+}
+
+/* ============================================= */
+/*user detail*/
+.user_detail {
+  gap: 0.3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================================= */
+/*user network name*/
+.user_network_name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  font-family: "Catamaran", serif;
+}
+
+/* ============================================= */
+/*user network mail*/
+.user_network_mail {
+  font-weight: 500;
+  font-size: 0.8rem;
+  font-family: "Catamaran", serif;
+}
+
+/* ============================================= */
+/*message user container*/
+.message_user_container {
+  gap: 1rem;
+  height: 40px;
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  background: linear-gradient(
+    234.5deg,
+    #161515 52.64%,
+    #531650 80.04%,
+    #d618ce 98.42%
+  );
+  border: 3px solid white;
+}
+
+/* ============================================= */
+/*message*/
+.message {
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  font-family: "Catamaran", serif;
+}
+
+/* ============================================= */
+/*message send icon*/
+.message_send_icon {
+  width: 22px;
+  height: 22px;
+}
+
+/* ============================================= */
+/* remove*/
+.remove {
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  color: #d618ce;
+  line-height: 41px;
+  text-transform: capitalize;
+  font-family: "Catamaran", serif;
+}
+
+/* ============================================= */
+/*load more */
+.loadmore {
+  height: 10%;
+  display: flex;
+  font-weight: 500;
+  font-size: 0.9rem;
+  align-items: center;
+  justify-content: center;
+  font-family: "Catamaran", serif;
+}
+
+/* ================================================ */
+
+/* ================================================ */
+/* Mobile View */
+@media screen and (width <= 1023px) {
+  /* ============================================= */
+  /*main container*/
+  .main_container {
+    padding: 0;
+  }
+
+  /* ============================================= */
+  /* nav*/
+  .nav {
+    padding: 0.6rem;
+    position: relative;
+  }
+
+  /* ============================================= */
+  /* Search container*/
+  .search_container {
+    padding: 0;
+    width: max-content;
+  }
+
+  /* ============================================= */
+  /* Navigation Links Container*/
+  .navigation_link_container {
+    top: 0%;
+    right: 0%;
+    width: 60%;
+    z-index: 22;
+    height: 99vh;
+    overflow: hidden;
+    position: absolute;
+    border-radius: 15px;
+    border: 3px solid gray;
+    transform: translate(110%);
+    transition: all 300ms linear;
+    background-color: #000000;
+  }
+
+  .open_nav {
+    transform: translate(0%);
+  }
+
+  /* ============================================= */
+  /*Link Container*/
+  .link_container {
+    padding-top: 3rem;
+    position: relative;
+    justify-content: unset;
+    flex-direction: column;
+  }
+
+  /* ============================================= */
+  /*link icon*/
+  .link_icon {
+    width: 22px;
+    height: 18px;
+  }
+
+  /* ============================================= */
+  /*contact serach link icon*/
+  .contact_serach_icon {
+    width: 24px;
+    height: 20px;
+  }
+
+  /* ============================================= */
+  /*Link name*/
+  .link_name {
+    font-size: 1rem;
+  }
+
+  /* ============================================= */
+  /*drop down icon*/
+  .drop_down_icon {
+    display: none;
+  }
+
+  /* ============================================= */
+  /*Desktop view  Profile Picture container*/
+  .profile_picture_container {
+    display: none;
+  }
+
+  /* ============================================= */
+  /*Mobile view  Profile Picture container*/
+  .mobile_profile_container {
+    gap: 0.2rem;
+    display: flex;
+    height: max-content;
+  }
+
+  /* ============================================= */
+  /* Profile Picture */
+  .profile_picture {
+    width: 25px;
+    height: 20px;
+  }
+
+  /* ============================================= */
+  /* user name */
+  .user_name {
+    font-size: 0.8rem;
+  }
+
+  /* ============================================= */
+  /*nav toggle container */
+  .nav_toggle_container {
+    display: block;
+    color: #ffffff;
+    font-size: 1.1rem;
+  }
+
+  /* ============================================= */
+  /*  nav cancel container*/
+  .nav_cancel_container {
+    top: 2%;
+    right: 6%;
+    color: red;
+    display: block;
+    font-size: 1.1rem;
+    position: absolute;
+  }
+
+  /* ============================================= */
+  /*General section */
+  .general_section {
+    height: 89.5%;
+    position: relative;
+  }
+
+  /* ============================================= */
+  /*side bar container */
+  .side_bar_container {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* ============================================= */
+  /* item icon  */
+  .item_icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* ============================================= */
+  /* item name */
+  .item_name {
+    font-size: 1rem;
+  }
+
+  /* ============================================= */
+  /*channels title  */
+  .channel_title {
+    font-size: 1.3rem;
+  }
+
+  /* ============================================= */
+  /*  channel profile */
+  .channel_profile {
+    width: 46px;
+    height: 46px;
+  }
+
+  /* ============================================= */
+  /*  channel name*/
+  .channel_name {
+    font-size: 1rem;
+  }
+
+  /* ============================================= */
+  /*Network container */
+  .network_container {
+    padding: 0;
+    z-index: 5;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    position: absolute;
+    transform: translate(100%);
+    transition: all 300ms linear;
+  }
+
+  .open_network_container {
+    opacity: 1;
+    transform: translate(0%);
+  }
+
+  /* ============================================= */
+  /*network nav */
+  .network_nav {
+    gap: 4rem;
+    height: 15%;
+    padding: 0 1rem;
+    overflow-x: scroll;
+    justify-content: space-evenly;
+  }
+
+  /* ============================================= */
+  /*  Mobile View Go back icon  back icon */
+  .back_icon {
+    display: block;
+  }
+
+  /* ============================================= */
+  /*   page */
+  .page {
+    width: max-content;
+    font-size: 0.9rem;
+  }
+
+  /* ============================================= */
+  /*   create post */
+  .create_post {
+    font-size: 0.9rem;
+    width: max-content;
+  }
+
+  /* ============================================= */
+  /*user network */
+  .user_network {
+    height: 85%;
+  }
+
+  /* ============================================= */
+  /*networks */
+  .networks {
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+
+  /* ============================================= */
+  /*about user network */
+  .about_user_network {
+    padding: 0.6rem;
+  }
+
+  /* ============================================= */
+  /*user network details */
+  .user_network_details {
+    min-width: 55%;
+  }
+
+  /* ============================================= */
+  /*user network profile*/
+  .user_network_profile {
+    width: 70px;
+    height: 65px;
+    border-radius: 50%;
+    background: #d9d9d9;
+  }
+
+  /* ============================================= */
+  /*user network name*/
+  .user_network_name {
+    font-size: 0.9rem;
+  }
+
+  /* ============================================= */
+  /*message user container*/
+  .message_user_container {
+    gap: 0.5rem;
+    height: 30px;
+    padding: 0.4rem;
+  }
+
+  /* ============================================= */
+  /*message*/
+  .message {
+    font-size: 0.7rem;
+  }
+
+  /* ============================================= */
+  /*message send icon*/
+  .message_send_icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* ============================================= */
+  /* remove*/
+  .remove {
+    font-size: 0.9rem;
+  }
+}
+
+/* ================================================ */
+
+/* ================================================ */
+/* Ipad View */
+@media screen and (764px <= width <= 1024px) {
+  /* ============================================= */
+  /* Nav logo*/
+  .nav_logo {
+    width: 50px;
+    height: 45px;
+  }
+
+  /* ============================================= */
+  /* search icon*/
+  .search_icon {
+    width: 24px;
+    height: 20px;
+  }
+
+  /* ============================================= */
+  /* profile picture*/
+  .profile_picture {
+    width: 32px;
+    height: 27px;
+  }
+
+  /* ============================================= */
+  /* user name */
+  .user_name {
+    font-size: 0.9rem;
+  }
+
+  /* ============================================= */
+  /* Navigation Links Container*/
+  .navigation_link_container {
+    height: 90vh;
+  }
+
+  /* ============================================= */
+  /*link icon*/
+  .link_icon {
+    width: 24px;
+    height: 20px;
+  }
+
+  /* ============================================= */
+  /*contact serach link icon*/
+  .contact_serach_icon {
+    width: 26px;
+    height: 24px;
+  }
+
+  /* ============================================= */
+  /*Link name*/
+  .link_name {
+    font-size: 1.1rem;
+  }
+
+  /* ============================================= */
+  /*new notification*/
+  .new_notifications {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* ============================================= */
+  /*nav toggle container */
+  .nav_toggle_container {
+    font-size: 1.2rem;
+  }
+
+  /* ============================================= */
+  /* item icon  */
+  .item_icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* ============================================= */
+  /* item name */
+  .item_name {
+    font-size: 1.2rem;
+  }
+
+  /* ============================================= */
+  /*channels title  */
+  .channel_title {
+    font-size: 1.5rem;
+  }
+
+  /* ============================================= */
+  /*  channel profile */
+  .channel_profile {
+    width: 48px;
+    height: 48px;
+  }
+
+  /* ============================================= */
+  /*  channel name*/
+  .channel_name {
+    font-size: 1.2rem;
+  }
+
+  /* ============================================= */
+  /*   page */
+  .page {
+    font-size: 1rem;
+  }
+
+  /* ============================================= */
+  /*   create post */
+  .create_post {
+    font-size: 1rem;
+  }
+
+  /* ============================================= */
+  /*user network profile*/
+  .user_network_profile {
+    width: 72px;
+    height: 67px;
+  }
+
+  /* ============================================= */
+  /*user network name*/
+  .user_network_name {
+    font-size: 1.3rem;
+  }
+
+  /* ============================================= */
+  /*user network mail*/
+  .user_network_mail {
+    font-size: 1rem;
+  }
+
+  /* ============================================= */
+  /*message user container*/
+  .message_user_container {
+    gap: 1rem;
+    height: 40px;
+  }
+
+  /* ============================================= */
+  /*message*/
+  .message {
+    font-size: 1.4rem;
+  }
+
+  /* ============================================= */
+  /* remove*/
+  .remove {
+    font-size: 1.4rem;
+  }
+}

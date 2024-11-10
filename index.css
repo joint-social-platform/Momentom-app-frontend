@@ -45,7 +45,7 @@ ul li {
   cursor: pointer;
 }
 
-button {
+header nav button {
   padding: 0.8rem 1.5rem;
   background-color: black;
   color: white;
@@ -84,9 +84,18 @@ button {
   cursor: pointer;
 }
 
+.zara img {
+  width: 100%;
+  height: 355px;
+}
+
 .faq-section {
   background-color: #fadcd9;
   padding: 50px 0;
+}
+
+.faq {
+  margin-left: 160px;
 }
 .faq-card {
   background-color: white;
@@ -133,23 +142,30 @@ button {
   width: 100%;
 }
 
+.learn {
+  border-radius: 40px;
+  width: 85px;
+}
+
 .adventure-card {
-  border: none;
-  background-color: #f8f9fa;
+  background-color: #fff;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+
+  width: 100%;
+  height: 250px;
+  border-radius: 10px 10px 10px 10px;
 }
 
 .adventure-card h5 {
   color: white;
-  background-color: #6a0dad;
-  padding: 10px;
+  background-color: #4b3cf5;
+  padding: 25px;
   border-radius: 10px 10px 0 0;
 }
 
 .adventure-card .btn {
-  background-color: #6a0dad;
+  background-color: #4b3cf5;
   color: white;
 }
 
@@ -158,6 +174,10 @@ button {
   text-align: center;
   margin-top: 40px;
   margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .testimonial img {
@@ -169,7 +189,10 @@ button {
 .social-icons i {
   font-size: 30px;
   margin: 0 10px;
-  color: #6a0dad;
+}
+
+.instagram {
+  color: purple;
 }
 
 .form-container {
@@ -188,17 +211,17 @@ button {
 
 .form-container input::placeholder,
 .form-container textarea::placeholder {
-  color: #6c757d;
+  color: white;
 }
 
 .send-btn {
-  background-color: #6a0dad;
+  background-color: #4b3cf5;
   color: white;
   border: none;
   border-radius: 15px;
   padding: 10px 20px;
 }
 
-.send-btn:hover {
-  background-color: #5e0cac;
+a {
+  text-decoration: none;
 }
