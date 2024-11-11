@@ -102,6 +102,7 @@ const active_room_public = document.querySelector("#active_room_public");
 const active_room_private = document.querySelector("#active_room_private");
 const current_chat_details = document.querySelector(".current_chat_detail");
 const current_chat_detail = document.querySelector("#current_chat_detail");
+const typing_area = document.querySelectorAll(".typing_area");
 
 // public room functionality
 public_room.forEach((each_public_room) => {
@@ -202,41 +203,62 @@ current_chat_detail.addEventListener("click", () => {
 
 // ===========================================================
 // send message
-const send_message_icon = document.querySelector(".send_arrow_icon");
-const message_input = document.querySelector("#type_message_input");
-const chat_message_container = document.querySelector(".chat_messages");
+let global_index;
+const send_message_icon = document.querySelectorAll(".send_arrow_icon");
+const message_input = document.querySelectorAll("#type_message_input");
+const chat_message_container = document.querySelectorAll(".chat_messages");
 let input_value;
+
 // message input
-message_input.addEventListener("input", (e) => {
-  input_value = e.target.value;
-});
+message_input.forEach((message_input, index) => {
+  message_input.addEventListener("input", (e) => {
+    input_value = e.target.value;
+  });
 
-// send message functionality
-send_message_icon.addEventListener("click", () => {
-  // send recording
-  if (typing_area.classList.contains("show_recording")) {
-    typing_area.classList.remove("show_recording");
-    stopRecording();
-  }
+  // send message functionality
+  send_message_icon[index].addEventListener("click", () => {
+    global_index = index;
+    // send recording
+    if (typing_area[index].classList.contains("show_recording")) {
+      typing_area[index].classList.remove("show_recording");
+      stopRecording();
+    }
 
-  // if input is empty don't send message
-  if (input_value.trim() !== "") {
-    const newMessage = document.createElement("h2");
-    newMessage.className = "receiver_message";
-    newMessage.textContent = input_value;
+    // if input is empty don't send message
+    if (input_value.trim() !== "") {
+      const newMessage = document.createElement("h2");
+      newMessage.className = "receiver_message";
+      newMessage.textContent = input_value;
 
-    chat_message_container.appendChild(newMessage);
+      chat_message_container[index].appendChild(newMessage);
 
-    // style the div
-    const style_div = document.createElement("div");
-    style_div.className = "receiver_message_box_design";
+      // style the div
+      const style_div = document.createElement("div");
+      style_div.className = "receiver_message_box_design";
 
-    newMessage.appendChild(style_div);
+      newMessage.appendChild(style_div);
 
-    // Clear the input field in the DOM and reset the variable
-    message_input.value = "";
-    input_value = "";
-  }
+      // group chat
+      if (group_chatting_page.classList.contains("chatting_page_open")) {
+        const senderDetails = document.createElement("div");
+        senderDetails.className = "sender_details receiver_details";
+        const senderName = document.createElement("h4");
+        senderName.className = 'sender_name"';
+        senderName.textContent = "you";
+        const senderImg = document.createElement("img");
+        senderImg.className = "sender_profile_picture";
+        senderImg.src = "../../src/images/user_profile.png";
+
+        newMessage.appendChild(senderDetails);
+        senderDetails.appendChild(senderName);
+        senderDetails.appendChild(senderImg);
+      }
+
+      // Clear the input field in the DOM and reset the variable
+      message_input.value = "";
+      input_value = "";
+    }
+  });
 });
 
 // ===========================================================
@@ -326,8 +348,7 @@ close_camera.addEventListener("click", () => {
 
 // ===========================================================
 // mic
-const mic_icon = document.querySelector(".mic_recoder_icon");
-const typing_area = document.querySelector(".typing_area");
+const mic_icon = document.querySelectorAll(".mic_recoder_icon");
 let user_recoder;
 let record = [];
 let audio_stream;
@@ -360,7 +381,7 @@ const Mic = async () => {
       audio_container.className = "receiver audio_player";
 
       // Append the audio container element to the chat container
-      chat_message_container.appendChild(audio_container);
+      chat_message_container[global_index].appendChild(audio_container);
       audio_container.appendChild(audioElement);
 
       // Release the audio
@@ -368,95 +389,102 @@ const Mic = async () => {
 
       // Clear audio chunks for future recordings
       record = [];
-      console.log(audioElement);
     };
   } catch (error) {
     alert("Microphone access denied or unavailable");
   }
 };
 
-mic_icon.addEventListener("click", () => {
-  typing_area.classList.add("show_recording");
-  Mic();
+mic_icon.forEach((mic_icon, index) => {
+  mic_icon.addEventListener("click", () => {
+    typing_area[index].classList.add("show_recording");
+    Mic();
+  });
 });
 
 // stop recording
 const stopRecording = () => {
   if (user_recoder && user_recoder.state === "recording") {
     user_recoder.stop();
-    console.log("Recording stopped");
   }
 };
 
 // ===========================================================
 // File
-const File_icon = document.querySelector(".gallery_icon");
-const user_file_container = document.querySelector(".gallery_icon_file_input");
+const File_icon = document.querySelectorAll(".gallery_icon");
+const user_file_container = document.querySelectorAll(
+  ".gallery_icon_file_input"
+);
 
 // ===========================================================
 // File upload functionality
-user_file_container.addEventListener("change", (e) => {
-  const file = e.target.files[0];
-  const fileName = e.target.files[0].name;
+user_file_container.forEach((user_file, index) => {
+  user_file.addEventListener("change", (e) => {
+    const file = e.target.files[0];
+    const fileName = e.target.files[0].name;
 
-  const filetype = (type, classes) => {
-    const newImg = document.createElement(type);
-    newImg.className = classes;
+    const filetype = (type, classes) => {
+      const newImg = document.createElement(type);
+      newImg.className = classes;
 
-    // Set controls for audio and video elements
-    if (type === "audio" || type === "video") {
-      newImg.controls = true;
+      // Set controls for audio and video elements
+      if (type === "audio" || type === "video") {
+        newImg.controls = true;
+      }
+
+      try {
+        const fileUrl = URL.createObjectURL(file);
+        newImg.src = fileUrl;
+      } catch (error) {
+        console.log(error);
+      }
+      console.log(newImg);
+
+      chat_message_container[index].appendChild(newImg);
+
+      if (type === "audio") {
+        const audio_container = document.createElement("div");
+        audio_container.appendChild(newImg);
+        audio_container.classList = 'receiver audio_player"';
+        chat_message_container[index].appendChild(audio_container);
+      }
+    };
+
+    if (file) {
+      // images
+      if (
+        fileName.endsWith(".jpg") ||
+        fileName.endsWith(".jpeg") ||
+        fileName.endsWith(".png")
+      ) {
+        filetype("img", "receiver_message_image receiver");
+      }
+
+      // music
+      else if (
+        fileName.endsWith(".mp3") ||
+        fileName.endsWith(".wav") ||
+        fileName.endsWith(".aac") ||
+        fileName.endsWith(".flac") ||
+        fileName.endsWith(".ogg") ||
+        fileName.endsWith(".m4a") ||
+        fileName.endsWith(".aiff")
+      ) {
+        filetype("audio");
+      }
+
+      // video
+      else if (fileName.endsWith(".mp4")) {
+        filetype("video", "receiver receiver_message_image receiver");
+      }
+      console.log(file);
     }
-
-    try {
-      const fileUrl = URL.createObjectURL(file);
-      newImg.src = fileUrl;
-    } catch (error) {
-      console.log(error);
-    }
-    console.log(newImg);
-
-    chat_message_container.appendChild(newImg);
-
-    if (type === "audio") {
-      const audio_container = document.createElement("div");
-      audio_container.appendChild(newImg);
-      audio_container.classList = 'receiver audio_player"';
-      chat_message_container.appendChild(audio_container);
-    }
-  };
-
-  if (file) {
-    // images
-    if (
-      fileName.endsWith(".jpg") ||
-      fileName.endsWith(".jpeg") ||
-      fileName.endsWith(".png")
-    ) {
-      filetype("img", "receiver_message_image receiver");
-    }
-
-    // music
-    else if (
-      fileName.endsWith(".mp3") ||
-      fileName.endsWith(".wav") ||
-      fileName.endsWith(".aac") ||
-      fileName.endsWith(".flac") ||
-      fileName.endsWith(".ogg") ||
-      fileName.endsWith(".m4a") ||
-      fileName.endsWith(".aiff")
-    ) {
-      filetype("audio");
-    }
-
-    // video
-    else if (fileName.endsWith(".mp4")) {
-      filetype("video", "receiver receiver_message_image receiver");
-    }
-    console.log(file);
-  }
+  });
 });
 
-File_icon.addEventListener("click", () => {
-  user_file_container.click();
+File_icon.forEach((file_icon, index) => {
+  file_icon.addEventListener("click", () => {
+    global_index = index;
+    user_file_container[index].click();
+  });
 });

@@ -771,6 +771,7 @@ html {
 .receiver {
   align-self: end;
   justify-self: end;
+  position: relative;
 }
 
 /* ========================================================= */
