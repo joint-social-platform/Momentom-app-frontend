@@ -417,6 +417,13 @@ user_file_container.addEventListener("change", (e) => {
     console.log(newImg);
 
     chat_message_container.appendChild(newImg);
+
+    if (type === "audio") {
+      const audio_container = document.createElement("div");
+      audio_container.appendChild(newImg);
+      audio_container.classList = 'receiver audio_player"';
+      chat_message_container.appendChild(audio_container);
+    }
   };
 
   if (file) {
@@ -430,14 +437,23 @@ user_file_container.addEventListener("change", (e) => {
     }
 
     // music
-    else if (fileName.endsWith(".mp3")) {
-      filetype("audio", "receiver receiver_message_image receiver");
+    else if (
+      fileName.endsWith(".mp3") ||
+      fileName.endsWith(".wav") ||
+      fileName.endsWith(".aac") ||
+      fileName.endsWith(".flac") ||
+      fileName.endsWith(".ogg") ||
+      fileName.endsWith(".m4a") ||
+      fileName.endsWith(".aiff")
+    ) {
+      filetype("audio");
     }
 
     // video
     else if (fileName.endsWith(".mp4")) {
       filetype("video", "receiver receiver_message_image receiver");
     }
+    console.log(file);
   }
 });
 
