@@ -445,7 +445,7 @@ html {
 
 /* ============================================= */
 /*   add post */
-.add_post{
+.add_post {
   width: 40px;
   height: 40px;
   display: flex;
@@ -455,6 +455,7 @@ html {
   border-radius: 50%;
   background: #6c49f8;
   justify-content: center;
+  cursor: pointer;
 }
 
 /* ============================================= */
