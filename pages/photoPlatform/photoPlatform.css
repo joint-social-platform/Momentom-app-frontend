@@ -193,7 +193,7 @@
     gap: 60px;
 }
 .post{
-    margin-top: 28px;
+    margin-top: 44px;
 }
 .create img{
     width: 50px;
@@ -202,12 +202,13 @@
 .create{
     display: flex;
     gap: 10px;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 .navbar-body2{
     display: flex;
     gap: 110px;
     margin-left: 250px;
+    
 }
 .dot{
     text-align: center;
@@ -226,6 +227,12 @@
     display: flex;
     margin-top: 20px;
     gap: 20px;
+}
+.body2{
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+    padding-top: 50px;
 }
 .circle{
     width: 100px;
