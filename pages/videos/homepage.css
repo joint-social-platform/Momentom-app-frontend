@@ -47,6 +47,9 @@ nav .Search {
     margin: 0;
     background-color: transparent;
     padding: 0.7em;
+    outline: none;
+    color: white;
+    width: 100%;
 }
 
 .navigation-icons {
@@ -61,6 +64,10 @@ nav .Search {
     gap: 0.4em;
     align-items: center;
     justify-content: center;
+}
+
+.navigation-icons div:hover {
+    cursor: pointer;
 }
 
 .navigation-icons .videos {
@@ -91,7 +98,7 @@ nav .Search {
     gap: 1em;
     position: fixed;
     height: 100%;
-    top: 4em;
+    top: 2.9em;
     left: 0;
 }
 
@@ -114,13 +121,18 @@ nav .Search {
 .groups {
     display: flex;
     flex-direction: column;
-    gap: 0.5em;
+    gap: 1em;
 }
 
 .groups div {
     display: flex;
     gap: 1em;
     align-items: center;
+}
+
+.groups div:hover {
+    cursor: pointer;
+    color: rgb(140, 116, 250);
 }
 
 .channel {
@@ -132,6 +144,12 @@ nav .Search {
 .channel .send, .channel .add {
     width: 0.9em;
     margin: 0.2em;
+}
+
+.channel .send:hover, .channel .add:hover {
+    cursor: pointer;
+    color: rgb(140, 116, 250);
+    width: 0.85em;
 }
 
 .groupnames {
@@ -151,6 +169,11 @@ nav .Search {
     height: 2em;
     background-color: whitesmoke;
     border-radius: 50%;
+}
+
+.groupnames > div:hover {
+    cursor: pointer;
+    color: rgb(140, 116, 250);
 }
 
 .all{
@@ -179,6 +202,10 @@ nav .Search {
     margin: 0em 0.5em;
 }
 
+.upper a:hover{
+    color: rgb(140, 116, 250);
+}
+
 .upper div {
     display: flex;
     align-items: center;
@@ -188,8 +215,6 @@ nav .Search {
     width: 2.5em;
 }
 
-
- 
 h2{
     color: rgb(140, 116, 250);
     display: block;
