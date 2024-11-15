@@ -33,12 +33,12 @@ function initializeNavigation() {
     });
 
     // Scroll handler for navbar effects
-    let lastScroll = 0;
-    window.addEventListener('scroll', () => {
-        const navbar = document.querySelector('.navbar');
-        const currentScroll = window.pageYOffset;
+   // let lastScroll = 0;
+    //window.addEventListener('scroll', () => {
+       // const navbar = document.querySelector('.navbar');
+        //const currentScroll = window.pageYOffset;
 
-        if (!navbar) return;
+        //if (!navbar) return;
 
         // Add shadow effect on scroll
         if (currentScroll > 0) {

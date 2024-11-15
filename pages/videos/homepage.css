@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    font-family: "Catamaran", sans-serif;
+    font-size: 14px;
+}
+
+nav{
+  background: #000000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-size: 8px;
+  align-items: center;
+  padding: 1em 3em;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+nav .logo {
+    width: 15%;
+} 
+
+nav .logo img {
+    width: 5em;
+}
+
+nav .Search {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    border: 0.1em solid rgba(255, 255, 255, 0.24);
+    border-radius: 4em;
+    padding: 1em;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.Search input {
+    border: 0;
+    margin: 0;
+    background-color: transparent;
+    padding: 0.7em;
+    outline: none;
+    color: white;
+    width: 100%;
+}
+
+.navigation-icons {
+    display: flex;
+    gap: 4em;
+    align-items: end;
+}
+
+.navigation-icons div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation-icons div:hover {
+    cursor: pointer;
+}
+
+.navigation-icons .videos {
+    display: flex;
+    flex-direction: row;
+}
+
+.dropdown img{
+    width: 60%;
+}
+
+.profile {
+    margin-left: 1em;
+}
+
+.fullpage {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 20%;
+    background: #000000;
+    color: white;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    position: fixed;
+    height: 100%;
+    top: 2.9em;
+    left: 0;
+}
+
+.sidebar > div {
+    background-color: #ffffff23;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.sidebar img {
+    width: 1.2em;
+}
+
+.sidebar div p {
+    text-align: center;
+    width: 100%;
+    font-size: 1.1em;
+}
+
+.groups {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.groups div {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.groups div:hover {
+    cursor: pointer;
+    color: rgb(140, 116, 250);
+}
+
+.channel {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em auto;
+}
+
+.channel .send, .channel .add {
+    width: 0.9em;
+    margin: 0.2em;
+}
+
+.channel .send:hover, .channel .add:hover {
+    cursor: pointer;
+    color: rgb(140, 116, 250);
+    width: 0.85em;
+}
+
+.groupnames {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+}
+
+.groupnames > div {
+    display: flex;
+    gap: 0.6em;
+    align-items: center;
+} 
+
+.groupnames > div > div{
+    width: 2em;
+    height: 2em;
+    background-color: whitesmoke;
+    border-radius: 50%;
+}
+
+.groupnames > div:hover {
+    cursor: pointer;
+    color: rgb(140, 116, 250);
+}
+
+.all{
+    padding: 2em;
+    background-color: rgb(69, 45, 64);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    overflow: scroll;
+    width: 80%;
+    border-top-left-radius: 1em;
+    position: relative;
+    top: 4em;
+    left: 19em;
+}
+
+.upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.upper a {
+    text-decoration: none;
+    color: white;
+    margin: 0em 0.5em;
+}
+
+.upper a:hover{
+    color: rgb(140, 116, 250);
+}
+
+.upper div {
+    display: flex;
+    align-items: center;
+}
+
+.upper img {
+    width: 2.5em;
+}
+
+h2{
+    color: rgb(140, 116, 250);
+    display: block;
+}
+
+.line{
+    line-height: 2px;
+    padding: 6px;
+    margin: 20px;
+}
+
+.img{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.all img {
+    border-radius: 1em;
+}

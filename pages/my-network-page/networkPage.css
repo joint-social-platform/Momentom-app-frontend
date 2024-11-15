@@ -1,3 +1,4 @@
+@import "../../src/modal/modal.css";
 /* ============================================= */
 /* General styling */
 *,
@@ -454,6 +455,7 @@ html {
   border-radius: 50%;
   background: #6c49f8;
   justify-content: center;
+  cursor: pointer;
 }
 
 /* ============================================= */

@@ -1,0 +1,184 @@
+.overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: black;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+}
+
+.modal-head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-head h2 {
+  color: #6c49f8;
+}
+
+.modal-head p {
+  color: white;
+}
+
+.modal-head img {
+  margin-top: 1rem;
+}
+
+.modal-body {
+  background-color: #373638;
+  position: relative;
+  width: 100%;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 9px;
+  margin-top: 1rem;
+}
+
+.modal-body button {
+  position: absolute;
+  right: 5px;
+  top: -5px;
+  cursor: pointer;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.modal-body .add-photos {
+  color: white;
+}
+
+.modal-body .drag-drop {
+  color: #535354;
+}
+
+.modal-foot {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.add-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  width: 100%;
+  padding: 1rem;
+}
+
+.add-text-img {
+  display: flex;
+  gap: 5px;
+}
+
+.share {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.share p {
+  margin-right: 1rem;
+}
+
+.next-btn {
+  width: 100%;
+  border-radius: 5px;
+  height: 2.5rem;
+  margin-top: 1rem;
+  background-color: #373638;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 25px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #373638;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 25px;
+  width: 26px;
+  left: 2px;
+  bottom: 0;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(32px);
+  -ms-transform: translateX(32px);
+  transform: translateX(32px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.hidden {
+  display: none;
+}

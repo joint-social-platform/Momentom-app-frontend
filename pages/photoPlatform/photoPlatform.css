@@ -1,0 +1,268 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.image-background{
+    background-color: white;
+    width: 60px;
+    padding-top: 5px;
+    height: 47px;
+    border-radius: 15px;
+}
+.image-background img{
+    align-items: center;
+}
+.search-button{
+    display: flex;
+    width: 500px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    height: 20px;
+    background-color: rgb(48, 29, 29);
+    border-radius: 20px;
+    gap: 20px;
+    padding-left: 10px;
+}
+.search-button input{
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+.nav-button{
+    display: flex;
+    gap: 50px;
+}
+.nav-button button{
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    color: white;
+
+}
+.nav-button p{
+    font-size: 9px;
+    text-align: center;
+}
+.navBar{
+    display: flex;
+    gap: 180px;
+    justify-content: center;
+    padding-top: 10px;
+    background-color: black;
+    padding-bottom: 10px;
+}
+.navbar2{
+    display: flex;
+    gap: 70px;
+}
+.search{
+    position: relative;
+}
+.search img{ 
+    position: absolute;
+    right: 8px;
+    width: 10px;
+}
+.image1 img{
+    height: 30px;
+}
+.image1 p{
+    font-size: 9px;
+}
+.search button img{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 20px;
+    position: relative;
+    
+}
+.search p{
+    position: absolute;
+    top: 30px;
+}
+.seach{
+    position: relative;
+}
+.seach img{ 
+    position: absolute;
+    right: -5px;
+    width: 10px;
+}
+.seach p{
+    position: absolute;
+    top: 30px;
+    left: -4px;
+}
+.seach button img{
+    width: 28px;
+    height: 30px;
+    margin-bottom: 20px;
+    position: relative;
+    
+}
+.navBar p{
+    color: white;
+}
+.buttton{
+    display: flex;
+    gap: 10px;
+}
+.body-side-bar{
+    background-color: rgb(48, 29, 29);
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+.hou{
+    display: flex;
+    gap: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.hou p{
+    padding-top: 5px;
+}
+.body-side-bar1{
+    width: 180px;
+    height: 140px;
+    background-color: rgb(73, 45, 45);
+    padding-left: 10px;
+    border-radius: 15px;
+    color: white;
+}
+.hou3{
+    display: flex;
+    gap: 20px;   
+}
+.hou2{
+    display: flex;
+    gap: 89px;
+    margin-top: 20px;
+}
+.hou3 img{
+    width: 20px;
+    height: 20px;
+}
+.body-side-bar2 img{
+    width: 40px;
+    height: 40px;
+}
+.body-side-bar2 p{
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.body-side-bar2{
+    display: flex;
+    gap: 5px;
+    margin-top: 15px;
+}
+.body-side-bar2 p{
+    padding-top: 13px;
+}
+.body-side-bar3{
+    width: 180px;
+    background-color: rgb(73, 45, 45);
+    height: 450px;
+    padding-top: 20px;
+    border-radius: 15px;
+    padding-left: 10px;
+    margin-top: 30px;
+    padding-bottom: 10px;
+    color: white;
+}
+.par{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    text-align: center;
+    
+}
+.img{
+   margin-top: 20px;
+}
+.navbar-body2 button{
+     border: none;
+     background-color: transparent;
+     color: white;
+}
+.navbar-body{
+    display: flex;
+    gap: 60px;
+}
+.post{
+    margin-top: 44px;
+}
+.create img{
+    width: 50px;
+    height: 50px;
+}
+.create{
+    display: flex;
+    gap: 10px;
+    margin-top: 50px;
+}
+.navbar-body2{
+    display: flex;
+    gap: 110px;
+    margin-left: 250px;
+    
+}
+.dot{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+.body-side-bar4{
+    display: flex;
+    
+}
+.human1{
+    width: 600px;
+    height: 500px;
+}
+.body1{
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+}
+.body2{
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+    padding-top: 50px;
+}
+.circle{
+    width: 100px;
+    height: 100px;
+}
+.button-section button{
+    border: none;
+    background-color: transparent;
+}
+.button-section img{
+    width: 30px;
+    height: 30px;
+}
+.ico i{
+    font-size: 30px;
+}
+.button-section{
+    display: flex;
+    gap: 15px;
+}
+.name{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.likes{
+    font-family: Arial, Helvetica, sans-serif;padding-top: 10px;
+}
+.wholeBody{
+    background: linear-gradient(45deg, purple 10%, rgb(48, 29, 29) 60%);
+    padding-left: 120px;
+    padding-right: 60px;
+    padding-bottom: 60px;
+}
