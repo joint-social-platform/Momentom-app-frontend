@@ -1308,6 +1308,13 @@
                     alt="help_icon"
                     class="help_icon"
                   />
+
+                  <!-- =========================================== -->
+                  <!-- detail container-->
+                  <div class="tooltip-bottom">
+                    <i class="fa-solid fa-x close_detail"></i>
+                    <h1>User Details</h1>
+                  </div>
                 </div>
               </div>
 
@@ -1415,6 +1422,10 @@
               <!-- =========================================== -->
               <!--  typing area container -->
               <div class="typing_area_container">
+                <!-- =========================================== -->
+                <!--  emoji container -->
+                <div class="bubble-bottom emoji_container"></div>
+
                 <!-- =========================================== -->
                 <!--  emoji icon -->
                 <img
@@ -1544,6 +1555,13 @@
                     alt="help_icon"
                     class="help_icon"
                   />
+
+                  <!-- =========================================== -->
+                  <!-- detail container-->
+                  <div class="tooltip-bottom">
+                    <i class="fa-solid fa-x close_detail"></i>
+                    <h1>User Details</h1>
+                  </div>
                 </div>
               </div>
 
@@ -1751,6 +1769,10 @@
               <!-- =========================================== -->
               <!--  typing area container -->
               <div class="typing_area_container">
+                <!-- =========================================== -->
+                <!--  emoji container -->
+                <div class="bubble-bottom emoji_container"></div>
+
                 <!-- =========================================== -->
                 <!--  emoji icon -->
                 <img
@@ -2025,6 +2047,74 @@
             </div>
           </div>
         </section>
+
+        <!-- =========================================== -->
+        <!-- start call modal -->
+        <div class="start_call">
+          <!-- =========================================== -->
+          <!-- call btn -->
+          <button class="call_btn start">start call</button>
+          <button class="call_btn start video open_video_call">
+            start video call
+          </button>
+
+          <!-- =========================================== -->
+          <!-- call btn -->
+          <button class="call_btn cancel">cancel</button>
+        </div>
+
+        <!-- =========================================== -->
+        <!-- normal call container -->
+        <div class="normal_call_container">
+          <!-- =========================================== -->
+          <!--  call detail-->
+          <div class="caller_detail">
+            <!-- =========================================== -->
+            <!-- caller name -->
+            <h2 class="caller_name">my mtn</h2>
+
+            <!-- =========================================== -->
+            <!-- calling text-->
+            <p class="calling">calling</p>
+          </div>
+
+          <!-- =========================================== -->
+          <!-- caller profile container-->
+          <div class="caller_profile_container">
+            <h2 class="time">
+              <span class="hr">00 </span> : <span class="mins"> 00 </span> :
+              <span class="secs"> 00</span>
+            </h2>
+            <!-- =========================================== -->
+            <!-- caller_profile -->
+            <img
+              alt="caller_profile"
+              class="caller_profile"
+              src="../../src/images/big-user_profile_picture.jpg"
+            />
+          </div>
+
+          <!-- =========================================== -->
+          <!-- end call-->
+          <button class="end_call">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="68"
+              height="68"
+              viewBox="0 0 24 24"
+            >
+              <rect width="24" height="24" fill="none" />
+              <path
+                fill="#ffffff"
+                d="M8 13.478v-.616s0-1.466 4-1.466s4 1.466 4 1.466v.388c0 .956.723 1.77 1.7 1.912l2 .294c1.21.177 2.3-.73 2.3-1.913v-2.125c0-.587-.184-1.164-.63-1.562C20.23 8.837 17.42 7 12 7c-5.749 0-8.56 2.583-9.56 3.789c-.315.381-.44.864-.44 1.352v1.923c0 1.298 1.296 2.228 2.58 1.852l2-.587c.843-.247 1.42-.998 1.42-1.85"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- =========================================== -->
+        <!-- video call  -->
+        <video class="video_call" autoplay></video>
       </div>
     </div>
     <!-- =========================================== -->
