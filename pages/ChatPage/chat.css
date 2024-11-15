@@ -600,6 +600,7 @@ html {
   height: 15%;
   display: flex;
   padding-left: 1rem;
+  position: relative;
   align-items: center;
   justify-content: space-between;
 }
@@ -771,6 +772,7 @@ html {
 .receiver {
   align-self: end;
   justify-self: end;
+  position: relative;
 }
 
 /* ========================================================= */
@@ -846,6 +848,7 @@ html {
   height: 15%;
   display: flex;
   padding: 1.5rem;
+  position: relative;
   align-items: center;
   justify-content: space-between;
 }
@@ -1032,7 +1035,7 @@ html {
 /* ========================================================= */
 /* camera video and canva */
 
-:is(#camera_video, .camera_canva, .current_img) {
+:is(#camera_video, .current_img) {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1047,6 +1050,7 @@ html {
 /* ========================================================= */
 /*show current picture */
 .open_camera_canva .current_img {
+  object-fit: contain;
   display: block;
 }
 
@@ -1104,6 +1108,236 @@ html {
   height: 80%;
   border-radius: 50%;
   background-color: #ffffff;
+}
+
+/* ========================================================= */
+/* detail container*/
+.tooltip-bottom {
+  /* Modify size here: */
+  top: 80%;
+  right: 0%;
+  width: 50%;
+  z-index: 333;
+  height: 400px;
+  padding: 1rem;
+  display: none;
+  position: absolute;
+  background: #333;
+}
+
+.tooltip-bottom:after {
+  content: "";
+  top: 0%;
+  left: 96%;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  background: #333;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.show_detail {
+  display: grid;
+  color: white;
+  font-size: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  font-family: "Catamaran", serif;
+}
+.close_detail {
+  top: 5%;
+  right: 10%;
+  color: red;
+  position: absolute;
+}
+
+/* ========================================================= */
+/* emoji container*/
+.emoji_container {
+  gap: 1rem;
+  display: none;
+  padding: 1rem;
+  overflow: scroll;
+  grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+}
+.show_emoji {
+  display: grid;
+}
+
+.emoji_container::-webkit-scrollbar {
+  display: none;
+}
+
+.bubble-bottom {
+  --size: 150px;
+  /* Modify size here: */
+  bottom: 100%;
+  left: 0%;
+  z-index: 333;
+  position: absolute;
+  width: 100%;
+  background: #333;
+  border-radius: 10px;
+  height: calc(var(--size) * 0.66);
+}
+
+.bubble-bottom:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  width: 0;
+  height: 0;
+  border: calc(var(--size) * 0.13) solid transparent;
+  border-top-color: #333;
+  border-bottom: 0;
+  margin-left: calc(var(--size) * 0.13 * -1);
+  margin-bottom: calc(var(--size) * 0.13 * -1);
+}
+
+/* ========================================================= */
+/* Start  call*/
+.start_call {
+  gap: 1rem;
+  width: 100%;
+  height: 88vh;
+  display: none;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  background-color: #000000c5;
+  font-family: "Catamaran", serif;
+}
+
+/* ========================================================= */
+/* Start  */
+.start {
+  display: none;
+  background-color: green;
+}
+.start:hover {
+  background-color: #31b957;
+}
+
+.cancel {
+  background-color: red;
+}
+.cancel:hover {
+  background-color: #d61818;
+}
+
+/* ========================================================= */
+/* call btn*/
+.call_btn {
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 15px;
+  padding: 1rem 1.5rem;
+}
+
+/* ========================================================= */
+/* normal call container*/
+.normal_call_container {
+  width: 100%;
+  height: 88vh;
+  z-index: 11;
+  display: none;
+  padding: 0.8rem;
+  position: absolute;
+  align-items: center;
+  flex-direction: column;
+  background-color: #000000;
+  justify-content: space-between;
+}
+
+/* ========================================================= */
+/* caller detail*/
+:is(.caller_detail, .caller_profile_container) {
+  gap: 0.5rem;
+  display: flex;
+  color: #ffffff;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-family: sans-serif;
+  text-transform: capitalize;
+}
+
+/* ========================================================= */
+/* caller name*/
+.caller_name {
+  font-size: 1.4rem;
+}
+
+/* ========================================================= */
+/* calling text*/
+.calling {
+  font-size: 0.9rem;
+}
+
+/* ========================================================= */
+/* time*/
+.time {
+  font-size: 1rem;
+  color: lightgrey;
+}
+
+/* ========================================================= */
+/* caller_profile*/
+.caller_profile {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* ========================================================= */
+/* end call*/
+.end_call {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+/* ========================================================= */
+/* end call svg*/
+.end_call svg {
+  width: 55px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.end_call:hover {
+  background-color: #d61818;
+}
+
+/* ========================================================= */
+/* open Start  call*/
+.open_call {
+  display: flex;
+}
+
+/* ========================================================= */
+/* video call*/
+.video_call {
+  width: 100%;
+  height: 88vh;
+  object-fit: cover;
+  position: absolute;
+  display: none !important;
+}
+
+.video {
+  display: none;
+}
+
+.open_video_call {
+  display: block !important;
 }
 
 /* ========================================================= */
