@@ -625,6 +625,7 @@ html {
 /* ========================================================= */
 /* active user detail */
 .active_user_detail {
+  position: relative;
   font-family: sans-serif;
 }
 
@@ -649,6 +650,13 @@ html {
   line-height: 12.24px;
   letter-spacing: -0.01em;
   text-transform: capitalize;
+}
+
+/* ========================================================= */
+/*  status div position */
+.status_div_position {
+  top: 70%;
+  left: 80%;
 }
 
 /* ========================================================= */

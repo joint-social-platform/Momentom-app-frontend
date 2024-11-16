@@ -1,4 +1,8 @@
 // ============================================================
+// Setting direct message opened chat message using chat header
+let True_False = 0;
+
+// ============================================================
 // all open function
 
 const openFunctionality = (div, classes) => {
@@ -103,6 +107,10 @@ chat_header_container.addEventListener("click", (e) => {
       closeFunctionality(active_chat, "active_message");
       if (Id == id) {
         openFunctionality(element, "active_message");
+      }
+
+      if (Id === "group") {
+        True_False = 1;
       }
     });
   }
@@ -709,4 +717,53 @@ start_video_call.addEventListener("click", () => {
   openFunctionality(call_container, "open_call");
   call_container.style.backgroundColor = "transparent";
   openFunctionality(video_call_container, "open_video_call");
+});
+
+// ===========================================================
+// Direct message
+const direct_messager = document.querySelectorAll(".active_group");
+const active_user_detail = document.querySelectorAll(".active_user_detail");
+
+// Direct message functionality
+direct_messager.forEach((messager) => {
+  messager.addEventListener("click", (e) => {
+    chat_message_container[True_False].innerHTML = "";
+
+    // getting chat messager details details
+    const chat_messager_details =
+      chat_message_container[True_False].parentElement.children[0].children[0];
+
+    let status_div = document.createElement("div");
+    let img = chat_messager_details.children[0];
+    let name = chat_messager_details.children[1].children[0];
+    let status = chat_messager_details.children[1].children[1];
+
+    if (e.currentTarget) {
+      let direct_messager_name = e.currentTarget.children[1];
+      let direct_messager_img = e.currentTarget.children[0].children[0];
+      let direct_messager_status = e.currentTarget.children[0].children[1];
+
+      // styling the status div
+      status_div.className = `${direct_messager_status.classList} status_div_position`;
+
+      // setting currently chatting friend to be as direct active group details
+      img.src = direct_messager_img.src;
+      name.textContent = direct_messager_name.textContent;
+      status.textContent = direct_messager_status.classList.contains(
+        "group_online"
+      )
+        ? "active now"
+        : "active few minutes ago";
+    }
+
+    // adding status
+    active_user_detail[True_False].appendChild(status_div);
+
+    // close direct message
+    if (chatting_page.classList.contains("close_chatting_page")) {
+      closeFunctionality(chatting_page, "close_chatting_page");
+      closeFunctionality(group_chatting_page, "close_chatting_page");
+      closeFunctionality(active_friends_list, "open_active_friends_list");
+    }
+  });
 });
