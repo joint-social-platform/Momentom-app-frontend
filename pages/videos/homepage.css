@@ -54,8 +54,9 @@ nav .Search {
   width: 100%;
 }
 
-.navigation-icons {
+.navigation-icons ul {
   display: flex;
+  flex-direction: row;
   gap: 4em;
   align-items: end;
 }
@@ -94,7 +95,6 @@ nav .Search {
 .fullpage {
   display: flex;
   width: 99vw;
-  overflow-x: hidden;
 }
 
 .sidebar {
@@ -131,6 +131,8 @@ nav .Search {
   display: flex;
   flex-direction: column;
   gap: 1em;
+  width: 100%;
+  margin: 0;
 }
 
 .groups div {
@@ -167,6 +169,8 @@ nav .Search {
   display: flex;
   flex-direction: column;
   gap: 0.8em;
+  width: 100%;
+  margin: 0;
 }
 
 .groupnames > div {
@@ -175,8 +179,9 @@ nav .Search {
   align-items: center;
 }
 
-.groupnames > div > div {
+.groupnames > div > img {
   width: 2em;
+  padding: 0.2em;
   height: 2em;
   background-color: whitesmoke;
   border-radius: 50%;
@@ -198,7 +203,12 @@ nav .Search {
   border-top-left-radius: 1em;
   position: relative;
   top: 4em;
-  left: 19em;
+  left: calc(100vw - 80%);
+}
+
+.right_arrow,
+.to_right_arrow {
+  display: none;
 }
 
 .upper {
@@ -208,6 +218,9 @@ nav .Search {
   padding-bottom: 2em;
   padding-left: 8em;
   font-size: 1.2em;
+  overflow-x: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: grey transparent;
 }
 
 .upper a {
@@ -283,6 +296,7 @@ h2 {
 
 .all {
   overflow: hidden;
+  width: 80%;
 }
 
 @media only screen and (max-width: 720px) {
@@ -324,24 +338,36 @@ h2 {
     outline: none;
     color: white;
     width: 100%;
+    display: none;
   }
 
-  .navigation-icons {
-    display: flex;
+  .navigation-icons ul {
+    display: none;
+    flex-direction: column;
+    background-color: #000000;
     gap: 2em;
+    width: 30%;
     align-items: end;
+    position: absolute;
+    font-size: 14px;
+    top: 3.6em;
+    right: 0;
+    padding: 1em;
   }
 
-  .navigation-icons div {
+  .navigation-icons ul div {
     display: flex;
     flex-direction: column;
     gap: 0.4em;
-    align-items: center;
+    width: 100%;
+    text-align: left;
+    align-items: flex-start;
     justify-content: center;
   }
 
   .navigation-icons div img {
     width: 60%;
+    display: none;
   }
 
   .navigation-icons .notifications img {
@@ -355,28 +381,26 @@ h2 {
   .navigation-icons .videos {
     display: flex;
     flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  .dropdown img {
-    width: 60%;
+  .navigation-icons .dropdown img {
+    width: 10%;
+    display: block;
   }
 
   .profile {
     margin-left: 1em;
   }
 
-  .hamburger,
-  .hamburger_icon {
+  .navigation-icons .hamburger,
+  .navigation-icons .hamburger_icon {
     display: block;
-    width: 10em;
+    width: 4em;
   }
 
-  .upper {
-    width: 100%;
-    margin-left: 0;
-    padding-left: 0;
-    font-size: 1em;
-  }
   .fullpage {
     display: flex;
     flex-direction: column;
@@ -385,7 +409,7 @@ h2 {
   .sidebar {
     position: fixed;
     z-index: 1;
-    top: 4em;
+    top: 3.5em;
     width: 100%;
     display: none;
   }
@@ -396,6 +420,29 @@ h2 {
     left: 0;
     padding: 1em;
     border-top-left-radius: 0;
+  }
+
+  .upper {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+    font-size: 0.9em;
+  }
+
+  .right_arrow {
+    background-color: #000000ad;
+    padding: 0.5em;
+    position: relative;
+    top: -0.2em;
+    left: -1em;
+    width: 5em;
+    display: block;
+  }
+
+  .to_right_arrow {
+    width: 100%;
+    display: block;
+    cursor: pointer;
   }
 
   .img {
