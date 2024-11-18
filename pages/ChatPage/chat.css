@@ -489,7 +489,7 @@ html {
 /*room kind  */
 .room_kinds {
   gap: 4rem;
-  width: 60%;
+  width: 40%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -530,9 +530,32 @@ html {
 }
 
 /* ========================================================= */
-/*  mobile view see active friends container */
+/*  see active friends container */
 .see_active_friend_container {
+  gap: 0.5rem;
   display: none;
+  align-items: center;
+}
+
+/* ========================================================= */
+/*  see active friends */
+.see_active_friends {
+  color: white;
+  font-weight: 600;
+  width: max-content;
+  font-size: 0.7rem;
+  line-height: 18.15px;
+  text-transform: capitalize;
+  font-family: "Inter", sans-serif;
+}
+
+/* ========================================================= */
+/*  active green div */
+.active_green_div {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #31b957;
 }
 
 /* ========================================================= */
@@ -655,8 +678,8 @@ html {
 /* ========================================================= */
 /*  status div position */
 .status_div_position {
-  top: 70%;
-  left: 80%;
+  top: 20%;
+  right: -20% !important;
 }
 
 /* ========================================================= */
@@ -945,6 +968,7 @@ html {
 /* active friends list  */
 .active_friends_list {
   width: 30%;
+  opacity: 0;
   color: #ffffff;
   padding-left: 1rem;
   background: linear-gradient(
@@ -952,6 +976,12 @@ html {
     #161515 72.23%,
     rgba(214, 24, 206, 0.92) 105.25%
   );
+}
+
+/* ========================================================= */
+/* open active friends list  */
+.open_active_friends_list {
+  opacity: 1;
 }
 
 /* ========================================================= */
@@ -1615,32 +1645,9 @@ html {
   }
 
   /* ========================================================= */
-  /*  see active friends container */
-  .see_active_friend_container {
-    gap: 0.5rem;
-    display: flex;
-    align-items: center;
-  }
-
-  /* ========================================================= */
   /*  see active friends */
   .see_active_friends {
-    color: white;
-    font-weight: 600;
-    width: max-content;
     font-size: 0.85rem;
-    line-height: 18.15px;
-    text-transform: capitalize;
-    font-family: "Inter", sans-serif;
-  }
-
-  /* ========================================================= */
-  /*  active green div */
-  .active_green_div {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: #31b957;
   }
 
   /* ========================================================= */

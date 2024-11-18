@@ -1,6 +1,7 @@
 // ============================================================
 // Setting direct message opened chat message using chat header
 let True_False = 0;
+let ID = "friendly_chat";
 
 // ============================================================
 // all open function
@@ -39,6 +40,9 @@ const recent_friends_chat = document.querySelectorAll(
 const chatting_page = document.querySelector(".chatting_page ");
 const chat_container = document.querySelector(".chat_container");
 const see_friends_list = document.querySelector(".see_active_friends");
+const see_friends_list_container = document.querySelector(
+  ".see_active_friend_container"
+);
 const group_chatting_page = document.querySelector(".group_chatting-page");
 const active_friends_list = document.querySelector(".active_friends_list");
 
@@ -48,6 +52,10 @@ recent_friends_chat.forEach((each_chat) => {
   each_chat.addEventListener("click", () => {
     openFunctionality(friends, "close_friends_list");
     openFunctionality(chat_container, "open_chat");
+
+    // ========================================================
+    // group chatting page see friendlist display none
+    see_friends_list_container.style.display = "flex";
   });
 });
 
@@ -109,8 +117,19 @@ chat_header_container.addEventListener("click", (e) => {
         openFunctionality(element, "active_message");
       }
 
+      if (Id === "peer") {
+        True_False = 0;
+        ID = "friendly_chat";
+      }
+
       if (Id === "group") {
         True_False = 1;
+        ID = "group_chat";
+      }
+
+      if (Id === "request") {
+        True_False = 2;
+        ID = "request";
       }
     });
   }
@@ -147,8 +166,16 @@ public_room.forEach((each_public_room) => {
       let user_chat_img = current_chat_detail.children[0];
       const name = target.children[1].children[0].textContent;
       let user_chat_name = current_chat_detail.children[1].children[0];
+      let user_chat_status = document.querySelectorAll(".status_div_position");
+
       user_chat_name.textContent = name;
       user_chat_img.src = img;
+
+      if (user_chat_status) {
+        user_chat_status.forEach((status) => {
+          status.style.display = "none";
+        });
+      }
 
       // opened chat active
 
@@ -175,9 +202,6 @@ public_room.forEach((each_public_room) => {
           );
         }
       });
-      // ========================================================
-      // group chatting page see friendlist display none
-      see_friends_list.style.display = "none";
     }
   });
 });
@@ -206,8 +230,16 @@ private_room.forEach((each_private_room) => {
       let user_chat_img = current_chat_details.children[0];
       const name = target.children[1].children[0].textContent;
       let user_chat_name = current_chat_details.children[1].children[0];
+      let user_chat_status = document.querySelectorAll(".status_div_position");
+
       user_chat_name.textContent = name;
       user_chat_img.src = img;
+
+      if (user_chat_status) {
+        user_chat_status.forEach((status) => {
+          status.style.display = "none";
+        });
+      }
     }
 
     // opened chat active
@@ -739,22 +771,22 @@ direct_messager.forEach((messager) => {
     let status = chat_messager_details.children[1].children[1];
 
     if (e.currentTarget) {
-      let direct_messager_name = e.currentTarget.children[1];
-      let direct_messager_img = e.currentTarget.children[0].children[0];
-      let direct_messager_status = e.currentTarget.children[0].children[1];
-
-      // styling the status div
-      status_div.className = `${direct_messager_status.classList} status_div_position`;
-
-      // setting currently chatting friend to be as direct active group details
-      img.src = direct_messager_img.src;
-      name.textContent = direct_messager_name.textContent;
-      status.textContent = direct_messager_status.classList.contains(
-        "group_online"
-      )
-        ? "active now"
-        : "active few minutes ago";
     }
+    let direct_messager_name = e.currentTarget.children[1];
+    let direct_messager_img = e.currentTarget.children[0].children[0];
+    let direct_messager_status = e.currentTarget.children[0].children[1];
+
+    // styling the status div
+    status_div.className = `${direct_messager_status.classList} status_div_position`;
+
+    // setting currently chatting friend to be as direct active group details
+    img.src = direct_messager_img.src;
+    name.textContent = direct_messager_name.textContent;
+    status.textContent = direct_messager_status.classList.contains(
+      "group_online"
+    )
+      ? "active now"
+      : "active few minutes ago";
 
     // adding status
     active_user_detail[True_False].appendChild(status_div);
@@ -765,5 +797,130 @@ direct_messager.forEach((messager) => {
       closeFunctionality(group_chatting_page, "close_chatting_page");
       closeFunctionality(active_friends_list, "open_active_friends_list");
     }
+
+    // ===========================================================
+    // creating new Element to be appended to the active chat message
+    const new_recent_friends_chat_container = document.createElement("div");
+    const new_friends_profile = document.createElement("img");
+    const new_about_friend = document.createElement("article");
+    const new_friend_name = document.createElement("h3");
+    const new_recent_message = document.createElement("p");
+    const new_recent_group_message = document.createElement("span");
+    const new_camera_icon = document.createElement("img");
+
+    const new_container = document.querySelectorAll(
+      ".recent_friends_chat_container"
+    );
+
+    // getting all friends name
+    const all_chat_friends_name = document.querySelectorAll(".friend_name");
+
+    // new messages chat only function
+
+    new_container.forEach((message_container) => {
+      closeFunctionality(message_container, "currently_open_chat");
+      closeFunctionality(
+        message_container.children[1].children[0],
+        "opened_chat"
+      );
+      closeFunctionality(
+        message_container.children[1].children[1],
+        "opened_chat"
+      );
+    });
+
+    // new elements styling
+    new_recent_friends_chat_container.className =
+      "recent_friends_chat_container currently_open_chat";
+    new_friends_profile.className = "friends_profile ";
+    new_about_friend.className = "about_friend";
+    new_recent_message.className = "recent_message  opened_chat";
+    new_recent_group_message.className = "recent_group_message";
+    new_camera_icon.className = "camera_icon";
+    new_friend_name.className = "friend_name opened_chat";
+
+    // new elements id
+    new_recent_friends_chat_container.id = ID;
+
+    // new chats being added to active chat message container
+
+    // Check if the name already exists in the list
+    let nameExists = false;
+
+    all_chat_friends_name.forEach((name) => {
+      if (name.textContent === direct_messager_name.textContent) {
+        // Mark that the chat already exists
+        nameExists = true;
+      }
+    });
+
+    // If name doesn't exist, prepend the new chat
+    if (!nameExists) {
+      if (active_chat_messages[True_False]) {
+        active_chat_messages[True_False].prepend(
+          new_recent_friends_chat_container
+        );
+      }
+    } else {
+      openFunctionality(new_container[0], "currently_open_chat");
+      openFunctionality(
+        new_container[0].children[1].children[0],
+        "opened_chat"
+      );
+      openFunctionality(
+        new_container[0].children[1].children[1],
+        "opened_chat"
+      );
+    }
+
+    // active_chat_messages[True_False].prepend(new_recent_friends_chat_container);
+    new_recent_friends_chat_container.appendChild(new_friends_profile);
+    new_recent_friends_chat_container.appendChild(new_about_friend);
+    new_about_friend.appendChild(new_friend_name);
+    new_about_friend.appendChild(new_recent_message);
+    new_recent_friends_chat_container.appendChild(new_camera_icon);
+
+    // new elements content
+    new_friend_name.textContent = name.textContent;
+    new_friends_profile.src = img.src;
+    new_camera_icon.src = "../../src/images/camera_icon.png";
+
+    message_input.forEach((message_input) => {
+      message_input.addEventListener("input", (e) => {
+        input_value = e.target.value;
+        new_recent_message.textContent = input_value;
+      });
+    });
+
+    //  ========================================
+    new_container.forEach((each) => {
+      each.addEventListener("click", (e) => {
+        openFunctionality(friends, "close_friends_list");
+        openFunctionality(chat_container, "open_chat");
+
+        // remove all active style
+        new_container.forEach((item) => {
+          closeFunctionality(item, "currently_open_chat");
+          closeFunctionality(item.children[1].children[0], "opened_chat");
+          closeFunctionality(item.children[1].children[1], "opened_chat");
+        });
+
+        // add stle to current click
+        openFunctionality(each, "currently_open_chat");
+        openFunctionality(each.children[1].children[0], "opened_chat");
+        openFunctionality(each.children[1].children[1], "opened_chat");
+
+        // upadte chatpage name
+        name.textContent = each.children[1].children[0].textContent;
+        img.src = each.children[0].src;
+      });
+    });
+
+    // ======================================
+    recent_friends_chat.forEach((recent_chat) => {
+      closeFunctionality(recent_chat, "currently_open_chat");
+      closeFunctionality(recent_chat.children[1].children[0], "opened_chat");
+      closeFunctionality(recent_chat.children[1].children[1], "opened_chat");
+    });
   });
 });
