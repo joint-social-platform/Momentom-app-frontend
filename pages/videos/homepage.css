@@ -1,5 +1,9 @@
 /** @format */
 
+:root {
+  --transiton: ease 1s linear;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -86,8 +90,8 @@ nav .Search {
   margin-left: 1em;
 }
 
-#hamburger,
-.hamburger_icon {
+.navigation-icons #hamburger,
+.navigation-icons .hamburger_icon {
   display: none;
   width: 10em;
 }
@@ -206,8 +210,7 @@ nav .Search {
   left: calc(100vw - 80%);
 }
 
-.right_arrow,
-.to_right_arrow {
+.right_arrow, #arrow {
   display: none;
 }
 
@@ -299,7 +302,7 @@ h2 {
   width: 80%;
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 768px) {
   nav {
     padding: 1em 1em;
   }
@@ -412,6 +415,7 @@ h2 {
     top: 3.5em;
     width: 100%;
     display: none;
+    padding-top: 3em;
   }
 
   .all {
@@ -424,25 +428,26 @@ h2 {
 
   .upper {
     width: 100%;
-    margin-left: 0;
+    margin-left: 1.7em;
     padding-left: 0;
     font-size: 0.9em;
   }
-
+  
   .right_arrow {
     background-color: #000000ad;
     padding: 0.5em;
-    position: relative;
-    top: -0.2em;
-    left: -1em;
-    width: 5em;
+    position: fixed;
+    top: 2.9em;
+    left: 0;
+    width: fit-content;
     display: block;
+    color: white;
+    font-size: 1.5em;
+    z-index: 1;
   }
 
-  .to_right_arrow {
-    width: 100%;
+  #arrow {
     display: block;
-    cursor: pointer;
   }
 
   .img {
