@@ -905,6 +905,7 @@ direct_messager.forEach((messager) => {
     activeChatContainer.forEach((activeChatContainer) => {
       activeChatContainer.addEventListener("click", (e) => {
         const targetChat = e.target.closest(".recent_friends_chat_container");
+        const targetCamera = e.target.classList.contains("camera_icon");
         if (targetChat) {
           openFunctionality(friends, "close_friends_list");
           openFunctionality(chat_container, "open_chat");
@@ -938,6 +939,10 @@ direct_messager.forEach((messager) => {
           // Update chat page name
           name.textContent = targetChat.children[1].children[0].textContent;
           img.src = targetChat.children[0].src;
+        }
+        if (targetCamera) {
+          openFunctionality(body_container, "open_camera_container");
+          userCamera(video_container);
         }
       });
     });
