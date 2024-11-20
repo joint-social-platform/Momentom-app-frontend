@@ -44,7 +44,7 @@ const see_friends_list_container = document.querySelector(
   ".see_active_friend_container"
 );
 const group_chatting_page = document.querySelector(".group_chatting-page");
-const active_friends_list = document.querySelector(".active_friends_list");
+const active_friends_list = document.querySelectorAll(".active_friends_list");
 
 // ============================================================
 // open chatting page functionality
@@ -52,10 +52,6 @@ recent_friends_chat.forEach((each_chat) => {
   each_chat.addEventListener("click", () => {
     openFunctionality(friends, "close_friends_list");
     openFunctionality(chat_container, "open_chat");
-
-    // ========================================================
-    // group chatting page see friendlist display none
-    see_friends_list_container.style.display = "flex";
   });
 });
 
@@ -64,7 +60,15 @@ recent_friends_chat.forEach((each_chat) => {
 see_friends_list.addEventListener("click", () => {
   openFunctionality(chatting_page, "close_chatting_page");
   openFunctionality(group_chatting_page, "close_chatting_page");
-  openFunctionality(active_friends_list, "open_active_friends_list");
+  active_friends_list.forEach((active_list) => {
+    closeFunctionality(active_list, "open_active_friends_list");
+  });
+
+  // show active friend list on mobilr view
+  openFunctionality(
+    active_friends_list[True_False],
+    "open_mobile_active_friends_list"
+  );
 });
 
 // ========================================================
@@ -78,7 +82,12 @@ go_back.forEach((each_back_icon) => {
     if (chatting_page.classList.contains("close_chatting_page")) {
       closeFunctionality(chatting_page, "close_chatting_page");
       closeFunctionality(group_chatting_page, "close_chatting_page");
-      closeFunctionality(active_friends_list, "open_active_friends_list");
+
+      // close active friend list on mobilr view
+      closeFunctionality(
+        active_friends_list[True_False],
+        "open_mobile_active_friends_list"
+      );
     } else {
       friends.classList.remove("close_friends_list");
       closeFunctionality(chat_container, "open_chat");
@@ -120,11 +129,15 @@ chat_header_container.addEventListener("click", (e) => {
       if (Id === "peer") {
         True_False = 0;
         ID = "friendly_chat";
+        openFunctionality(active_friends_list[0], "open_active_friends_list");
+        closeFunctionality(active_friends_list[1], "open_active_friends_list");
       }
 
       if (Id === "group") {
         True_False = 1;
         ID = "group_chat";
+        openFunctionality(active_friends_list[1], "open_active_friends_list");
+        closeFunctionality(active_friends_list[0], "open_active_friends_list");
       }
 
       if (Id === "request") {
@@ -770,8 +783,6 @@ direct_messager.forEach((messager) => {
     let name = chat_messager_details.children[1].children[0];
     let status = chat_messager_details.children[1].children[1];
 
-    if (e.currentTarget) {
-    }
     let direct_messager_name = e.currentTarget.children[1];
     let direct_messager_img = e.currentTarget.children[0].children[0];
     let direct_messager_status = e.currentTarget.children[0].children[1];
@@ -791,14 +802,19 @@ direct_messager.forEach((messager) => {
     // adding status
     active_user_detail[True_False].appendChild(status_div);
 
-    // close direct message
+    // mobile close direct message
     if (chatting_page.classList.contains("close_chatting_page")) {
       closeFunctionality(chatting_page, "close_chatting_page");
       closeFunctionality(group_chatting_page, "close_chatting_page");
-      closeFunctionality(active_friends_list, "open_active_friends_list");
+
+      // close active friend list on mobilr view
+
+      closeFunctionality(
+        active_friends_list[True_False],
+        "open_mobile_active_friends_list"
+      );
     }
 
-    // ===========================================================
     // creating new Element to be appended to the active chat message
     const new_recent_friends_chat_container = document.createElement("div");
     const new_friends_profile = document.createElement("img");
@@ -813,10 +829,8 @@ direct_messager.forEach((messager) => {
     );
 
     // getting all friends name
-    const all_chat_friends_name = document.querySelectorAll(".friend_name");
 
     // new messages chat only function
-
     new_container.forEach((message_container) => {
       closeFunctionality(message_container, "currently_open_chat");
       closeFunctionality(
@@ -834,7 +848,7 @@ direct_messager.forEach((messager) => {
       "recent_friends_chat_container currently_open_chat";
     new_friends_profile.className = "friends_profile ";
     new_about_friend.className = "about_friend";
-    new_recent_message.className = "recent_message  opened_chat";
+    new_recent_message.className = "recent_message opened_chat";
     new_recent_group_message.className = "recent_group_message";
     new_camera_icon.className = "camera_icon";
     new_friend_name.className = "friend_name opened_chat";
@@ -843,37 +857,28 @@ direct_messager.forEach((messager) => {
     new_recent_friends_chat_container.id = ID;
 
     // new chats being added to active chat message container
+    const active_chat_messages_children =
+      active_chat_messages[True_False].children;
 
-    // Check if the name already exists in the list
+    // Convert current active class children to an array
+    const childrenarray = Array.from(active_chat_messages_children);
+
+    // get friend_name class
     let nameExists = false;
-
-    all_chat_friends_name.forEach((name) => {
-      if (name.textContent === direct_messager_name.textContent) {
-        // Mark that the chat already exists
+    childrenarray.forEach((targetchild) => {
+      const childElements = targetchild.querySelector(".friend_name");
+      if (childElements.textContent === direct_messager_name.textContent) {
+        // Mark that chat already exists
         nameExists = true;
       }
     });
 
-    // If name doesn't exist, prepend the new chat
     if (!nameExists) {
-      if (active_chat_messages[True_False]) {
-        active_chat_messages[True_False].prepend(
-          new_recent_friends_chat_container
-        );
-      }
-    } else {
-      openFunctionality(new_container[0], "currently_open_chat");
-      openFunctionality(
-        new_container[0].children[1].children[0],
-        "opened_chat"
-      );
-      openFunctionality(
-        new_container[0].children[1].children[1],
-        "opened_chat"
+      active_chat_messages[True_False].prepend(
+        new_recent_friends_chat_container
       );
     }
 
-    // active_chat_messages[True_False].prepend(new_recent_friends_chat_container);
     new_recent_friends_chat_container.appendChild(new_friends_profile);
     new_recent_friends_chat_container.appendChild(new_about_friend);
     new_about_friend.appendChild(new_friend_name);
@@ -892,31 +897,57 @@ direct_messager.forEach((messager) => {
       });
     });
 
-    //  ========================================
-    new_container.forEach((each) => {
-      each.addEventListener("click", (e) => {
-        openFunctionality(friends, "close_friends_list");
-        openFunctionality(chat_container, "open_chat");
+    // Event Delegation for Clicking on Recent Chats
+    const activeChatContainer = document.querySelectorAll(
+      ".active_chat_messages"
+    ); // Change to your actual chat container selector
 
-        // remove all active style
-        new_container.forEach((item) => {
-          closeFunctionality(item, "currently_open_chat");
-          closeFunctionality(item.children[1].children[0], "opened_chat");
-          closeFunctionality(item.children[1].children[1], "opened_chat");
-        });
+    activeChatContainer.forEach((activeChatContainer) => {
+      activeChatContainer.addEventListener("click", (e) => {
+        const targetChat = e.target.closest(".recent_friends_chat_container");
+        const targetCamera = e.target.classList.contains("camera_icon");
+        if (targetChat) {
+          openFunctionality(friends, "close_friends_list");
+          openFunctionality(chat_container, "open_chat");
 
-        // add stle to current click
-        openFunctionality(each, "currently_open_chat");
-        openFunctionality(each.children[1].children[0], "opened_chat");
-        openFunctionality(each.children[1].children[1], "opened_chat");
+          // Remove all active style
 
-        // upadte chatpage name
-        name.textContent = each.children[1].children[0].textContent;
-        img.src = each.children[0].src;
+          // create active chat container child
+          const active_chat_container_child = activeChatContainer.children;
+
+          // create an array for each active chat container child
+          const active_chat_container_child_array = Array.from(
+            active_chat_container_child
+          );
+          active_chat_container_child_array.map((active_chat) => {
+            closeFunctionality(active_chat, "currently_open_chat");
+            closeFunctionality(
+              active_chat.children[1].children[0],
+              "opened_chat"
+            );
+            closeFunctionality(
+              active_chat.children[1].children[1],
+              "opened_chat"
+            );
+          });
+
+          // Add style to current click
+          openFunctionality(targetChat, "currently_open_chat");
+          openFunctionality(targetChat.children[1].children[0], "opened_chat");
+          openFunctionality(targetChat.children[1].children[1], "opened_chat");
+
+          // Update chat page name
+          name.textContent = targetChat.children[1].children[0].textContent;
+          img.src = targetChat.children[0].src;
+        }
+        if (targetCamera) {
+          openFunctionality(body_container, "open_camera_container");
+          userCamera(video_container);
+        }
       });
     });
 
-    // ======================================
+    // Close all recent friends chats
     recent_friends_chat.forEach((recent_chat) => {
       closeFunctionality(recent_chat, "currently_open_chat");
       closeFunctionality(recent_chat.children[1].children[0], "opened_chat");
