@@ -90,10 +90,13 @@ nav .Search {
   margin-left: 1em;
 }
 
-.navigation-icons #hamburger,
-.navigation-icons .hamburger_icon {
+.navigation-icons .hamburger{
   display: none;
   width: 10em;
+}
+
+.hamburger .hamburger-icon, .hamburger .cross-icon{
+  display: none;
 }
 
 .fullpage {
@@ -398,10 +401,21 @@ h2 {
     margin-left: 1em;
   }
 
-  .navigation-icons .hamburger,
-  .navigation-icons .hamburger_icon {
-    display: block;
-    width: 4em;
+  .navigation-icons .hamburger {
+    background-color: #000000ad;
+    padding: 0.5em;
+    position: fixed;
+    top: 0.1em;
+    right: 0;
+    width: fit-content;
+    display: flex;
+    color: white;
+    font-size: 3em;
+    z-index: 1;
+  }
+
+  #hamburger-icon{
+    display: flex;
   }
 
   .fullpage {
@@ -412,7 +426,7 @@ h2 {
   .sidebar {
     position: fixed;
     z-index: 1;
-    top: 3.5em;
+    top: 3.9em;
     width: 100%;
     display: none;
     padding-top: 3em;
@@ -434,16 +448,16 @@ h2 {
   }
   
   .right_arrow {
-    background-color: #000000ad;
-    padding: 0.5em;
-    position: fixed;
-    top: 2.9em;
-    left: 0;
-    width: fit-content;
-    display: block;
-    color: white;
-    font-size: 1.5em;
-    z-index: 1;
+      background-color: #000000ad;
+      padding: 0.5em;
+      position: fixed;
+      top: 2.9em;
+      left: 0;
+      width: fit-content;
+      display: block;
+      color: white;
+      font-size: 1.5em;
+      z-index: 1;
   }
 
   #arrow {

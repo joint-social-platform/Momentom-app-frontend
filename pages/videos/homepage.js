@@ -7,9 +7,13 @@ const hamburgerClick = () => {
   if (navigation.style.display === "flex") {
     navigation.style.display = "none";
     sidebar.style.display = "none";
+    document.querySelector("#cross-icon").style.display = "none";
+    document.querySelector("#hamburger-icon").style.display = "flex";
   } else {
     navigation.style.display = "flex";
     sidebar.style.display = "none";
+    document.querySelector("#cross-icon").style.display = "flex";
+    document.querySelector("#hamburger-icon").style.display = "none";
   }
 };
 
