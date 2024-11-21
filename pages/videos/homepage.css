@@ -210,7 +210,8 @@ nav .Search {
   left: calc(100vw - 80%);
 }
 
-.right_arrow, #arrow {
+.right_arrow,
+#arrow {
   display: none;
 }
 
@@ -432,7 +433,7 @@ h2 {
     padding-left: 0;
     font-size: 0.9em;
   }
-  
+
   .right_arrow {
     background-color: #000000ad;
     padding: 0.5em;
