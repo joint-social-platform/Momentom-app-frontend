@@ -2,6 +2,14 @@
   padding: 0px;
   margin: 0px;
 }
+
+body {
+  height: 100vh;
+  background-image: url("../../src/images/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .jh {
   background: linear-gradient(180deg, black 10%, purple 60%);
   padding: 30px;
@@ -12,6 +20,7 @@
   gap: 90px;
   margin-top: 80px;
   justify-content: center;
+  cursor: pointer;
 }
 .hj p {
   text-align: center;
@@ -21,6 +30,7 @@
   padding-top: 15px;
   color: white;
 }
+
 .back {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
@@ -35,10 +45,7 @@
   margin-left: 110px;
   margin-top: 40px;
 }
-.con {
-  background-image: url("/src/images/background.png");
-  padding-bottom: 70px;
-}
+
 @media (max-width: 700px) {
   .hj {
     display: flex;
