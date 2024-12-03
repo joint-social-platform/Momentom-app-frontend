@@ -103,6 +103,7 @@ nav .Search {
 .fullpage {
   display: flex;
   width: 99vw;
+  height: 100vh;
 }
 
 .sidebar {
@@ -226,9 +227,6 @@ nav .Search {
   padding-bottom: 2em;
   padding-left: 8em;
   font-size: 1.2em;
-  overflow-x: scroll;
-  scrollbar-width: thin;
-  scrollbar-color: grey transparent;
 }
 
 .upper a {

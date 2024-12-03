@@ -103,6 +103,7 @@ nav .Search {
 .fullpage {
   display: flex;
   width: 99vw;
+  height: 100vh;
 }
 
 .sidebar {
