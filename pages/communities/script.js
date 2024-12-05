@@ -55,8 +55,46 @@ function initializeNavigation() {
         }
 
         lastScroll = currentScroll;
-    });
-}
+    };
+
+
+    const menubar = document.getElementById('menubar');
+    const sidebar = document.getElementById('sidebar');
+
+    let changeIcon = true;
+
+    menubar.addEventListener('click', (event) => {
+        sidebar.classList.toggle('show');
+        event.stopPropagation();
+
+        if (changeIcon) {
+            menubar.innerHTML = '<i class="fa-solid fa-xmark"></i>'
+        } else {
+             menubar.innerHTML = '<i class="fa-solid fa-arrow-right"></i>'
+        }
+
+        changeIcon = !changeIcon
+    })
+
+
+
+    const harmburger = document.getElementById('harmburger');
+    const navbarMenu = document.getElementById('navbarMenu');
+
+    let iconChage = true;
+
+    harmburger.addEventListener('click', (event) =>{
+        navbarMenu.classList.toggle('drop');
+        event.stopPropagation();
+
+        if (iconChage) {
+            harmburger.innerHTML = '<i class="fa-solid fa-xmark"></i>'
+        } else {
+            harmburger.innerHTML = '<i class="fa-solid fa-bars"></i>'
+        }
+
+        iconChage = !iconChage
+    })
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', initializeNavigation);
