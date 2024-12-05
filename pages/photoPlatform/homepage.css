@@ -90,12 +90,13 @@ nav .Search {
   margin-left: 1em;
 }
 
-.navigation-icons .hamburger{
+.navigation-icons .hamburger {
   display: none;
   width: 10em;
 }
 
-.hamburger .hamburger-icon, .hamburger .cross-icon{
+.hamburger .hamburger-icon,
+.hamburger .cross-icon {
   display: none;
 }
 
@@ -269,24 +270,6 @@ h2 {
   display: block;
 }
 
-.line {
-  line-height: 2px;
-  padding: 6px;
-  margin: 20px;
-  display: none;
-}
-
-.img {
-  display: flex;
-  padding: 10px;
-  margin-bottom: 3em;
-  justify-content: space-between;
-  overflow-x: scroll;
-  scrollbar-width: thin;
-  scroll-behavior: smooth;
-  scrollbar-color: rgba(212, 212, 212, 0.34) transparent;
-}
-
 ::-webkit-scrollbar-button {
   display: none;
   background-color: transparent;
@@ -297,7 +280,6 @@ h2 {
 }
 
 .all img {
-  border-radius: 1em;
   margin: 0.2em 1em;
 }
 
@@ -305,6 +287,59 @@ h2 {
   overflow: hidden;
   width: 80%;
 }
+
+.profiler {
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    color: white;
+    gap: 7em;
+}
+
+.profiler > div {
+    display: flex;
+    align-items: flex-start;
+}
+
+.profiler > div * {
+    margin: 0;
+}
+
+.profiler > div > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: auto;
+    margin-left: 1.5em;
+}
+
+.profiler > div > div img {
+    width: 100%;
+}
+
+.profiler > div > div > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.profiler > div > div > div > div {
+    display: flex;
+    gap: 1em;
+}
+
+.profiler > div > div > div h3 {
+    font-size: 1.7em;
+}
+
+.profiler > div > div > div > div * {
+    margin: 0;
+    padding: 0;
+    width: 2em;
+    border-radius: none;
+}
+
 
 @media only screen and (max-width: 768px) {
   nav {
@@ -415,7 +450,7 @@ h2 {
     z-index: 1;
   }
 
-  #hamburger-icon{
+  #hamburger-icon {
     display: flex;
   }
 
@@ -449,16 +484,16 @@ h2 {
   }
 
   .right_arrow {
-      background-color: #000000ad;
-      padding: 0.5em;
-      position: fixed;
-      top: 2.9em;
-      left: 0;
-      width: fit-content;
-      display: block;
-      color: white;
-      font-size: 1.5em;
-      z-index: 1;
+    background-color: #000000ad;
+    padding: 0.5em;
+    position: fixed;
+    top: 2.9em;
+    left: 0;
+    width: fit-content;
+    display: block;
+    color: white;
+    font-size: 1.5em;
+    z-index: 1;
   }
 
   #arrow {

@@ -90,12 +90,13 @@ nav .Search {
   margin-left: 1em;
 }
 
-.navigation-icons .hamburger{
+.navigation-icons .hamburger {
   display: none;
   width: 10em;
 }
 
-.hamburger .hamburger-icon, .hamburger .cross-icon{
+.hamburger .hamburger-icon,
+.hamburger .cross-icon {
   display: none;
 }
 
@@ -276,15 +277,66 @@ h2 {
   display: none;
 }
 
-.img {
+.profiles {
   display: flex;
   padding: 10px;
+  gap: 1.5em;
   margin-bottom: 3em;
   justify-content: space-between;
   overflow-x: scroll;
   scrollbar-width: thin;
   scroll-behavior: smooth;
   scrollbar-color: rgba(212, 212, 212, 0.34) transparent;
+  align-content: space-between;
+}
+
+.profiles > div {
+  height: 19em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+  gap: 1em;
+}
+
+.profiles > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.profiles .p-img {
+  width: 2.3em;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+.profiles > div > div > div {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0.4em;
+  align-items: center;
+  color: whitesmoke;
+}
+
+.profiles > div > div > .images {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.2em;
+  width: 40%;
+}
+
+.profiles > div > div > .images img {
+  width: 1.2em;
+}
+
+.profiles > div img {
+  margin: 0;
+  padding: 0;
 }
 
 ::-webkit-scrollbar-button {
@@ -415,7 +467,7 @@ h2 {
     z-index: 1;
   }
 
-  #hamburger-icon{
+  #hamburger-icon {
     display: flex;
   }
 
@@ -449,16 +501,16 @@ h2 {
   }
 
   .right_arrow {
-      background-color: #000000ad;
-      padding: 0.5em;
-      position: fixed;
-      top: 2.9em;
-      left: 0;
-      width: fit-content;
-      display: block;
-      color: white;
-      font-size: 1.5em;
-      z-index: 1;
+    background-color: #000000ad;
+    padding: 0.5em;
+    position: fixed;
+    top: 2.9em;
+    left: 0;
+    width: fit-content;
+    display: block;
+    color: white;
+    font-size: 1.5em;
+    z-index: 1;
   }
 
   #arrow {

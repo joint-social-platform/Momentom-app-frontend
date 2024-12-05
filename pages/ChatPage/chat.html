@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -61,7 +61,7 @@
                   <!-- icons  -->
                   <img
                     src="../../src/images/home_icon.png"
-                    alt="home_icon"
+                    alt=""
                     class="icons"
                   />
                   home
@@ -95,7 +95,7 @@
                   <!-- icons   -->
                   <img
                     src="../../src/images/notification.png"
-                    alt="notification"
+                    alt=""
                     class="icons"
                   />
                   notification
@@ -116,7 +116,7 @@
                   <!-- user profile  -->
                   <img
                     src="../../src/images/user_profile.png"
-                    alt="user_profile"
+                    alt=""
                     class="user_profile"
                   />
 
@@ -129,7 +129,7 @@
                     <!-- play icon  -->
                     <img
                       src="../../src/images/play_icon.png"
-                      alt="play_icon"
+                      alt=""
                       class="play_icon"
                     />
                   </div>
@@ -206,7 +206,7 @@
             <!-- =========================================== -->
             <!-- search icon -->
             <img
-              src="../../src/images/search_icon.png"
+              src="../../src/images/search-icon.png"
               alt="search_icon"
               class="search_icon"
             />
@@ -289,7 +289,7 @@
                   <!-- friend emoji -->
                   <img
                     src="../../src/images/Glass_emoji.png"
-                    alt="Glass_emoji"
+                    alt=""
                     class="friend_emoji"
                   />
 
@@ -486,7 +486,7 @@
                   <!-- friend emoji -->
                   <img
                     src="../../src/images/Glass_emoji.png"
-                    alt="Glass_emoji"
+                    alt=""
                     class="friend_emoji"
                   />
 
@@ -1188,7 +1188,6 @@
             </div>
           </div>
         </section>
-
         <!-- =========================================== -->
         <!-- chat container section -->
         <section class="chat_container">
@@ -1308,6 +1307,13 @@
                     alt="help_icon"
                     class="help_icon"
                   />
+
+                  <!-- =========================================== -->
+                  <!-- detail container-->
+                  <div class="tooltip-bottom">
+                    <i class="fa-solid fa-x close_detail"></i>
+                    <h1>User Details</h1>
+                  </div>
                 </div>
               </div>
 
@@ -1415,6 +1421,10 @@
               <!-- =========================================== -->
               <!--  typing area container -->
               <div class="typing_area_container">
+                <!-- =========================================== -->
+                <!--  emoji container -->
+                <div class="bubble-bottom emoji_container"></div>
+
                 <!-- =========================================== -->
                 <!--  emoji icon -->
                 <img
@@ -1544,12 +1554,19 @@
                     alt="help_icon"
                     class="help_icon"
                   />
+
+                  <!-- =========================================== -->
+                  <!-- detail container-->
+                  <div class="tooltip-bottom">
+                    <i class="fa-solid fa-x close_detail"></i>
+                    <h1>User Details</h1>
+                  </div>
                 </div>
               </div>
 
               <!-- =========================================== -->
               <!--  chat messages -->
-              <div class="chat_messages">
+              <div class="chat_messages" id="chat_messages">
                 <!-- =========================================== -->
                 <!--  sender messages -->
                 <h2 class="sender_message">
@@ -1752,6 +1769,10 @@
               <!--  typing area container -->
               <div class="typing_area_container">
                 <!-- =========================================== -->
+                <!--  emoji container -->
+                <div class="bubble-bottom emoji_container"></div>
+
+                <!-- =========================================== -->
                 <!--  emoji icon -->
                 <img
                   src="../../src/images/Emoji.png"
@@ -1768,6 +1789,10 @@
                 />
 
                 <!-- =========================================== -->
+                <!--  gallery icon file input -->
+                <input type="file" class="gallery_icon_file_input" />
+
+                <!-- =========================================== -->
                 <!--  typing area-->
                 <div class="typing_area">
                   <!-- =========================================== -->
@@ -1775,7 +1800,7 @@
                   <input
                     type="text"
                     name="type_message_input"
-                    id=""
+                    id="type_message_input"
                     class="type_message_input"
                     placeholder="type your message here........."
                   />
@@ -1787,6 +1812,23 @@
                     alt="mic_recoder"
                     class="mic_recoder_icon"
                   />
+
+                  <!-- =========================================== -->
+                  <!--  recodering lines -->
+                  <div class="recording_lines">
+                    <!-- =========================================== -->
+                    <!--  zig zag lines -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 1440 320"
+                      class="zig_zag_lines"
+                    >
+                      <path
+                        fill-opacity="1"
+                        d="M0,128L0,224L41.1,224L41.1,160L82.3,160L82.3,0L123.4,0L123.4,256L164.6,256L164.6,320L205.7,320L205.7,64L246.9,64L246.9,96L288,96L288,288L329.1,288L329.1,224L370.3,224L370.3,96L411.4,96L411.4,96L452.6,96L452.6,192L493.7,192L493.7,192L534.9,192L534.9,256L576,256L576,160L617.1,160L617.1,224L658.3,224L658.3,0L699.4,0L699.4,160L740.6,160L740.6,32L781.7,32L781.7,192L822.9,192L822.9,288L864,288L864,288L905.1,288L905.1,96L946.3,96L946.3,64L987.4,64L987.4,64L1028.6,64L1028.6,224L1069.7,224L1069.7,160L1110.9,160L1110.9,224L1152,224L1152,320L1193.1,320L1193.1,32L1234.3,32L1234.3,64L1275.4,64L1275.4,256L1316.6,256L1316.6,256L1357.7,256L1357.7,32L1398.9,32L1398.9,256L1440,256L1440,320L1398.9,320L1398.9,320L1357.7,320L1357.7,320L1316.6,320L1316.6,320L1275.4,320L1275.4,320L1234.3,320L1234.3,320L1193.1,320L1193.1,320L1152,320L1152,320L1110.9,320L1110.9,320L1069.7,320L1069.7,320L1028.6,320L1028.6,320L987.4,320L987.4,320L946.3,320L946.3,320L905.1,320L905.1,320L864,320L864,320L822.9,320L822.9,320L781.7,320L781.7,320L740.6,320L740.6,320L699.4,320L699.4,320L658.3,320L658.3,320L617.1,320L617.1,320L576,320L576,320L534.9,320L534.9,320L493.7,320L493.7,320L452.6,320L452.6,320L411.4,320L411.4,320L370.3,320L370.3,320L329.1,320L329.1,320L288,320L288,320L246.9,320L246.9,320L205.7,320L205.7,320L164.6,320L164.6,320L123.4,320L123.4,320L82.3,320L82.3,320L41.1,320L41.1,320L0,320L0,320Z"
+                      ></path>
+                    </svg>
+                  </div>
                 </div>
 
                 <!-- =========================================== -->
@@ -1801,6 +1843,210 @@
 
             <!-- =========================================== -->
             <!-- active friends list -->
+            <div class="active_friends_list open_active_friends_list">
+              <!-- =========================================== -->
+              <!-- Direct title -->
+              <h2 class="direct_title">Direct message</h2>
+
+              <!-- =========================================== -->
+              <!-- active group list -->
+              <div class="active_group_list">
+                <!-- =========================================== -->
+                <!-- active groups -->
+                <div class="active_group">
+                  <!-- =========================================== -->
+                  <!-- group profile container -->
+                  <div class="group_profile_container">
+                    <!-- =========================================== -->
+                    <!-- group profile picture -->
+                    <img
+                      src="../../src/images/Group_contact_icon.png"
+                      alt="Group_contact_icon"
+                      class="group_profile_picture"
+                    />
+
+                    <!-- =========================================== -->
+                    <!-- group online status -->
+                    <div class="group_online_status group_online"></div>
+                  </div>
+
+                  <!-- =========================================== -->
+                  <!-- group name -->
+                  <h2 class="group_name">Jargontine</h2>
+                </div>
+
+                <!-- =========================================== -->
+                <!-- active groups -->
+                <div class="active_group">
+                  <!-- =========================================== -->
+                  <!-- group profile container -->
+                  <div class="group_profile_container">
+                    <!-- =========================================== -->
+                    <!-- group profile picture -->
+                    <img
+                      src="../../src/images/Group_contact_icon.png"
+                      alt="Group_contact_icon"
+                      class="group_profile_picture"
+                    />
+
+                    <!-- =========================================== -->
+                    <!-- group online status -->
+                    <div class="group_online_status group_online"></div>
+                  </div>
+
+                  <!-- =========================================== -->
+                  <!-- group name -->
+                  <h2 class="group_name">MidjourneyBot</h2>
+                </div>
+
+                <!-- =========================================== -->
+                <!-- active groups -->
+                <div class="active_group">
+                  <!-- =========================================== -->
+                  <!-- group profile container -->
+                  <div class="group_profile_container">
+                    <!-- =========================================== -->
+                    <!-- group profile picture -->
+                    <img
+                      src="../../src/images/Group_contact_icon.png"
+                      alt="Group_contact_icon"
+                      class="group_profile_picture"
+                    />
+
+                    <!-- =========================================== -->
+                    <!-- group online status -->
+                    <div class="group_online_status group_online"></div>
+                  </div>
+
+                  <!-- =========================================== -->
+                  <!-- group name -->
+                  <h2 class="group_name">Cold_Blizz</h2>
+                </div>
+
+                <!-- =========================================== -->
+                <!-- active groups -->
+                <div class="active_group">
+                  <!-- =========================================== -->
+                  <!-- group profile container -->
+                  <div class="group_profile_container">
+                    <!-- =========================================== -->
+                    <!-- group profile picture -->
+                    <img
+                      src="../../src/images/Group_contact_icon.png"
+                      alt="Group_contact_icon"
+                      class="group_profile_picture"
+                    />
+
+                    <!-- =========================================== -->
+                    <!-- group online status -->
+                    <div class="group_online_status group_online"></div>
+                  </div>
+
+                  <!-- =========================================== -->
+                  <!-- group name -->
+                  <h2 class="group_name">JoJoGiovanna</h2>
+                </div>
+
+                <!-- =========================================== -->
+                <!-- active groups -->
+                <div class="active_group">
+                  <!-- =========================================== -->
+                  <!-- group profile container -->
+                  <div class="group_profile_container">
+                    <!-- =========================================== -->
+                    <!-- group profile picture -->
+                    <img
+                      src="../../src/images/Group_contact_icon.png"
+                      alt="Group_contact_icon"
+                      class="group_profile_picture"
+                    />
+
+                    <!-- =========================================== -->
+                    <!-- group online status -->
+                    <div class="group_online_status group_online"></div>
+                  </div>
+
+                  <!-- =========================================== -->
+                  <!-- group name -->
+                  <h2 class="group_name">Dandadan_1</h2>
+                </div>
+
+                <!-- =========================================== -->
+                <!-- active groups -->
+                <div class="active_group">
+                  <!-- =========================================== -->
+                  <!-- group profile container -->
+                  <div class="group_profile_container">
+                    <!-- =========================================== -->
+                    <!-- group profile picture -->
+                    <img
+                      src="../../src/images/Group_contact_icon.png"
+                      alt="Group_contact_icon"
+                      class="group_profile_picture"
+                    />
+
+                    <!-- =========================================== -->
+                    <!-- group online status -->
+                    <div class="group_online_status group_offline"></div>
+                  </div>
+
+                  <!-- =========================================== -->
+                  <!-- group name -->
+                  <h2 class="group_name">SHREEEEE</h2>
+                </div>
+
+                <!-- =========================================== -->
+                <!-- active groups -->
+                <div class="active_group">
+                  <!-- =========================================== -->
+                  <!-- group profile container -->
+                  <div class="group_profile_container">
+                    <!-- =========================================== -->
+                    <!-- group profile picture -->
+                    <img
+                      src="../../src/images/Group_contact_icon.png"
+                      alt="Group_contact_icon"
+                      class="group_profile_picture"
+                    />
+
+                    <!-- =========================================== -->
+                    <!-- group online status -->
+                    <div class="group_online_status group_offline"></div>
+                  </div>
+
+                  <!-- =========================================== -->
+                  <!-- group name -->
+                  <h2 class="group_name">MaxVerstappen1</h2>
+                </div>
+
+                <!-- =========================================== -->
+                <!-- active groups -->
+                <div class="active_group">
+                  <!-- =========================================== -->
+                  <!-- group profile container -->
+                  <div class="group_profile_container">
+                    <!-- =========================================== -->
+                    <!-- group profile picture -->
+                    <img
+                      src="../../src/images/Group_contact_icon.png"
+                      alt="Group_contact_icon"
+                      class="group_profile_picture"
+                    />
+
+                    <!-- =========================================== -->
+                    <!-- group online status -->
+                    <div class="group_online_status group_offline"></div>
+                  </div>
+
+                  <!-- =========================================== -->
+                  <!-- group name -->
+                  <h2 class="group_name">1kariShinji</h2>
+                </div>
+              </div>
+            </div>
+
+            <!-- =========================================== -->
+            <!-- active group friends list -->
             <div class="active_friends_list">
               <!-- =========================================== -->
               <!-- Direct title -->
@@ -2004,6 +2250,74 @@
             </div>
           </div>
         </section>
+
+        <!-- =========================================== -->
+        <!-- start call modal -->
+        <div class="start_call">
+          <!-- =========================================== -->
+          <!-- call btn -->
+          <button class="call_btn start">start call</button>
+          <button class="call_btn start video open_video_call">
+            start video call
+          </button>
+
+          <!-- =========================================== -->
+          <!-- call btn -->
+          <button class="call_btn cancel">cancel</button>
+        </div>
+
+        <!-- =========================================== -->
+        <!-- normal call container -->
+        <div class="normal_call_container">
+          <!-- =========================================== -->
+          <!--  call detail-->
+          <div class="caller_detail">
+            <!-- =========================================== -->
+            <!-- caller name -->
+            <h2 class="caller_name">my mtn</h2>
+
+            <!-- =========================================== -->
+            <!-- calling text-->
+            <p class="calling">calling</p>
+          </div>
+
+          <!-- =========================================== -->
+          <!-- caller profile container-->
+          <div class="caller_profile_container">
+            <h2 class="time">
+              <span class="hr">00 </span> : <span class="mins"> 00 </span> :
+              <span class="secs"> 00</span>
+            </h2>
+            <!-- =========================================== -->
+            <!-- caller_profile -->
+            <img
+              alt="caller_profile"
+              class="caller_profile"
+              src="../../src/images/big-user_profile_picture.jpg"
+            />
+          </div>
+
+          <!-- =========================================== -->
+          <!-- end call-->
+          <button class="end_call">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="68"
+              height="68"
+              viewBox="0 0 24 24"
+            >
+              <rect width="24" height="24" fill="none" />
+              <path
+                fill="#ffffff"
+                d="M8 13.478v-.616s0-1.466 4-1.466s4 1.466 4 1.466v.388c0 .956.723 1.77 1.7 1.912l2 .294c1.21.177 2.3-.73 2.3-1.913v-2.125c0-.587-.184-1.164-.63-1.562C20.23 8.837 17.42 7 12 7c-5.749 0-8.56 2.583-9.56 3.789c-.315.381-.44.864-.44 1.352v1.923c0 1.298 1.296 2.228 2.58 1.852l2-.587c.843-.247 1.42-.998 1.42-1.85"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- =========================================== -->
+        <!-- video call  -->
+        <video class="video_call" autoplay></video>
       </div>
     </div>
     <!-- =========================================== -->
