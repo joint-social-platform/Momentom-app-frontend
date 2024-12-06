@@ -9,7 +9,20 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.welcome-container {
+  padding-top: 20px;
+}
 
+.small-logo {
+  width: 60px;
+  height: 60px;
+  margin-left: 9px;
+  display: none;
+}
+
+.big-logo {
+  margin-left: 9px;
+}
 .jh {
   background: linear-gradient(180deg, black 10%, purple 60%);
   padding: 30px;
@@ -87,5 +100,11 @@ body {
     background-image: url("/src/images/background.png");
     padding-bottom: 160px;
     padding-top: 50px;
+  }
+  .big-logo {
+    display: none;
+  }
+  .small-logo {
+    display: block;
   }
 }
