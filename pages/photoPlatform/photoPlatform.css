@@ -100,9 +100,24 @@ nav .Search {
   display: none;
 }
 
+.navigation-icons ul div i {
+  font-size: 2.5em;
+}
+
+.black, .white {
+  width: 2.5em;
+  margin: 0;
+  padding: 0;
+}
+
+.black {
+  display: none;
+}
+
 .fullpage {
   display: flex;
   width: 99vw;
+  height: 100vh;
 }
 
 .sidebar {
@@ -226,7 +241,6 @@ nav .Search {
   padding-bottom: 2em;
   padding-left: 8em;
   font-size: 1.2em;
-  overflow-x: scroll;
   scrollbar-width: thin;
   scrollbar-color: grey transparent;
 }
@@ -354,7 +368,7 @@ h2 {
 }
 
 .all {
-  overflow: hidden;
+  overflow-x: hidden;
   width: 80%;
 }
 
@@ -404,37 +418,63 @@ h2 {
     display: none;
     flex-direction: column;
     background-color: #000000;
-    gap: 2em;
+    gap: 0;
     width: 30%;
     align-items: end;
     position: absolute;
     font-size: 14px;
-    top: 3.6em;
+    top: 4em;
     right: 0;
-    padding: 1em;
+    /* padding: 1em; */
   }
 
   .navigation-icons ul div {
     display: flex;
-    flex-direction: column;
-    gap: 0.4em;
+    flex-direction: row;
+    /* flex-direction: column; */
+    /* gap: 0.4em; */
     width: 100%;
     text-align: left;
-    align-items: flex-start;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.9em;
+  }
+
+  .navigation-icons ul div i {
+    font-size: 1em;
+    margin-right: 1em;
   }
 
   .navigation-icons div img {
-    width: 60%;
-    display: none;
+    width: 1.3em;
+    margin-right: 0.5em;
+    /* display: none; */
   }
 
   .navigation-icons .notifications img {
-    width: 40%;
+    /* width: 40%; */
+  }
+
+  .black, .white {
+    width: 1em;
+  }
+
+  .black {
+    display: none;
   }
 
   .navigation-icons div:hover {
     cursor: pointer;
+    background-color: white;
+    color: #000000;
+  }
+
+  .navigation-icons div:hover .white {
+    display: none;
+  }
+
+  .navigation-icons div:hover .black {
+    display: block;
   }
 
   .navigation-icons .videos {
@@ -443,6 +483,7 @@ h2 {
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    padding: 0;
   }
 
   .navigation-icons .dropdown img {

@@ -10,7 +10,7 @@ const hamburgerClick = () => {
     document.querySelector("#cross-icon").style.display = "none";
     document.getElementById("arrow").style.rotate = "360deg";
     document.querySelector("#hamburger-icon").style.display = "flex";
-} else {
+  } else {
     navigation.style.display = "flex";
     sidebar.style.display = "none";
     document.getElementById("arrow").style.rotate = "360deg";
