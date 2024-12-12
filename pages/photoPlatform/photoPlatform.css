@@ -104,7 +104,8 @@ nav .Search {
   font-size: 2.5em;
 }
 
-.black, .white {
+.black,
+.white {
   width: 2.5em;
   margin: 0;
   padding: 0;
@@ -337,6 +338,7 @@ h2 {
 }
 
 .profiles > div > div > .images {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -451,11 +453,12 @@ h2 {
     /* display: none; */
   }
 
-  .navigation-icons .notifications img {
-    /* width: 40%; */
-  }
+  /* .navigation-icons .notifications img {
+    width: 40%;
+  } */
 
-  .black, .white {
+  .black,
+  .white {
     width: 1em;
   }
 
@@ -561,4 +564,57 @@ h2 {
   .img {
     width: 100%;
   }
+}
+
+/* Added styling for like and love functionality */
+.love_image {
+  display: none;
+}
+
+/* show love image */
+.showImage .love_image {
+  display: block;
+}
+
+/* don't display like icon */
+.showImage .like_image {
+  display: none;
+}
+
+/* Share Pop up div styling */
+
+.shareImageLink {
+  width: 200px;
+  bottom: 140%;
+  display: none;
+  color: white;
+  padding: 0.5rem;
+  position: absolute;
+  border-radius: 10px;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: black;
+}
+.linkText {
+  color: blue;
+  padding: 0.6rem;
+  font-size: 0.7rem;
+}
+
+.copy_btn {
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  text-transform: capitalize;
+}
+.copy_btn:hover {
+  color: white;
+  background-color: #000000;
+  box-shadow: 1px 1px 1px 2px white;
+}
+
+.show {
+  display: block;
 }

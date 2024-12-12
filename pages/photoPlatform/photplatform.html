@@ -1,88 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./photoPlatform.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="nav_container">
-        <!-- For the navigation menu -->
-        <nav>
-          <div class="logo">
-            <img
-              src="../../src/images/momentom-logo-small.png"
-              alt="logo"
-              class="logo"
-            />
-          </div>
-          <div class="Search">
-            <img
-              src="../../src/images/search_icon.png"
-              alt="Search"
-              class="search-icon"
-            />
-            <input type="text" />
-          </div>
-  
-          <div class="navigation-icons">
-            <ul id="navigation-icons">
-              <div class="home">
-                <i class="fa-solid fa-house"></i>
-                <p>Home</p>
-              </div>
-  
-              <div class="contact-search">
-                <img
-                  src="../../src/images/search contact white.png"
-                  alt="Contact Search"
-                  class="contact-search-icon white"
-                />
-                <img
-                  src="../../src/images/search contact.png"
-                  alt="Contact Search"
-                  class="contact-search-icon black"
-                />
+      <!-- For the navigation menu -->
+      <nav>
+        <div class="logo">
+          <img
+            src="../../src/images/momentom-logo-small.png"
+            alt="logo"
+            class="logo"
+          />
+        </div>
+        <div class="Search">
+          <img
+            src="../../src/images/search_icon.png"
+            alt="Search"
+            class="search-icon"
+          />
+          <input type="text" />
+        </div>
 
-                <p>Contact</p>
-              </div>
-  
-              <div class="notifications">
-                <i class="fa-solid fa-bell"></i>
-                <p>Notification</p>
-              </div>
-  
-              <div class="videos">
-                <div>
-                  <i class="fa-solid fa-image"></i>
-                  <p>Photo</p>
-                </div>
-                <div class="dropdown">
-                  <i class="fa-solid fa-caret-down"></i>
-                </div>
-              </div>
-  
-              <div class="profile">
-                <img
-                  src="../../src/images/user_profile.png"
-                  alt="user_profile"
-                  class="user_profile"
-                />
-                <p>Username</p>
-              </div>
-            </ul>
-  
-            <div class="hamburger" onclick="hamburgerClick()">
-              <i class="fa-solid fa-bars hamburger-icon" id="hamburger-icon"></i>
-              <i class="fa-solid fa-xmark cross-icon" id="cross-icon"></i>
+        <div class="navigation-icons">
+          <ul id="navigation-icons">
+            <div class="home">
+              <i class="fa-solid fa-house"></i>
+              <p>Home</p>
             </div>
+
+            <div class="contact-search">
+              <img
+                src="../../src/images/search contact white.png"
+                alt="Contact Search"
+                class="contact-search-icon white"
+              />
+              <img
+                src="../../src/images/search contact.png"
+                alt="Contact Search"
+                class="contact-search-icon black"
+              />
+
+              <p>Contact</p>
+            </div>
+
+            <div class="notifications">
+              <i class="fa-solid fa-bell"></i>
+              <p>Notification</p>
+            </div>
+
+            <div class="videos">
+              <div>
+                <i class="fa-solid fa-image"></i>
+                <p>Photo</p>
+              </div>
+              <div class="dropdown">
+                <i class="fa-solid fa-caret-down"></i>
+              </div>
+            </div>
+
+            <div class="profile">
+              <img
+                src="../../src/images/user_profile.png"
+                alt="user_profile"
+                class="user_profile"
+              />
+              <p>Username</p>
+            </div>
+          </ul>
+
+          <div class="hamburger" onclick="hamburgerClick()">
+            <i class="fa-solid fa-bars hamburger-icon" id="hamburger-icon"></i>
+            <i class="fa-solid fa-xmark cross-icon" id="cross-icon"></i>
           </div>
-        </nav>
+        </div>
+      </nav>
     </div>
     <div class="fullpage">
       <div class="sidebar" id="sidebar">
@@ -213,14 +216,45 @@
               <img src="../../src/images/profile1.png" alt="hip tv" />
               <div>
                 <div>
-                  <img src="../../src/images/Rectangle 56 (1).png" class="p-img" alt="">
+                  <img
+                    src="../../src/images/Rectangle 56 (1).png"
+                    class="p-img"
+                    alt=""
+                  />
                   <h3>Kate Sean</h3>
                 </div>
                 <div class="images">
-                  <img src="../../src/images/like.png" alt="">
-                  <img src="../../src/images/addmessage.png" alt="">
-                  <img src="../../src/images/share.png" alt="">
-                  <img src="../../src/images/download.png" alt="">
+                  <div class="love_like_Image_container">
+                    <img
+                      src="../../src/images/like.png"
+                      alt=""
+                      class="like_image"
+                    />
+                    <img
+                      src="../../src/images/love.png"
+                      alt=""
+                      class="love_image"
+                    />
+                  </div>
+                  <img
+                    src="../../src/images/addmessage.png"
+                    alt=""
+                    class="add_image"
+                  />
+                  <div class="shareImageLink">
+                    <p class="linkText"></p>
+                    <button class="copy_btn">copy link</button>
+                  </div>
+                  <img
+                    src="../../src/images/share.png"
+                    alt=""
+                    class="share_image"
+                  />
+                  <img
+                    src="../../src/images/download.png"
+                    alt=""
+                    class="download_image"
+                  />
                 </div>
               </div>
             </div>
@@ -228,14 +262,46 @@
               <img src="../../src/images/profile2.png" alt="hip tv" />
               <div>
                 <div>
-                  <img src="../../src/images/Rectangle 56 (1).png" class="p-img" alt="">
+                  <img
+                    src="../../src/images/Rectangle 56 (1).png"
+                    class="p-img"
+                    alt=""
+                  />
                   <h3>Kate Sean</h3>
                 </div>
                 <div class="images">
-                  <img src="../../src/images/like.png" alt="">
-                  <img src="../../src/images/addmessage.png" alt="">
-                  <img src="../../src/images/share.png" alt="">
-                  <img src="../../src/images/download.png" alt="">
+                  <div class="love_like_Image_container">
+                    <img
+                      src="../../src/images/like.png"
+                      alt=""
+                      class="like_image"
+                    />
+                    <img
+                      src="../../src/images/love.png"
+                      alt=""
+                      class="love_image"
+                    />
+                  </div>
+                  <img
+                    src="../../src/images/addmessage.png"
+                    alt=""
+                    class="add_image"
+                  />
+
+                  <div class="shareImageLink">
+                    <p class="linkText"></p>
+                    <button class="copy_btn">copy link</button>
+                  </div>
+                  <img
+                    src="../../src/images/share.png"
+                    alt=""
+                    class="share_image"
+                  />
+                  <img
+                    src="../../src/images/download.png"
+                    alt=""
+                    class="download_image"
+                  />
                 </div>
               </div>
             </div>
@@ -243,14 +309,45 @@
               <img src="../../src/images/profile3.png" alt="hip tv" />
               <div>
                 <div>
-                  <img src="../../src/images/Rectangle 56 (1).png" class="p-img" alt="">
+                  <img
+                    src="../../src/images/Rectangle 56 (1).png"
+                    class="p-img"
+                    alt=""
+                  />
                   <h3>Kate Sean</h3>
                 </div>
                 <div class="images">
-                  <img src="../../src/images/like.png" alt="">
-                  <img src="../../src/images/addmessage.png" alt="">
-                  <img src="../../src/images/share.png" alt="">
-                  <img src="../../src/images/download.png" alt="">
+                  <div class="love_like_Image_container">
+                    <img
+                      src="../../src/images/like.png"
+                      alt=""
+                      class="like_image"
+                    />
+                    <img
+                      src="../../src/images/love.png"
+                      alt=""
+                      class="love_image"
+                    />
+                  </div>
+                  <img
+                    src="../../src/images/addmessage.png"
+                    alt=""
+                    class="add_image"
+                  />
+                  <div class="shareImageLink">
+                    <p class="linkText"></p>
+                    <button class="copy_btn">copy link</button>
+                  </div>
+                  <img
+                    src="../../src/images/share.png"
+                    alt=""
+                    class="share_image"
+                  />
+                  <img
+                    src="../../src/images/download.png"
+                    alt=""
+                    class="download_image"
+                  />
                 </div>
               </div>
             </div>
@@ -258,14 +355,45 @@
               <img src="../../src/images/profile4.png" alt="hip tv" />
               <div>
                 <div>
-                  <img src="../../src/images/Rectangle 56 (1).png" class="p-img" alt="">
+                  <img
+                    src="../../src/images/Rectangle 56 (1).png"
+                    class="p-img"
+                    alt=""
+                  />
                   <h3>Kate Sean</h3>
                 </div>
                 <div class="images">
-                  <img src="../../src/images/like.png" alt="">
-                  <img src="../../src/images/addmessage.png" alt="">
-                  <img src="../../src/images/share.png" alt="">
-                  <img src="../../src/images/download.png" alt="">
+                  <div class="love_like_Image_container">
+                    <img
+                      src="../../src/images/like.png"
+                      alt=""
+                      class="like_image"
+                    />
+                    <img
+                      src="../../src/images/love.png"
+                      alt=""
+                      class="love_image"
+                    />
+                  </div>
+                  <img
+                    src="../../src/images/addmessage.png"
+                    alt=""
+                    class="add_image"
+                  />
+                  <div class="shareImageLink">
+                    <p class="linkText"></p>
+                    <button class="copy_btn">copy link</button>
+                  </div>
+                  <img
+                    src="../../src/images/share.png"
+                    alt=""
+                    class="share_image"
+                  />
+                  <img
+                    src="../../src/images/download.png"
+                    alt=""
+                    class="download_image"
+                  />
                 </div>
               </div>
             </div>
@@ -273,14 +401,45 @@
               <img src="../../src/images/profile5.png" alt="hip tv" />
               <div>
                 <div>
-                  <img src="../../src/images/Rectangle 56 (1).png" class="p-img" alt="">
+                  <img
+                    src="../../src/images/Rectangle 56 (1).png"
+                    class="p-img"
+                    alt=""
+                  />
                   <h3>Kate Sean</h3>
                 </div>
                 <div class="images">
-                  <img src="../../src/images/like.png" alt="">
-                  <img src="../../src/images/addmessage.png" alt="">
-                  <img src="../../src/images/share.png" alt="">
-                  <img src="../../src/images/download.png" alt="">
+                  <div class="love_like_Image_container">
+                    <img
+                      src="../../src/images/like.png"
+                      alt=""
+                      class="like_image"
+                    />
+                    <img
+                      src="../../src/images/love.png"
+                      alt=""
+                      class="love_image"
+                    />
+                  </div>
+                  <img
+                    src="../../src/images/addmessage.png"
+                    alt=""
+                    class="add_image"
+                  />
+                  <div class="shareImageLink">
+                    <p class="linkText"></p>
+                    <button class="copy_btn">copy link</button>
+                  </div>
+                  <img
+                    src="../../src/images/share.png"
+                    alt=""
+                    class="share_image"
+                  />
+                  <img
+                    src="../../src/images/download.png"
+                    alt=""
+                    class="download_image"
+                  />
                 </div>
               </div>
             </div>
@@ -297,14 +456,45 @@
               <img src="../../src/images/profile6.png" alt="hip tv" />
               <div>
                 <div>
-                  <img src="../../src/images/Rectangle 56 (1).png" class="p-img" alt="">
+                  <img
+                    src="../../src/images/Rectangle 56 (1).png"
+                    class="p-img"
+                    alt=""
+                  />
                   <h3>Kate Sean</h3>
                 </div>
                 <div class="images">
-                  <img src="../../src/images/like.png" alt="">
-                  <img src="../../src/images/addmessage.png" alt="">
-                  <img src="../../src/images/share.png" alt="">
-                  <img src="../../src/images/download.png" alt="">
+                  <div class="love_like_Image_container">
+                    <img
+                      src="../../src/images/like.png"
+                      alt=""
+                      class="like_image"
+                    />
+                    <img
+                      src="../../src/images/love.png"
+                      alt=""
+                      class="love_image"
+                    />
+                  </div>
+                  <img
+                    src="../../src/images/addmessage.png"
+                    alt=""
+                    class="add_image"
+                  />
+                  <div class="shareImageLink">
+                    <p class="linkText"></p>
+                    <button class="copy_btn">copy link</button>
+                  </div>
+                  <img
+                    src="../../src/images/share.png"
+                    alt=""
+                    class="share_image"
+                  />
+                  <img
+                    src="../../src/images/download.png"
+                    alt=""
+                    class="download_image"
+                  />
                 </div>
               </div>
             </div>
@@ -312,14 +502,45 @@
               <img src="../../src/images/profile7.png" alt="hip tv" />
               <div>
                 <div>
-                  <img src="../../src/images/Rectangle 56 (1).png" class="p-img" alt="">
+                  <img
+                    src="../../src/images/Rectangle 56 (1).png"
+                    class="p-img"
+                    alt=""
+                  />
                   <h3>Kate Sean</h3>
                 </div>
                 <div class="images">
-                  <img src="../../src/images/like.png" alt="">
-                  <img src="../../src/images/addmessage.png" alt="">
-                  <img src="../../src/images/share.png" alt="">
-                  <img src="../../src/images/download.png" alt="">
+                  <div class="love_like_Image_container">
+                    <img
+                      src="../../src/images/like.png"
+                      alt=""
+                      class="like_image"
+                    />
+                    <img
+                      src="../../src/images/love.png"
+                      alt=""
+                      class="love_image"
+                    />
+                  </div>
+                  <img
+                    src="../../src/images/addmessage.png"
+                    alt=""
+                    class="add_image"
+                  />
+                  <div class="shareImageLink">
+                    <p class="linkText"></p>
+                    <button class="copy_btn">copy link</button>
+                  </div>
+                  <img
+                    src="../../src/images/share.png"
+                    alt=""
+                    class="share_image"
+                  />
+                  <img
+                    src="../../src/images/download.png"
+                    alt=""
+                    class="download_image"
+                  />
                 </div>
               </div>
             </div>
@@ -327,14 +548,45 @@
               <img src="../../src/images/profile8.png" alt="hip tv" />
               <div>
                 <div>
-                  <img src="../../src/images/Rectangle 56 (1).png" class="p-img" alt="">
+                  <img
+                    src="../../src/images/Rectangle 56 (1).png"
+                    class="p-img"
+                    alt=""
+                  />
                   <h3>Kate Sean</h3>
                 </div>
                 <div class="images">
-                  <img src="../../src/images/like.png" alt="">
-                  <img src="../../src/images/addmessage.png" alt="">
-                  <img src="../../src/images/share.png" alt="">
-                  <img src="../../src/images/download.png" alt="">
+                  <div class="love_like_Image_container">
+                    <img
+                      src="../../src/images/like.png"
+                      alt=""
+                      class="like_image"
+                    />
+                    <img
+                      src="../../src/images/love.png"
+                      alt=""
+                      class="love_image"
+                    />
+                  </div>
+                  <img
+                    src="../../src/images/addmessage.png"
+                    alt=""
+                    class="add_image"
+                  />
+                  <div class="shareImageLink">
+                    <p class="linkText"></p>
+                    <button class="copy_btn">copy link</button>
+                  </div>
+                  <img
+                    src="../../src/images/share.png"
+                    alt=""
+                    class="share_image"
+                  />
+                  <img
+                    src="../../src/images/download.png"
+                    alt=""
+                    class="download_image"
+                  />
                 </div>
               </div>
             </div>
@@ -342,24 +594,52 @@
               <img src="../../src/images/profile1.png" alt="hip tv" />
               <div>
                 <div>
-                  <img src="../../src/images/Rectangle 56 (1).png" class="p-img" alt="">
+                  <img
+                    src="../../src/images/Rectangle 56 (1).png"
+                    class="p-img"
+                    alt=""
+                  />
                   <h3>Kate Sean</h3>
                 </div>
                 <div class="images">
-                  <img src="../../src/images/like.png" alt="">
-                  <img src="../../src/images/addmessage.png" alt="">
-                  <img src="../../src/images/share.png" alt="">
-                  <img src="../../src/images/download.png" alt="">
+                  <div class="love_like_Image_container">
+                    <img
+                      src="../../src/images/like.png"
+                      alt=""
+                      class="like_image"
+                    />
+                    <img
+                      src="../../src/images/love.png"
+                      alt=""
+                      class="love_image"
+                    />
+                  </div>
+                  <img
+                    src="../../src/images/addmessage.png"
+                    alt=""
+                    class="add_image"
+                  />
+                  <div class="shareImageLink">
+                    <p class="linkText"></p>
+                    <button class="copy_btn">copy link</button>
+                  </div>
+                  <img
+                    src="../../src/images/share.png"
+                    alt=""
+                    class="share_image"
+                  />
+                  <img
+                    src="../../src/images/download.png"
+                    alt=""
+                    class="download_image"
+                  />
                 </div>
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </div>
-</div>
-    
-</body>
-<script src="./photoplatform.js"></script>
+  </body>
+  <script src="./photoplatform.js"></script>
 </html>
