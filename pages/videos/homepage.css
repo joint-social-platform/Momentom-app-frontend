@@ -16,6 +16,10 @@ body {
   font-size: 14px;
 }
 
+img {
+  display: block;
+}
+
 nav {
   background: #000000;
   color: white;
@@ -90,12 +94,13 @@ nav .Search {
   margin-left: 1em;
 }
 
-.navigation-icons .hamburger{
+.navigation-icons .hamburger {
   display: none;
   width: 10em;
 }
 
-.hamburger .hamburger-icon, .hamburger .cross-icon{
+.hamburger .hamburger-icon,
+.hamburger .cross-icon {
   display: none;
 }
 
@@ -103,7 +108,8 @@ nav .Search {
   font-size: 2.5em;
 }
 
-.black, .white {
+.black,
+.white {
   width: 2.5em;
   margin: 0;
   padding: 0;
@@ -283,13 +289,6 @@ h2 {
   display: block;
 }
 
-.line {
-  line-height: 2px;
-  padding: 6px;
-  margin: 20px;
-  display: none;
-}
-
 .img {
   display: flex;
   padding: 10px;
@@ -318,6 +317,66 @@ h2 {
 .all {
   overflow: hidden;
   width: 80%;
+}
+
+/* ============================================= */
+/* video details container */
+.video_details_container {
+  display: flex;
+  align-items: end;
+  justify-content: space-evenly;
+}
+
+/* ============================================= */
+/* p-img*/
+.p-img {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  border-radius: 50% !important;
+}
+
+/* ============================================= */
+/* video name and details */
+.names_and_details {
+  color: white;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+
+/* ============================================= */
+/* images and love image container*/
+.images {
+  width: 25%;
+}
+
+.love_like_Image_container {
+  display: flex;
+  cursor: pointer;
+  justify-content: space-evenly;
+}
+
+/* ============================================= */
+/* like image,love image and add image */
+:is(.like_image, .love_image, .add_image) {
+  width: 1.3rem;
+  object-fit: cover;
+  margin: unset !important;
+}
+
+/* Added styling for like and love functionality */
+.love_image {
+  display: none;
+}
+
+/* show love image */
+.showImage .love_image {
+  display: block;
+}
+
+/* don't display like icon */
+.showImage .like_image {
+  display: none;
 }
 
 @media only screen and (max-width: 768px) {
@@ -403,7 +462,8 @@ h2 {
     /* width: 40%; */
   }
 
-  .black, .white {
+  .black,
+  .white {
     width: 1em;
   }
 
@@ -486,16 +546,16 @@ h2 {
   }
 
   .right_arrow {
-      background-color: #000000ad;
-      padding: 0.5em;
-      position: fixed;
-      top: 2.9em;
-      left: 0;
-      width: fit-content;
-      display: block;
-      color: white;
-      font-size: 1.5em;
-      z-index: 1;
+    background-color: #000000ad;
+    padding: 0.5em;
+    position: fixed;
+    top: 2.9em;
+    left: 0;
+    width: fit-content;
+    display: block;
+    color: white;
+    font-size: 1.5em;
+    z-index: 1;
   }
 
   #arrow {

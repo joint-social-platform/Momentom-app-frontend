@@ -10,7 +10,7 @@ const hamburgerClick = () => {
     document.querySelector("#cross-icon").style.display = "none";
     document.getElementById("arrow").style.rotate = "360deg";
     document.querySelector("#hamburger-icon").style.display = "flex";
-} else {
+  } else {
     navigation.style.display = "flex";
     sidebar.style.display = "none";
     document.getElementById("arrow").style.rotate = "360deg";
@@ -51,9 +51,23 @@ if (mediaQuery.matches) {
 mediaQuery.addEventListener("change", (e) => {
   if (e.matches) {
     navigation.style.display = "flex";
-      sidebar.style.display = "flex";
-        console.log("Switched to a smaller screen.");
-    } else {
-        console.log("Switched to a larger screen.");
-    }
+    sidebar.style.display = "flex";
+    console.log("Switched to a smaller screen.");
+  } else {
+    console.log("Switched to a larger screen.");
+  }
+});
+
+// New functionality like share add and download
+const Love_Like_image_Container = document.querySelectorAll(
+  ".love_like_Image_container"
+);
+const Add_image = document.querySelectorAll(".add_image");
+
+// Like and love functionality
+Love_Like_image_Container.forEach((image_icon) => {
+  image_icon.addEventListener("click", (e) => {
+    // toggle class showImage to add different image
+    e.currentTarget.classList.toggle("showImage");
+  });
 });
