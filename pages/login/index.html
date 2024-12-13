@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./create.css" />
+    <link rel="stylesheet" href="./login.css" />
     <link rel="stylesheet" href="../../src/style.css" />
     <link
       rel="stylesheet"
@@ -12,11 +12,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>Create Account</title>
+    <script defer src="./login.js"></script>
+    <title>Login</title>
   </head>
   <body>
-    <div class="flex flex-col lg:flex-row min-h-screen w-full">
-      <div class="relative flex flex-col lg:w-1/2 p-4 lg:p-10 flex-grow">
+    <div class="flex flex-col lg:flex-row h-screen">
+      <div class="relative flex flex-col lg:w-1/2 p-4 lg:p-10">
         <div class="absolute top-4 left-4 lg:left-10">
           <a href="../../index.html">
             <img
@@ -37,21 +38,14 @@
           </h1>
 
           <form
-            class="flex flex-col [&_label]:text-white [&_input]:outline-none space-y-3 w-full max-w-xs lg:max-w-sm"
+            class="form-login flex flex-col [&_label]:text-white [&_input]:outline-none space-y-3 w-full max-w-xs lg:max-w-sm"
           >
-            <label for="fullName">Full Name</label>
-            <input
-              type="text"
-              name="fullName"
-              id="fullName"
-              class="p-2 border rounded"
-            />
-
             <label for="email">Email</label>
             <input
               type="email"
               name="email"
               id="email"
+              value="test@gmail.com"
               class="p-2 border rounded"
             />
 
@@ -61,14 +55,7 @@
               name="password"
               id="password"
               class="p-2 border rounded"
-            />
-
-            <label for="confirmPassword">Confirm Password</label>
-            <input
-              type="password"
-              name="confirmPassword"
-              id="confirmPassword"
-              class="p-2 border rounded"
+              value="test"
             />
 
             <p class="text-sm text-white ml-auto hover:underline">
@@ -83,7 +70,7 @@
             <button
               class="bg-gradient-to-r from-[#D618CE,20%] to-[#161515] text-white p-2 rounded"
             >
-              Sign Up
+              Sign In
             </button>
           </form>
 
@@ -105,28 +92,27 @@
               <i class="fa-brands fa-twitter" style="color: #1da1f2"></i>
               <i class="fa-brands fa-tiktok" style="color: #010101"></i>
             </div>
-
             <p class="text-white">
-              Already have an account?
-              <a class="text-purple-900" href="../LoginPage/login.html"
-                >Login</a
+              Don't have an account?
+              <a class="text-purple-900" href="../create-account/"
+                >Create an Account</a
               >
             </p>
           </div>
         </div>
 
         <p
-          class="absolute bottom-4 lg:left-2 w-full text-center text-white text-sm"
+          class="absolute bottom-0 lg:left-2 w-full text-center text-white text-sm"
         >
           &copy; 2024 Momentom. All rights reserved.
         </p>
       </div>
 
-      <div class="hidden lg:flex w-1/2 min-h-screen">
+      <div class="hidden lg:flex w-1/2">
         <img
           src="../../src/images/girl-on-glasses.webp"
           alt="girl-on-glasses"
-          class="w-full lg:h-full 2xl:h-screen object-cover"
+          class="h-full w-full object-cover"
         />
       </div>
     </div>

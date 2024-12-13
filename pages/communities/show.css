@@ -36,7 +36,12 @@ body {
   font-size: 20px;
   display: none;
 }
-
+.chat {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 3rem;
+}
 .menubar i:hover {
   color: #fa69f3;
 }
@@ -135,7 +140,8 @@ p {
   transition: background-color 0.3s;
   gap: 10px;
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   padding-right: 40px;
 }
 
@@ -156,7 +162,8 @@ p {
   margin-left: 20px;
 }
 
-.nav-item:hover {
+.nav-item:hover,
+.chat:hover {
   background-color: #444;
   width: 230px;
   margin-left: 20px;
@@ -236,6 +243,24 @@ p {
 
 .under-nav2 a {
   width: 120px;
+}
+
+.kim {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+a:link {
+  color: #ffffff;
+  text-decoration: none;
 }
 /* Responsive design */
 @media (max-width: 768px) and (min-width: 720px) {
@@ -964,8 +989,7 @@ p {
   margin-top: 17px;
   width: 230px;
 }
-.puttin2:hover {
-}
+
 .user-profile:hover {
   background-color: #444;
   margin-left: 10px;

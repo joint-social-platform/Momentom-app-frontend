@@ -104,7 +104,8 @@ nav .Search {
   font-size: 2.5em;
 }
 
-.black, .white {
+.black,
+.white {
   width: 2.5em;
   margin: 0;
   padding: 0;
@@ -241,6 +242,8 @@ nav .Search {
   padding-bottom: 2em;
   padding-left: 8em;
   font-size: 1.2em;
+  scrollbar-width: thin;
+  scrollbar-color: grey transparent;
 }
 
 .upper a {
@@ -263,11 +266,19 @@ nav .Search {
   border-radius: 100%;
   margin-top: 0.4em;
 }
-
+.post .dot {
+  width: 5px;
+  height: 5px;
+  background-color: white;
+  border-radius: 100%;
+  margin-top: 0.4em;
+}
 .upper a:hover > div {
   background-color: white;
 }
-
+.e-commerce {
+  color: white;
+}
 .upper > div {
   display: flex;
   align-items: center;
@@ -282,6 +293,76 @@ h2 {
   display: block;
 }
 
+.line {
+  line-height: 2px;
+  padding: 6px;
+  margin: 20px;
+  display: none;
+}
+
+.profiles {
+  display: flex;
+  padding: 10px;
+  gap: 1.5em;
+  margin-bottom: 3em;
+  justify-content: space-between;
+  overflow-x: scroll;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+  scrollbar-color: rgba(212, 212, 212, 0.34) transparent;
+  align-content: space-between;
+}
+
+.profiles > div {
+  height: 19em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+  gap: 1em;
+}
+
+.profiles > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.profiles .p-img {
+  width: 2.3em;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+.profiles > div > div > div {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0.4em;
+  align-items: center;
+  color: whitesmoke;
+}
+
+.profiles > div > div > .images {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.2em;
+  width: 40%;
+}
+
+.profiles > div > div > .images img {
+  width: 1.2em;
+}
+
+.profiles > div img {
+  margin: 0;
+  padding: 0;
+}
+
 ::-webkit-scrollbar-button {
   display: none;
   background-color: transparent;
@@ -292,6 +373,7 @@ h2 {
 }
 
 .all img {
+  border-radius: 1em;
   margin: 0.2em 1em;
 }
 
@@ -299,60 +381,10 @@ h2 {
   overflow-x: hidden;
   width: 80%;
 }
-
-.profiler {
-    display: flex;
-    width: fit-content;
-    flex-direction: column;
-    color: white;
-    gap: 7em;
+a:link {
+  color: white;
+  text-decoration: none;
 }
-
-.profiler > div {
-    display: flex;
-    align-items: flex-start;
-}
-
-.profiler > div * {
-    margin: 0;
-}
-
-.profiler > div > div {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin: auto;
-    margin-left: 1.5em;
-}
-
-.profiler > div > div img {
-    width: 100%;
-}
-
-.profiler > div > div > div {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-}
-
-.profiler > div > div > div > div {
-    display: flex;
-    gap: 1em;
-}
-
-.profiler > div > div > div h3 {
-    font-size: 1.7em;
-}
-
-.profiler > div > div > div > div * {
-    margin: 0;
-    padding: 0;
-    width: 2em;
-    border-radius: none;
-}
-
-
 @media only screen and (max-width: 768px) {
   nav {
     padding: 1em 1em;
@@ -404,7 +436,7 @@ h2 {
     align-items: end;
     position: absolute;
     font-size: 14px;
-    top: 3.7em;
+    top: 4em;
     right: 0;
     /* padding: 1em; */
   }
@@ -432,11 +464,12 @@ h2 {
     /* display: none; */
   }
 
-  .navigation-icons .notifications img {
-    /* width: 40%; */
-  }
+  /* .navigation-icons .notifications img {
+    width: 40%;
+  } */
 
-  .black, .white {
+  .black,
+  .white {
     width: 1em;
   }
 
@@ -542,4 +575,57 @@ h2 {
   .img {
     width: 100%;
   }
+}
+
+/* Added styling for like and love functionality */
+.love_image {
+  display: none;
+}
+
+/* show love image */
+.showImage .love_image {
+  display: block;
+}
+
+/* don't display like icon */
+.showImage .like_image {
+  display: none;
+}
+
+/* Share Pop up div styling */
+
+.shareImageLink {
+  width: 200px;
+  bottom: 140%;
+  display: none;
+  color: white;
+  padding: 0.5rem;
+  position: absolute;
+  border-radius: 10px;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: black;
+}
+.linkText {
+  color: blue;
+  padding: 0.6rem;
+  font-size: 0.7rem;
+}
+
+.copy_btn {
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  text-transform: capitalize;
+}
+.copy_btn:hover {
+  color: white;
+  background-color: #000000;
+  box-shadow: 1px 1px 1px 2px white;
+}
+
+.show {
+  display: block;
 }
