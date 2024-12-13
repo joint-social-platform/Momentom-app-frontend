@@ -179,6 +179,10 @@ nav .Search {
   margin: 1em auto;
 }
 
+.channel div {
+  display: flex;
+}
+
 .channel .send,
 .channel .add {
   width: 0.9em;
@@ -421,49 +425,31 @@ h2 {
     display: none;
   }
 
-  .navigation-icons ul {
-    display: none;
-    flex-direction: column;
-    background-color: #000000;
-    gap: 0;
-    width: 30%;
-    align-items: end;
-    position: absolute;
-    font-size: 14px;
-    top: 3.7em;
-    right: 0;
-    /* padding: 1em; */
+  .navigation-icons {
+    display: flex;
+    align-items: center;
+    gap: 2em;
   }
 
-  .navigation-icons ul div {
-    display: flex;
-    flex-direction: row;
-    /* flex-direction: column; */
-    /* gap: 0.4em; */
-    width: 100%;
-    text-align: left;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0.9em;
+  #navigation-icons {
+    gap: 1em;
+  }
+
+  .navigation-icons ul div p {
+    display: none;
   }
 
   .navigation-icons ul div i {
-    font-size: 1em;
-    margin-right: 1em;
+    font-size: 1.6em;
+    padding: 0.5em;
   }
 
   .navigation-icons div img {
-    width: 1.3em;
-    margin-right: 0.5em;
-    /* display: none; */
+    width: 3.0em;
+    padding: 0.5em;
   }
 
-  .navigation-icons .notifications img {
-    /* width: 40%; */
-  }
-
-  .black,
-  .white {
+  .black, .white {
     width: 1em;
   }
 
@@ -485,30 +471,16 @@ h2 {
     display: block;
   }
 
-  .navigation-icons .videos {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0;
-  }
-
-  .navigation-icons .dropdown img {
-    width: 10%;
-    display: block;
-  }
-
   .navigation-icons .hamburger {
     background-color: #000000ad;
     padding: 0.5em;
-    position: fixed;
+    /* position: fixed; */
     top: 0.1em;
     right: 0;
     width: fit-content;
     display: flex;
     color: white;
-    font-size: 3em;
+    font-size: 2em;
     z-index: 1;
   }
 
@@ -524,10 +496,9 @@ h2 {
   .sidebar {
     position: fixed;
     z-index: 1;
-    top: 3.9em;
+    top: 3.2em;
     width: 100%;
     display: none;
-    padding-top: 3em;
   }
 
   .all {
@@ -540,26 +511,8 @@ h2 {
 
   .upper {
     width: 100%;
-    margin-left: 1.7em;
     padding-left: 0;
     font-size: 0.9em;
-  }
-
-  .right_arrow {
-    background-color: #000000ad;
-    padding: 0.5em;
-    position: fixed;
-    top: 2.9em;
-    left: 0;
-    width: fit-content;
-    display: block;
-    color: white;
-    font-size: 1.5em;
-    z-index: 1;
-  }
-
-  #arrow {
-    display: block;
   }
 
   .img {

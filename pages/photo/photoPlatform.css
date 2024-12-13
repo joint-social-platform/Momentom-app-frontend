@@ -77,7 +77,7 @@ nav .Search {
   cursor: pointer;
 }
 
-.navigation-icons .videos {
+.navigation-icons .photos {
   display: flex;
   flex-direction: row;
 }
@@ -228,11 +228,6 @@ nav .Search {
   position: relative;
   top: 4em;
   left: calc(100vw - 80%);
-}
-
-.right_arrow,
-#arrow {
-  display: none;
 }
 
 .upper {
@@ -427,49 +422,31 @@ a:link {
     display: none;
   }
 
-  .navigation-icons ul {
-    display: none;
-    flex-direction: column;
-    background-color: #000000;
-    gap: 0;
-    width: 30%;
-    align-items: end;
-    position: absolute;
-    font-size: 14px;
-    top: 4em;
-    right: 0;
-    /* padding: 1em; */
+  .navigation-icons {
+    display: flex;
+    align-items: center;
+    gap: 2em;
   }
 
-  .navigation-icons ul div {
-    display: flex;
-    flex-direction: row;
-    /* flex-direction: column; */
-    /* gap: 0.4em; */
-    width: 100%;
-    text-align: left;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0.9em;
+  #navigation-icons {
+    gap: 1em;
+  }
+
+  .navigation-icons ul div p {
+    display: none;
   }
 
   .navigation-icons ul div i {
-    font-size: 1em;
-    margin-right: 1em;
+    font-size: 1.6em;
+    padding: 0.5em;
   }
 
   .navigation-icons div img {
-    width: 1.3em;
-    margin-right: 0.5em;
-    /* display: none; */
+    width: 3.0em;
+    padding: 0.5em;
   }
 
-  /* .navigation-icons .notifications img {
-    width: 40%;
-  } */
-
-  .black,
-  .white {
+  .black, .white {
     width: 1em;
   }
 
@@ -491,34 +468,16 @@ a:link {
     display: block;
   }
 
-  .navigation-icons .videos {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0;
-  }
-
-  .navigation-icons .dropdown img {
-    width: 10%;
-    display: block;
-  }
-
-  .profile {
-    margin-left: 1em;
-  }
-
   .navigation-icons .hamburger {
     background-color: #000000ad;
     padding: 0.5em;
-    position: fixed;
+    /* position: fixed; */
     top: 0.1em;
     right: 0;
     width: fit-content;
     display: flex;
     color: white;
-    font-size: 3em;
+    font-size: 2em;
     z-index: 1;
   }
 
@@ -534,10 +493,9 @@ a:link {
   .sidebar {
     position: fixed;
     z-index: 1;
-    top: 3.9em;
+    top: 3.2em;
     width: 100%;
     display: none;
-    padding-top: 3em;
   }
 
   .all {
@@ -550,7 +508,6 @@ a:link {
 
   .upper {
     width: 100%;
-    margin-left: 1.7em;
     padding-left: 0;
     font-size: 0.9em;
   }
