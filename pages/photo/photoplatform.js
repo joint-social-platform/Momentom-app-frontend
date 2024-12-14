@@ -221,3 +221,16 @@ comment_close_btn.forEach((close_btn) => {
     parent_container.classList.remove("showFlex");
   });
 });
+
+const addPostBtn = document.querySelector(".plus_icon");
+const overlay = document.querySelector(".overlay");
+
+//close modal functionality
+overlay.addEventListener("click", function (e) {
+  if (e.target.closest(".modal")) return;
+  overlay.classList.add("hidden");
+});
+
+addPostBtn.addEventListener("click", function () {
+  overlay.classList.remove("hidden");
+});

@@ -60,6 +60,9 @@
   cursor: pointer;
   font-size: 2rem;
   text-align: center;
+  background-color: transparent;
+  outline: none;
+  border: none;
 }
 
 .modal-body .add-photos {
@@ -181,4 +184,17 @@ input:checked + .slider:before {
 
 .hidden {
   display: none;
+}
+
+@media (max-width: 902px) {
+  .modal {
+    width: fit-content;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 955px) {
+  .modal {
+    width: fit-content;
+  }
 }

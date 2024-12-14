@@ -11,6 +11,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./photoPlatform.css" />
+    <link rel="stylesheet" href="../../src/modal/modal.css" />
   </head>
 
   <body>
@@ -18,11 +19,7 @@
       <!-- For the navigation menu -->
       <nav>
         <div class="logo">
-          <img
-            src="../../src/images/nav_logo.png"
-            alt="logo"
-            class="logo"
-          />
+          <img src="../../src/images/nav_logo.png" alt="logo" class="logo" />
         </div>
         <div class="Search">
           <img
@@ -201,13 +198,12 @@
           </div>
           <div class="upper_create_post">
             <a href="#">Create a post</a>
-            <a href="#">
-              <img
-                src="../../src/images/plus_icon.png"
-                alt="plus_icon"
-                class="plus_icon"
-              />
-            </a>
+
+            <img
+              src="../../src/images/plus_icon.png"
+              alt="plus_icon"
+              class="plus_icon"
+            />
           </div>
         </div>
 
@@ -2193,6 +2189,45 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- modal -->
+      <div class="overlay hidden">
+        <div class="modal">
+          <div class="modal-head">
+            <h2>Create Post</h2>
+            <img src="../../src/images/profile-head.png" alt="Profile-head" />
+            <p>Say your mind here</p>
+          </div>
+          <div class="modal-body">
+            <button>&times;</button>
+            <p class="add-photos">Add photos/videos</p>
+            <p class="drag-drop">or drag and drop</p>
+          </div>
+          <div class="modal-foot">
+            <div class="add-text">
+              <p>Add Text here</p>
+              <div class="add-text-img">
+                <img src="../../src/images/gallery-pic.png" alt="gallery" /><img
+                  src="../../src/images/emoji-smiley.png"
+                  alt=""
+                /><img
+                  src="../../src/images/location-icon.png"
+                  alt="location"
+                /><img src="../../src/images/person-icon.png" alt="person" />
+              </div>
+            </div>
+            <div class="share">
+              <p>Share your post directly to your peers</p>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+            </div>
+
+            <button class="next-btn">Next</button>
           </div>
         </div>
       </div>
