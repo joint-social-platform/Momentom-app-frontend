@@ -62,6 +62,7 @@ html {
 /* ============================================= */
 /* Nav Logo container*/
 .nav_logo_container {
+  overflow: hidden;
   border-radius: 15px;
   background: #ffffff;
 }

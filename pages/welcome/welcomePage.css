@@ -95,6 +95,7 @@ body {
     margin-left: auto;
     margin-left: 40px;
     margin-top: 40px;
+    border-radius: 10px;
   }
   .con {
     background-image: url("/src/images/background.png");
@@ -105,6 +106,11 @@ body {
     display: none;
   }
   .small-logo {
-    display: block;
+    display: flex;
+    object-fit: cover;
+    align-items: center;
+    border-radius: 15px;
+    justify-content: center;
+    background-color: white;
   }
 }

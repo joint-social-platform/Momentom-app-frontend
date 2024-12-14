@@ -20,6 +20,11 @@ img {
   display: block;
 }
 
+a {
+  color: unset;
+  text-decoration: none;
+}
+
 nav {
   background: #000000;
   color: white;
@@ -39,6 +44,10 @@ nav .logo {
 
 nav .logo img {
   width: 5em;
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 10px;
+  background-color: white;
 }
 
 nav .Search {
@@ -368,6 +377,266 @@ h2 {
   margin: unset !important;
 }
 
+/* ==================================== */
+/* comment modal */
+/* desktop */
+.comment_modal {
+  top: 0%;
+  left: 0;
+  z-index: 22;
+  display: none;
+  position: fixed;
+  border-radius: 20px;
+  align-items: center;
+  width: 100% !important;
+  height: 100vh !important;
+  background-color: #000000dc;
+  justify-content: center !important;
+}
+
+/* ==================================== */
+/* comment container */
+.comment_container {
+  width: 60%;
+  height: 85%;
+  display: flex;
+  overflow: hidden;
+  border-radius: 15px;
+  flex-direction: column;
+  background-color: #000000;
+  align-items: unset !important;
+  justify-content: space-between;
+  box-shadow: 0px 0px 4px 4px rgba(211, 211, 211, 0.587);
+}
+
+/* ==================================== */
+/* comment header */
+.comment_header {
+  display: flex;
+  justify-content: space-evenly;
+  box-shadow: 0px 2px 4px 4px rgba(211, 211, 211, 0.76);
+}
+
+/* ==================================== */
+/* comment title */
+.comment_title {
+  width: 80%;
+  display: flex;
+  padding: 0.8rem;
+  font-size: 0.9rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==================================== */
+/* comment title */
+.comment_title h2 {
+  color: white;
+}
+
+/* ==================================== */
+/* close comment */
+.close_comment {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==================================== */
+/* comment close btn */
+.comment_close_btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  display: flex;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background-color: lightgray;
+}
+
+/* ==================================== */
+/* comment close btn */
+.comment_close_btn:hover {
+  background-color: darkgray;
+}
+
+/* ==================================== */
+/* comment body */
+.comment_body {
+  gap: 1rem;
+  height: 65%;
+  display: flex;
+  padding: 1rem;
+  overflow-y: scroll;
+  flex-direction: column;
+}
+
+/* ==================================== */
+/* commenter */
+.commenter {
+  gap: 0.6rem;
+  display: flex;
+}
+
+/* ==================================== */
+/* comment img */
+.commenter_img {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* ==================================== */
+/* Comment comment container*/
+.commenter_comment_container {
+  padding: 0.5rem;
+  border-radius: 10px;
+  background-color: rgb(133, 133, 133);
+}
+
+/* ==================================== */
+/*Comment name*/
+.commenter_name {
+  color: black;
+  font-size: 0.7rem;
+  text-transform: capitalize;
+}
+
+/* ==================================== */
+/* Commenter comment*/
+.commenter_comment {
+  color: white;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+
+/* ==================================== */
+/* Comment  icons images*/
+.comment_icon_images {
+  display: flex;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: white;
+  align-items: center;
+  justify-content: space-evenly;
+  border-top: 2px solid darkgrey;
+  border-bottom: 2px solid darkgrey;
+}
+
+.comment_icon_images .love_image {
+  width: 1.28rem;
+}
+
+/* ==================================== */
+/* Comment images*/
+.comment_images {
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+/* ==================================== */
+/*user commenting input container */
+.user_commenting_input_container {
+  gap: 1rem;
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+}
+
+/* ==================================== */
+/* input container */
+.input_container {
+  width: 80%;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: rgb(133, 133, 133);
+}
+
+/* ==================================== */
+/* input  */
+.input_container input {
+  width: 100%;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  background-color: transparent;
+}
+
+.input_container:has(input:focus) {
+  border: 2px solid skyblue;
+}
+
+.input_container input::placeholder {
+  color: white;
+}
+
+/* ==================================== */
+/* input send icon */
+.input_send_icon {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: rgb(133, 133, 133);
+}
+
+/* ==================================== */
+/* comment modal */
+/* Ipad view */
+@media screen and (width <= 1023px) {
+  .comment_container {
+    width: 90%;
+    height: 85%;
+  }
+  .upper {
+    padding: 0;
+    height: 8vh;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .upper_sub_nav {
+    height: 100%;
+    gap: 0.5rem;
+  }
+
+  .upper_create_post {
+    height: 80%;
+    margin-bottom: 0.4rem;
+  }
+
+  .upper_sub_nav a,
+  .upper_create_post a {
+    width: max-content;
+  }
+}
+
+/* ==================================== */
+/* comment modal */
+/* Mobile view */
+@media screen and (width <= 764px) {
+  .comment_container {
+    width: 94%;
+    height: 90%;
+  }
+  .upper {
+    padding: 0;
+    height: 13vh;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
 /* Added styling for like and love functionality */
 .love_image {
   display: none;
@@ -381,6 +650,10 @@ h2 {
 /* don't display like icon */
 .showImage .like_image {
   display: none;
+}
+
+.showFlex {
+  display: flex;
 }
 
 @media only screen and (max-width: 768px) {
@@ -445,11 +718,12 @@ h2 {
   }
 
   .navigation-icons div img {
-    width: 3.0em;
+    width: 3em;
     padding: 0.5em;
   }
 
-  .black, .white {
+  .black,
+  .white {
     width: 1em;
   }
 
