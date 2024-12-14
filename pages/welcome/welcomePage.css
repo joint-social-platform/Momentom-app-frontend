@@ -95,6 +95,7 @@ body {
     margin-left: auto;
     margin-left: 40px;
     margin-top: 40px;
+    border-radius: 10px;
   }
   .con {
     background-image: url("/src/images/background.png");
@@ -106,5 +107,8 @@ body {
   }
   .small-logo {
     display: block;
+    object-fit: cover;
+    border-radius: 15px;
+    background-color: white;
   }
 }

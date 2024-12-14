@@ -35,6 +35,9 @@ nav .logo {
 
 nav .logo img {
   width: 5em;
+  object-fit: cover;
+  border-radius: 10px;
+  background-color: white;
 }
 
 nav .Search {
@@ -754,6 +757,27 @@ a:link {
     width: 90%;
     height: 85%;
   }
+
+  .upper {
+    gap: 1rem;
+    padding: 0;
+    min-height: 10vh;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    margin-bottom: 1rem;
+  }
+
+  :is(.upper_sub_nav a, .upper_create_post a) {
+    width: max-content;
+  }
+
+  .upper_sub_nav {
+    height: 100%;
+  }
+  .upper_create_post {
+    height: 80%;
+    margin-bottom: 0.8rem;
+  }
 }
 
 /* ==================================== */
@@ -763,6 +787,10 @@ a:link {
   .comment_container {
     width: 94%;
     height: 90%;
+  }
+
+  .upper {
+    min-height: 13vh;
   }
 }
 

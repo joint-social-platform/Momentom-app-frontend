@@ -20,6 +20,11 @@ img {
   display: block;
 }
 
+a {
+  color: unset;
+  text-decoration: none;
+}
+
 nav {
   background: #000000;
   color: white;
@@ -39,6 +44,9 @@ nav .logo {
 
 nav .logo img {
   width: 5em;
+  object-fit: cover;
+  border-radius: 10px;
+  background-color: white;
 }
 
 nav .Search {
@@ -588,6 +596,28 @@ h2 {
     width: 90%;
     height: 85%;
   }
+  .upper {
+    padding: 0;
+    height: 8vh;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .upper_sub_nav {
+    height: 100%;
+    gap: 0.5rem;
+  }
+
+  .upper_create_post {
+    height: 80%;
+    margin-bottom: 0.4rem;
+  }
+
+  .upper_sub_nav a,
+  .upper_create_post a {
+    width: max-content;
+  }
 }
 
 /* ==================================== */
@@ -597,6 +627,12 @@ h2 {
   .comment_container {
     width: 94%;
     height: 90%;
+  }
+  .upper {
+    padding: 0;
+    height: 13vh;
+    align-items: center;
+    gap: 0.5rem;
   }
 }
 
