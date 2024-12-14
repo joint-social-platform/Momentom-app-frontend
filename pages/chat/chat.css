@@ -73,6 +73,7 @@ html {
 /* Logo */
 .logo {
   display: flex;
+  overflow: hidden;
   align-items: center;
   border-radius: 15px;
   justify-content: center;

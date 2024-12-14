@@ -44,6 +44,7 @@ nav .logo {
 
 nav .logo img {
   width: 5em;
+  overflow: hidden;
   object-fit: cover;
   border-radius: 10px;
   background-color: white;
