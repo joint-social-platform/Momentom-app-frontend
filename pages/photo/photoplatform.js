@@ -222,7 +222,7 @@ comment_close_btn.forEach((close_btn) => {
   });
 });
 
-const addPostBtn = document.querySelector(".plus_icon");
+const addPostBtn = document.querySelector(".upper_create_post");
 const overlay = document.querySelector(".overlay");
 
 //close modal functionality

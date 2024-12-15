@@ -42,7 +42,6 @@ const Love_Like_image_Container = document.querySelectorAll(
 const Add_image = document.querySelectorAll(".add_image");
 const like_text = document.querySelectorAll(".like_text");
 
-
 // Like and love functionality
 Love_Like_image_Container.forEach((image_icon) => {
   image_icon.addEventListener("click", (e) => {
@@ -159,4 +158,17 @@ comment_close_btn.forEach((close_btn) => {
       e.currentTarget.parentElement.parentElement.parentElement.parentElement;
     parent_container.classList.remove("showFlex");
   });
+});
+
+const addPostBtn = document.querySelector(".upper_create_post");
+const overlay = document.querySelector(".overlay");
+
+//close modal functionality
+overlay.addEventListener("click", function (e) {
+  if (e.target.closest(".modal")) return;
+  overlay.classList.add("hidden");
+});
+
+addPostBtn.addEventListener("click", function () {
+  overlay.classList.remove("hidden");
 });

@@ -275,9 +275,7 @@ nav .Search {
 .upper a:hover > div {
   background-color: white;
 }
-.e-commerce {
-  color: white;
-}
+
 .upper > div {
   display: flex;
   align-items: center;
@@ -285,6 +283,14 @@ nav .Search {
 
 .upper img {
   width: 2.5em;
+}
+
+.upper_create_post {
+  cursor: pointer;
+}
+
+.upper_create_post p {
+  color: white;
 }
 
 h2 {
@@ -381,7 +387,8 @@ h2 {
   overflow-x: hidden;
   width: 80%;
 }
-a:link {
+a:link,
+a:visited {
   color: white;
   text-decoration: none;
 }
@@ -443,13 +450,13 @@ a:link {
   }
 
   .navigation-icons ul div i {
-    font-size: 2.5em;
+    font-size: 1.6em;
     padding: 0.5em;
   }
 
   .navigation-icons div img {
-    width: 4.8em;
-    padding: 0.7em;
+    width: 3em;
+    padding: 0.5em;
   }
 
   .black,
@@ -847,14 +854,6 @@ a:link {
 .show {
   display: block;
 }
-
-
-@media only screen and (max-width: 600px) {
-  .upper {
-    font-size: 0.8em;
-  }
-}
 .showFlex {
   display: flex !important;
 }
-

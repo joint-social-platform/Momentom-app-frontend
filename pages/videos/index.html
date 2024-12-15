@@ -11,6 +11,7 @@
     />
     <title>Home page for video platform</title>
     <link rel="stylesheet" href="homepage.css" />
+    <link rel="stylesheet" href="../../src/modal/modal.css" />
   </head>
   <body>
     <div class="nav_container">
@@ -55,24 +56,28 @@
               <p>Notification</p>
             </div>
 
-            <div class="videos">
-              <div>
-                <i class="fa-solid fa-image"></i>
-                <p>Photo</p>
+            <a href="../photo/">
+              <div class="videos">
+                <div>
+                  <i class="fa-solid fa-image"></i>
+                  <p>Photo</p>
+                </div>
+                <div class="dropdown">
+                  <i class="fa-solid fa-caret-down"></i>
+                </div>
               </div>
-              <div class="dropdown">
-                <i class="fa-solid fa-caret-down"></i>
-              </div>
-            </div>
+            </a>
 
-            <div class="profile">
-              <img
-                src="../../src/images/user_profile.png"
-                alt="user_profile"
-                class="user_profile"
-              />
-              <p>Username</p>
-            </div>
+            <a href="../profile/">
+              <div class="profile">
+                <img
+                  src="../../src/images/user_profile.png"
+                  alt="user_profile"
+                  class="user_profile"
+                />
+                <p>Username</p>
+              </div>
+            </a>
           </ul>
 
           <div class="hamburger" onclick="hamburgerClick()">
@@ -85,38 +90,42 @@
     <div class="fullpage">
       <div class="sidebar" id="sidebar">
         <div class="groups">
-          <div>
-            <img
-              src="../../src/images/E_commerce_icon.png"
-              alt="E-commerce"
-              class="E-commerce"
-            />
-            <span>E-commerce</span>
-          </div>
-          <div>
-            <img
-              src="../../src/images/Photo_icon.png"
-              alt="Photo_icon"
-              class="photo-icon"
-            />
-            <span>Photos</span>
-          </div>
-          <div>
-            <img
-              src="../../src/images/settings-icon.png"
-              alt="settings-icon"
-              class="settings-icon"
-            />
-            <span>Settings</span>
-          </div>
-          <div>
-            <img
-              src="../../src/images/group-chats-icon.png"
-              alt="group-chats-icon"
-              class="group-chats-icon"
-            />
-            <span>Chats</span>
-          </div>
+          <a href="../e-commerce/">
+            <div>
+              <img
+                src="../../src/images/E_commerce_icon.png"
+                alt="E-commerce"
+                class="E-commerce"
+              />
+              <span>E-commerce</span>
+            </div>
+          </a>
+          <a href="../photo/">
+            <div>
+              <img
+                src="../../src/images/Photo_icon.png"
+                alt="Photo_icon"
+                class="photo-icon"
+              />
+              <span>Photos</span>
+            </div>
+          </a>
+          <a href="../videos/">
+            <div>
+              <i class="fa-brands fa-youtube"></i>
+              <span>Videos</span>
+            </div>
+          </a>
+          <a href="../chat/">
+            <div>
+              <img
+                src="../../src/images/group-chats-icon.png"
+                alt="group-chats-icon"
+                class="group-chats-icon"
+              />
+              <span>Chats</span>
+            </div>
+          </a>
         </div>
         <div>
           <p>Your Channel</p>
@@ -1270,6 +1279,45 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- modal -->
+      <div class="overlay hidden">
+        <div class="modal">
+          <div class="modal-head">
+            <h2>Create Post</h2>
+            <img src="../../src/images/profile-head.png" alt="Profile-head" />
+            <p>Say your mind here</p>
+          </div>
+          <div class="modal-body">
+            <button>&times;</button>
+            <p class="add-photos">Add photos/videos</p>
+            <p class="drag-drop">or drag and drop</p>
+          </div>
+          <div class="modal-foot">
+            <div class="add-text">
+              <p>Add Text here</p>
+              <div class="add-text-img">
+                <img src="../../src/images/gallery-pic.png" alt="gallery" /><img
+                  src="../../src/images/emoji-smiley.png"
+                  alt=""
+                /><img
+                  src="../../src/images/location-icon.png"
+                  alt="location"
+                /><img src="../../src/images/person-icon.png" alt="person" />
+              </div>
+            </div>
+            <div class="share">
+              <p>Share your post directly to your peers</p>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+            </div>
+
+            <button class="next-btn">Next</button>
           </div>
         </div>
       </div>
