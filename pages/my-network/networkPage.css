@@ -166,15 +166,6 @@ html {
 }
 
 /* ============================================= */
-/*Link name*/
-.link_name {
-  font-size: 11px;
-  font-weight: 300;
-  line-height: 18.04px;
-  font-family: "Catamaran", serif;
-}
-
-/* ============================================= */
 /*drop down icon*/
 .drop_down_icon {
   width: 12px;
@@ -197,15 +188,6 @@ html {
 .profile_picture {
   width: 30px;
   height: 25px;
-}
-
-/* ============================================= */
-/* user name */
-.user_name {
-  font-size: 10px;
-  font-weight: 600;
-  line-height: 22.96px;
-  font-family: "Catamaran", serif;
 }
 
 /* ============================================= */
@@ -640,14 +622,8 @@ html {
   }
 
   /* ============================================= */
-  /*Link name*/
-  .link_name {
-    font-size: 0.6rem;
-  }
-
-  /* ============================================= */
-  /*drop down icon*/
-  .drop_down_icon {
+  /*drop down container*/
+  .drop_down_container {
     display: none;
   }
 
@@ -656,12 +632,6 @@ html {
   .profile_picture {
     width: 25px;
     height: 20px;
-  }
-
-  /* ============================================= */
-  /* user name */
-  .user_name {
-    font-size: 0.5rem;
   }
 
   /* ============================================= */
@@ -884,12 +854,6 @@ html {
   .profile_picture {
     width: 34px;
     height: 26px;
-  }
-
-  /* ============================================= */
-  /* user name */
-  .user_name {
-    font-size: 0.9rem;
   }
 
   /* ============================================= */
