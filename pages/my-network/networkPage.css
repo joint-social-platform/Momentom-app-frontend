@@ -191,6 +191,15 @@ html {
 }
 
 /* ============================================= */
+/* user name */
+.user_name {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 22.96px;
+  font-family: "Catamaran", serif;
+}
+
+/* ============================================= */
 /* Mobile bar icon */
 .nav_toggle_container {
   display: none;
@@ -635,6 +644,12 @@ html {
   }
 
   /* ============================================= */
+  /* user name */
+  .user_name {
+    font-size: 0.5rem;
+  }
+
+  /* ============================================= */
   /*nav toggle container */
   .nav_toggle_container {
     display: block;
@@ -854,6 +869,12 @@ html {
   .profile_picture {
     width: 34px;
     height: 26px;
+  }
+
+  /* ============================================= */
+  /* user name */
+  .user_name {
+    font-size: 0.9rem;
   }
 
   /* ============================================= */
