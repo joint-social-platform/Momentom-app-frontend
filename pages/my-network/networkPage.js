@@ -24,3 +24,5 @@ overlay.addEventListener("click", function (e) {
 addPostBtn.addEventListener("click", function () {
   overlay.classList.remove("hidden");
 });
+
+
