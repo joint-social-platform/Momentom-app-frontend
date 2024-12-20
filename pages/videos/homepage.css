@@ -618,6 +618,7 @@ h2 {
   .upper_sub_nav a,
   .upper_create_post a {
     width: max-content;
+    font-size: 1.1rem;
   }
 }
 
@@ -634,6 +635,11 @@ h2 {
     height: 13vh;
     align-items: center;
     gap: 0.5rem;
+  }
+
+  .upper_sub_nav a,
+  .upper_create_post a {
+    font-size: 1rem;
   }
 }
 
@@ -713,13 +719,23 @@ h2 {
   }
 
   .navigation-icons ul div i {
-    font-size: 1.6em;
+    font-size: 2.3em;
     padding: 0.5em;
   }
 
+  .contact-search {
+    display: flex;
+    padding: 0.2rem;
+    align-items: center;
+  }
+
   .navigation-icons div img {
-    width: 3em;
+    width: 3.6em;
     padding: 0.5em;
+  }
+
+  .profile img {
+    width: 4em !important;
   }
 
   .black,

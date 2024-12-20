@@ -450,13 +450,23 @@ a:visited {
   }
 
   .navigation-icons ul div i {
-    font-size: 1.6em;
+    font-size: 1.2rem;
     padding: 0.5em;
   }
 
+  .contact-search {
+    display: flex;
+    padding: 0.2rem;
+    align-items: center;
+  }
+
   .navigation-icons div img {
-    width: 3em;
+    width: 4em;
     padding: 0.5em;
+  }
+
+  .user_profile {
+    width: 4.4em !important;
   }
 
   .black,
@@ -775,7 +785,9 @@ a:visited {
     margin-bottom: 1rem;
   }
 
-  :is(.upper_sub_nav a, .upper_create_post a) {
+  :is(.upper_sub_nav a, .upper_create_post p) {
+    font-size: 1.1rem;
+
     width: max-content;
   }
 
@@ -799,6 +811,9 @@ a:visited {
 
   .upper {
     min-height: 13vh;
+  }
+  :is(.upper_sub_nav a, .upper_create_post p) {
+    font-size: 1rem;
   }
 }
 
