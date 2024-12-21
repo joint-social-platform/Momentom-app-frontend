@@ -1,0 +1,171 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="nav_container">
+      <!-- For the navigation menu -->
+      <nav>
+        <div class="logo">
+          <img src="../../src/images/nav_logo.png" alt="logo" class="logo" />
+        </div>
+        <div class="Search">
+          <img
+            src="../../src/images/search_icon.png"
+            alt="Search"
+            class="search-icon"
+          />
+          <input type="text" />
+        </div>
+
+        <div class="navigation-icons">
+          <ul id="navigation-icons">
+            <div class="home">
+              <i class="fa-solid fa-house"></i>
+              <p>Home</p>
+            </div>
+
+            <div class="contact-search">
+              <img
+                src="../../src/images/search contact white.png"
+                alt="Contact Search"
+                class="contact-search-icon white"
+              />
+              <img
+                src="../../src/images/search contact.png"
+                alt="Contact Search"
+                class="contact-search-icon black"
+              />
+
+              <p>Contact</p>
+            </div>
+
+            <div class="notifications">
+              <i class="fa-solid fa-bell"></i>
+              <p>Notification</p>
+            </div>
+
+            <a href="../photo/">
+              <div class="videos">
+                <div>
+                  <i class="fa-solid fa-image"></i>
+                  <p>Photo</p>
+                </div>
+                <div class="dropdown">
+                  <i class="fa-solid fa-caret-down"></i>
+                </div>
+              </div>
+            </a>
+
+            <a href="../profile/">
+              <div class="profile">
+                <img
+                  src="../../src/images/user_profile.png"
+                  alt="user_profile"
+                  class="user_profile"
+                />
+                <p>Username</p>
+              </div>
+            </a>
+          </ul>
+
+          <div class="hamburger" onclick="hamburgerClick()">
+            <i class="fa-solid fa-bars hamburger-icon" id="hamburger-icon"></i>
+            <i class="fa-solid fa-xmark cross-icon" id="cross-icon"></i>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="fullpage" style="color: white;">
+      <div class="top-side">
+        <p>Notifications</p>
+        <p onclick="markAsRead()" class="mark"><i>Mark all as read</i></p>
+      </div>
+      <div class="notify">
+        <div id="new">
+          <img src="../../src/images/Hani.png" alt="avatar image" />
+          <div>
+            <p><b>Michelle</b> Liked your recent post <i>"We are all one"</i></p>
+            <p>one minute ago</p>
+          </div>
+        </div>
+        <div>
+          <img src="../../src/images/love.png" alt="avatar image" />
+          <div>
+            <p><b>Samson</b> started following you</p>
+            <p>2 hours ago</p>
+          </div>
+        </div>
+        <div id="new">
+          <img src="../../src/images/Davido.png" alt="avatar image" />
+          <div>
+            <p><b>Davido</b> sent you a private message <i>"Hey, I thought you said we are supposed to meet up today, I went there but you were not there, just wanted to know where you have..."</i></p>
+            <p>5 hours ago</p>
+          </div>
+        </div>
+        <div id="new">
+          <img src="../../src/images/VictorSam.png" alt="avatar image" />
+          <div>
+            <p><b>Micheal Joe</b> accepted your request to join the group <i>"Programming Hub"</i></p>
+            <p>12 hours ago</p>
+          </div>
+        </div>
+        <div>
+          <img src="../../src/images/samuel john.png" alt="avatar image" />
+          <div>
+            <p><b>John Doe</b> is inviting you to their live class on "Active programmers" page</p>
+            <p>14 hours ago</p>
+          </div>
+        </div>
+        <div id="new">
+          <img src="../../src/images/AryraStar.png" alt="avatar image" />
+          <div>
+            <p><b>Aryya Star</b> Liked your post <i>"My best moments of the year were from you, Aryya Star..."</i></p>
+            <p>15 hours ago</p>
+          </div>
+        </div>
+        <div>
+          <img src="../../src/images/Camera.png" alt="avatar image" />
+          <div>
+            <p><b>Max Williams</b> invites you to join a group challenge to know who the best photoshop designer is...</p>
+            <p>23 hours ago</p>
+          </div>
+        </div>
+        <div>
+          <img src="../../src/images/Asake.png" alt="avatar image" />
+          <div>
+            <p><b>Asake</b> Liked your post <i>"We are all one"</i></p>
+            <p>1 day ago</p>
+          </div>
+        </div>
+        <div id="new">
+          <img src="../../src/images/Aman.png" alt="avatar image" />
+          <div>
+            <p><b>Samuel Wilson & Jessica Maxwell</b> are newly married today, <i>congratulate them</i></p>
+            <p>2 days ago</p>
+          </div>
+        </div>
+        <div id="new">
+          <img src="../../src/images/Abhilash.png" alt="avatar image" />
+          <div>
+            <p><b>Abhilash</b> birthday is today. Wish her well or send  her a gift</p>
+            <p>3 days ago</p>
+          </div>
+        </div>
+      </div>
+      <div></div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
