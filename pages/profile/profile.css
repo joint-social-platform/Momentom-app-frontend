@@ -84,8 +84,8 @@ html {
 /* ============================================= */
 /* Search Icon*/
 .search_icon {
-  width: 21px;
-  height: 18px;
+  font: 1rem;
+  color: white;
 }
 
 /* ============================================= */
@@ -131,6 +131,11 @@ html {
   height: 18px;
 }
 
+.E_commerce_icon_link_container {
+  gap: 1rem;
+  flex-direction: row;
+}
+
 /* ============================================= */
 /*contact serach link icon*/
 .contact_serach_icon {
@@ -148,15 +153,6 @@ html {
   position: absolute;
   border-radius: 50%;
   background-color: #d61818;
-}
-
-/* ============================================= */
-/*Link name*/
-.link_name {
-  font-size: 11px;
-  font-weight: 300;
-  line-height: 18.04px;
-  font-family: "Catamaran", serif;
 }
 
 /* ============================================= */
@@ -903,28 +899,27 @@ html {
   /* ============================================= */
   /*link icon*/
   .link_icon {
-    width: 22px;
-    height: 18px;
+    font-size: 1.2rem;
   }
 
   /* ============================================= */
   /*E commence icon*/
   .E_commerce_icon {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 25px;
+    margin-left: 0.4rem;
+  }
+
+  .E_commerce_icon_link_container {
+    gap: 1rem;
+    flex-direction: column;
   }
 
   /* ============================================= */
   /*contact serach link icon*/
   .contact_serach_icon {
-    width: 24px;
-    height: 20px;
-  }
-
-  /* ============================================= */
-  /*Link name*/
-  .link_name {
-    font-size: 1rem;
+    width: 26px;
+    height: 22px;
   }
 
   /* ============================================= */
@@ -1165,13 +1160,6 @@ html {
   }
 
   /* ============================================= */
-  /* search icon*/
-  .search_icon {
-    width: 24px;
-    height: 20px;
-  }
-
-  /* ============================================= */
   /* profile picture*/
   .profile_picture {
     width: 32px;
@@ -1193,28 +1181,21 @@ html {
   /* ============================================= */
   /*link icon*/
   .link_icon {
-    width: 24px;
-    height: 20px;
+    font-size: 1.4rem;
   }
 
   /* ============================================= */
   /*E commence icon*/
   .E_commerce_icon {
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
   }
 
   /* ============================================= */
   /*contact serach link icon*/
   .contact_serach_icon {
     width: 26px;
-    height: 24px;
-  }
-
-  /* ============================================= */
-  /*Link name*/
-  .link_name {
-    font-size: 1.1rem;
+    height: 22px;
   }
 
   /* ============================================= */
