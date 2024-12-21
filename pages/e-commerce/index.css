@@ -1,0 +1,28 @@
+/* logo styling */
+.momentum_heading {
+  width: 95%;
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.momentum_heading h2 {
+  padding: 0;
+  font-size: 1.5rem;
+}
+.momentum_logo {
+  height: 70px;
+  width: 80px;
+  border-radius: 10px;
+}
+/* footer svg icon */
+.footer_icon a div svg {
+  width: 45px;
+  height: 35px;
+}
+/* footer svg name */
+
+.footer_icon a p {
+  font-size: 1.2rem;
+  text-align: center;
+}

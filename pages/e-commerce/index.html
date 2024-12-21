@@ -12,6 +12,7 @@
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
     <div
@@ -25,11 +26,18 @@
       />
       <div>
         <div class="flex items-center bg-[#1a1122] p-4 pb-2 justify-between">
-          <h2
-            class="text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pl-12"
-          >
-            Momentom App
-          </h2>
+          <div class="momentum_heading">
+            <img
+              src="../../src/images/nav_logo.png"
+              alt="nav_logo"
+              class="momentum_logo"
+            />
+            <h2
+              class="text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pl-12"
+            >
+              Momentom
+            </h2>
+          </div>
           <div class="flex w-12 items-center justify-end">
             <button
               class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 bg-transparent text-white gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0"
@@ -294,7 +302,7 @@
       </div>
       <div>
         <div
-          class="flex gap-2 border-t border-[#362447] bg-[#261a32] px-4 pb-3 pt-2"
+          class="flex gap-2 border-t border-[#362447] bg-[#261a32] px-4 pb-3 pt-2 footer_icon"
         >
           <a
             class="just flex flex-1 flex-col items-center justify-end gap-1 rounded-full text-white"
