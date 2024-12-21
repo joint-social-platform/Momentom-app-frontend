@@ -15,6 +15,11 @@
   width: 80px;
   border-radius: 10px;
 }
+.footer_icon {
+  padding: 1rem;
+  justify-content: space-evenly;
+}
+
 /* footer svg icon */
 .footer_icon a div svg {
   width: 45px;
