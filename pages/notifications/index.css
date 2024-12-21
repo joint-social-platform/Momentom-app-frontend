@@ -1,0 +1,303 @@
+/** @format */
+
+:root {
+  --transiton: ease 1s linear;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+  font-family: "Catamaran", sans-serif;
+  font-size: 14px;
+}
+
+img {
+  display: block;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+nav {
+  background: #000000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-size: 8px;
+  align-items: center;
+  padding: 1em 3em;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+nav .logo {
+  width: 15%;
+}
+
+nav .logo img {
+  width: 5em;
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 10px;
+  background-color: white;
+}
+
+nav .Search {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  border: 0.1em solid rgba(255, 255, 255, 0.24);
+  border-radius: 4em;
+  padding: 1em;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.Search input {
+  border: 0;
+  margin: 0;
+  background-color: transparent;
+  padding: 0.7em;
+  outline: none;
+  color: white;
+  width: 100%;
+}
+
+.navigation-icons ul {
+  display: flex;
+  flex-direction: row;
+  gap: 4em;
+  align-items: end;
+}
+
+.navigation-icons div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation-icons div:hover {
+  cursor: pointer;
+}
+
+.navigation-icons .videos {
+  display: flex;
+  flex-direction: row;
+}
+
+.dropdown img {
+  width: 60%;
+}
+
+.profile {
+  margin-left: 1em;
+}
+
+.navigation-icons .hamburger {
+  display: none;
+  width: 10em;
+}
+
+.hamburger .hamburger-icon,
+.hamburger .cross-icon {
+  display: none;
+}
+
+.navigation-icons ul div i {
+  font-size: 2.5em;
+}
+
+.black,
+.white {
+  width: 2.5em;
+  margin: 0;
+  padding: 0;
+}
+
+.black {
+  display: none;
+}
+
+.fullpage {
+  position: relative;
+  top: 5em;
+  background: linear-gradient(-45deg, rgb(0, 0, 0), rgba(182, 0, 182, 0.5));
+  width: 60%;
+  margin: auto;
+  padding: 1em;
+  border-radius: 1em 1em 0 0;
+}
+
+.top-side {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+    align-items: center;
+}
+
+.mark {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.671);
+  font-size: 0.8em;
+}
+
+.mark:hover {
+    color: rgba(255, 255, 255, 0.877);
+}
+
+.notify {
+  display: grid;
+  gap: 0.5em;
+  font-size: 1em;
+}
+
+.notify > div {
+  background-color: rgba(252, 226, 226, 0.13);
+  cursor: pointer;
+  display: flex;
+  gap: 1em;
+  border-radius: 0.5em;
+  align-items: center;
+  padding: 0.5em;
+}
+
+.notify div img {
+  border-radius: 50%;
+  width: 2.5em;
+}
+
+.notify #new {
+  background-color: rgba(240, 248, 255, 0.438);
+}
+
+
+@media only screen and (max-width: 768px) {
+  nav {
+    padding: 1em 1em;
+  }
+
+  nav .logo {
+    width: 10%;
+  }
+
+  nav .logo img {
+    width: 5em;
+  }
+
+  nav .Search {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border: none;
+    border-radius: 4em;
+    padding: 1em;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .Search img {
+    align-items: end;
+    justify-items: end;
+    display: none;
+  }
+
+  .Search input {
+    border: 0;
+    margin: 0;
+    background-color: transparent;
+    padding: 0.7em;
+    outline: none;
+    color: white;
+    width: 100%;
+    display: none;
+  }
+
+  .navigation-icons {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+  }
+
+  #navigation-icons {
+    gap: 1em;
+  }
+
+  .navigation-icons ul div p {
+    display: none;
+  }
+
+  .navigation-icons ul div i {
+    font-size: 2.3em;
+    padding: 0.5em;
+  }
+
+  .contact-search {
+    display: flex;
+    padding: 0.2rem;
+    align-items: center;
+  }
+
+  .navigation-icons div img {
+    width: 3.6em;
+    padding: 0.5em;
+  }
+
+  .profile img {
+    width: 4em !important;
+  }
+
+  .black,
+  .white {
+    width: 1em;
+  }
+
+  .black {
+    display: none;
+  }
+
+  .navigation-icons div:hover {
+    cursor: pointer;
+    background-color: white;
+    color: #000000;
+  }
+
+  .navigation-icons div:hover .white {
+    display: none;
+  }
+
+  .navigation-icons div:hover .black {
+    display: block;
+  }
+
+  .navigation-icons .hamburger {
+    background-color: #000000ad;
+    padding: 0.5em;
+    /* position: fixed; */
+    top: 0.1em;
+    right: 0;
+    width: fit-content;
+    display: flex;
+    color: white;
+    font-size: 2em;
+    z-index: 1;
+  }
+
+  #hamburger-icon {
+    display: flex;
+  }
+
+  .fullpage{
+    width: 95%;
+  }
+}
