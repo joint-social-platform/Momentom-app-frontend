@@ -87,8 +87,13 @@ html {
 /* ============================================= */
 /* Search container*/
 .search_container {
+  gap: 1rem;
   width: 40%;
+  display: flex;
+  padding: 0.6rem;
+  border-radius: 15px;
   padding-left: 3rem;
+  border: 2px solid rgba(211, 211, 211, 0.363);
 }
 
 /* ============================================= */
@@ -96,6 +101,23 @@ html {
 .search_icon {
   color: white;
   font-size: 1rem;
+}
+
+/* ============================================= */
+/* Search input*/
+.search_input {
+  width: 90%;
+  height: 100%;
+  border: none;
+  outline: navy;
+  color: white;
+  font-size: 1rem;
+  background-color: transparent;
+}
+
+.search_container:has(input:focus) {
+  border: 2px solid skyblue;
+  background-color: rgb(49, 47, 47);
 }
 
 /* ============================================= */
@@ -163,15 +185,6 @@ html {
   position: absolute;
   border-radius: 50%;
   background-color: #d61818;
-}
-
-/* ============================================= */
-/*Link name*/
-.link_name {
-  font-size: 11px;
-  font-weight: 300;
-  line-height: 18.04px;
-  font-family: "Catamaran", serif;
 }
 
 /* ============================================= */
@@ -588,6 +601,9 @@ html {
   font-family: "Catamaran", serif;
 }
 
+/* ============================================= */
+/*search modal */
+
 /* ================================================ */
 
 /* ================================================ */
@@ -609,8 +625,56 @@ html {
   /* Search container*/
   .search_container {
     padding: 0;
+    border: none;
     padding: 0.2rem;
     width: max-content;
+  }
+
+  /* ============================================= */
+  /* Search input*/
+  .search_input {
+    display: none;
+  }
+
+  /* ============================================= */
+  /* Search Modal mobile*/
+  .search_modal_mobile {
+    top: 10%;
+    width: 90%;
+    gap: 0.8rem;
+    height: 0;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    align-items: center;
+    border-radius: 15px;
+    transition: all 1s linear;
+    background-color: #000000;
+  }
+
+  /* ============================================= */
+  /*mobile search input */
+  .mobile_search_input {
+    width: 90%;
+    height: 80%;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: transparent;
+  }
+
+  /* ============================================= */
+  /* mobile cancel icon */
+  .mobile_cancel_icon {
+    color: red;
+    font-size: 1rem;
+  }
+
+  .show_mobile_search {
+    height: 50px;
+    padding: 0.4rem;
+    padding-left: 0.6rem;
+    border: 2px solid rgb(66, 66, 66);
   }
 
   /* ============================================= */
@@ -640,14 +704,8 @@ html {
   }
 
   /* ============================================= */
-  /*Link name*/
-  .link_name {
-    font-size: 0.6rem;
-  }
-
-  /* ============================================= */
-  /*drop down icon*/
-  .drop_down_icon {
+  /*drop down container*/
+  .drop_down_container {
     display: none;
   }
 
@@ -816,8 +874,6 @@ html {
   .user_network_profile {
     width: 70px;
     height: 65px;
-    border-radius: 50%;
-    background: #d9d9d9;
   }
 
   /* ============================================= */

@@ -31,6 +31,8 @@ body {
 .momentom-logo {
   height: 60px;
   width: 60px;
+  border-radius: 15px;
+  
 }
 .menubar {
   font-size: 20px;
@@ -1024,8 +1026,9 @@ a:link {
   background-color: #b81995;
   padding: 5px;
   border-radius: 6px;
-
+   width: 1060px;
   cursor: pointer;
+  margin-left: 800px;
 }
 
 .main-content2 {
@@ -1044,9 +1047,10 @@ a:link {
 .main-content2:hover {
   padding: 5px;
   border-radius: 6px;
-
+  width: 1060px;
   cursor: pointer;
   background-color: #b81995;
+  margin-left: 800px;
 }
 .main-content3 {
   display: flex;
@@ -1063,10 +1067,10 @@ a:link {
 
 .main-content3:hover {
   background-color: #b81995;
-
+  width: 1060px;
   padding: 5px;
   border-radius: 6px;
-
+  margin-left: 800px;
   cursor: pointer;
 }
 
@@ -1087,8 +1091,9 @@ a:link {
   background-color: #b81995;
   padding: 5px;
   border-radius: 6px;
-
+  width: 1060px;
   cursor: pointer;
+  margin-left: 800px;
 }
 
 .main-content5 {
@@ -1108,6 +1113,7 @@ a:link {
   background-color: #b81995;
   padding: 5px;
   border-radius: 6px;
-
+  width: 1060px;
   cursor: pointer;
+  margin-left: 800px;
 }

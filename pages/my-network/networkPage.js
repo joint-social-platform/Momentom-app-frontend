@@ -15,6 +15,7 @@ Nav_toggle_btn.addEventListener("click", (e) => {
   Sidebar_container.classList.toggle("open_side_bar_container");
 });
 
+// =========================================
 //close modal functionality
 overlay.addEventListener("click", function (e) {
   if (e.target.closest(".modal")) return;
@@ -23,4 +24,32 @@ overlay.addEventListener("click", function (e) {
 
 addPostBtn.addEventListener("click", function () {
   overlay.classList.remove("hidden");
+});
+
+// =========================================
+// Remove Element
+const RemoveBtn = document.querySelectorAll(".remove");
+
+// Remove functionality
+RemoveBtn.forEach((remove) => {
+  remove.addEventListener("click", (e) => {
+    // get the click parent
+    const removeParent = e.currentTarget.parentElement;
+    removeParent.remove();
+  });
+});
+
+// =========================================
+// Search element
+const SearchBtn = document.querySelector(".search_icon");
+const mobileSearchContainer = document.querySelector(".search_modal_mobile");
+const mobileCancelIcon = document.querySelector(".mobile_cancel_icon");
+
+// Search functionality
+SearchBtn.addEventListener("click", () => {
+  mobileSearchContainer.classList.add("show_mobile_search");
+});
+
+mobileCancelIcon.addEventListener("click", () => {
+  mobileSearchContainer.classList.remove("show_mobile_search");
 });

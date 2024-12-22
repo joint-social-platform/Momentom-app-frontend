@@ -43,12 +43,16 @@
 
           <!-- =================================================== -->
           <!-- Search container-->
-          <div class="search_container">
+          <form class="search_container">
             <!-- =================================================== -->
             <!-- Search Icon -->
 
             <i class="fa-solid fa-magnifying-glass search_icon"></i>
-          </div>
+
+            <!-- =================================================== -->
+            <!-- Search Input -->
+            <input type="text" name="search" class="search_input" />
+          </form>
           <!-- =================================================== -->
           <!-- Navigation Links Container -->
           <div class="navigation_link_container">
@@ -61,10 +65,6 @@
                   <!-- =================================================== -->
                   <!-- Link icon -->
                   <i class="fa-solid fa-house link_icon"></i>
-
-                  <!-- =================================================== -->
-                  <!-- Link name -->
-                  <h2 class="link_name">Home</h2>
                 </a>
               </li>
 
@@ -81,10 +81,6 @@
                   />
 
                   <!-- =================================================== -->
-                  <!-- Link name -->
-                  <h2 class="link_name">peer</h2>
-
-                  <!-- =================================================== -->
                   <!-- new notifications-->
                   <div class="new_notifications"></div>
                 </a>
@@ -99,10 +95,6 @@
                   <i class="fa-solid fa-bell link_icon"></i>
 
                   <!-- =================================================== -->
-                  <!-- Link name -->
-                  <h2 class="link_name">Notification</h2>
-
-                  <!-- =================================================== -->
                   <!-- new notifications-->
                   <div class="new_notifications"></div>
                 </a>
@@ -113,15 +105,10 @@
               <li class="video_drop_down_container">
                 <!-- =================================================== -->
                 <!-- Link -->
-                <a href="" class="link">
+                <a href="../videos/" class="link">
                   <!-- =================================================== -->
                   <!-- Link icon -->
-                  <a href="../videos/">
-                    <i class="fa-brands fa-youtube link_icon"></i>
-                    <!-- =================================================== -->
-                    <!-- Link name -->
-                    <h2 class="link_name">Videos</h2>
-                  </a>
+                  <i class="fa-brands fa-youtube link_icon"></i>
                 </a>
                 <!-- =================================================== -->
                 <!-- Drop down container -->
@@ -147,6 +134,7 @@
                     alt="user_profile"
                     class="profile_picture"
                   />
+
                   <!-- =================================================== -->
                   <!-- user name -->
                   <h2 class="user_name">Hello , Aditi</h2>
@@ -426,7 +414,11 @@
                 <article class="user_network_details">
                   <!-- =================================================== -->
                   <!-- user network profile-->
-                  <div class="user_network_profile"></div>
+                  <img
+                    src="../../src/images/circle_img.png"
+                    class="user_network_profile"
+                    alt="circle_img.png"
+                  />
 
                   <!-- =================================================== -->
                   <!-- user detail-->
@@ -470,7 +462,11 @@
                 <article class="user_network_details">
                   <!-- =================================================== -->
                   <!-- user network profile-->
-                  <div class="user_network_profile"></div>
+                  <img
+                    src="../../src/images/circle_img.png"
+                    class="user_network_profile"
+                    alt="circle_img.png"
+                  />
 
                   <!-- =================================================== -->
                   <!-- user detail-->
@@ -514,7 +510,11 @@
                 <article class="user_network_details">
                   <!-- =================================================== -->
                   <!-- user network profile-->
-                  <div class="user_network_profile"></div>
+                  <img
+                    src="../../src/images/circle_img.png"
+                    class="user_network_profile"
+                    alt="circle_img.png"
+                  />
 
                   <!-- =================================================== -->
                   <!-- user detail-->
@@ -558,7 +558,11 @@
                 <article class="user_network_details">
                   <!-- =================================================== -->
                   <!-- user network profile-->
-                  <div class="user_network_profile"></div>
+                  <img
+                    src="../../src/images/circle_img.png"
+                    class="user_network_profile"
+                    alt="circle_img.png"
+                  />
 
                   <!-- =================================================== -->
                   <!-- user detail-->
@@ -602,7 +606,11 @@
                 <article class="user_network_details">
                   <!-- =================================================== -->
                   <!-- user network profile-->
-                  <div class="user_network_profile"></div>
+                  <img
+                    src="../../src/images/circle_img.png"
+                    class="user_network_profile"
+                    alt="circle_img.png"
+                  />
 
                   <!-- =================================================== -->
                   <!-- user detail-->
@@ -644,6 +652,19 @@
           </div>
         </section>
       </div>
+
+      <!-- =================================================== -->
+      <!-- Search Modal mobile -->
+      <form class="search_modal_mobile">
+        <!-- =================================================== -->
+        <!-- mobile search input -->
+        <input type="text" name="search" class="mobile_search_input" />
+
+        <!-- =================================================== -->
+        <!-- mobile cancel icon -->
+        <i class="fa-solid fa-x mobile_cancel_icon"></i>
+      </form>
+
       <!-- modal -->
       <div class="overlay hidden">
         <div class="modal">
@@ -685,5 +706,6 @@
     </main>
 
     <script src="./networkPage.js"></script>
+    <script src="./specialNetworkPage.js"></script>
   </body>
 </html>
