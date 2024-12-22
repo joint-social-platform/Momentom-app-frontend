@@ -1,21 +1,22 @@
-*{
-    margin: 0;
-    padding: 0;
-    
-
+* {
+  margin: 0;
+  padding: 0;
 }
-.coming{
-    text-align: center;
-    align-items: center;
-    font-size: 100px;
-    padding-top: 120px;
-    padding-bottom: 300px;
-    color: white;
+.coming {
+  text-align: center;
+  align-items: center;
+  font-size: 100px;
+  padding-top: 120px;
+  padding-bottom: 300px;
+  color: white;
 }
-.body{
-    background: url("/src/images/background.png");
+.body {
+  background: url("/src/images/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
-.body img{
-    padding-top: 20px;
-    padding-left: 20px;
+.body img {
+  padding-top: 20px;
+  padding-left: 20px;
 }
