@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="google-signin-client_id"
+      content="865312802964-9ue0ol0578nk9f5rh7d0aircdiombr52.apps.googleusercontent.com"
+    />
     <link rel="stylesheet" href="./create.css" />
     <link rel="stylesheet" href="../../src/style.css" />
     <link
@@ -12,6 +16,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script defer src="./create.js"></script>
     <title>Create Account</title>
   </head>
   <body>
@@ -100,7 +106,11 @@
           >
             <p class="text-white">Sign In With</p>
             <div class="icons flex space-x-4">
-              <i class="fa-brands fa-google" style="color: #db4437"></i>
+              <i
+                class="fa-brands fa-google google-signIn"
+                style="color: #db4437"
+              ></i>
+
               <i class="fa-brands fa-facebook-f" style="color: #1877f2"></i>
               <i class="fa-brands fa-twitter" style="color: #1da1f2"></i>
               <i class="fa-brands fa-tiktok" style="color: #010101"></i>

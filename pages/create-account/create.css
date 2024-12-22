@@ -1,1 +1,5 @@
 @import "../login/login.css";
+
+.google-signIn {
+  cursor: pointer;
+}
