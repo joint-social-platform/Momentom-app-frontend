@@ -29,10 +29,10 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 .momentom-logo {
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
   border-radius: 15px;
-  
 }
 .menubar {
   font-size: 20px;
@@ -50,15 +50,6 @@ body {
 
 .menubar i:active {
   transform: scaleX(0.7);
-}
-
-.navbar-brand {
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding: 30px;
-}
-.navbar-brand img {
-  padding-top: 15px;
 }
 
 .navbar-menu {
@@ -1026,7 +1017,7 @@ a:link {
   background-color: #b81995;
   padding: 5px;
   border-radius: 6px;
-   width: 1060px;
+  width: 1060px;
   cursor: pointer;
   margin-left: 800px;
 }

@@ -1,0 +1,1072 @@
+@import "../../src/modal/modal.css";
+/* ============================================= */
+/* General styling */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  display: block;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* ========================================================= */
+/* Scroll bar */
+html {
+  scroll-behavior: smooth;
+}
+/* Scroll bar width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Scroll bar Track */
+::-webkit-scrollbar-track {
+  background: rgb(179, 179, 179);
+}
+
+/*Scroll bar Handle */
+::-webkit-scrollbar-thumb {
+  background: #646266;
+}
+
+/* ============================================== */
+/* Desktop View */
+
+/* ============================================= */
+/* main container*/
+.main_container {
+  height: 100vh;
+  padding: 0 2rem;
+  overflow: hidden;
+  padding-bottom: 1rem;
+  background: #000000;
+  /* background: #36454F; */
+}
+
+/* ============================================= */
+/* nav container*/
+.nav_container {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+
+/* ============================================= */
+/* nav*/
+.nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ============================================= */
+/* Nav Logo container*/
+.nav_logo_container {
+  overflow: hidden;
+  border-radius: 15px;
+  background: #ffffff;
+}
+
+/* ============================================= */
+/* Nav Logo */
+.nav_logo {
+  width: 47px;
+  height: 42px;
+}
+
+/* ============================================= */
+/* Search container*/
+.search_container {
+  gap: 1rem;
+  width: 40%;
+  display: flex;
+  padding: 0.6rem;
+  border-radius: 15px;
+  padding-left: 3rem;
+  border: 2px solid rgba(211, 211, 211, 0.363);
+}
+
+/* ============================================= */
+/* Search Icon*/
+.search_icon {
+  color: white;
+  font-size: 1rem;
+}
+
+/* ============================================= */
+/* Search input*/
+.search_input {
+  width: 90%;
+  height: 100%;
+  border: none;
+  outline: navy;
+  color: white;
+  font-size: 1rem;
+  background-color: transparent;
+}
+
+.search_container:has(input:focus) {
+  border: 2px solid skyblue;
+  background-color: rgb(49, 47, 47);
+}
+
+/* ============================================= */
+/* Navigation Links Container*/
+.navigation_link_container {
+  height: 100%;
+}
+
+/* ============================================= */
+/*Link Container*/
+.link_container {
+  height: 100%;
+  display: flex;
+  padding: 0 1rem;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* ============================================= */
+/*Link */
+.link {
+  gap: 5px;
+  display: flex;
+  color: white;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ============================================= */
+/*link icon*/
+.link_icon {
+  font-size: 1.2rem;
+}
+
+.video_drop_down_container {
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+/* ============================================= */
+/*contact search link icon container*/
+.contact_search_icon_container {
+  gap: 2px;
+}
+
+/* ============================================= */
+/*contact search link icon*/
+.contact_search_icon {
+  width: 26px;
+  height: 19px;
+}
+
+/* ============================================= */
+/*new notifications*/
+.new_notifications {
+  top: 0;
+  width: 7px;
+  right: 23%;
+  height: 7px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #d61818;
+}
+
+/* ============================================= */
+/*drop down icon*/
+.drop_down_icon {
+  width: 12px;
+  height: 7px;
+}
+
+/* ============================================= */
+/*Desktop view  Profile Picture container*/
+.profile_picture_container {
+  height: 100%;
+  display: flex;
+  color: white;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+/* ============================================= */
+/* Profile Picture */
+.profile_picture {
+  width: 30px;
+  height: 25px;
+}
+
+/* ============================================= */
+/* user name */
+.user_name {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 22.96px;
+  font-family: "Catamaran", serif;
+}
+
+/* ============================================= */
+/* General container */
+.general_container {
+  width: 100%;
+  display: flex;
+  height: calc(100vh - 10vh - 0.3rem);
+}
+
+/* ============================================= */
+/* Side container */
+.side_container {
+  gap: 1rem;
+  width: 30%;
+  display: flex;
+  color: white;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Catamaran", serif;
+}
+
+/* ============================================= */
+/* Side title */
+.side_title {
+  height: 11%;
+  width: 100%;
+  display: flex;
+  font-weight: 700;
+  font-size: 1.6rem;
+  align-items: center;
+}
+
+/* ============================================= */
+/* Account center main container*/
+.account_center_main_container {
+  gap: 1rem;
+  height: 89%;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  overflow-y: auto;
+  padding-top: 1rem;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* ============================================= */
+/* Account center container*/
+.account_center_container {
+  width: 96%;
+  gap: 0.5rem;
+  display: flex;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 10px;
+  flex-direction: column;
+  box-shadow: 1px 1px 1px 2px lightgray;
+}
+
+/* ============================================= */
+/* Account center title*/
+.account_center_title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+
+/* ============================================= */
+/*account center sub text*/
+.acct_center_sub_text {
+  font-size: 0.9rem;
+  color: lightgray;
+}
+
+/* ============================================= */
+/*setting text and icon*/
+.setting_text_and_icon {
+  gap: 0.5rem;
+  display: flex;
+  padding: 0.3rem 0;
+  font-size: 0.8rem;
+  color: lightgray;
+  align-items: center;
+}
+
+.setting_text_and_icon:hover {
+  padding: 0.5rem;
+  border-radius: 10px;
+  background-color: rgb(91, 90, 90);
+}
+
+/* ============================================= */
+/*gray line*/
+.gray_line {
+  width: 100%;
+  min-height: 2px;
+  background-color: rgb(113, 111, 111);
+}
+
+/* ============================================= */
+/*sub settings containers */
+.sub_settings_container {
+  gap: 0.7rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================================= */
+/*sub settings title */
+.sub_setting_title {
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+/* ============================================= */
+/*sub settings sub title*/
+.sub_setting_sub_title {
+  color: lightgray;
+}
+
+/* ============================================= */
+/*sub settings sub title*/
+.sub_setting_item_container {
+  gap: 0.6rem;
+  display: flex;
+  cursor: pointer;
+  padding: 0.6rem;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.sub_setting_item_container:hover {
+  background-color: rgb(91, 90, 90);
+}
+
+.active {
+  padding: 0.5rem;
+  border-radius: 10px;
+  background-color: rgb(91, 90, 90);
+}
+
+/* ============================================= */
+/* main content container */
+.main_content_container {
+  width: 70%;
+  padding: 2rem;
+  color: white;
+  overflow-y: scroll;
+}
+
+/* ============================================= */
+/* profile content */
+.profile_content {
+  width: 90%;
+  gap: 0.6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================================= */
+/* profile title */
+.profile_title {
+  font-weight: 600;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+}
+
+/* ============================================= */
+/* profile sub title */
+.profile_sub_title {
+  font-size: 1.1rem;
+}
+
+/* ============================================= */
+/* profile container  */
+.profile_container {
+  display: flex;
+  padding: 1rem;
+  cursor: pointer;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: space-between;
+  box-shadow: 1px 1px 1px 2px lightgray;
+}
+
+.profile_container:hover {
+  background-color: rgb(24, 24, 24);
+}
+
+/* ============================================= */
+/* profile picture container   */
+.profile_picture_container {
+  position: relative;
+}
+
+/* ============================================= */
+/*  profile picture   */
+.setting_profile_picture {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* ============================================= */
+/*  logo*/
+.setting_logo {
+  left: 60%;
+  bottom: 0%;
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+  border-radius: 50%;
+  position: absolute;
+}
+
+/* ============================================= */
+/*  profile details*/
+.setting_profile_details {
+  width: 75%;
+  font-size: 1rem;
+}
+
+/* ============================================= */
+/*  profile name*/
+.profile_name {
+  font-weight: 600;
+}
+
+/* ============================================= */
+/*  app*/
+.app {
+  color: lightgray;
+}
+
+/* ============================================= */
+/*  edit btn*/
+.edit_btn {
+  font-weight: 500;
+  border-radius: 10px;
+  padding: 0.4rem 1.2rem;
+  background-color: navy;
+  text-transform: capitalize;
+}
+
+.edit_btn:hover {
+  background-color: blue;
+}
+
+/* ============================================= */
+/* edit profile modal container */
+.edit_profile_modal_container {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  display: none;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000d4;
+}
+
+/* ============================================= */
+/* edit profile modal */
+.edit_profile_modal {
+  width: 60%;
+  gap: 1.5rem;
+  display: flex;
+  padding: 1rem;
+  color: white;
+  min-height: 20%;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px 2px lightgray;
+}
+
+/* ============================================= */
+/* edit cancel */
+.edit_cancel {
+  width: 100%;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 1.2rem;
+  text-align: right;
+}
+.edit_cancel:hover {
+  color: red;
+}
+
+/* ============================================= */
+/* edit profile container */
+.edit_user_profile_container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* ============================================= */
+/* edit profile picture */
+.edit_profile_picture {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* ============================================= */
+/*edit profile name */
+.edit_profile_name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+}
+
+/* ============================================= */
+/*edit app*/
+.edit_app {
+  font-size: 0.9rem;
+  color: lightgray;
+}
+
+/* ============================================= */
+/*edit user form*/
+.edit_user_form {
+  gap: 0.2rem;
+  display: flex;
+  overflow: hidden;
+  padding: 0.4rem 0;
+  border-radius: 10px;
+  flex-direction: column;
+  background-color: white;
+  border: 2px solid lightgray;
+}
+
+/* ============================================= */
+/*edit input container*/
+.edit_input_container {
+  gap: 0.5rem;
+  display: flex;
+  color: black;
+  padding: 0.2rem 0.5rem;
+  flex-direction: column;
+  border-bottom: 1px solid gray;
+}
+
+/* ============================================= */
+/*label*/
+.label {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: rgb(69, 69, 69);
+  text-transform: capitalize;
+}
+
+/* ============================================= */
+/*editing input*/
+.editing_input {
+  width: 600px;
+  border: none;
+  outline: none;
+  font-weight: 700;
+  padding: 0.3rem 0;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+}
+.edit_input_container:has(input:focus) {
+  border-bottom: 1px solid black;
+}
+
+/* ============================================= */
+/*info about edit*/
+.info_about_edit {
+  width: 85%;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: lightgray;
+}
+
+/* ============================================= */
+/*update info*/
+.update_info {
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 0.4rem 1.5rem;
+  background-color: navy;
+  text-transform: capitalize;
+}
+
+.update_info:hover {
+  background-color: blue;
+}
+
+/* ============================================= */
+/* password content*/
+.password_content {
+  width: 85%;
+  gap: 0.6rem;
+  display: flex;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* ============================================= */
+/* password main title */
+.password_main_title {
+  font-size: 2rem;
+  font-weight: 650;
+}
+
+/* ============================================= */
+/*password title*/
+.password_title {
+  width: 100%;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+/* ============================================= */
+/*password sub title*/
+.password_sub_title {
+  width: 100%;
+  font-size: 0.95rem;
+}
+
+/* ============================================= */
+/*password form*/
+.password_form {
+  gap: 1.2rem;
+  width: 100%;
+  height: 52vh;
+  display: flex;
+  padding: 1rem 0;
+  overflow-y: scroll;
+  flex-direction: column;
+}
+
+/* ============================================= */
+/*password input container */
+.password_input_container {
+  width: 100%;
+  color: darkgray;
+  border-radius: 15px;
+  background-color: #ffffff;
+  border: 2px solid darkgray;
+}
+
+.password_input_container:has(input:focus) {
+  color: black;
+  border: 2px solid black;
+}
+
+/* ============================================= */
+/* password input  */
+.password_input {
+  width: 100%;
+  border: none;
+  height: 60px;
+  padding: 1rem;
+  outline: none;
+  font-size: 1rem;
+  background-color: transparent;
+}
+
+/* ============================================= */
+/*  Update password btn */
+.update_password_btn {
+  padding: 0.7rem;
+  cursor: pointer;
+  font-weight: 650;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  background-color: navy;
+}
+
+.update_password_btn:hover {
+  background-color: blue;
+}
+
+/* ============================================= */
+/*  Block content */
+.block_content {
+  gap: 1rem;
+  width: 85%;
+  margin: auto;
+  display: flex;
+  display: none;
+  flex-direction: column;
+  background-color: #000000;
+}
+
+/* ============================================= */
+/*  Block title  */
+.block_title {
+  font-weight: 650;
+  font-size: 1.3rem;
+}
+
+/* ============================================= */
+/*  Block edit */
+.block_edit {
+  padding: 1rem;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+
+/* ============================================= */
+/*  Block sub title  */
+.block_sub_title {
+  font-size: 1rem;
+  font-weight: 650;
+}
+
+/* ============================================= */
+/* Block edit container  */
+.block_edit_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ============================================= */
+/* Block edit details  */
+.block_edit_details {
+  width: 90%;
+  padding: 1rem 0;
+}
+
+/* ============================================= */
+/* Block edit title  */
+.block_edit_title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* ============================================= */
+/* Block edit text  */
+.block_edit_text {
+  font-size: 0.8rem;
+}
+
+/* ============================================= */
+/* Block edit btn */
+.block_edit_btn {
+  font-weight: 600;
+  color: #000000;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  padding: 0.4rem 0.8rem;
+  text-transform: capitalize;
+  background-color: lightgray;
+}
+.block_edit_btn:hover {
+  background-color: darkgrey;
+}
+
+/* ============================================= */
+/*Block modal container*/
+.block_modal_container {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  display: none;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000d7;
+}
+
+/* ============================================= */
+/* Block modal*/
+.block_modal {
+  gap: 1rem;
+  width: 50%;
+  padding: 1rem;
+  display: flex;
+  min-height: 20%;
+  border-radius: 10px;
+  flex-direction: column;
+  background-color: #000000;
+  box-shadow: 1px 1px 1px 2px lightgray;
+}
+
+/* ============================================= */
+/* header*/
+.header {
+  display: flex;
+  padding: 0.2rem;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* ============================================= */
+/* Block modal title*/
+.block_modal_title {
+  width: 90%;
+  font-weight: 650;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* ============================================= */
+/* block cancel*/
+.block_cancel {
+  cursor: pointer;
+  border-radius: 45%;
+  padding: 0.8rem 0.9rem;
+  background-color: lightgray;
+}
+
+.block_cancel:hover {
+  background-color: darkgray;
+}
+
+/* ============================================= */
+/* Block modal text*/
+.block_modal_text {
+  font-size: 0.9rem;
+}
+
+/* ============================================= */
+/* add list container*/
+:is(.add_list_container, .see_list_container) {
+  gap: 1rem;
+  display: flex;
+  cursor: pointer;
+  padding: 0.3rem;
+  border-radius: 15px;
+  align-items: center;
+}
+
+:is(.add_list_container, .see_list_container):hover {
+  background-color: rgb(61, 60, 60);
+}
+
+/* ============================================= */
+/* plus div*/
+.plus_div {
+  font-size: 1.2rem;
+  border-radius: 50%;
+  padding: 0.7rem 0.8rem;
+  background-color: blue;
+}
+
+/* ============================================= */
+/* restricted*/
+.restricted {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border-radius: 50%;
+  background-color: lightgray;
+}
+
+/* ============================================= */
+/* Notification container*/
+.notification_container {
+  gap: 0.5rem;
+  display: flex;
+  display: none;
+  flex-direction: column;
+}
+
+/* ============================================= */
+/*Notification title*/
+.notification_title {
+  font-weight: 650;
+  font-size: 1.6rem;
+}
+
+/* ============================================= */
+/*Notification sub title*/
+.notification_sub_title {
+  font-size: 1.1rem;
+  color: lightgray;
+}
+
+/* ============================================= */
+/*Notification heading title*/
+.notification_heading_title {
+  font-weight: 600;
+  padding: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+/* ============================================= */
+/*Notification content*/
+.notification_content {
+  height: 75px;
+  padding: 1rem;
+  display: flex;
+  overflow: hidden;
+  border-radius: 10px;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 1px 1px 1px 2px lightgray;
+}
+
+/* ============================================= */
+/*comment container*/
+.comment_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* ============================================= */
+/*message icon*/
+.fa-message {
+  font-size: 1.6rem;
+}
+
+/* ============================================= */
+/*comment details*/
+.comment_details {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================================= */
+/*comment details*/
+.comments_title {
+  font-weight: 650;
+  font-size: 1.15rem;
+}
+
+/* ============================================= */
+/*comment sub div*/
+.comment_sub_div {
+  gap: 0.3rem;
+  display: flex;
+  align-items: center;
+}
+
+/* ============================================= */
+/*drop down container*/
+.drop_down_container {
+  font-size: 1.2rem;
+}
+/* ============================================= */
+/*drop down icon*/
+.fa-caret-up {
+  display: none;
+}
+
+/* ============================================= */
+/*Notification text*/
+.notification_text {
+  width: 100%;
+  padding: 0.6rem;
+  font-weight: 600;
+}
+
+/* ============================================= */
+/*Notification method container*/
+.notification_method_container {
+  width: 100%;
+  padding: 1.5rem;
+}
+
+/* ============================================= */
+/*Notification method*/
+.notification_method {
+  display: flex;
+  cursor: pointer;
+  padding: 0.6rem;
+  font-weight: 600;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.notification_method:hover {
+  border-radius: 15px;
+  background-color: rgb(53, 53, 53);
+}
+
+/* ============================================= */
+/*method icon*/
+.method_icon {
+  font-size: 1.3rem;
+}
+
+/* ============================================= */
+/*Notification text*/
+.notification_texts {
+  width: 80%;
+}
+
+/* ============================================= */
+/*toggle div*/
+.toggle_div {
+  width: 55px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  background-color: darkgray;
+  border: 2px solid yellow;
+}
+
+/* ============================================= */
+/*circle div*/
+.circle_div {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.show_icon .fa-caret-down {
+  display: none;
+}
+.show_icon .fa-caret-up {
+  display: block;
+}
+
+.add_height {
+  min-height: 10vh;
+}
+
+.show_display {
+  display: flex;
+}
+
+/* ================================================ */
+
+/* ================================================ */
+/* Mobile View */
+@media screen and (width <= 1023px) {
+  /* ================================================ */
+  /* nav */
+  .nav {
+    display: none;
+  }
+}
+
+/* ================================================ */
+
+/* ================================================ */
+/* Ipad View */
+@media screen and (764px <= width <= 1024px) {
+}
