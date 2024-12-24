@@ -69,6 +69,11 @@ side_bar_contents.forEach((side_bar_content_btn) => {
       }
     }
 
+    // open setting page onclick on setting
+    if (content_btn.classList.contains("setting_and_privacy")) {
+      window.location.href = "../Setting And Privacy/Setting.html";
+    }
+
     // ====================================
     // closing profile content
     back_icon.addEventListener("click", () => {
