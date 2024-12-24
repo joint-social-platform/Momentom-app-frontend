@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../src/style.css" />
+    <link rel="stylesheet" href="../../index.css" />
     <script
       src="https://kit.fontawesome.com/f1c61101fc.js"
       crossorigin="anonymous"
@@ -150,26 +151,36 @@
 
               <!-- =================================================== -->
               <!--setting text and icon -->
-              <div class="setting_text_and_icon active">
+              <div
+                class="setting_text_and_icon active side_clickable_btn"
+                data-id="personal_details"
+              >
                 <!-- =================================================== -->
                 <!-- setting icon -->
                 <i class="fa-solid fa-user-tag"></i>
 
                 <!-- =================================================== -->
                 <!-- setting text -->
-                <h2 class="setting_text">Personal details</h2>
+                <h2 class="setting_text" data-id="personal_details">
+                  Personal details
+                </h2>
               </div>
 
               <!-- =================================================== -->
               <!--setting text and icon -->
-              <div class="setting_text_and_icon">
+              <div
+                class="setting_text_and_icon side_clickable_btn"
+                data-id="password"
+              >
                 <!-- =================================================== -->
                 <!-- setting icon -->
                 <i class="fa-solid fa-shield"></i>
 
                 <!-- =================================================== -->
                 <!-- setting text -->
-                <h2 class="setting_text">Password and security</h2>
+                <h2 class="setting_text" data-id="password">
+                  Password and security
+                </h2>
               </div>
             </div>
 
@@ -192,24 +203,32 @@
 
               <!-- =================================================== -->
               <!-- sub settings item container -->
-              <div class="sub_setting_item_container">
+              <div
+                class="sub_setting_item_container side_clickable_btn"
+                data-id="profile_details"
+              >
                 <!-- =================================================== -->
                 <!-- sub settings icon -->
                 <i class="fa-regular fa-circle-user"></i>
                 <!-- =================================================== -->
                 <!-- sub settings text -->
-                <h3 class="sub_setting_text">profile details</h3>
+                <h3 class="sub_setting_text" data-id="profile_details">
+                  profile details
+                </h3>
               </div>
 
               <!-- =================================================== -->
               <!-- sub settings item container -->
-              <div class="sub_setting_item_container">
+              <div
+                class="sub_setting_item_container side_clickable_btn"
+                data-id="blocking"
+              >
                 <!-- =================================================== -->
                 <!-- sub settings icon -->
                 <i class="fa-solid fa-moon"></i>
                 <!-- =================================================== -->
                 <!-- sub settings text -->
-                <h3 class="sub_setting_text">blocking</h3>
+                <h3 class="sub_setting_text" data-id="blocking">blocking</h3>
               </div>
             </div>
 
@@ -232,24 +251,32 @@
 
               <!-- =================================================== -->
               <!-- sub settings item container -->
-              <div class="sub_setting_item_container">
+              <div
+                class="sub_setting_item_container side_clickable_btn"
+                data-id="notification"
+              >
                 <!-- =================================================== -->
                 <!-- sub settings icon -->
                 <i class="fa-solid fa-bell sub_setting_icon"></i>
                 <!-- =================================================== -->
                 <!-- sub settings text -->
-                <h3 class="sub_setting_text">notifications</h3>
+                <h3 class="sub_setting_text" data-id="notification">
+                  notifications
+                </h3>
               </div>
 
               <!-- =================================================== -->
               <!-- sub settings item container -->
-              <div class="sub_setting_item_container">
+              <div
+                class="sub_setting_item_container side_clickable_btn"
+                data-id="dark_mode"
+              >
                 <!-- =================================================== -->
                 <!-- sub settings icon -->
                 <i class="fa-solid fa-moon"></i>
                 <!-- =================================================== -->
                 <!-- sub settings text -->
-                <h3 class="sub_setting_text">dark mode</h3>
+                <h3 class="sub_setting_text" data-id="dark_mode">dark mode</h3>
               </div>
             </div>
           </div>
@@ -260,7 +287,10 @@
         <div class="main_content_container">
           <!-- =================================================== -->
           <!-- profile content -->
-          <div class="profile_content">
+          <div
+            class="profile_content show_display content"
+            id="personal_details"
+          >
             <!-- =================================================== -->
             <!-- profile title -->
             <h2 class="profile_title">Profiles</h2>
@@ -391,7 +421,7 @@
 
           <!-- =================================================== -->
           <!-- password content -->
-          <div class="password_content">
+          <div class="password_content content" id="password">
             <!-- =================================================== -->
             <!-- password main title -->
             <h1 class="password_main_title">Password and security</h1>
@@ -418,7 +448,7 @@
                 <input
                   type="text"
                   name=""
-                  id=""
+                  id="current_password"
                   class="password_input"
                   placeholder="Current Password "
                 />
@@ -432,7 +462,7 @@
                 <input
                   type="text"
                   name=""
-                  id=""
+                  id="new_password"
                   class="password_input"
                   placeholder="New Password"
                 />
@@ -446,7 +476,7 @@
                 <input
                   type="text"
                   name=""
-                  id=""
+                  id="re_type_password"
                   class="password_input"
                   placeholder="Re-type Password"
                 />
@@ -460,7 +490,7 @@
 
           <!-- =================================================== -->
           <!-- Block content -->
-          <div class="block_content">
+          <div class="block_content content" id="blocking">
             <!-- =================================================== -->
             <!-- Block title -->
             <h2 class="block_title">Blocking</h2>
@@ -621,7 +651,7 @@
 
           <!-- =================================================== -->
           <!--Notification container-->
-          <div class="notification_container">
+          <div class="notification_container content" id="notification">
             <!-- =================================================== -->
             <!--Notification title-->
             <h2 class="notification_title">Notifications settings</h2>
@@ -763,5 +793,7 @@
         </div>
       </div>
     </main>
+
+    <script src="./Setting.js"></script>
   </body>
 </html>

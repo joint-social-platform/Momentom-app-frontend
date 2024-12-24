@@ -1,3 +1,19 @@
+// document onload get current mode
+window.addEventListener("DOMContentLoaded", () => {
+  const user_name = document.querySelector(".user_name");
+
+  if (localStorage.getItem("User_Name")) {
+    user_name.textContent = localStorage.getItem("User_Name");
+  }
+
+  // function for modes
+  if (localStorage.getItem("mode")) {
+    document.body.className = localStorage.getItem("mode");
+    return;
+  }
+  document.body.className = localStorage.getItem("mode");
+});
+
 // =========================================
 // Modal
 const overlay = document.querySelector(".overlay");

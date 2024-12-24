@@ -9,6 +9,24 @@ const open_functionality = (div, classes) => {
   div.classList.add(classes);
 };
 
+// document onload get current mode
+window.addEventListener("DOMContentLoaded", () => {
+  const user_name = document.querySelector(".user_name");
+  const user_profile_name = document.querySelector(".user_profile_name");
+
+  if (localStorage.getItem("User_Name")) {
+    user_name.textContent = localStorage.getItem("User_Name");
+    user_profile_name.textContent = localStorage.getItem("Full_Name");
+  }
+
+  // function for modes
+  if (localStorage.getItem("mode")) {
+    document.body.className = localStorage.getItem("mode");
+    return;
+  }
+  document.body.className = localStorage.getItem("mode");
+});
+
 // =========================================
 // Mobile nav toggle
 const open_nav_btn = document.querySelector(".fa-bars");
