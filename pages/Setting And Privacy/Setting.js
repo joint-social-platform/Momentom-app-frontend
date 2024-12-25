@@ -35,6 +35,10 @@ const side_bar_container = document.querySelector(
 );
 const side_bar_click = document.querySelectorAll(".side_clickable_btn");
 const getContents = document.querySelectorAll(".content");
+const main_content_container = document.querySelector(
+  ".main_content_container"
+);
+const Mobile_back_Setting_icon = document.querySelector(".fa-arrow-left");
 
 // side bar functionality
 side_bar_container.addEventListener("click", (e) => {
@@ -70,6 +74,7 @@ side_bar_container.addEventListener("click", (e) => {
 
     // add class of active to the current click
     open_functionality(currentClick, "active");
+    open_functionality(Mobile_back_Setting_icon, "show_display");
 
     // if click is null do nothing,if it has no matching id with the data-set
 
@@ -80,6 +85,8 @@ side_bar_container.addEventListener("click", (e) => {
         // remove all class of show display from all content
         close_functionality(content, "show_display");
       });
+      // mobile responsiveness functionality
+      open_functionality(main_content_container, "show_main_content_container");
     } else {
       return;
     }
@@ -87,6 +94,12 @@ side_bar_container.addEventListener("click", (e) => {
     // add show display to the current click get content
     open_functionality(getClicked, "show_display");
   }
+});
+
+// mobile back setting icon
+Mobile_back_Setting_icon.addEventListener("click", () => {
+  close_functionality(main_content_container, "show_main_content_container");
+  close_functionality(Mobile_back_Setting_icon, "show_display");
 });
 
 // =========================================
@@ -98,11 +111,13 @@ const ProfileModal = document.querySelector(".edit_profile_modal_container");
 // profile edit btn functionality open modal
 ProfileEditBtn.addEventListener("click", () => {
   open_functionality(ProfileModal, "show_display");
+  close_functionality(Mobile_back_Setting_icon, "show_display");
 });
 
 // profile edit btn functionality close modal
 ProfileCloseBtn.addEventListener("click", () => {
   close_functionality(ProfileModal, "show_display");
+  open_functionality(Mobile_back_Setting_icon, "show_display");
 });
 
 // =========================================
@@ -155,6 +170,7 @@ block_edit_btn.forEach((edit_btn) => {
     const title = parent_container.children[0].children[0];
     const text = parent_container.children[0].children[1];
     open_functionality(block_modal_container, "show_display");
+    close_functionality(Mobile_back_Setting_icon, "show_display");
 
     // get block modal container title and update the contents
     const header = block_modal_container.querySelector(".block_modal_title");
@@ -167,6 +183,7 @@ block_edit_btn.forEach((edit_btn) => {
 // blocking edit functionality close modal
 block_cancel.addEventListener("click", () => {
   close_functionality(block_modal_container, "show_display");
+  open_functionality(Mobile_back_Setting_icon, "show_display");
 });
 
 // =========================================
