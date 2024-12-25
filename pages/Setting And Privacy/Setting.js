@@ -74,7 +74,9 @@ side_bar_container.addEventListener("click", (e) => {
 
     // add class of active to the current click
     open_functionality(currentClick, "active");
-    open_functionality(Mobile_back_Setting_icon, "show_display");
+    setTimeout(() => {
+      open_functionality(Mobile_back_Setting_icon, "show_display");
+    }, 2000);
 
     // if click is null do nothing,if it has no matching id with the data-set
 
