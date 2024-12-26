@@ -45,7 +45,7 @@ html {
   padding: 0 2rem;
   overflow: hidden;
   padding-bottom: 1rem;
-  background: #000000;
+  background: var(--bgColor);
 }
 
 /* ============================================= */

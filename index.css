@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* styling for dark and light mode */
+.dark_mode {
+  --bgColor: #000000;
+}
+
+.light_mode {
+  --bgColor: #36454f;
+}
+
 * {
   margin: 0;
   padding: 0;

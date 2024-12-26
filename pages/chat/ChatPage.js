@@ -1,3 +1,19 @@
+// document onload get current mode
+window.addEventListener("DOMContentLoaded", () => {
+  const user_profile_name = document.querySelector(".user_profile_name");
+
+  if (localStorage.getItem("User_Name")) {
+    user_profile_name.textContent = localStorage.getItem("User_Name");
+  }
+
+  // function for modes
+  if (localStorage.getItem("mode")) {
+    document.body.className = localStorage.getItem("mode");
+    return;
+  }
+  document.body.className = localStorage.getItem("mode");
+});
+
 // ============================================================
 // Setting direct message opened chat message using chat header
 let True_False = 0;
@@ -18,18 +34,7 @@ const closeFunctionality = (div, classes) => {
 
 // ============================================================
 // nav toggle elements used
-const nav_bar_icon = document.querySelector(".nav_toggle");
 const mobile_nav = document.querySelector(".navigation_icons");
-const nav_cancel_icon = document.querySelector(".cancel_nav_toggle_icon");
-
-// ===========================================================
-// nav toggle functionality
-nav_bar_icon.addEventListener("click", () => {
-  openFunctionality(mobile_nav, "open_nav");
-});
-nav_cancel_icon.addEventListener("click", () => {
-  closeFunctionality(mobile_nav, "open_nav");
-});
 
 // ===========================================================
 // chat page element

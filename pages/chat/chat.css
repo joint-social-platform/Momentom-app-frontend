@@ -1,3 +1,11 @@
+.dark_mode {
+  --bgColor: #000000;
+}
+
+.light_mode {
+  --bgColor: linear-gradient(-45deg, rgb(0, 0, 0), rgba(182, 0, 182, 0.5));
+}
+
 /* ========================================================= */
 /* General styling & Desktop View */
 *,
@@ -47,7 +55,7 @@ html {
 /* General container */
 .general_container {
   min-height: 100vh;
-  background: #000000;
+  background: var(--bgColor);
 }
 
 /* ========================================================= */
@@ -57,6 +65,7 @@ html {
   height: 12vh;
   display: flex;
   justify-content: end;
+  background: var(--bgColor);
 }
 
 /* ========================================================= */
@@ -106,12 +115,6 @@ html {
 }
 
 /* ========================================================= */
-/*mobile viewcancel nav toggle icon */
-.cancel_nav_toggle_icon {
-  display: none;
-}
-
-/* ========================================================= */
 /* icons text and profile name */
 .icon_text,
 .profile_name {
@@ -124,15 +127,7 @@ html {
 /* ========================================================= */
 /* icons  */
 .icons {
-  width: 20px;
-  height: 17px;
-}
-
-/* ============================================= */
-/*contact serach link icon*/
-.contact_serach_icon {
-  width: 22px;
-  height: 18px;
+  font-size: 1.4rem;
 }
 
 /* ========================================================= */
@@ -145,12 +140,6 @@ html {
   position: absolute;
   border-radius: 50%;
   background: #d61818;
-}
-
-/* ========================================================= */
-/* Mobile View Profile Picture container */
-.mobile {
-  display: none;
 }
 
 /* ========================================================= */
@@ -1397,18 +1386,6 @@ html {
   }
 
   /* ========================================================= */
-  /*  Desktop View Profile Picture container*/
-  .user_profile_picture_container {
-    display: none;
-  }
-
-  /* ========================================================= */
-  /* Mobile View Profile Picture container */
-  .mobile {
-    display: block;
-  }
-
-  /* ========================================================= */
   /* user profile */
   .user_profile {
     width: 35px;
@@ -1428,47 +1405,10 @@ html {
   }
 
   /* ========================================================= */
-  /* navigation icons */
-  .navigation_icons {
-    top: 0%;
-    right: 0;
-    width: 70%;
-    z-index: 22;
-    height: 98vh;
-    padding: 3rem 1rem;
-    position: absolute;
-    border-radius: 15px;
-    flex-direction: column;
-    justify-content: start;
-    transform: translate(110%);
-    transition: all 300ms linear;
-    background-color: #000000;
-    box-shadow: -3px 3px 4px lightgray;
-  }
-
-  /* ========================================================= */
-  /* open nav */
-  .open_nav {
-    transform: translate(0%);
-  }
-
-  /* ========================================================= */
   /* icons container */
   .icons_container {
     gap: 1.5rem;
-    width: 100%;
-    position: relative;
-    flex-direction: column;
-  }
-
-  /* ========================================================= */
-  /*mobile viewcancel nav toggle icon */
-  .cancel_nav_toggle_icon {
-    top: -20%;
-    right: 3%;
-    color: red;
-    display: block;
-    position: absolute;
+    width: 80%;
   }
 
   /* ========================================================= */
@@ -1484,27 +1424,12 @@ html {
     height: 20px;
   }
 
-  /* ============================================= */
-  /*contact serach link icon*/
-  .contact_serach_icon {
-    width: 26px;
-    height: 22px;
-  }
-
   /* ========================================================= */
   /* new notifications  */
   .new_notifications {
     right: 20%;
     width: 10px;
     height: 10px;
-  }
-
-  /* ========================================================= */
-  /* mobile view nav toggle icon */
-  .nav_toggle {
-    width: 10%;
-    color: #ffffff;
-    font-size: 1.1rem;
   }
 
   /* ========================================================= */
@@ -1816,13 +1741,6 @@ html {
   }
 
   /* ========================================================= */
-  /*mobile viewcancel nav toggle icon */
-  .cancel_nav_toggle_icon {
-    top: -10%;
-    font-size: 1.3rem;
-  }
-
-  /* ========================================================= */
   /* icons text */
   .icon_text {
     font-size: 1rem;
@@ -1831,15 +1749,7 @@ html {
   /* ========================================================= */
   /* icons  */
   .icons {
-    width: 28px;
-    height: 24px;
-  }
-
-  /* ============================================= */
-  /*contact serach link icon*/
-  .contact_serach_icon {
-    width: 30px;
-    height: 26px;
+    font-size: 1.2rem;
   }
 
   /* ========================================================= */
