@@ -55,17 +55,59 @@ body {
 .navbar-brand {
   font-size: 1.5rem;
   font-weight: bold;
-  padding: 30px;
+  padding-left: 30px;
+  padding-bottom: 5px;
+  margin-top: 10px;
 }
 .navbar-brand img {
-  padding-top: 15px;
+height: 45px;
+width: 50px;
+position: relative;
+
 }
 
 .navbar-menu {
   display: flex;
-  margin-left: auto;
+  flex-direction: row;
 }
 
+.nav-item2 {
+  cursor: pointer;
+  background-color: transparent;
+  transition: background-color 0.3s;
+  gap: 11px;
+  display: flex;
+  flex-direction: row;
+  padding-right: 50px;
+  font-size: 0.9rem;
+}
+
+.nav-item{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+gap: 13px;
+font-size: 0.9rem;
+padding-right: 15px;
+
+}
+
+.puller{
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  margin-left: 10px;
+
+}
+
+.puller img{
+  margin-left: -2.0rem;
+  padding-right: 12px;
+}
 .navbar-item {
   padding: 0 15px;
   cursor: pointer;
@@ -76,7 +118,7 @@ body {
   transition: background-color 0.3s;
   margin-top: 11px;
   padding-top: px;
-  font-size: 13px;
+  font-size: 15px;
   gap: 5px;
 }
 #menu-icon {
@@ -99,7 +141,7 @@ body {
 
 /* Sidebar styles - adjusted to account for navbar */
 .sidebar {
-  width: 270px;
+  width: 240px;
   background-color: #040404;
   color: white;
   height: calc(100vh - 50px);
@@ -110,7 +152,7 @@ body {
   /* Start below navbar */
 
   overflow-y: auto;
-  padding-left: 15px;
+  padding-left: 38px;
   gap: 40px;
   margin-bottom: 20px;
 }
@@ -135,41 +177,7 @@ p {
   color: #ddd;
 }
 
-.nav-item {
-  padding: 5px;
-  cursor: pointer;
-  background-color: transparent;
-  transition: background-color 0.3s;
-  gap: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-right: 40px;
-}
 
-.nav-item2 {
-  padding: 5px;
-  cursor: pointer;
-  background-color: transparent;
-  transition: background-color 0.3s;
-  gap: 10px;
-  display: flex;
-  flex-direction: row;
-  padding-right: 77px;
-}
-
-.nav-item2:hover {
-  background-color: #444;
-  width: 230px;
-  margin-left: 20px;
-}
-
-.nav-item:hover,
-.chat:hover {
-  background-color: #444;
-  width: 230px;
-  margin-left: 20px;
-}
 
 .content-section {
   margin-bottom: 30px;
@@ -190,6 +198,12 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+margin-right:-1.0rem ;
+  width: 100px;
+}
+
+.user-prof span{
+font-size: 0.8rem;
 }
 
 .user-avatar {
@@ -239,20 +253,18 @@ p {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 30px;
-  margin-left: 350px;
+  gap: 40px;
+  margin-left: 500px;
+  margin-top: 20px;
+  
 }
 
 .under-nav2 a {
   width: 120px;
+  font-size: 0.9rem;
 }
 
-.kim {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+
 .dot {
   width: 5px;
   height: 5px;
@@ -264,8 +276,8 @@ a:link {
   color: #ffffff;
   text-decoration: none;
 }
-/* Responsive design */
-@media (max-width: 768px) and (min-width: 720px) {
+
+@media screen  and (max-width: 1020px) and (min-width:720px)  {
   .sidebar {
     position: absolute;
     width: 250px;
@@ -278,9 +290,30 @@ a:link {
   }
   .under-nav a {
     display: block;
-    margin-right: -30px;
-    padding-left: -50px;
+  
   }
+  .kip{
+  display: flex;
+  width: 1.0rem;
+  position: relative;
+  left: 3.0rem;
+  }
+  .kim{
+   display: flex;
+   width: 0.9rem;
+  }
+  .kup{
+   display: flex;
+   width: 0.9rem;
+  }
+  .cut{
+    display: flex;
+    width: 0.9rem;
+    position: relative;
+    right: 0.7rem;
+
+  }
+
   .user-avatar1 {
     width: 60px;
   }
@@ -289,19 +322,29 @@ a:link {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 100px;
+    position: relative;
+    right: 5.0rem;
+  
   }
-
+.under-nav2{
+  gap: 7.0rem;
+}
   .user-profile2 {
     display: flex;
     flex-direction: row;
     margin-right: 400px;
+    font-size: 0.6rem;
+    width: 20.0rem;
   }
 
+  .user-profile2 button{
+    height: 2.8rem;
+    width: 2.8rem;
+  }
   .search-container button {
-    left: -290px;
-    top: -3px;
-    border-radius: 5px 1px 1px 5px;
+    position: relative;
+    left: -19.0rem;
+  
   }
 
   .sidebar.show {
@@ -319,7 +362,8 @@ a:link {
   } */
 
   .search-container {
-    margin-left: 0;
+    margin-right: 10.0rem;
+    
   }
 
   .navbar-menu {
@@ -409,7 +453,7 @@ a:link {
   }
 }
 
-@media (max-width: 720px) and (min-width: 400px) {
+@media  screen and (max-width: 720px) and (min-width:470px)  {
   .sidebar {
     position: absolute;
     width: 250px;
@@ -423,29 +467,36 @@ a:link {
   .user-prof span {
     font-size: 13px;
   }
-  .under-nav a {
-    display: block;
-    width: 30px;
-    padding-left: 50px;
-    gap: -10px;
-  }
+  
   .kip {
-    margin-left: -230px;
+    margin-left: -7.3rem;
     margin-bottom: 20px;
+    width: 3.0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .kim {
-    margin-right: 20px;
+display: flex;
     margin-bottom: 20px;
+    width: 5.0rem;
+    position: relative;
+    right: 2.0rem;
   }
   .kup {
-    margin-left: 10px;
+  width: 5.0rem;
     display: flex;
     flex-direction: row;
     margin-bottom: 20px;
+    position: relative;
+    right: 3.5rem;
   }
   .cut {
-    margin-left: 20px;
+  display: flex;
     margin-bottom: 20px;
+    width: 6.0rem;
+    position: relative;
+    right: 5.3rem;
   }
   .user-avatar1 {
     width: 60px;
@@ -459,14 +510,27 @@ a:link {
   }
 
   .user-profile2 {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    right: 160px;
-    top: 30px;
-    width: 200px;
+  display: flex;
+  position: relative;
+  right: 12.0rem;
+  margin-bottom: 20px;
+  font-weight: 1.7rem;
   }
 
+  .user-profile2 button{
+    height: 2.0rem;
+    width: 2.0rem;
+    
+  }
+
+  .user-profile2 p{
+    font-size: 0.9rem;
+  }
+.under-nav a {
+  font-size: 0.8rem;
+
+  display: block;
+}
   .search-container button {
     left: -125px;
     top: -3px;
@@ -568,10 +632,7 @@ a:link {
     gap: 10px;
     margin-right: 535px;
   }
-  .main-content1:hover {
-    width: 370px;
-    margin-left: 80px;
-  }
+  
   .main-content2 {
     display: flex;
     flex-direction: row;
@@ -580,10 +641,6 @@ a:link {
     margin-left: 120px;
     gap: 10px;
     margin-right: 535px;
-  }
-  .main-content2:hover {
-    width: 370px;
-    margin-left: 80px;
   }
   .main-content3 {
     display: flex;
@@ -595,10 +652,6 @@ a:link {
     margin-right: 535px;
   }
 
-  .main-content3:hover {
-    width: 370px;
-    margin-left: 80px;
-  }
   .main-content4 {
     display: flex;
     flex-direction: row;
@@ -608,10 +661,7 @@ a:link {
     gap: 10px;
     margin-right: 535px;
   }
-  .main-content4:hover {
-    width: 370px;
-    margin-left: 80px;
-  }
+  
   .main-content5 {
     display: flex;
     flex-direction: row;
@@ -621,13 +671,11 @@ a:link {
     gap: 10px;
     margin-right: 535px;
   }
-  .main-content5:hover {
-    width: 370px;
-    margin-left: 80px;
-  }
+
 }
 
-@media (max-width: 400px) {
+/*@media  screen and (max-width: 470px) {
+
   .sidebar {
     position: absolute;
     width: 250px;
@@ -721,23 +769,6 @@ a:link {
     width: 100%;
   }
 
-  .navbar-menu {
-    /* display: none; */
-    width: 230px;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 350px;
-    background: #000;
-    top: 90px;
-    right: 10px;
-    border-radius: 5px;
-    padding: 20px 0;
-    transform: translateX(400px);
-    transition: 0.5s ease-in-out;
-  }
 
   .navbar-menu.drop {
     transform: translateX(0);
@@ -844,6 +875,247 @@ a:link {
     margin-left: 80px;
   }
 }
+*/
+
+
+
+@media screen and (max-width:469px){
+  .sidebar {
+    position: absolute;
+    width: 250px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  .user-prof {
+    position: relative;
+    right: 100px;
+  }
+  .user-prof span {
+    font-size: 13px;
+  }
+  
+  .kip {
+    margin-left: -3.3rem;
+    margin-bottom: 20px;
+    width: 3.0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .kim {
+display: flex;
+    margin-bottom: 20px;
+    width: 5.0rem;
+    position: relative;
+    right: 3.0rem;
+  }
+  .kup {
+  width: 5.0rem;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    position: relative;
+    right: 5.5rem;
+  }
+  .cut {
+  display: flex;
+    margin-bottom: 20px;
+    width: 6.0rem;
+    position: relative;
+    right: 8.3rem;
+  }
+  .user-avatar1 {
+    width: 60px;
+  }
+  .under-nav {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+  }
+
+  .user-profile2 {
+  display: flex;
+  position: relative;
+  right: 15.0rem;
+  margin-bottom: 20px;
+  }
+
+  .user-profile2 button{
+    height: 2.0rem;
+    width: 2.0rem;
+    
+  }
+
+  .user-profile2 p{
+    font-size: 0.75rem;
+  }
+.under-nav a {
+  font-size: 0.75rem;
+
+  display: block;
+}
+  .search-container button {
+    left: -125px;
+    top: -3px;
+    border-radius: 5px 1px 1px 5px;
+  }
+
+  .sidebar.show {
+    transform: translateX(0);
+    position: fixed;
+  }
+  .navbar-brand {
+    margin-left: -2px;
+    width: 30px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  .menubar {
+    display: block;
+    cursor: pointer;
+    margin-left: -10px;
+    font-size: 18px;
+  }
+
+  .search-container {
+    position: relative;
+    right: 80px;
+  }
+.search-container  input {
+  padding: 6px 50px;
+}
+
+.search-container button{
+  position: relative;
+  left: -6.9rem;
+}
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .navbar-menu {
+    /* display: none; */
+    width: 230px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    background: #000;
+    top: 90px;
+    right: 10px;
+    border-radius: 5px;
+    padding: 20px 0;
+    transform: translateX(400px);
+    transition: 0.5s ease-in-out;
+  }
+
+  .navbar-menu.drop {
+    transform: translateX(0);
+  }
+
+  .navbar-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+  }
+
+  .navbar-item i {
+    color: #fff;
+  }
+
+  .navbar-menu::before {
+    content: "";
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    z-index: 1;
+    top: -10px;
+    right: 10px;
+    rotate: 50deg;
+    background: #000;
+    border-radius: 3px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .harmburger {
+    display: block;
+    margin-left: -100px;
+  }
+
+  .main-content1 {
+    display: flex;
+    flex-direction: row;
+    height: 210px;
+    width: 400px;
+    gap: 10px;
+    margin-right: 535px;
+    font-size: 0.7rem;
+  }
+  .main-content img {
+ width: 100px;
+  }
+  .main-content2 {
+    display: flex;
+    flex-direction: row;
+    height: 210px;
+    width: 400px;
+    margin-left: 120px;
+    gap: 10px;
+    margin-right: 535px;
+  }
+
+  .main-content3 {
+    display: flex;
+    flex-direction: row;
+    height: 210px;
+    width: 400px;
+    margin-left: 120px;
+    gap: 10px;
+    margin-right: 535px;
+  }
+
+  .main-content4 {
+    display: flex;
+    flex-direction: row;
+    height: 210px;
+    width: 400px;
+    margin-left: 120px;
+    gap: 10px;
+    margin-right: 535px;
+  }
+
+  .main-content5 {
+    display: flex;
+    flex-direction: row;
+    height: 210px;
+    width: 400px;
+    margin-left: 120px;
+    gap: 10px;
+    margin-right: 535px;
+  }
+  
+  
+  .navbar-brand{
+    position: relative;
+    right: 1.0rem;
+  }
+  .navbar{
+    height: 3.0rem;
+  }
+  }
 
 .menu-toggle {
   display: none;
@@ -856,7 +1128,11 @@ a:link {
   display: flex;
   flex-direction: row;
   margin-top: 5rem;
+  position: relative;
+  right: 5.0rem;
 }
+
+
 
 .under-nav a {
   color: white;
@@ -889,24 +1165,23 @@ a:link {
   font-size: 17px;
   color: #fff;
   border: none;
-  border: 1px solid grey;
-  background-color: transparent;
+  background-color:rgb(26, 25, 25);
   height: 40px;
-  width: 100%;
+  width: 75%;
   border-radius: 10px;
+  margin-left: 3.7rem;
 }
 
 .search-container button {
   padding: 6px 10px;
   margin-top: 8px;
-  margin-right: 16px;
   background: transparent;
-  font-size: 17px;
+  font-size: 1.1rem;
   border: none;
   cursor: pointer;
   height: 35px;
   position: relative;
-  right: 500px;
+  right: 410px;
   color: white;
   bottom: 5px;
 }
@@ -917,7 +1192,7 @@ a:link {
   box-sizing: border-box;
   border-radius: 5px 5px 5px 5px;
   background-color: #111111;
-  margin-bottom: 10px;
+  margin-top: 15px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -925,16 +1200,18 @@ a:link {
   height: 180px;
   padding-top: 15px;
   padding-right: 20px;
-  width: 230px;
+  width: 183px;
+  gap: 10px;
 }
 
 .user-profile2 {
   gap: 15px;
-  margin-top: -8px;
+  margin-top: 1.5rem;
   margin-left: 100px;
   display: flex;
   align-items: center;
   padding: 0 15px;
+  font-size: 1.0rem;
 }
 
 .puttin1:hover {
@@ -948,37 +1225,43 @@ a:link {
   align-items: center;
   flex-direction: column;
   gap: 7px;
-  width: 230px;
+  width: 183px;
   padding-top: 15px;
   padding-right: 20px;
 }
 .nav-item3 {
   color: grey;
-  font-size: 18px;
+  font-size: 15px;
   padding-left: 10px;
+}
+
+.nav-item41{
+font-size: 1.3rem;
+padding-right: 95px ;
 }
 
 .nav-item4 {
   font-size: 28px;
   display: flex;
   flex-direction: row;
-  gap: 100px;
+  gap: 0px;
   align-items: center;
   margin-right: -20px;
-  margin-top: 10px;
+  margin-top: px;
 }
 .nav-item5:hover {
   color: white;
 }
 .nav-item5 {
-  margin-left: 20px;
   display: flex;
   flex-direction: row;
   gap: 10px;
-  margin-right: -20px;
-  gap: 10px;
+position:relative;
+left: 5px;
   font-size: 21px;
   color: rgb(156, 155, 155);
+  
+
 }
 
 .puttin2 {
@@ -989,13 +1272,9 @@ a:link {
   gap: 20px;
   cursor: pointer;
   margin-top: 17px;
-  width: 230px;
+  width: 190px;
 }
 
-.user-profile:hover {
-  background-color: #444;
-  margin-left: 10px;
-}
 
 .main-content img {
   width: 210px;
@@ -1022,14 +1301,14 @@ a:link {
   margin-left: 120px;
   gap: 10px;
 }
-.main-content1:hover {
+/*.main-content1:hover {
   background-color: #b81995;
   padding: 5px;
   border-radius: 6px;
    width: 1060px;
   cursor: pointer;
   margin-left: 800px;
-}
+}*/
 
 .main-content2 {
   display: flex;
@@ -1044,14 +1323,14 @@ a:link {
   padding-top: 30px;
 }
 
-.main-content2:hover {
+/*.main-content2:hover {
   padding: 5px;
   border-radius: 6px;
   width: 1060px;
   cursor: pointer;
   background-color: #b81995;
   margin-left: 800px;
-}
+}*/
 .main-content3 {
   display: flex;
   flex-direction: row;
@@ -1065,14 +1344,14 @@ a:link {
   padding-top: 30px;
 }
 
-.main-content3:hover {
+/*.main-content3:hover {
   background-color: #b81995;
   width: 1060px;
   padding: 5px;
   border-radius: 6px;
   margin-left: 800px;
   cursor: pointer;
-}
+}*/
 
 .main-content4 {
   display: flex;
@@ -1087,14 +1366,14 @@ a:link {
   padding-top: 30px;
 }
 
-.main-content4:hover {
+/*.main-content4:hover {
   background-color: #b81995;
   padding: 5px;
   border-radius: 6px;
   width: 1060px;
   cursor: pointer;
   margin-left: 800px;
-}
+}*/
 
 .main-content5 {
   display: flex;
@@ -1109,11 +1388,4 @@ a:link {
   padding-top: 30px;
 }
 
-.main-content5:hover {
-  background-color: #b81995;
-  padding: 5px;
-  border-radius: 6px;
-  width: 1060px;
-  cursor: pointer;
-  margin-left: 800px;
-}
+
