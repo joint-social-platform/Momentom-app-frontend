@@ -18,13 +18,6 @@ window.addEventListener("DOMContentLoaded", () => {
     user_name.textContent = localStorage.getItem("User_Name");
     user_profile_name.textContent = localStorage.getItem("Full_Name");
   }
-
-  // function for modes
-  if (localStorage.getItem("mode")) {
-    document.body.className = localStorage.getItem("mode");
-    return;
-  }
-  document.body.className = localStorage.getItem("mode");
 });
 
 // =========================================

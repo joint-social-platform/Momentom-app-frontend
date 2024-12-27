@@ -48,7 +48,7 @@ html {
   padding: 0 2rem;
   overflow: hidden;
   padding-bottom: 1rem;
-  background: var(--bgColor);
+  background: black;
 }
 
 /* ============================================= */
