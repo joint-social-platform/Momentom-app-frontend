@@ -239,6 +239,11 @@ const dropZone = document.getElementById("drop-zone");
 const fileInput = document.querySelector(".file-input");
 const output = document.getElementById("output");
 const removeFile = document.querySelector(".remove-file");
+const closeModal = document.querySelector(".close-modal");
+
+closeModal.addEventListener("click", function () {
+  overlay.classList.add("hidden");
+});
 
 dropZone.addEventListener("click", (e) => {
   if (e.target.closest(".remove-file")) return;

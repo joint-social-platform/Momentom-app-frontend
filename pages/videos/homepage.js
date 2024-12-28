@@ -219,10 +219,15 @@ comment_close_btn.forEach((close_btn) => {
 
 const addPostBtn = document.querySelector(".upper_create_post");
 const overlay = document.querySelector(".overlay");
+const closeModal = document.querySelector(".close-modal");
 
 //close modal functionality
 overlay.addEventListener("click", function (e) {
   if (e.target.closest(".modal")) return;
+  overlay.classList.add("hidden");
+});
+
+closeModal.addEventListener("click", function () {
   overlay.classList.add("hidden");
 });
 
