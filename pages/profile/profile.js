@@ -22,11 +22,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
 // =========================================
 // Mobile nav toggle
-const open_nav_btn = document.querySelector(".fa-bars");
-const close_nav_btn = document.querySelector(".fa-x");
-const navigation_link_container = document.querySelector(
-  ".navigation_link_container"
-);
+// const open_nav_btn = document.querySelector(".fa-bars");
+// const close_nav_btn = document.querySelector(".fa-x");
+// const navigation_link_container = document.querySelector(
+//   ".navigation_link_container"
+// );
 
 // ====================================
 // open side bar toggle
@@ -36,15 +36,15 @@ const network_container = document.querySelector(".network_container");
 
 // ==============================
 // open nav
-open_nav_btn.addEventListener("click", () => {
-  open_functionality(navigation_link_container, "open_nav");
-});
+// open_nav_btn.addEventListener("click", () => {
+//   open_functionality(navigation_link_container, "open_nav");
+// });
 
 // ==============================
 // close nav
-close_nav_btn.addEventListener("click", () => {
-  close_functionality(navigation_link_container, "open_nav");
-});
+// close_nav_btn.addEventListener("click", () => {
+//   close_functionality(navigation_link_container, "open_nav");
+// });
 
 // ==========================================================
 // getting side bar elements
@@ -90,6 +90,45 @@ side_bar_contents.forEach((side_bar_content_btn) => {
     back_icon.addEventListener("click", () => {
       close_functionality(section_body_container, "show_profile_page");
       close_functionality(back_icon, "show_profile_page");
+    });
+  });
+});
+
+// ===================================================
+// follow btn element
+const Follow_btn = document.querySelector(".follow_btn");
+
+// follow function
+Follow_btn.addEventListener("click", () => {
+  if (Follow_btn.textContent === "Follow") {
+    Follow_btn.textContent = "unFollow";
+  } else {
+    Follow_btn.textContent = "Follow";
+  }
+});
+
+// ================================
+// share btn element
+const share_btn = document.querySelector(".share_profile_text");
+const profile_link_container = document.querySelector(
+  ".profile_link_container"
+);
+
+// share btn functionality
+share_btn.addEventListener("click", () => {
+  const Link = window.location.href;
+
+  profile_link_container.textContent = Link;
+
+  open_functionality(profile_link_container, "show_profile_link_container");
+
+  setTimeout(() => {
+    close_functionality(profile_link_container, "show_profile_link_container");
+  }, 4000);
+
+  profile_link_container.addEventListener("click", () => {
+    navigator.clipboard.writeText(Link).then(() => {
+      alert("Link copied to clipboard!");
     });
   });
 });
