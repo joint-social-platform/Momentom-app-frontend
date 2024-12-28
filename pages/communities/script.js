@@ -104,4 +104,9 @@ harmburger.addEventListener("click", (event) => {
 });
 
 // Initialize when DOM is loaded
+<<<<<<< HEAD
+document.addEventListener('DOMContentLoaded', initializeNavigation);
+console.log(getComputedStyle(document.querySelector('.main-content img')));
+=======
 document.addEventListener("DOMContentLoaded", initializeNavigation);
+>>>>>>> 9ca6b736f95739034ec8c87b3a39aeda526217a9
