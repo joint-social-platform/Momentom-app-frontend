@@ -11,7 +11,7 @@
   color: white;
 }
 .body {
-  background: url("/src/images/background.png");
+  background: url("../../src/images/background.png");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
