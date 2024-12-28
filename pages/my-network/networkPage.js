@@ -24,6 +24,53 @@ Nav_toggle_btn.addEventListener("click", (e) => {
   Sidebar_container.classList.toggle("open_side_bar_container");
 });
 
+const dropZone = document.getElementById("drop-zone");
+const fileInput = document.querySelector(".file-input");
+const output = document.getElementById("output");
+const removeFile = document.querySelector(".remove-file");
+
+dropZone.addEventListener("click", (e) => {
+  if (e.target.closest(".remove-file")) return;
+  fileInput.click();
+});
+
+removeFile.addEventListener("click", () => {
+  if (output.src) output.src = "";
+  fileInput.value = "";
+});
+
+fileInput.addEventListener("change", (e) => {
+  const file = e.target.files[0];
+  if (file) {
+    output.src = URL.createObjectURL(file);
+    output.onload = () => {
+      URL.revokeObjectURL(output.src);
+    };
+  }
+});
+
+dropZone.addEventListener("dragover", (e) => {
+  e.preventDefault();
+  dropZone.classList.add("drag-over");
+});
+
+dropZone.addEventListener("dragleave", () => {
+  dropZone.classList.remove("drag-over");
+});
+
+dropZone.addEventListener("drop", (e) => {
+  e.preventDefault();
+  dropZone.classList.remove("drag-over");
+  const file = e.dataTransfer.files[0];
+  if (file) {
+    fileInput.files = e.dataTransfer.files;
+    output.src = URL.createObjectURL(file);
+    output.onload = () => {
+      URL.revokeObjectURL(output.src);
+    };
+  }
+});
+
 // =========================================
 //close modal functionality
 overlay.addEventListener("click", function (e) {

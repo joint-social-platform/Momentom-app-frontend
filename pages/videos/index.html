@@ -1296,14 +1296,21 @@
             <img src="../../src/images/profile-head.png" alt="Profile-head" />
             <p>Say your mind here</p>
           </div>
-          <div class="modal-body">
-            <button>&times;</button>
+          <div class="modal-body" id="drop-zone">
+            <button class="remove-file">&times;</button>
             <p class="add-photos">Add photos/videos</p>
             <p class="drag-drop">or drag and drop</p>
+            <input
+              type="file"
+              accept="image/*, video/*"
+              class="file-input"
+              hidden
+            />
+            <img id="output" class="img-output" />
           </div>
           <div class="modal-foot">
             <div class="add-text">
-              <p>Add Text here</p>
+              <input type="text" name="post-text" placeholder="Add Text Here" />
               <div class="add-text-img">
                 <img src="../../src/images/gallery-pic.png" alt="gallery" /><img
                   src="../../src/images/emoji-smiley.png"
