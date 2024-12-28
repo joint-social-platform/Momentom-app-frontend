@@ -98,3 +98,4 @@ function initializeNavigation() {
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', initializeNavigation);
+console.log(getComputedStyle(document.querySelector('.main-content img')));
