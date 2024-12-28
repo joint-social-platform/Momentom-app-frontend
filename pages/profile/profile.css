@@ -175,6 +175,12 @@ html {
 }
 
 /* ============================================= */
+/*Mobile view  Profile Picture container*/
+.mobile_profile_container {
+  display: none;
+}
+
+/* ============================================= */
 /* Profile Picture */
 .profile_picture {
   width: 30px;
@@ -188,6 +194,18 @@ html {
   font-weight: 600;
   line-height: 22.96px;
   font-family: "Catamaran", serif;
+}
+
+/* ============================================= */
+/* Mobile bar icon */
+.nav_toggle_container {
+  display: none;
+}
+
+/* ============================================= */
+/*  nav cancel container*/
+.nav_cancel_container {
+  display: none;
 }
 
 /* ============================================= */
@@ -871,9 +889,33 @@ html {
   } */
 
   /* ============================================= */
+  /* Navigation Links Container*/
+  .navigation_link_container {
+    top: 0%;
+    right: 0%;
+    width: 60%;
+    z-index: 22;
+    height: 99vh;
+    overflow: hidden;
+    position: absolute;
+    border-radius: 15px;
+    border: 3px solid gray;
+    transform: translate(110%);
+    transition: all 0.5s linear;
+    background-color: #000000;
+  }
+
+  .open_nav {
+    transform: translate(0%);
+  }
+
+  /* ============================================= */
   /*Link Container*/
   .link_container {
-    align-items: center;
+    padding-top: 3rem;
+    position: relative;
+    justify-content: unset;
+    flex-direction: column;
   }
 
   /* ============================================= */
@@ -888,6 +930,11 @@ html {
     width: 28px;
     height: 25px;
     margin-left: 0.4rem;
+  }
+
+  .E_commerce_icon_link_container {
+    gap: 1rem;
+    flex-direction: column;
   }
 
   /* ============================================= */
@@ -906,7 +953,15 @@ html {
   /* ============================================= */
   /*Desktop view  Profile Picture container*/
   .profile_picture_container {
-    height: 100%;
+    display: none;
+  }
+
+  /* ============================================= */
+  /*Mobile view  Profile Picture container*/
+  .mobile_profile_container {
+    gap: 0.2rem;
+    display: flex;
+    height: max-content;
   }
 
   /* ============================================= */
@@ -920,6 +975,25 @@ html {
   /* user name */
   .user_name {
     font-size: 0.6rem;
+  }
+
+  /* ============================================= */
+  /*nav toggle container */
+  .nav_toggle_container {
+    display: block;
+    color: #ffffff;
+    font-size: 1.1rem;
+  }
+
+  /* ============================================= */
+  /*  nav cancel container*/
+  .nav_cancel_container {
+    top: 2%;
+    right: 6%;
+    color: red;
+    display: block;
+    font-size: 1.1rem;
+    position: absolute;
   }
 
   /* ============================================= */
@@ -1128,6 +1202,12 @@ html {
   }
 
   /* ============================================= */
+  /* Navigation Links Container*/
+  .navigation_link_container {
+    height: 90vh;
+  }
+
+  /* ============================================= */
   /*link icon*/
   .link_icon {
     font-size: 1.4rem;
@@ -1152,6 +1232,12 @@ html {
   .new_notifications {
     width: 10px;
     height: 10px;
+  }
+
+  /* ============================================= */
+  /*nav toggle container */
+  .nav_toggle_container {
+    font-size: 1.2rem;
   }
 
   /* ============================================= */

@@ -22,11 +22,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
 // =========================================
 // Mobile nav toggle
-// const open_nav_btn = document.querySelector(".fa-bars");
-// const close_nav_btn = document.querySelector(".fa-x");
-// const navigation_link_container = document.querySelector(
-//   ".navigation_link_container"
-// );
+const open_nav_btn = document.querySelector(".fa-bars");
+const close_nav_btn = document.querySelector(".fa-x");
+const navigation_link_container = document.querySelector(
+  ".navigation_link_container"
+);
 
 // ====================================
 // open side bar toggle
@@ -36,15 +36,15 @@ const network_container = document.querySelector(".network_container");
 
 // ==============================
 // open nav
-// open_nav_btn.addEventListener("click", () => {
-//   open_functionality(navigation_link_container, "open_nav");
-// });
+open_nav_btn.addEventListener("click", () => {
+  open_functionality(navigation_link_container, "open_nav");
+});
 
 // ==============================
 // close nav
-// close_nav_btn.addEventListener("click", () => {
-//   close_functionality(navigation_link_container, "open_nav");
-// });
+close_nav_btn.addEventListener("click", () => {
+  close_functionality(navigation_link_container, "open_nav");
+});
 
 // ==========================================================
 // getting side bar elements
