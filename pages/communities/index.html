@@ -20,239 +20,264 @@
 
   <body>
     <!-- Navigation Bar-->
-    <nav class="navbar">
-      <div class="menubar" id="menubar">
-        <i class="fa-solid fa-arrow-right"></i>
-      </div>
-      <div class="navbar-brand">
-        <img
-          src="../../src/images/nav_logo.png"
-          alt="momentom-logo"
-          class="momentom-logo"
-        />
-      </div>
-
-      <div class="search-container">
-        <input type="text" placeholder="" />
-
-        <button type="submit">
-          <svg
+    <div class="nav_container">
+      <!-- For the navigation menu -->
+      <nav>
+        <div class="logo">
+          <img src="../../src/images/nav_logo.png" alt="logo" class="logo" />
+        </div>
+        <div class="Search">
+          <img
+            src="../../src/images/search_icon.png"
+            alt="Search"
             class="search-icon"
-            width="20"
-            height=""
-            viewBox="0 0 20 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M8.5 3a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM1 8.5a7.5 7.5 0 1115 0 7.5 7.5 0 01-15 0z"
-              fill="currentColor"
-            />
-            <path
-              d="M13 13l6 6"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-            />
-          </svg>
-        </button>
-      </div>
-      <div class="navbar-menu" id="navbarMenu">
-        <div class="navbar-item"><i class="bx bxs-home"></i>Home</div>
-        <div class="navbar-item"><i class="bx bx-search-alt"></i>peers</div>
-        <div class="navbar-item">
-          <a
-            href="../notifications/index.html"
-            style="color: white; text-align: center"
-            ><i class="bx bx-bell"></i>Notification</a
-          >
-        </div>
-        <div class="navbar-item"><i class="bx bxl-youtube"></i>Videos</div>
-        <div class="navbar-item">
-          <i class="bx bx-chevron-down" id="menu-icon"></i>
-        </div>
-      </div>
-      <div class="user-prof">
-        <div class="user-ava">
-          <img
-            src="../../src/images/small-profile-image.png"
-            alt=""
-            class="nav-logo"
           />
+          <input type="text" />
         </div>
-        <span class="user_name">Hello Mike</span>
-      </div>
 
-      <div class="harmburger" id="harmburger">
-        <i class="fa-solid fa-bars"></i>
-      </div>
-    </nav>
+        <div class="navigation-icons">
+          <ul id="navigation-icons">
+            <a href="../welcome/">
+              <div class="home">
+                <i class="fa-solid fa-house"></i>
+                <p>Home</p>
+              </div>
+            </a>
 
-    <!-- Sidebar -->
-    <div class="sidebar" id="sidebar">
-      <nav class="puttin">
-        <div class="nav-item">
-          <img
-            src="../../src/images/add_business.png"
-            alt=""
-            class="nav-logo"
-          />E-commerce
+            <a href="../chat/">
+              <div class="contact-search">
+                <img
+                  src="../../src/images/search contact white.png"
+                  alt="Contact Search"
+                  class="contact-search-icon white"
+                />
+                <img
+                  src="../../src/images/search contact.png"
+                  alt="Contact Search"
+                  class="contact-search-icon black"
+                />
+                <p>Contact</p>
+              </div>
+            </a>
+
+            <a href="../notifications/index.html">
+              <div class="notifications">
+                <i class="fa-solid fa-bell"></i>
+                <p>Notification</p>
+              </div>
+            </a>
+
+            <a href="../videos/">
+              <div class="photos">
+                <div>
+                  <i class="fa-brands fa-youtube"></i>
+                  <p>videos</p>
+                </div>
+                <!-- <div class="dropdown">
+                  <i class="fa-solid fa-caret-down"></i>
+                </div> -->
+              </div>
+            </a>
+
+            <a href="../profile/">
+              <div class="profile">
+                <img
+                  src="../../src/images/user_profile.png"
+                  alt="user_profile"
+                  class="user_profile"
+                />
+                <p class="user_name">Username</p>
+              </div>
+            </a>
+          </ul>
+
+          <div class="hamburger" onclick="hamburgerClick()">
+            <i class="fa-solid fa-bars hamburger-icon" id="hamburger-icon"></i>
+            <i class="fa-solid fa-xmark cross-icon" id="cross-icon"></i>
+          </div>
         </div>
-        <div class="nav-item2">
-          <img
-            src="../../src/images/add_a_photo.png"
-            alt=""
-            class="nav-logo"
-          />Photos
-        </div>
-        <div class="nav-item2">
-          <img
-            src="../../src/images/settings-icon.png"
-            alt=""
-            class="nav-logo"
-          />Settings
-        </div>
-        <div class="puller">
-          <a href="../chat">
-            <img
-              src="../../src/images/group-chats-icon.png"
-              alt=""
-              class="nav-logo"
-            />Group chats
+      </nav>
+    </div>
+
+    <div class="fullpage">
+      <div class="sidebar" id="sidebar">
+        <div class="groups">
+          <a href="../e-commerce/">
+            <div>
+              <img
+                src="../../src/images/E_commerce_icon.png"
+                alt="E-commerce"
+                class="E-commerce"
+              />
+              <span class="e-commerce">E-commerce</span>
+            </div>
+          </a>
+          <a href="../photo/">
+            <div>
+              <img
+                src="../../src/images/Photo_icon.png"
+                alt="Photo_icon"
+                class="photo-icon"
+              />
+              <span>Photos</span>
+            </div>
+          </a>
+          <a href="../videos/">
+            <div>
+              <i class="fa-brands fa-youtube"></i>
+              <span>Videos</span>
+            </div>
+          </a>
+          <a href="../chat/">
+            <div>
+              <img
+                src="../../src/images/group-chats-icon.png"
+                alt="group-chats-icon"
+                class="group-chats-icon"
+              />
+              <span>Chats</span>
+            </div>
           </a>
         </div>
-      </nav>
-      <br />
-      <nav class="puttin1">
-        <div class="nav-item3">Your Channels</div>
-        <div class="nav-item4">
-          <div class="nav-item41">
-            <i class="bx bx-shopping-bag"></i>
+        <div>
+          <p>Your Channel</p>
+          <div class="channel">
+            <div>
+              <img
+                src="../../src/images/unknown.png"
+                alt="unknown icon"
+                class="unknown"
+              />
+            </div>
+            <div>
+              <img src="../../src/images/plus_sign.png" alt="add" class="add" />
+              <img
+                src="../../src/images/send_icon.png"
+                alt="send"
+                class="send"
+              />
+            </div>
           </div>
-          <div class="nav-item5">
-            <i class="bx bx-plus"></i>
-            <i class="bx bx-right-arrow-alt"></i>
+          <div class="groupnames">
+            <div>
+              <img src="../../src/images/group icon.png" alt="group icon" />
+              <span>SRM University of ....</span>
+            </div>
+            <div>
+              <img src="../../src/images/group icon.png" alt="group icon" />
+              <span>IIT Madras</span>
+            </div>
+            <div>
+              <img src="../../src/images/group icon.png" alt="group icon" />
+              <span>SRMIST RMP</span>
+            </div>
+            <div>
+              <img src="../../src/images/group icon.png" alt="group icon" />
+              <span>The Chennia Intern</span>
+            </div>
+            <div>
+              <img src="../../src/images/group icon.png" alt="group icon" />
+              <span>Python Community</span>
+            </div>
+            <div>
+              <img src="../../src/images/group icon.png" alt="group icon" />
+              <span>Standford University</span>
+            </div>
+            <div>
+              <img src="../../src/images/group icon.png" alt="group icon" />
+              <span>Memes</span>
+            </div>
           </div>
-        </div>
-        <div class="puttin2">
-          <div class="user-profile">
-            <div class="user-avatar">SU</div>
-            <span>SRM University ...</span>
-          </div>
-          <div class="user-profile">
-            <div class="user-avatar">IM</div>
-            <span>IIT Madras</span>
-          </div>
-          <div class="user-profile">
-            <div class="user-avatar">SR</div>
-            <span>SRMIST RMP</span>
-          </div>
-
-          <div class="user-profile">
-            <div class="user-avatar">CI</div>
-            <span>The Chennai Intern</span>
-          </div>
-          <div class="user-profile">
-            <div class="user-avatar">U</div>
-            <span>Python Community</span>
-          </div>
-          <div class="user-profile">
-            <div class="user-avatar">S</div>
-            <span>Stanford University</span>
-          </div>
-          <div class="user-profile">
-            <div class="user-avatar">M</div>
-            <span>:Memes</span>
-          </div>
-        </div>
-      </nav>
-    </div>
-    <!-- second nav-bar-->
-    <div class="under-nav">
-      <div class="under-nav2">
-        <div class="kip">
-          <a href="../photo">Posts</a>
-        </div>
-
-        <div class="kim">
-          <a href="../communities">Communities</a>
-        </div>
-
-        <div class="kup">
-          <a href="../my-network">MyNetwork</a>
-        </div>
-
-        <div class="cut">
-          <a href="#Collaborations">Collaborations</a>
         </div>
       </div>
 
-      <div class="user-profile2">
-        <p>Creat</p>
-        <p>a</p>
-        <p>Post</p>
+      <div class="all">
+        <div class="upper">
+          <div class="upper_sub_nav">
+            <a href="../photo/"
+              ><p>Posts</p>
+              <div></div>
+            </a>
+            <a href="#" class="communities"
+              >Communities
+              <div class="dot"></div>
+            </a>
+            <a href="../my-network/"
+              >My Network
+              <div></div>
+            </a>
+            <a href="../collaboration/"
+              >Collaborations
+              <div></div>
+            </a>
+          </div>
+          <div class="upper_create_post">
+            <p>Create a post</p>
 
-        <button type="submit" class="user-avatar1">+</button>
-      </div>
-    </div>
+            <img
+              src="../../src/images/plus_icon.png"
+              alt="plus_icon"
+              class="plus_icon"
+            />
+          </div>
+        </div>
 
-    <!-- Main Content -->
-    <div class="main-content">
-      <div class="main-content1">
-        <div class="main-content11">
-          <img
-            src="../../src/images/premier-league.webp"
-            alt="premier-league"
-          />
+        <div class="main-content1">
+          <div class="main-content11">
+            <img
+              src="../../src/images/premier-league.webp"
+              alt="premier-league"
+            />
+          </div>
+          <div class="main-content12">
+            <h3>The English Premier league</h3>
+            <p>By English Football Assoication</p>
+            <p>3.7 Million Members</p>
+          </div>
         </div>
-        <div class="main-content12">
-          <h3>The English Premier league</h3>
-          <p>By English Football Assoication</p>
-          <p>3.7 Million Members</p>
+  
+        <div class="main-content2">
+          <div class="main-content21">
+            <img src="../../src/images/lgbtq.webp" alt="lgbtq" />
+          </div>
+          <div class="main-content22">
+            <h3>LGBT Communities</h3>
+            <p>By Harry Hey</p>
+            <p>58.6k Members</p>
+          </div>
         </div>
-      </div>
-
-      <div class="main-content2">
-        <div class="main-content21">
-          <img src="../../src/images/lgbtq.webp" alt="lgbtq" />
+  
+        <div class="main-content3">
+          <div class="main-content31">
+            <img src="../../src/images/chelsea.webp" alt="chelsea" />
+          </div>
+          <div class="main-content32">
+            <h3>Chelsea Football Fans</h3>
+            <p>By Filip Jorgensen</p>
+            <p>79.9k Members</p>
+          </div>
         </div>
-        <div class="main-content22">
-          <h3>LGBT Communities</h3>
-          <p>By Harry Hey</p>
-          <p>58.6k Members</p>
+  
+        <div class="main-content4">
+          <div class="main-content41">
+            <img src="../../src/images/call-of-duty.webp" alt="call-of-duty" />
+          </div>
+          <div class="main-content42">
+            <h3>Call Of Duty</h3>
+            <p>By Richard Steave</p>
+            <p>37.1k Members</p>
+          </div>
         </div>
-      </div>
-
-      <div class="main-content3">
-        <div class="main-content31">
-          <img src="../../src/images/chelsea.webp" alt="chelsea" />
-        </div>
-        <div class="main-content32">
-          <h3>Chelsea Football Fans</h3>
-          <p>By Filip Jorgensen</p>
-          <p>79.9k Members</p>
-        </div>
-      </div>
-
-      <div class="main-content4">
-        <div class="main-content41">
-          <img src="../../src/images/call-of-duty.webp" alt="call-of-duty" />
-        </div>
-        <div class="main-content42">
-          <h3>Call Of Duty</h3>
-          <p>By Richard Steave</p>
-          <p>37.1k Members</p>
-        </div>
-      </div>
-
-      <div class="main-content5">
-        <div class="main-content51">
-          <img src="../../src/images/korean-drama.webp" alt="korean-drama" />
-        </div>
-        <div class="main-content52">
-          <h3>koeran Drama</h3>
-          <p>By Nam Joo-hyuk</p>
-          <p>22.4k Members</p>
+  
+        <div class="main-content5">
+          <div class="main-content51">
+            <img src="../../src/images/korean-drama.webp" alt="korean-drama" />
+          </div>
+          <div class="main-content52">
+            <h3>koeran Drama</h3>
+            <p>By Nam Joo-hyuk</p>
+            <p>22.4k Members</p>
+          </div>
         </div>
       </div>
     </div>

@@ -73,6 +73,10 @@ dropZone.addEventListener("drop", (e) => {
 
 // =========================================
 //close modal functionality
+const closeModal = document.querySelector(".close-modal");
+closeModal.addEventListener("click", function () {
+  overlay.classList.add("hidden");
+});
 overlay.addEventListener("click", function (e) {
   if (e.target.closest(".modal")) return;
   overlay.classList.add("hidden");
