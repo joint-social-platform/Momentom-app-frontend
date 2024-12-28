@@ -1,11 +1,3 @@
-.dark_mode {
-  --bgColor: #000000;
-}
-
-.light_mode {
-  --bgColor: linear-gradient(-45deg, rgb(0, 0, 0), rgba(182, 0, 182, 0.5));
-}
-
 /* ========================================================= */
 /* General styling & Desktop View */
 *,
@@ -55,7 +47,7 @@ html {
 /* General container */
 .general_container {
   min-height: 100vh;
-  background: var(--bgColor);
+  background: linear-gradient(-45deg, rgb(0, 0, 0), rgba(182, 0, 182, 0.5));
 }
 
 /* ========================================================= */
@@ -65,7 +57,7 @@ html {
   height: 12vh;
   display: flex;
   justify-content: end;
-  background: var(--bgColor);
+  background: linear-gradient(-45deg, rgb(0, 0, 0), rgba(182, 0, 182, 0.5));
 }
 
 /* ========================================================= */

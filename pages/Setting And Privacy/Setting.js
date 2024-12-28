@@ -17,15 +17,6 @@ window.addEventListener("DOMContentLoaded", () => {
     profile_name.textContent = localStorage.getItem("User_Name");
     edit_profile_name.textContent = localStorage.getItem("User_Name");
   }
-
-  // function for modes
-  if (localStorage.getItem("mode")) {
-    theme = localStorage.getItem("mode");
-    document.body.className = localStorage.getItem("mode");
-    return;
-  }
-  localStorage.setItem("mode", theme);
-  document.body.className = localStorage.getItem("mode");
 });
 
 // ===============================================
@@ -53,15 +44,15 @@ side_bar_container.addEventListener("click", (e) => {
   }
 
   // dark mode functionality
-  if (id === "dark_mode") {
-    if (theme === "dark_mode") {
-      theme = "light_mode";
-    } else {
-      theme = "dark_mode";
-    }
-    localStorage.setItem("mode", theme);
-    document.body.className = localStorage.getItem("mode");
-  }
+  // if (id === "dark_mode") {
+  //   if (theme === "dark_mode") {
+  //     theme = "light_mode";
+  //   } else {
+  //     theme = "dark_mode";
+  //   }
+  //   localStorage.setItem("mode", theme);
+  //   document.body.className = localStorage.getItem("mode");
+  // }
 
   // if clicked contains dataset-id then add this functions
   if (id) {
