@@ -57,7 +57,7 @@ html {
   height: 12vh;
   display: flex;
   justify-content: end;
-  background: linear-gradient(-45deg, rgb(0, 0, 0), rgba(182, 0, 182, 0.5));
+  background-color: #000000;
 }
 
 /* ========================================================= */

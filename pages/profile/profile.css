@@ -523,8 +523,14 @@ html {
 .about_pages {
   gap: 0.3rem;
   display: flex;
+  color: white;
+  cursor: pointer;
   align-items: center;
   flex-direction: column;
+}
+
+.about_pages:hover {
+  color: blue;
 }
 
 /* ============================================= */
@@ -863,6 +869,104 @@ html {
   display: none;
 }
 
+/* ============================================= */
+/*  blue border*/
+.blue {
+  border: 2px solid blue;
+}
+
+/* ============================================= */
+/*  post modal*/
+.post_modal {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  gap: 1.5rem;
+  display: none;
+  height: 100vh;
+  padding: 1rem;
+  color: white;
+  position: fixed;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid white;
+  background-color: #000000d2;
+}
+
+/* ============================================= */
+/*  close post modal */
+.close_post_modal {
+  top: 5%;
+  right: 5%;
+  cursor: pointer;
+  font-size: 1.4rem;
+  position: absolute;
+}
+
+.close_post_modal:hover {
+  color: red;
+}
+
+/* ============================================= */
+/*  your uploads */
+.user_uploads {
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+/* ============================================= */
+/*  uploads */
+.uploads {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================================= */
+/*  uploads container*/
+.upload_container {
+  display: flex;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 0.5rem 1.5rem;
+  flex-direction: column;
+  font-family: "Catamaran", serif;
+  box-shadow: 1px 1px 1px 2px lightgray;
+}
+
+.upload_container:hover {
+  background-color: navy;
+}
+
+/* ============================================= */
+/* title upload*/
+.title_upload {
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+
+.upload_num {
+  color: red;
+  font-size: 1.6rem;
+  font-family: sans-serif;
+}
+
+/* ============================================= */
+/* text upload*/
+.text_upload {
+  font-size: 1.1rem;
+  color: lightgray;
+  text-transform: capitalize;
+}
+
+/* =========================================== */
+/* display_flex */
+.display_flex {
+  display: flex;
+}
+
 /* ================================================ */
 
 /* ================================================ */
@@ -872,6 +976,10 @@ html {
   /*main container*/
   .main_container {
     padding: 0;
+  }
+
+  .blue {
+    border: none;
   }
 
   /* ============================================= */

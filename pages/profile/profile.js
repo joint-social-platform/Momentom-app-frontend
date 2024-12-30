@@ -132,3 +132,50 @@ share_btn.addEventListener("click", () => {
     });
   });
 });
+// ===============================================
+// post element
+const post_btn = document.querySelector(".post");
+const post_modal = document.querySelector(".post_modal");
+const close_post_modal = document.querySelector(".close_post_modal");
+
+// post functionality open modal
+post_btn.addEventListener("click", () => {
+  open_functionality(post_modal, "display_flex");
+});
+
+// post functionality close modal
+close_post_modal.addEventListener("click", () => {
+  close_functionality(post_modal, "display_flex");
+});
+
+// ======================================================
+//  award and my work elements
+const sub_nav_link = document.querySelectorAll(".about_pages");
+const all_active_dot = document.querySelectorAll(".about_opened_page");
+
+//  award and my work functionality
+sub_nav_link.forEach((links_btn) => {
+  links_btn.addEventListener("click", (e) => {
+    const current_click = e.currentTarget;
+    const href_id = links_btn.getAttribute("href");
+    const target_element = document.querySelector(`${href_id}`);
+
+    if (href_id) {
+      open_functionality(target_element, "blue");
+
+      // remove border after 4secs
+      setTimeout(() => {
+        close_functionality(target_element, "blue");
+      }, 1000);
+    }
+
+    // get all active dot and remove active class
+    all_active_dot.forEach((dot) => {
+      close_functionality(dot, "active_about_page");
+    });
+
+    // get active dot
+    const active_dot = current_click.querySelector(".about_opened_page");
+    open_functionality(active_dot, "active_about_page");
+  });
+});

@@ -471,10 +471,10 @@
                 <div class="about_user_nav_container">
                   <!-- ======================================== -->
                   <!-- about pages -->
-                  <div class="about_pages">
+                  <div class="about_pages post">
                     <!-- ======================================== -->
                     <!-- pages -->
-                    <h2 class="page">Profile</h2>
+                    <h2 class="page">Posts</h2>
 
                     <!-- ======================================== -->
                     <!-- about opened page -->
@@ -483,19 +483,7 @@
 
                   <!-- ======================================== -->
                   <!-- about pages -->
-                  <div class="about_pages">
-                    <!-- ======================================== -->
-                    <!-- pages -->
-                    <h2 class="page">Posts</h2>
-
-                    <!-- ======================================== -->
-                    <!-- about opened page -->
-                    <div class="about_opened_page"></div>
-                  </div>
-
-                  <!-- ======================================== -->
-                  <!-- about pages -->
-                  <div class="about_pages">
+                  <a href="#awards" class="about_pages">
                     <!-- ======================================== -->
                     <!-- pages -->
                     <h2 class="page">Awards</h2>
@@ -503,11 +491,11 @@
                     <!-- ======================================== -->
                     <!-- about opened page -->
                     <div class="about_opened_page"></div>
-                  </div>
+                  </a>
 
                   <!-- ======================================== -->
                   <!-- about pages -->
-                  <div class="about_pages">
+                  <a href="#my_works" class="about_pages my_work">
                     <!-- ======================================== -->
                     <!-- pages -->
                     <h2 class="page">My Work</h2>
@@ -515,13 +503,13 @@
                     <!-- ======================================== -->
                     <!-- about opened page -->
                     <div class="about_opened_page"></div>
-                  </div>
+                  </a>
                 </div>
               </div>
 
               <!-- ======================================== -->
               <!-- about text area container -->
-              <div class="about_text_area_container">
+              <div class="about_text_area_container" id="my_works">
                 <!-- ======================================== -->
                 <!-- about title container -->
                 <div class="about_title_container">
@@ -563,15 +551,15 @@
 
               <!-- ======================================== -->
               <!-- E commerce profile container -->
-              <div class="e_commernce_prfoile_container">
-                <!-- ======================================== -->
-                <!-- e commerce profile title -->
+              <!-- <div class="e_commernce_prfoile_container">
+                ========================================
+                e commerce profile title
                 <h2 class="e_commerce_profile_title">E Commerce Profile</h2>
 
-                <!-- ======================================== -->
-                <!-- view more btn -->
+                ========================================
+                view more btn
                 <button class="view_more_btn">View</button>
-              </div>
+              </div> -->
 
               <!-- ======================================== -->
               <!-- user education section -->
@@ -698,7 +686,7 @@
 
             <!-- ======================================== -->
             <!-- user communities -->
-            <div class="user_communities">
+            <div class="user_communities" id="awards">
               <!-- ======================================== -->
               <!-- community title -->
               <h2 class="community_title">Community Awards</h2>
@@ -886,6 +874,58 @@
       <!-- go back icon for profile page -->
       <div class="back_icon_container">
         <i class="fa-solid fa-arrow-left"></i>
+      </div>
+
+      <!-- ================================================== -->
+      <!-- post modal -->
+      <div class="post_modal">
+        <!-- ========================================= -->
+        <!-- close post modal -->
+        <i class="fa-solid fa-x close_post_modal"></i>
+
+        <!-- ================================================== -->
+        <!-- your uploads -->
+        <h2 class="user_uploads">your uploads</h2>
+
+        <!-- ================================================== -->
+        <!-- uploads -->
+        <div class="uploads">
+          <!-- ================================================== -->
+          <!-- upload container-->
+          <div class="upload_container">
+            <!-- ================================================== -->
+            <!-- title upload -->
+            <h3 class="title_upload">
+              <span class="upload_num"> 0 </span> pictures
+            </h3>
+
+            <!-- ================================================== -->
+            <!-- upload -->
+            <div class="upload">
+              <!-- ================================================== -->
+              <!-- text upload -->
+              <p class="text_upload">no picture has been uploaded</p>
+            </div>
+          </div>
+
+          <!-- ================================================== -->
+          <!-- upload container -->
+          <div class="upload_container">
+            <!-- ================================================== -->
+            <!-- title upload -->
+            <h3 class="title_upload">
+              <span class="upload_num"> 0 </span> video
+            </h3>
+
+            <!-- ================================================== -->
+            <!-- post modal -->
+            <div class="upload">
+              <!-- ================================================== -->
+              <!-- text upload -->
+              <p class="text_upload">no video has been uploaded</p>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
     <script src="./profile.js"></script>
