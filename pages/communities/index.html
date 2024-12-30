@@ -15,6 +15,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="../../src/modal/modal.css" />
     <link rel="stylesheet" href="./show.css" />
   </head>
 
@@ -235,7 +236,7 @@
             <p>3.7 Million Members</p>
           </div>
         </div>
-  
+
         <div class="main-content2">
           <div class="main-content21">
             <img src="../../src/images/lgbtq.webp" alt="lgbtq" />
@@ -246,7 +247,7 @@
             <p>58.6k Members</p>
           </div>
         </div>
-  
+
         <div class="main-content3">
           <div class="main-content31">
             <img src="../../src/images/chelsea.webp" alt="chelsea" />
@@ -257,7 +258,7 @@
             <p>79.9k Members</p>
           </div>
         </div>
-  
+
         <div class="main-content4">
           <div class="main-content41">
             <img src="../../src/images/call-of-duty.webp" alt="call-of-duty" />
@@ -268,7 +269,7 @@
             <p>37.1k Members</p>
           </div>
         </div>
-  
+
         <div class="main-content5">
           <div class="main-content51">
             <img src="../../src/images/korean-drama.webp" alt="korean-drama" />
@@ -277,6 +278,53 @@
             <h3>koeran Drama</h3>
             <p>By Nam Joo-hyuk</p>
             <p>22.4k Members</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- modal -->
+      <div class="overlay hidden">
+        <div class="modal">
+          <button class="close-modal">&times;</button>
+          <div class="modal-head">
+            <h2>Create Post</h2>
+            <img src="../../src/images/profile-head.png" alt="Profile-head" />
+            <p>Say your mind here</p>
+          </div>
+          <div class="modal-body" id="drop-zone">
+            <button class="remove-file">&times;</button>
+            <p class="add-photos">Add photos/videos</p>
+            <p class="drag-drop">or drag and drop</p>
+            <input
+              type="file"
+              accept="image/*, video/*"
+              class="file-input"
+              hidden
+            />
+            <img id="output" class="img-output" />
+          </div>
+          <div class="modal-foot">
+            <div class="add-text">
+              <input type="text" name="post-text" placeholder="Add Text Here" />
+              <div class="add-text-img">
+                <img src="../../src/images/gallery-pic.png" alt="gallery" /><img
+                  src="../../src/images/emoji-smiley.png"
+                  alt=""
+                /><img
+                  src="../../src/images/location-icon.png"
+                  alt="location"
+                /><img src="../../src/images/person-icon.png" alt="person" />
+              </div>
+            </div>
+            <div class="share">
+              <p>Share your post directly to your peers</p>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+            </div>
+
+            <button class="next-btn">Next</button>
           </div>
         </div>
       </div>

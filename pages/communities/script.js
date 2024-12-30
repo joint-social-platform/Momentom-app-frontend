@@ -2,6 +2,69 @@
 window.addEventListener("DOMContentLoaded", () => {
   const user_name = document.querySelector(".user_name");
   const user_profile_name = document.querySelector(".user_profile_name");
+  const addPostBtn = document.querySelector(".upper_create_post");
+  const overlay = document.querySelector(".overlay");
+  const dropZone = document.getElementById("drop-zone");
+  const fileInput = document.querySelector(".file-input");
+  const output = document.getElementById("output");
+  const removeFile = document.querySelector(".remove-file");
+  const closeModal = document.querySelector(".close-modal");
+
+  closeModal.addEventListener("click", function () {
+    overlay.classList.add("hidden");
+  });
+
+  dropZone.addEventListener("click", (e) => {
+    if (e.target.closest(".remove-file")) return;
+    fileInput.click();
+  });
+
+  removeFile.addEventListener("click", () => {
+    if (output.src) output.src = "";
+    fileInput.value = "";
+  });
+
+  fileInput.addEventListener("change", (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      output.src = URL.createObjectURL(file);
+      output.onload = () => {
+        URL.revokeObjectURL(output.src);
+      };
+    }
+  });
+
+  dropZone.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    dropZone.classList.add("drag-over");
+  });
+
+  dropZone.addEventListener("dragleave", () => {
+    dropZone.classList.remove("drag-over");
+  });
+
+  dropZone.addEventListener("drop", (e) => {
+    e.preventDefault();
+    dropZone.classList.remove("drag-over");
+    const file = e.dataTransfer.files[0];
+    if (file) {
+      fileInput.files = e.dataTransfer.files;
+      output.src = URL.createObjectURL(file);
+      output.onload = () => {
+        URL.revokeObjectURL(output.src);
+      };
+    }
+  });
+
+  //close modal functionality
+  overlay.addEventListener("click", function (e) {
+    if (e.target.closest(".modal")) return;
+    overlay.classList.add("hidden");
+  });
+
+  addPostBtn.addEventListener("click", function () {
+    overlay.classList.remove("hidden");
+  });
 
   if (localStorage.getItem("User_Name")) {
     user_name.textContent = localStorage.getItem("User_Name");
@@ -43,8 +106,6 @@ mediaQuery.addEventListener("change", (e) => {
     console.log("Switched to a larger screen.");
   }
 });
-
-
 
 // // Initialize when DOM is loaded
 // <<<<<<< HEAD
