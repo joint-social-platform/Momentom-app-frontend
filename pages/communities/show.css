@@ -563,6 +563,12 @@ a:visited {
     border-top-left-radius: 0;
   }
 
+  .all img {
+    border-radius: 0.5em;
+    margin: 0.2em 1em;
+    width: 10em;
+  }
+
   .upper {
     width: 100%;
     padding-left: 0;
