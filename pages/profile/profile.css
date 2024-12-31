@@ -763,6 +763,17 @@ html {
   color: red;
 }
 
+/* ================================================ */
+/* school edit icon */
+.school_edit_icon {
+  color: blue;
+  font-size: 0.9rem;
+}
+
+.school_edit_icon:hover {
+  color: white;
+}
+
 .error_message {
   color: red;
   font-size: 1rem;
@@ -1025,8 +1036,8 @@ html {
 }
 
 /* ============================================= */
-/*constant edit textarea*/
-.constant_edit_textarea {
+/*constant edit textarea school edit input */
+:is(.constant_edit_textarea, .school_edit_input) {
   gap: 0.3rem;
   width: 40vw;
   border: none;
@@ -1039,7 +1050,13 @@ html {
   border-radius: 10px;
 }
 
-.constant_edit_textarea:focus {
+/* school edit input */
+.school_edit_input {
+  padding: 0.5rem;
+  min-height: 3vh;
+}
+
+:is(.constant_edit_textarea, .school_edit_input):focus {
   color: black;
   border: 2px solid gray;
 }
@@ -1066,6 +1083,10 @@ html {
 /* display_flex */
 .display_flex {
   display: flex;
+}
+
+.display_flex.school_edit_icon {
+  display: none;
 }
 
 /* ================================================ */
@@ -1290,6 +1311,7 @@ html {
   .profile_link_container {
     left: 0;
     bottom: 90%;
+    font-size: 0.8rem;
     width: max-content;
   }
 
