@@ -590,6 +590,7 @@ html {
 .edit_about_icon {
   width: 15px;
   height: 15px;
+  cursor: pointer;
 }
 
 /* ============================================= */
@@ -694,6 +695,7 @@ html {
 .education_edit_icon {
   width: 15px;
   height: 15px;
+  cursor: pointer;
 }
 
 /* ============================================= */
@@ -709,6 +711,7 @@ html {
 .school-container {
   gap: 1rem;
   display: flex;
+  cursor: pointer;
   align-items: center;
 }
 
@@ -751,6 +754,19 @@ html {
   font-weight: 400;
   font-size: 0.7rem;
   font-family: sans-serif;
+}
+
+/* ================================================ */
+/* delete icon */
+.fa-trash {
+  display: none;
+  color: red;
+}
+
+.error_message {
+  color: red;
+  font-size: 1rem;
+  text-transform: capitalize;
 }
 
 /* ============================================= */
@@ -896,7 +912,7 @@ html {
 
 /* ============================================= */
 /*  close post modal */
-.close_post_modal {
+:is(.close_post_modal, .close_modal_container) {
   top: 5%;
   right: 5%;
   cursor: pointer;
@@ -904,7 +920,7 @@ html {
   position: absolute;
 }
 
-.close_post_modal:hover {
+:is(.close_post_modal, .close_modal_container):hover {
   color: red;
 }
 
@@ -958,6 +974,92 @@ html {
   font-size: 1.1rem;
   color: lightgray;
   text-transform: capitalize;
+}
+
+/* ============================================= */
+/* constant modal container*/
+.constant_modal_container {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 55;
+  height: 100vh;
+  display: none;
+  color: white;
+  position: fixed;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #000000de;
+  font-family: "Catamaran", serif;
+}
+
+/* ============================================= */
+/* constant modal*/
+.constant_modal {
+  gap: 1rem;
+  display: flex;
+  padding: 1rem;
+  border-radius: 10px;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 1px 1px 1px 2px lightgray;
+}
+
+/* ============================================= */
+/* constant modal title*/
+.constant_modal_title {
+  width: 100%;
+  font-size: 1.8rem;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 2px solid lightgray;
+}
+
+/* ============================================= */
+/*constant modal input container*/
+.constant_modal_input_container {
+  gap: 0.6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================================= */
+/*constant edit textarea*/
+.constant_edit_textarea {
+  gap: 0.3rem;
+  width: 40vw;
+  border: none;
+  color: gray;
+  outline: none;
+  padding: 1rem;
+  min-height: 20vh;
+  font-size: 0.9rem;
+  word-break: normal;
+  border-radius: 10px;
+}
+
+.constant_edit_textarea:focus {
+  color: black;
+  border: 2px solid gray;
+}
+
+/* ============================================= */
+/*constant modal edit*/
+.constant_modal_edit {
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
+  width: max-content;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  background-color: blue;
+  text-transform: capitalize;
+}
+
+.constant_modal_edit:hover {
+  background-color: navy;
 }
 
 /* =========================================== */
@@ -1250,6 +1352,12 @@ html {
   .course {
     font-size: 0.65rem;
     font-weight: lighter;
+  }
+
+  /* ============================================= */
+  /*   constant edit textarea */
+  .constant_edit_textarea {
+    width: 80vw;
   }
 
   /* ============================================= */

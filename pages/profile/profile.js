@@ -18,6 +18,11 @@ window.addEventListener("DOMContentLoaded", () => {
     user_name.textContent = localStorage.getItem("User_Name");
     user_profile_name.textContent = localStorage.getItem("Full_Name");
   }
+
+  // if about user is update then get the new details
+  if (localStorage.getItem("about_user")) {
+    about_user.textContent = localStorage.getItem("about_user");
+  }
 });
 
 // =========================================
@@ -90,6 +95,7 @@ side_bar_contents.forEach((side_bar_content_btn) => {
     back_icon.addEventListener("click", () => {
       close_functionality(section_body_container, "show_profile_page");
       close_functionality(back_icon, "show_profile_page");
+      window.location.reload();
     });
   });
 });
@@ -178,4 +184,93 @@ sub_nav_link.forEach((links_btn) => {
     const active_dot = current_click.querySelector(".about_opened_page");
     open_functionality(active_dot, "active_about_page");
   });
+});
+
+// ==============================================================
+// About user edit element
+const edit_about_btn = document.querySelector(".edit_about_icon");
+const about_user = document.querySelector(".about_user_text");
+const modal_title = document.querySelector(".constant_modal_title");
+const close_modal = document.querySelector(".close_modal_container");
+const modal_container = document.querySelector(".constant_modal_container");
+const modal_input = document.querySelector(".constant_edit_textarea");
+const modal_edit_btn = document.querySelector(".constant_modal_edit");
+
+// About user edit functionality opens the modal
+edit_about_btn.addEventListener("click", () => {
+  const currentDetails = about_user.textContent.trim();
+
+  // set modal title to be about user update
+  modal_title.textContent = "About user update";
+
+  // remove textarea
+  modal_input.style.display = "flex";
+
+  // Normalize the text (remove excessive line breaks or spaces)
+  const normalizedDetails = currentDetails.replace(/\s+/g, " ");
+
+  modal_input.value = normalizedDetails;
+
+  open_functionality(modal_container, "display_flex");
+
+  // about functionality that updates the modal
+  modal_edit_btn.addEventListener("click", () => {
+    // get the value from the textarea and update it to the about text
+    about_user.textContent = modal_input.value;
+
+    // save to local storage
+    localStorage.setItem("about_user", modal_input.value);
+
+    // close modal
+    close_functionality(modal_container, "display_flex");
+  });
+});
+
+// close modal functionality
+close_modal.addEventListener("click", () => {
+  close_functionality(modal_container, "display_flex");
+});
+
+// ==========================================
+// education element
+const education_btn = document.querySelector(".education_edit_icon");
+const delete_icon = document.querySelectorAll(".fa-trash");
+const university_container = document.querySelector(".university");
+
+// education functionality
+education_btn.addEventListener("click", () => {
+  delete_icon.forEach((icon) => {
+    open_functionality(icon, "display_flex");
+
+    // =========================================
+    // remove click
+    icon.addEventListener("click", (e) => {
+      e.currentTarget.parentElement.remove();
+      delete_icon.forEach((remove_icon) => {
+        close_functionality(remove_icon, "display_flex");
+      });
+
+      if (university_container.children.length < 1) {
+        const error_text = document.createElement("p");
+        error_text.textContent =
+          "no detail on your education , please tell us more about your education status";
+        error_text.className = "error_message";
+        university_container.append(error_text);
+      }
+    });
+  });
+});
+
+// =============================================
+// community elements
+const community = document.querySelector(".communities");
+const show_more_btn = document.querySelector(".show_more");
+
+show_more_btn.addEventListener("click", () => {
+  if (show_more_btn.textContent === "...show less") {
+    community.style.overflow = "hidden";
+  } else {
+    community.style.overflow = "scroll";
+    show_more_btn.style.display = "none";
+  }
 });
