@@ -1390,7 +1390,7 @@ html {
 
   /* ============================================= */
   /*   constant edit textarea */
-  .constant_edit_textarea {
+  :is(.constant_edit_textarea, .school_edit_input) {
     width: 80vw;
   }
 

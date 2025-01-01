@@ -356,19 +356,16 @@ education_btn.addEventListener("click", () => {
     icon.textContent = ">";
     course.textContent = uni_course.value;
     date.textContent = uni_year.value;
-    // deleteIcon.innerHTML = '<i class="fa-solid fa-trash"></i>';
-    // editSchool.innerHTML =
-    //   '<i class="fa-solid fa-pencil school_edit_icon"></i>';
 
     // style image
     school_img.textContent = uni_name.value.slice(0, 2);
 
-    if (!uni_name.value) {
+    if (uni_name.value.length < 1) {
       alert(`please you can't add an empty school name`);
       return;
     }
 
-    if (!uni_course.value) {
+    if (uni_course.value.length < 1) {
       alert(`please you can't add an empty course to yor education profile`);
       return;
     }
