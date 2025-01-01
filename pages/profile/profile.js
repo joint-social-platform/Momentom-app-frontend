@@ -229,6 +229,14 @@ edit_about_btn.addEventListener("click", () => {
 // close modal functionality
 close_modal.addEventListener("click", () => {
   close_functionality(modal_container, "display_flex");
+
+  const edit_input = document.querySelectorAll(".school_edit_input");
+  if (edit_input) {
+    edit_input.forEach((inputs) => {
+      inputs.remove();
+      close_functionality(modal_container, "display_flex");
+    });
+  }
 });
 
 // ==========================================
@@ -270,6 +278,13 @@ education_btn.addEventListener("click", () => {
     });
   });
 
+  // delete added school
+  university_container.addEventListener("click", (e) => {
+    if (e.target.classList.contains("fa-trash")) {
+      e.target.parentElement.remove();
+    }
+  });
+
   // remove school edit icon
   school_edit.forEach((edit_school) => {
     open_functionality(edit_school, "display_flex");
@@ -300,14 +315,71 @@ education_btn.addEventListener("click", () => {
   uni_course.placeholder = "Input course studied";
   uni_year.placeholder = "Input date";
 
+  // create school element as it is in the html
+  const school_container = document.createElement("div");
+  const school_img = document.createElement("div");
+  const school_names = document.createElement("h3");
+  const icon = document.createElement("h2");
+  const user_course = document.createElement("div");
+  const course = document.createElement("h4");
+  const date = document.createElement("p");
+  const deleteIcon = document.createElement("i");
+  const editSchool = document.createElement("i");
+
+  // style school elements
+  school_container.className = "school-container";
+  school_img.classList = "school_profile_picture js_style";
+  school_names.className = "school_name";
+  icon.className = "greater_than_icon";
+  user_course.className = "user_course";
+  course.className = "course";
+  editSchool.classList = "fa-solid fa-pencil school_edit_icon";
+  date.className = "date";
+  deleteIcon.classList = "fa-solid fa-trash display_flex";
+
+  // append all school elements to the container
+  school_container.append(school_img);
+  school_container.append(school_names);
+  school_container.append(icon);
+  school_container.append(user_course);
+  user_course.append(course);
+  user_course.append(date);
+  school_container.append(deleteIcon);
+  school_container.append(editSchool);
+
   open_functionality(modal_container, "display_flex");
 
   // add user education to profile page
   modal_edit_btn.addEventListener("click", () => {
+    // setting their input values
+    school_names.textContent = uni_name.value;
+    icon.textContent = ">";
+    course.textContent = uni_course.value;
+    date.textContent = uni_year.value;
+    // deleteIcon.innerHTML = '<i class="fa-solid fa-trash"></i>';
+    // editSchool.innerHTML =
+    //   '<i class="fa-solid fa-pencil school_edit_icon"></i>';
+
+    // style image
+    school_img.textContent = uni_name.value.slice(0, 2);
+
+    if (!uni_name.value) {
+      alert(`please you can't add an empty school name`);
+      return;
+    }
+
+    if (!uni_course.value) {
+      alert(`please you can't add an empty course to yor education profile`);
+      return;
+    }
+    // append school container to the main html document
+    university_container.append(school_container);
+
     // remove all input
     const edit_input = document.querySelectorAll(".school_edit_input");
     edit_input.forEach((inputs) => {
       inputs.remove();
+      close_functionality(modal_container, "display_flex");
     });
   });
 
@@ -317,9 +389,11 @@ education_btn.addEventListener("click", () => {
   constant_modal_input_container.prepend(uni_name);
 });
 
-// edit school functionality
-school_edit.forEach((edit_school) => {
-  edit_school.addEventListener("click", (e) => {
+university_container.addEventListener("click", (e) => {
+  const target = e.target;
+  if (target.classList.contains("school_edit_icon")) {
+    console.log("click");
+
     // set modal title to  education update
     modal_title.textContent = "education update";
 
@@ -327,7 +401,7 @@ school_edit.forEach((edit_school) => {
     modal_input.style.display = "none";
 
     // get the current school container
-    const parent = e.currentTarget.parentElement;
+    const parent = e.target.parentElement;
 
     // get current details
     const school_name = parent.querySelector(".school_name");
@@ -370,8 +444,15 @@ school_edit.forEach((edit_school) => {
     constant_modal_input_container.prepend(uni_year);
     constant_modal_input_container.prepend(uni_course);
     constant_modal_input_container.prepend(uni_name);
-  });
+  }
 });
+
+// edit school functionality
+// school_edit.forEach((edit_school) => {
+//   edit_school.addEventListener("click", (e) => {
+
+//   });
+// });
 
 // =============================================
 // community elements

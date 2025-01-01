@@ -730,6 +730,7 @@ html {
   font-weight: 600;
   font-size: 0.8rem;
   font-family: sans-serif;
+  text-transform: capitalize;
 }
 
 /* ============================================= */
@@ -746,6 +747,7 @@ html {
   font-weight: 0;
   font-size: 0.7rem;
   font-family: sans-serif;
+  text-transform: capitalize;
 }
 
 /* ============================================= */
@@ -1059,6 +1061,16 @@ html {
 :is(.constant_edit_textarea, .school_edit_input):focus {
   color: black;
   border: 2px solid gray;
+}
+
+.js_style {
+  color: white;
+  display: flex;
+  font-size: 1.2rem;
+  align-items: center;
+  justify-content: center;
+  background-color: blue;
+  text-transform: uppercase;
 }
 
 /* ============================================= */
