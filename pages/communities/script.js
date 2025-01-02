@@ -2,6 +2,69 @@
 window.addEventListener("DOMContentLoaded", () => {
   const user_name = document.querySelector(".user_name");
   const user_profile_name = document.querySelector(".user_profile_name");
+  const addPostBtn = document.querySelector(".upper_create_post");
+  const overlay = document.querySelector(".overlay");
+  const dropZone = document.getElementById("drop-zone");
+  const fileInput = document.querySelector(".file-input");
+  const output = document.getElementById("output");
+  const removeFile = document.querySelector(".remove-file");
+  const closeModal = document.querySelector(".close-modal");
+
+  closeModal.addEventListener("click", function () {
+    overlay.classList.add("hidden");
+  });
+
+  dropZone.addEventListener("click", (e) => {
+    if (e.target.closest(".remove-file")) return;
+    fileInput.click();
+  });
+
+  removeFile.addEventListener("click", () => {
+    if (output.src) output.src = "";
+    fileInput.value = "";
+  });
+
+  fileInput.addEventListener("change", (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      output.src = URL.createObjectURL(file);
+      output.onload = () => {
+        URL.revokeObjectURL(output.src);
+      };
+    }
+  });
+
+  dropZone.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    dropZone.classList.add("drag-over");
+  });
+
+  dropZone.addEventListener("dragleave", () => {
+    dropZone.classList.remove("drag-over");
+  });
+
+  dropZone.addEventListener("drop", (e) => {
+    e.preventDefault();
+    dropZone.classList.remove("drag-over");
+    const file = e.dataTransfer.files[0];
+    if (file) {
+      fileInput.files = e.dataTransfer.files;
+      output.src = URL.createObjectURL(file);
+      output.onload = () => {
+        URL.revokeObjectURL(output.src);
+      };
+    }
+  });
+
+  //close modal functionality
+  overlay.addEventListener("click", function (e) {
+    if (e.target.closest(".modal")) return;
+    overlay.classList.add("hidden");
+  });
+
+  addPostBtn.addEventListener("click", function () {
+    overlay.classList.remove("hidden");
+  });
 
   if (localStorage.getItem("User_Name")) {
     user_name.textContent = localStorage.getItem("User_Name");
@@ -9,82 +72,42 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-function initializeNavigation() {
-  // Add dummy content
-  const mainContent = document.querySelector(".main-content");
-  if (!mainContent) return;
+const sidebar = document.getElementById("sidebar");
+const navigation = document.getElementById("navigation-icons");
 
-  // Create content sections
-
-  // Navigation item click handlers
-  const navItems = document.querySelectorAll(".nav-item, .navbar-item");
-  navItems.forEach((item) => {
-    item.addEventListener("click", () => {
-      console.log(`Navigated to: ${item.textContent}`);
-    });
-  });
-
-  // Mobile menu toggle
-  const menuToggle = document.getElementById("menuToggle");
-  const navbarMenu = document.getElementById("navbarMenu");
-  const sidebar = document.getElementById("sidebar");
-
-  menuToggle?.addEventListener("click", () => {
-    navbarMenu?.classList.toggle("active");
-    sidebar?.classList.toggle("active");
-  });
-
-  // Handle window resize
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 768) {
-      navbarMenu?.classList.remove("active");
-      sidebar?.classList.remove("active");
-    }
-  });
-
-  // Scroll handler for navbar effects
-  // let lastScroll = 0;
-  //window.addEventListener('scroll', () => {
-  // const navbar = document.querySelector('.navbar');
-  //const currentScroll = window.pageYOffset;
-
-  //if (!navbar) return;
-
-  // Add shadow effect on scroll
-  if (currentScroll > 0) {
-    navbar.style.boxShadow = "0 2px 5px rgba(0,0,0,0.1)";
+const hamburgerClick = () => {
+  if (sidebar.style.display === "flex") {
+    sidebar.style.display = "none";
+    sidebar.style.transition = "ease 1s linear";
+    document.querySelector("#cross-icon").style.display = "none";
+    document.querySelector("#hamburger-icon").style.display = "flex";
   } else {
-    navbar.style.boxShadow = "none";
+    sidebar.style.display = "flex";
+    sidebar.style.transition = "ease 1s linear";
+    document.querySelector("#cross-icon").style.display = "flex";
+    document.querySelector("#hamburger-icon").style.display = "none";
   }
+};
 
-  // Optional: Hide/show navbar on scroll up/down
-  if (currentScroll > lastScroll && currentScroll > 60) {
-    navbar.style.transform = "translateY(-100%)";
-  } else {
-    navbar.style.transform = "translateY(0)";
-  }
+const mediaQuery = window.matchMedia("(min-width: 768px)");
 
-  lastScroll = currentScroll;
+if (mediaQuery.matches) {
+  sidebar.style.display = "flex";
+} else {
+  console.log("Screen size is larger than 768px.");
 }
 
-const menubar = document.getElementById("menubar");
-const sidebar = document.getElementById("sidebar");
-
-let changeIcon = true;
-
-menubar.addEventListener("click", (event) => {
-  sidebar.classList.toggle("show");
-  event.stopPropagation();
-
-  if (changeIcon) {
-    menubar.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+// Listen for changes
+mediaQuery.addEventListener("change", (e) => {
+  if (e.matches) {
+    sidebar.style.display = "flex";
+    console.log("Switched to a smaller screen.");
   } else {
-    menubar.innerHTML = '<i class="fa-solid fa-arrow-right"></i>';
+    console.log("Switched to a larger screen.");
   }
-
-  changeIcon = !changeIcon;
 });
 
+<<<<<<< HEAD
 const harmburger = document.getElementById("harmburger");
 const navbarMenu = document.getElementById("navbarMenu");
 
@@ -107,3 +130,12 @@ harmburger.addEventListener("click", (event) => {
 document.addEventListener('DOMContentLoaded', initializeNavigation);
 console.log(getComputedStyle(document.querySelector('.main-content img')));
 document.addEventListener("DOMContentLoaded", initializeNavigation);
+=======
+// // Initialize when DOM is loaded
+// <<<<<<< HEAD
+// document.addEventListener('DOMContentLoaded', initializeNavigation);
+// console.log(getComputedStyle(document.querySelector('.main-content img')));
+// =======
+// document.addEventListener("DOMContentLoaded", initializeNavigation);
+// >>>>>>> 9ca6b736f95739034ec8c87b3a39aeda526217a9
+>>>>>>> 1916ee905cf22dc149a05a1d3153e899503289a1

@@ -19,6 +19,7 @@
   justify-content: center;
   align-items: center;
   padding: 5rem;
+  position: relative;
 }
 
 .modal-head {
@@ -53,7 +54,7 @@
   margin-top: 1rem;
 }
 
-.modal-body button {
+.modal-body .remove-file {
   position: absolute;
   right: 5px;
   top: -5px;
@@ -65,6 +66,17 @@
   border: none;
 }
 
+.close-modal {
+  cursor: pointer;
+  position: absolute;
+  top: 55px;
+  right: 10px;
+  font-size: 2rem;
+  color: white;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
 .modal-body .add-photos {
   color: white;
 }
@@ -87,11 +99,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 10px;
   border: 1px solid white;
   border-radius: 5px;
   width: 100%;
   padding: 1rem;
+}
+
+.add-text input {
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  background: transparent;
+  color: white;
+}
+
+.add-text input::placeholder {
+  color: white;
 }
 
 .add-text-img {
@@ -110,13 +135,25 @@
 .share p {
   margin-right: 1rem;
 }
+.img-output {
+  width: 5rem;
+  height: 5rem;
+  color: transparent;
+  border: none;
+  outline: none;
+}
 
+#drop-zone.drag-over {
+  border: 2px dashed #00bfff;
+  background-color: #f0f8ff;
+}
 .next-btn {
   width: 100%;
   border-radius: 5px;
   height: 2.5rem;
   margin-top: 1rem;
   background-color: #373638;
+  color: white;
 }
 
 /* The switch - the box around the slider */

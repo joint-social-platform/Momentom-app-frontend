@@ -1,12 +1,3 @@
-// document onload get current mode
-window.addEventListener("DOMContentLoaded", () => {
-  const user_name = document.querySelector(".user_name");
-
-  if (localStorage.getItem("User_Name")) {
-    user_name.textContent = localStorage.getItem("User_Name");
-  }
-});
-
 // =========================================
 // Modal
 const overlay = document.querySelector(".overlay");
@@ -24,8 +15,87 @@ Nav_toggle_btn.addEventListener("click", (e) => {
   Sidebar_container.classList.toggle("open_side_bar_container");
 });
 
+// network element
+const network_container = document.querySelector(".networks");
+const loadmore = document.querySelector(".loadmore");
+
+network_container.addEventListener("scroll", () => {
+  loadmore.style.display = "none";
+
+  const lastElement = network_container.lastElementChild;
+
+  // Get the bounding rectangles
+  const containerRect = network_container.getBoundingClientRect();
+  const lastChildRect = lastElement.getBoundingClientRect();
+
+  // Check if the last child is within the container's visible area
+  const isWithinBounds =
+    lastChildRect.bottom <= containerRect.bottom &&
+    lastChildRect.right <= containerRect.right;
+
+  if (isWithinBounds) {
+    loadmore.style.display = "none";
+    return;
+  } else {
+    setTimeout(() => {
+      loadmore.style.display = "flex";
+    }, 1000);
+  }
+});
+
+const dropZone = document.getElementById("drop-zone");
+const fileInput = document.querySelector(".file-input");
+const output = document.getElementById("output");
+const removeFile = document.querySelector(".remove-file");
+
+dropZone.addEventListener("click", (e) => {
+  if (e.target.closest(".remove-file")) return;
+  fileInput.click();
+});
+
+removeFile.addEventListener("click", () => {
+  if (output.src) output.src = "";
+  fileInput.value = "";
+});
+
+fileInput.addEventListener("change", (e) => {
+  const file = e.target.files[0];
+  if (file) {
+    output.src = URL.createObjectURL(file);
+    output.onload = () => {
+      URL.revokeObjectURL(output.src);
+    };
+  }
+});
+
+dropZone.addEventListener("dragover", (e) => {
+  e.preventDefault();
+  dropZone.classList.add("drag-over");
+});
+
+dropZone.addEventListener("dragleave", () => {
+  dropZone.classList.remove("drag-over");
+});
+
+dropZone.addEventListener("drop", (e) => {
+  e.preventDefault();
+  dropZone.classList.remove("drag-over");
+  const file = e.dataTransfer.files[0];
+  if (file) {
+    fileInput.files = e.dataTransfer.files;
+    output.src = URL.createObjectURL(file);
+    output.onload = () => {
+      URL.revokeObjectURL(output.src);
+    };
+  }
+});
+
 // =========================================
 //close modal functionality
+const closeModal = document.querySelector(".close-modal");
+closeModal.addEventListener("click", function () {
+  overlay.classList.add("hidden");
+});
 overlay.addEventListener("click", function (e) {
   if (e.target.closest(".modal")) return;
   overlay.classList.add("hidden");

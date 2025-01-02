@@ -13,8 +13,12 @@ let theme = "dark_mode";
 // document onload get current mode
 window.addEventListener("DOMContentLoaded", () => {
   if (localStorage.getItem("User_Name")) {
-    user_name.textContent = localStorage.getItem("User_Name");
-    profile_name.textContent = localStorage.getItem("User_Name");
+    user_name.forEach((user) => {
+      user.textContent = localStorage.getItem("User_Name");
+    });
+    profile_name.forEach((profileName) => {
+      profileName.textContent = localStorage.getItem("User_Name");
+    });
     edit_profile_name.textContent = localStorage.getItem("User_Name");
   }
 });
@@ -118,8 +122,8 @@ ProfileCloseBtn.addEventListener("click", () => {
 const edit_user = document.querySelectorAll(".edit_input_container");
 const update_info = document.querySelector(".update_info");
 const edit_profile_name = document.querySelector(".edit_profile_name");
-const profile_name = document.querySelector(".profile_name");
-const user_name = document.querySelector(".user_name");
+const profile_name = document.querySelectorAll(".profile_name");
+const user_name = document.querySelectorAll(".user_name");
 
 // edit user element functionality
 update_info.addEventListener("click", () => {
@@ -139,8 +143,12 @@ update_info.addEventListener("click", () => {
           return;
         }
         localStorage.setItem("User_Name", value.value);
-        user_name.textContent = localStorage.getItem("User_Name");
-        profile_name.textContent = localStorage.getItem("User_Name");
+        user_name.forEach((user) => {
+          user.textContent = localStorage.getItem("User_Name");
+        });
+        profile_name.forEach((profileName) => {
+          profileName.textContent = localStorage.getItem("User_Name");
+        });
         edit_profile_name.textContent = localStorage.getItem("User_Name");
         value.value = "";
       }
@@ -230,5 +238,17 @@ updatePasswordBtn.addEventListener("click", (e) => {
     return;
   }
   localStorage.setItem("password", new_password);
-  window.location.href = "../../index.html";
+  window.location.href = "../profile/index.html";
+});
+
+// ==============================================
+// delete account element
+const delete_btn = document.querySelector(".delete_btn");
+
+// delete acct functionality
+delete_btn.addEventListener("click", () => {
+  alert("Account Deleted");
+  window.location.reload;
+  localStorage.removeItem("Full_Name");
+  localStorage.removeItem("User_Name");
 });

@@ -212,14 +212,7 @@ html {
   height: 25px;
 }
 
-/* ============================================= */
-/* user name */
-.user_name {
-  font-size: 10px;
-  font-weight: 600;
-  line-height: 22.96px;
-  font-family: "Catamaran", serif;
-}
+
 
 /* ============================================= */
 /* Mobile bar icon */
@@ -716,11 +709,7 @@ html {
     height: 20px;
   }
 
-  /* ============================================= */
-  /* user name */
-  .user_name {
-    font-size: 0.5rem;
-  }
+  
 
   /* ============================================= */
   /*nav toggle container */
@@ -942,11 +931,7 @@ html {
     height: 26px;
   }
 
-  /* ============================================= */
-  /* user name */
-  .user_name {
-    font-size: 0.9rem;
-  }
+ 
 
   /* ============================================= */
   /* Navigation Links Container*/

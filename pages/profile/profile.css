@@ -76,17 +76,17 @@ html {
 
 /* ============================================= */
 /* Search container*/
-.search_container {
+/* .search_container {
   width: 40%;
   padding-left: 3rem;
-}
+} */
 
 /* ============================================= */
 /* Search Icon*/
-.search_icon {
+/* .search_icon {
   font: 1rem;
   color: white;
-}
+} */
 
 /* ============================================= */
 /* Navigation Links Container*/
@@ -432,6 +432,7 @@ html {
   width: 25%;
   display: flex;
   padding-top: 1rem;
+  position: relative;
   justify-content: center;
   align-items: flex-start;
 }
@@ -456,6 +457,25 @@ html {
   padding: 0.2rem 0.6rem;
   font-family: sans-serif;
   background: #d618ceeb;
+}
+
+/* ============================================= */
+/*    profile link  */
+.profile_link_container {
+  right: 20%;
+  bottom: 100%;
+  padding: 1rem;
+  color: blue;
+  display: none;
+  cursor: pointer;
+  min-height: 5vh;
+  position: absolute;
+  border-radius: 10px;
+  background-color: #000000;
+}
+
+.show_profile_link_container {
+  display: block;
 }
 
 /* ============================================= */
@@ -503,8 +523,14 @@ html {
 .about_pages {
   gap: 0.3rem;
   display: flex;
+  color: white;
+  cursor: pointer;
   align-items: center;
   flex-direction: column;
+}
+
+.about_pages:hover {
+  color: blue;
 }
 
 /* ============================================= */
@@ -564,6 +590,7 @@ html {
 .edit_about_icon {
   width: 15px;
   height: 15px;
+  cursor: pointer;
 }
 
 /* ============================================= */
@@ -668,6 +695,7 @@ html {
 .education_edit_icon {
   width: 15px;
   height: 15px;
+  cursor: pointer;
 }
 
 /* ============================================= */
@@ -683,6 +711,7 @@ html {
 .school-container {
   gap: 1rem;
   display: flex;
+  cursor: pointer;
   align-items: center;
 }
 
@@ -701,6 +730,7 @@ html {
   font-weight: 600;
   font-size: 0.8rem;
   font-family: sans-serif;
+  text-transform: capitalize;
 }
 
 /* ============================================= */
@@ -717,6 +747,7 @@ html {
   font-weight: 0;
   font-size: 0.7rem;
   font-family: sans-serif;
+  text-transform: capitalize;
 }
 
 /* ============================================= */
@@ -725,6 +756,30 @@ html {
   font-weight: 400;
   font-size: 0.7rem;
   font-family: sans-serif;
+}
+
+/* ================================================ */
+/* delete icon */
+.fa-trash {
+  display: none;
+  color: red;
+}
+
+/* ================================================ */
+/* school edit icon */
+.school_edit_icon {
+  color: blue;
+  font-size: 0.9rem;
+}
+
+.school_edit_icon:hover {
+  color: white;
+}
+
+.error_message {
+  color: red;
+  font-size: 1rem;
+  text-transform: capitalize;
 }
 
 /* ============================================= */
@@ -843,6 +898,209 @@ html {
   display: none;
 }
 
+/* ============================================= */
+/*  blue border*/
+.blue {
+  border: 2px solid blue;
+}
+
+/* ============================================= */
+/*  post modal*/
+.post_modal {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  gap: 1.5rem;
+  display: none;
+  height: 100vh;
+  padding: 1rem;
+  color: white;
+  position: fixed;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #000000d2;
+}
+
+/* ============================================= */
+/*  close post modal */
+:is(.close_post_modal, .close_modal_container) {
+  top: 5%;
+  right: 5%;
+  cursor: pointer;
+  font-size: 1.4rem;
+  position: absolute;
+}
+
+:is(.close_post_modal, .close_modal_container):hover {
+  color: red;
+}
+
+/* ============================================= */
+/*  your uploads */
+.user_uploads {
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+/* ============================================= */
+/*  uploads */
+.uploads {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================================= */
+/*  uploads container*/
+.upload_container {
+  display: flex;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 0.5rem 1.5rem;
+  flex-direction: column;
+  font-family: "Catamaran", serif;
+  box-shadow: 1px 1px 1px 2px lightgray;
+}
+
+.upload_container:hover {
+  background-color: navy;
+}
+
+/* ============================================= */
+/* title upload*/
+.title_upload {
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+
+.upload_num {
+  color: red;
+  font-size: 1.6rem;
+  font-family: sans-serif;
+}
+
+/* ============================================= */
+/* text upload*/
+.text_upload {
+  font-size: 1.1rem;
+  color: lightgray;
+  text-transform: capitalize;
+}
+
+/* ============================================= */
+/* constant modal container*/
+.constant_modal_container {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 55;
+  height: 100vh;
+  display: none;
+  color: white;
+  position: fixed;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #000000de;
+  font-family: "Catamaran", serif;
+}
+
+/* ============================================= */
+/* constant modal*/
+.constant_modal {
+  gap: 1rem;
+  display: flex;
+  padding: 1rem;
+  border-radius: 10px;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 1px 1px 1px 2px lightgray;
+}
+
+/* ============================================= */
+/* constant modal title*/
+.constant_modal_title {
+  width: 100%;
+  font-size: 1.8rem;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 2px solid lightgray;
+}
+
+/* ============================================= */
+/*constant modal input container*/
+.constant_modal_input_container {
+  gap: 0.6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================================= */
+/*constant edit textarea school edit input */
+:is(.constant_edit_textarea, .school_edit_input) {
+  gap: 0.3rem;
+  width: 40vw;
+  border: none;
+  color: gray;
+  outline: none;
+  padding: 1rem;
+  min-height: 20vh;
+  font-size: 0.9rem;
+  word-break: normal;
+  border-radius: 10px;
+}
+
+/* school edit input */
+.school_edit_input {
+  padding: 0.5rem;
+  min-height: 3vh;
+}
+
+:is(.constant_edit_textarea, .school_edit_input):focus {
+  color: black;
+  border: 2px solid gray;
+}
+
+.js_style {
+  color: white;
+  display: flex;
+  font-size: 1.2rem;
+  align-items: center;
+  justify-content: center;
+  background-color: blue;
+  text-transform: uppercase;
+}
+
+/* ============================================= */
+/*constant modal edit*/
+.constant_modal_edit {
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
+  width: max-content;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  background-color: blue;
+  text-transform: capitalize;
+}
+
+.constant_modal_edit:hover {
+  background-color: navy;
+}
+
+/* =========================================== */
+/* display_flex */
+.display_flex {
+  display: flex;
+}
+
+.display_flex.school_edit_icon {
+  display: none;
+}
+
 /* ================================================ */
 
 /* ================================================ */
@@ -854,6 +1112,10 @@ html {
     padding: 0;
   }
 
+  .blue {
+    border: none;
+  }
+
   /* ============================================= */
   /* nav*/
   .nav {
@@ -863,10 +1125,10 @@ html {
 
   /* ============================================= */
   /* Search container*/
-  .search_container {
+  /* .search_container {
     padding: 0;
     width: max-content;
-  }
+  } */
 
   /* ============================================= */
   /* Navigation Links Container*/
@@ -947,14 +1209,14 @@ html {
   /* ============================================= */
   /* Profile Picture */
   .profile_picture {
-    width: 25px;
-    height: 20px;
+    width: 27px;
+    height: 27px;
   }
 
   /* ============================================= */
   /* user name */
   .user_name {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
 
   /* ============================================= */
@@ -1057,6 +1319,14 @@ html {
     left: 30%;
   }
 
+  /* profile link container */
+  .profile_link_container {
+    left: 0;
+    bottom: 90%;
+    font-size: 0.8rem;
+    width: max-content;
+  }
+
   /* ============================================= */
   /*   user detail  */
   .user_detail {
@@ -1116,6 +1386,12 @@ html {
   .course {
     font-size: 0.65rem;
     font-weight: lighter;
+  }
+
+  /* ============================================= */
+  /*   constant edit textarea */
+  :is(.constant_edit_textarea, .school_edit_input) {
+    width: 80vw;
   }
 
   /* ============================================= */
