@@ -33,14 +33,14 @@ network_container.addEventListener("scroll", () => {
     lastChildRect.bottom <= containerRect.bottom &&
     lastChildRect.right <= containerRect.right;
 
-  if (isWithinBounds) {
-    loadmore.style.display = "none";
-    return;
-  } else {
-    setTimeout(() => {
-      loadmore.style.display = "flex";
-    }, 1000);
-  }
+  setTimeout(() => {
+    loadmore.style.display = "flex";
+
+    if (isWithinBounds) {
+      loadmore.style.display = "none";
+      return;
+    }
+  }, 100);
 });
 
 const dropZone = document.getElementById("drop-zone");
