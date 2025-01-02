@@ -24,6 +24,18 @@ Nav_toggle_btn.addEventListener("click", (e) => {
   Sidebar_container.classList.toggle("open_side_bar_container");
 });
 
+// network element
+const network_container = document.querySelector(".networks");
+const loadmore = document.querySelector(".loadmore");
+
+network_container.addEventListener("scroll", () => {
+  loadmore.style.display = "none";
+
+  setInterval(() => {
+    loadmore.style.display = "flex";
+  }, 10000);
+});
+
 const dropZone = document.getElementById("drop-zone");
 const fileInput = document.querySelector(".file-input");
 const output = document.getElementById("output");
