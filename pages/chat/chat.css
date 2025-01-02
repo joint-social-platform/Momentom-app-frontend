@@ -137,14 +137,7 @@ html {
   flex-direction: column;
 }
 
-/* ========================================================= */
-/* user profile name */
-.user_profile_name {
-  gap: 0.3rem;
-  display: flex;
-  font-size: 0.7rem;
-  align-items: center;
-}
+/* 
 
 /* ========================================================= */
 /* play icon */
@@ -1372,11 +1365,7 @@ html {
     height: 30px;
   }
 
-  /* ========================================================= */
-  /* user profile name */
-  .user_profile_name {
-    font-size: 0.8rem;
-  }
+
 
   /* ========================================================= */
   /* play icon */
@@ -1706,11 +1695,7 @@ html {
     height: 34px;
   }
 
-  /* ========================================================= */
-  /* user profile name */
-  .user_profile_name {
-    font-size: 1rem;
-  }
+
 
   /* ========================================================= */
   /* icons text */

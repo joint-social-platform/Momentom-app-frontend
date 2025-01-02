@@ -1,11 +1,4 @@
 // document onload get current mode
-window.addEventListener("DOMContentLoaded", () => {
-  const user_profile_name = document.querySelector(".user_profile_name");
-
-  if (localStorage.getItem("User_Name")) {
-    user_profile_name.textContent = localStorage.getItem("User_Name");
-  }
-});
 
 // ============================================================
 // Setting direct message opened chat message using chat header
