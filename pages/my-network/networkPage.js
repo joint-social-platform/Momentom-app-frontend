@@ -1,12 +1,3 @@
-// document onload get current mode
-window.addEventListener("DOMContentLoaded", () => {
-  const user_name = document.querySelector(".user_name");
-
-  if (localStorage.getItem("User_Name")) {
-    user_name.textContent = localStorage.getItem("User_Name");
-  }
-});
-
 // =========================================
 // Modal
 const overlay = document.querySelector(".overlay");
@@ -31,9 +22,25 @@ const loadmore = document.querySelector(".loadmore");
 network_container.addEventListener("scroll", () => {
   loadmore.style.display = "none";
 
-  setInterval(() => {
-    loadmore.style.display = "flex";
-  }, 10000);
+  const lastElement = network_container.lastElementChild;
+
+  // Get the bounding rectangles
+  const containerRect = network_container.getBoundingClientRect();
+  const lastChildRect = lastElement.getBoundingClientRect();
+
+  // Check if the last child is within the container's visible area
+  const isWithinBounds =
+    lastChildRect.bottom <= containerRect.bottom &&
+    lastChildRect.right <= containerRect.right;
+
+  if (isWithinBounds) {
+    loadmore.style.display = "none";
+    return;
+  } else {
+    setTimeout(() => {
+      loadmore.style.display = "flex";
+    }, 1000);
+  }
 });
 
 const dropZone = document.getElementById("drop-zone");
