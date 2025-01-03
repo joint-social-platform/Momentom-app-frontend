@@ -107,7 +107,7 @@ mediaQuery.addEventListener("change", (e) => {
   }
 });
 
-<<<<<<< HEAD
+
 const harmburger = document.getElementById("harmburger");
 const navbarMenu = document.getElementById("navbarMenu");
 
@@ -130,7 +130,6 @@ harmburger.addEventListener("click", (event) => {
 document.addEventListener('DOMContentLoaded', initializeNavigation);
 console.log(getComputedStyle(document.querySelector('.main-content img')));
 document.addEventListener("DOMContentLoaded", initializeNavigation);
-=======
 // // Initialize when DOM is loaded
 // <<<<<<< HEAD
 // document.addEventListener('DOMContentLoaded', initializeNavigation);
@@ -138,4 +137,4 @@ document.addEventListener("DOMContentLoaded", initializeNavigation);
 // =======
 // document.addEventListener("DOMContentLoaded", initializeNavigation);
 // >>>>>>> 9ca6b736f95739034ec8c87b3a39aeda526217a9
->>>>>>> 1916ee905cf22dc149a05a1d3153e899503289a1
+

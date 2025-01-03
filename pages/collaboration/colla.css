@@ -19,19 +19,42 @@
 .body img {
   padding-top: 20px;
   padding-left: 20px;
+  
 }
-.small-logo {
-  width: 4rem;
-  height: 4rem;
+.body .logo img {
+  width: 4.0rem;
+  height: 3rem;
+  border-radius: 20px;
   display: none;
+ 
 }
 @media (max-width: 902px) {
   .big-logo {
     display: none;
   }
-  .small-logo {
-    display: block;
-  }
+
+.body .logo img{
+  display: block;
+  margin-top: -1.5rem;
+  position: relative;
+  right: 16.9px;
+  border-radius: 40px;
+  height: 48px;
+  width: 66px;
+}
+
+.logo{
+  border-radius: 1.3rem;
+border: 5px solid white;
+  width: 70px;
+  height: 40px;
+  margin-left: 20px;
+  padding-top: 0px;
+  margin-bottom: -1.0rem;
+  background-color: white;
+  position: relative;
+  top: 10px;
+}
   .coming {
     font-size: 50px;
   }
