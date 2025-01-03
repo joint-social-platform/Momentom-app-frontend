@@ -212,8 +212,6 @@ html {
   height: 25px;
 }
 
-
-
 /* ============================================= */
 /* Mobile bar icon */
 .nav_toggle_container {
@@ -709,8 +707,6 @@ html {
     height: 20px;
   }
 
-  
-
   /* ============================================= */
   /*nav toggle container */
   .nav_toggle_container {
@@ -807,6 +803,7 @@ html {
     padding: 0;
     width: 100%;
     height: 100%;
+    padding-bottom: 1rem;
   }
 
   /* ============================================= */
@@ -930,8 +927,6 @@ html {
     width: 34px;
     height: 26px;
   }
-
- 
 
   /* ============================================= */
   /* Navigation Links Container*/
