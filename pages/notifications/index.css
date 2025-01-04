@@ -129,20 +129,131 @@ nav .Search {
 }
 
 .fullpage {
-  position: relative;
-  top: 5em;
-  background: linear-gradient(-45deg, rgb(0, 0, 0), rgba(182, 0, 182, 0.5));
-  width: 60%;
-  margin: auto;
+  display: flex;
+  width: 99vw;
+  height: 100vh;
+  overflow: scroll
+}
+
+
+.sidebar {
+  width: 20%;
+  background: #000000;
+  color: white;
   padding: 1em;
-  border-radius: 1em 1em 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  position: fixed;
+  height: 100%;
+  top: 3.8em;
+  left: 0;
+}
+
+.sidebar > div {
+  background-color: #ffffff23;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+.sidebar img {
+  width: 1.2em;
+}
+
+.sidebar div p {
+  text-align: center;
+  width: 100%;
+  font-size: 1.1em;
+}
+
+.groups {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+  margin: 0;
+}
+
+.groups div {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.groups div:hover {
+  cursor: pointer;
+  color: rgb(140, 116, 250);
+}
+
+.channel {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em auto;
+}
+
+.channel .send,
+.channel .add {
+  width: 0.9em;
+  margin: 0.2em;
+}
+
+.channel .send:hover,
+.channel .add:hover {
+  cursor: pointer;
+  color: rgb(140, 116, 250);
+  width: 0.85em;
+}
+
+.groupnames {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  width: 100%;
+  margin: 0;
+}
+
+.groupnames > div {
+  display: flex;
+  gap: 0.6em;
+  align-items: center;
+}
+
+.groupnames > div > img {
+  width: 2em;
+  padding: 0.2em;
+  height: 2em;
+  background-color: whitesmoke;
+  border-radius: 50%;
+}
+
+.groupnames > div:hover {
+  cursor: pointer;
+  color: rgb(140, 116, 250);
+}
+
+.ico {
+  display: flex;
+}
+
+.all {
+  padding: 2em;
+  background-color: rgb(69, 45, 64);
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  overflow-y: scroll;
+  width: 80%;
+  border-top-left-radius: 1em;
+  position: relative;
+  top: 4em;
+  left: calc(100vw - 80%);
 }
 
 .top-side {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1em;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  align-items: center;
 }
 
 .mark {
@@ -299,5 +410,43 @@ nav .Search {
 
   .fullpage{
     width: 95%;
+  }
+
+  .all {
+    width: 100%;
+    position: relative;
+    left: 0;
+    padding: 1em;
+    border-top-left-radius: 0;
+  }
+  
+  .sidebar {
+    position: fixed;
+    z-index: 1;
+    top: 3.2em;
+    width: 100%;
+    display: none;
+  }
+
+  
+  .right_arrow {
+    background-color: #000000ad;
+    padding: 0.5em;
+    position: fixed;
+    top: 2.9em;
+    left: 0;
+    width: fit-content;
+    display: block;
+    color: white;
+    font-size: 1.5em;
+    z-index: 1;
+  }
+
+  #arrow {
+    display: block;
+  }
+
+  .img {
+    width: 100%;
   }
 }
