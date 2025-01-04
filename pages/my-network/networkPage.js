@@ -17,11 +17,9 @@ Nav_toggle_btn.addEventListener("click", (e) => {
 
 // network element
 const network_container = document.querySelector(".networks");
-const loadmore = document.querySelector(".loadmore");
+const loadMore = document.querySelector(".loadmore");
 
 network_container.addEventListener("scroll", () => {
-  loadmore.style.display = "none";
-
   const lastElement = network_container.lastElementChild;
 
   // Get the bounding rectangles
@@ -33,14 +31,12 @@ network_container.addEventListener("scroll", () => {
     lastChildRect.bottom <= containerRect.bottom &&
     lastChildRect.right <= containerRect.right;
 
-  setTimeout(() => {
-    loadmore.style.display = "flex";
-
-    if (isWithinBounds) {
-      loadmore.style.display = "none";
-      return;
-    }
-  }, 100);
+  if (isWithinBounds) {
+    loadMore.style.display = "none";
+    return;
+  } else {
+    loadMore.style.display = "flex";
+  }
 });
 
 const dropZone = document.getElementById("drop-zone");
