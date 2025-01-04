@@ -107,32 +107,6 @@ mediaQuery.addEventListener("change", (e) => {
   }
 });
 
-<<<<<<< HEAD
-
-const harmburger = document.getElementById("harmburger");
-const navbarMenu = document.getElementById("navbarMenu");
-
-let iconChage = true;
-
-harmburger.addEventListener("click", (event) => {
-  navbarMenu.classList.toggle("drop");
-  event.stopPropagation();
-
-  if (iconChage) {
-    harmburger.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-  } else {
-    harmburger.innerHTML = '<i class="fa-solid fa-bars"></i>';
-  }
-
-  iconChage = !iconChage;
-});
-
-// Initialize when DOM is loaded
-document.addEventListener('DOMContentLoaded', initializeNavigation);
-console.log(getComputedStyle(document.querySelector('.main-content img')));
-document.addEventListener("DOMContentLoaded", initializeNavigation);
-=======
->>>>>>> 34ff26acf17d16c8b5280ad8128b130f78c8e27a
 // // Initialize when DOM is loaded
 // <<<<<<< HEAD
 // document.addEventListener('DOMContentLoaded', initializeNavigation);
@@ -140,7 +114,3 @@ document.addEventListener("DOMContentLoaded", initializeNavigation);
 // =======
 // document.addEventListener("DOMContentLoaded", initializeNavigation);
 // >>>>>>> 9ca6b736f95739034ec8c87b3a39aeda526217a9
-<<<<<<< HEAD
-
-=======
->>>>>>> 34ff26acf17d16c8b5280ad8128b130f78c8e27a
