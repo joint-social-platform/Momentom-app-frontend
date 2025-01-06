@@ -38,6 +38,13 @@ html {
   background: #646266;
 }
 
+.coming_soon {
+  font-size: 2rem;
+  color: #d618ce;
+  text-align: center;
+  text-transform: capitalize;
+}
+
 /* ============================================= */
 /* main container*/
 .main_container {
