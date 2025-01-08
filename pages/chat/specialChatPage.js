@@ -325,3 +325,29 @@ window.addEventListener("DOMContentLoaded", () => {
     console.log(false);
   }
 });
+
+// =========================================================
+// search input elements
+const search_input = document.querySelector(".search_input");
+search_input.addEventListener("input", (e) => {
+  // get current open active chat container
+  const openChat = document.querySelector(".active_message");
+
+  const Names = openChat.querySelectorAll(".friend_name");
+
+  const value = e.target.value;
+
+  Names.forEach((name) => {
+    const parentContainer = name.parentElement.parentElement;
+
+    if (!value) {
+      parentContainer.style.display = "flex";
+    }
+
+    if (name.textContent.includes(`${value}`)) {
+      parentContainer.style.display = "flex";
+    } else {
+      parentContainer.style.display = "none";
+    }
+  });
+});
