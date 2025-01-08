@@ -26,10 +26,9 @@ a {
 }
 
 .coming_soon {
-  font-size: 2rem;
-  color: #d618ce;
   text-align: center;
   text-transform: capitalize;
+  color: rgb(140, 116, 250);
 }
 
 nav {

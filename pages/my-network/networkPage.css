@@ -39,10 +39,11 @@ html {
 }
 
 .coming_soon {
-  font-size: 2rem;
-  color: #d618ce;
+  font-weight: 600;
+  font-size: 1.5rem;
   text-align: center;
   text-transform: capitalize;
+  color: rgb(140, 116, 250);
 }
 
 /* ============================================= */
