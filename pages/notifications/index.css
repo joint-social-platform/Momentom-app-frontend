@@ -25,6 +25,13 @@ a {
   text-decoration: none;
 }
 
+.coming_soon {
+  font-size: 2rem;
+  color: #d618ce;
+  text-align: center;
+  text-transform: capitalize;
+}
+
 nav {
   background: #000000;
   color: white;
@@ -132,9 +139,8 @@ nav .Search {
   display: flex;
   width: 99vw;
   height: 100vh;
-  overflow: scroll
+  overflow: scroll;
 }
-
 
 .sidebar {
   width: 20%;
@@ -263,7 +269,7 @@ nav .Search {
 }
 
 .mark:hover {
-    color: rgba(255, 255, 255, 0.877);
+  color: rgba(255, 255, 255, 0.877);
 }
 
 .notify {
@@ -290,7 +296,6 @@ nav .Search {
 .notify #new {
   background-color: rgba(240, 248, 255, 0.438);
 }
-
 
 @media only screen and (max-width: 768px) {
   nav {
@@ -408,7 +413,7 @@ nav .Search {
     display: flex;
   }
 
-  .fullpage{
+  .fullpage {
     width: 95%;
   }
 
@@ -419,7 +424,7 @@ nav .Search {
     padding: 1em;
     border-top-left-radius: 0;
   }
-  
+
   .sidebar {
     position: fixed;
     z-index: 1;
@@ -428,7 +433,6 @@ nav .Search {
     display: none;
   }
 
-  
   .right_arrow {
     background-color: #000000ad;
     padding: 0.5em;
