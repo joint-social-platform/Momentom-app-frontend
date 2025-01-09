@@ -107,6 +107,39 @@ mediaQuery.addEventListener("change", (e) => {
   }
 });
 
+// =========================================================
+const container = document.querySelectorAll("#container");
+
+// ========================================================================
+let community_btn = "false";
+let timer;
+
+// upload community btn to local storage
+localStorage.setItem("community-btn", community_btn);
+container.forEach((content) => {
+  content.addEventListener("click", (e) => {
+    const parentContainer = e.currentTarget;
+    // =========================================
+    // get image
+    const group_img = parentContainer.children[0].children[0].src;
+
+    // get group name
+    const group_name = parentContainer.children[1].children[0].textContent;
+
+    // save details on local storage
+    localStorage.setItem("comm-group-name", group_name);
+    localStorage.setItem("comm-group-img", group_img);
+    localStorage.setItem("community-btn", (community_btn = "true"));
+
+    timer = setTimeout(() => {
+      localStorage.setItem("community-btn", (community_btn = "false"));
+    }, 3000);
+
+    // navigate to the chat page
+    window.location.href = "../chat/index.html";
+  });
+});
+
 // // Initialize when DOM is loaded
 // <<<<<<< HEAD
 // document.addEventListener('DOMContentLoaded', initializeNavigation);

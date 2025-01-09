@@ -123,18 +123,6 @@ html {
 }
 
 /* ========================================================= */
-/* new notifications  */
-.new_notifications {
-  top: 0;
-  right: 25%;
-  width: 8px;
-  height: 8px;
-  position: absolute;
-  border-radius: 50%;
-  background: #d61818;
-}
-
-/* ========================================================= */
 /* user profile */
 .user_profile {
   width: 30px;
@@ -149,14 +137,7 @@ html {
   flex-direction: column;
 }
 
-/* ========================================================= */
-/* user profile name */
-.user_profile_name {
-  gap: 0.3rem;
-  display: flex;
-  font-size: 0.7rem;
-  align-items: center;
-}
+/* 
 
 /* ========================================================= */
 /* play icon */
@@ -1385,12 +1366,6 @@ html {
   }
 
   /* ========================================================= */
-  /* user profile name */
-  .user_profile_name {
-    font-size: 0.8rem;
-  }
-
-  /* ========================================================= */
   /* play icon */
   .play_icon {
     display: none;
@@ -1400,7 +1375,7 @@ html {
   /* icons container */
   .icons_container {
     gap: 1.5rem;
-    width: 80%;
+    width: 90%;
   }
 
   /* ========================================================= */
@@ -1414,14 +1389,6 @@ html {
   .icons {
     width: 24px;
     height: 20px;
-  }
-
-  /* ========================================================= */
-  /* new notifications  */
-  .new_notifications {
-    right: 20%;
-    width: 10px;
-    height: 10px;
   }
 
   /* ========================================================= */
@@ -1727,12 +1694,6 @@ html {
   }
 
   /* ========================================================= */
-  /* user profile name */
-  .user_profile_name {
-    font-size: 1rem;
-  }
-
-  /* ========================================================= */
   /* icons text */
   .icon_text {
     font-size: 1rem;
@@ -1742,13 +1703,6 @@ html {
   /* icons  */
   .icons {
     font-size: 1.2rem;
-  }
-
-  /* ========================================================= */
-  /* new notifications  */
-  .new_notifications {
-    width: 15px;
-    height: 15px;
   }
 
   /* ========================================================= */

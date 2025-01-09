@@ -81,6 +81,9 @@ Add_image.forEach((comment) => {
     // Getting click icon specific comment modal
     const ParentContainer =
       e.currentTarget.parentElement.parentElement.parentElement.parentElement;
+
+    console.log("me");
+
     const commenting_modal = ParentContainer.querySelector(".comment_modal");
     commenting_modal.classList.add("showFlex");
   });

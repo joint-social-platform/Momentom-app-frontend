@@ -1,12 +1,3 @@
-// document onload get current mode
-window.addEventListener("DOMContentLoaded", () => {
-  const user_name = document.querySelector(".user_name");
-
-  if (localStorage.getItem("User_Name")) {
-    user_name.textContent = localStorage.getItem("User_Name");
-  }
-});
-
 // =========================================
 // Modal
 const overlay = document.querySelector(".overlay");
@@ -22,6 +13,30 @@ const Sidebar_container = document.querySelector(".side_bar_container");
 Nav_toggle_btn.addEventListener("click", (e) => {
   e.currentTarget.classList.toggle("change");
   Sidebar_container.classList.toggle("open_side_bar_container");
+});
+
+// network element
+const network_container = document.querySelector(".networks");
+const loadMore = document.querySelector(".loadmore");
+
+network_container.addEventListener("scroll", () => {
+  const lastElement = network_container.lastElementChild;
+
+  // Get the bounding rectangles
+  const containerRect = network_container.getBoundingClientRect();
+  const lastChildRect = lastElement.getBoundingClientRect();
+
+  // Check if the last child is within the container's visible area
+  const isWithinBounds =
+    lastChildRect.bottom <= containerRect.bottom &&
+    lastChildRect.right <= containerRect.right;
+
+  if (isWithinBounds) {
+    loadMore.style.display = "none";
+    return;
+  } else {
+    loadMore.style.display = "flex";
+  }
 });
 
 const dropZone = document.getElementById("drop-zone");

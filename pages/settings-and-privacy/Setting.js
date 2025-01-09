@@ -238,7 +238,7 @@ updatePasswordBtn.addEventListener("click", (e) => {
     return;
   }
   localStorage.setItem("password", new_password);
-  window.location.href = "../../index.html";
+  window.location.href = "../profile/index.html";
 });
 
 // ==============================================

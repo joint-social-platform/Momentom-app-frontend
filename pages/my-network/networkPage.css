@@ -38,6 +38,14 @@ html {
   background: #646266;
 }
 
+.coming_soon {
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: capitalize;
+  color: rgb(140, 116, 250);
+}
+
 /* ============================================= */
 /* main container*/
 .main_container {
@@ -210,15 +218,6 @@ html {
 .profile_picture {
   width: 30px;
   height: 25px;
-}
-
-/* ============================================= */
-/* user name */
-.user_name {
-  font-size: 10px;
-  font-weight: 600;
-  line-height: 22.96px;
-  font-family: "Catamaran", serif;
 }
 
 /* ============================================= */
@@ -717,12 +716,6 @@ html {
   }
 
   /* ============================================= */
-  /* user name */
-  .user_name {
-    font-size: 0.5rem;
-  }
-
-  /* ============================================= */
   /*nav toggle container */
   .nav_toggle_container {
     display: block;
@@ -818,6 +811,7 @@ html {
     padding: 0;
     width: 100%;
     height: 100%;
+    padding-bottom: 1rem;
   }
 
   /* ============================================= */
@@ -940,12 +934,6 @@ html {
   .profile_picture {
     width: 34px;
     height: 26px;
-  }
-
-  /* ============================================= */
-  /* user name */
-  .user_name {
-    font-size: 0.9rem;
   }
 
   /* ============================================= */

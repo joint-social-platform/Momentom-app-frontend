@@ -9,6 +9,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="index.css" />
     <title>Document</title>
   </head>
@@ -93,110 +100,201 @@
     </div>
 
     <div class="fullpage" style="color: white">
-      <div class="top-side">
-        <p>Notifications</p>
-        <p onclick="markAsRead()" class="mark"><i>Mark all as read</i></p>
-      </div>
-      <div class="notify">
-        <div id="new">
-          <img src="../../src/images/Hani.png" alt="avatar image" />
-          <div>
-            <p>
-              <b>Michelle</b> Liked your recent post <i>"We are all one"</i>
-            </p>
-            <p>one minute ago</p>
-          </div>
+      <div class="sidebar" id="sidebar">
+        <div class="groups">
+          <a href="../e-commerce/">
+            <div>
+              <img
+                src="../../src/images/E_commerce_icon.png"
+                alt="E-commerce"
+                class="E-commerce"
+              />
+              <span class="e-commerce">E-commerce</span>
+            </div>
+          </a>
+          <a href="../photo/">
+            <div>
+              <img
+                src="../../src/images/Photo_icon.png"
+                alt="Photo_icon"
+                class="photo-icon"
+              />
+              <span>Photos</span>
+            </div>
+          </a>
+          <a href="../videos/">
+            <div>
+              <i class="fa-brands fa-square-youtube"></i>
+              <span>Videos</span>
+            </div>
+          </a>
+          <a href="../chat/">
+            <div>
+              <i class="fa-regular fa-comment group-chats-icon"></i>
+              <span>Chats</span>
+            </div>
+          </a>
         </div>
         <div>
-          <img src="../../src/images/love.png" alt="avatar image" />
-          <div>
-            <p><b>Samson</b> started following you</p>
-            <p>2 hours ago</p>
+          <p>Your Channel</p>
+          <!-- <div class="channel">
+            <div>
+              <img
+                src="../../src/images/unknown.png"
+                alt="unknown icon"
+                class="unknown"
+              />
+            </div>
+            <div class="ico">
+              <img src="../../src/images/plus_sign.png" alt="add" class="add" />
+              <img
+                src="../../src/images/send_icon.png"
+                alt="send"
+                class="send"
+              />
+            </div>
           </div>
-        </div>
-        <div id="new">
-          <img src="../../src/images/Davido.png" alt="avatar image" />
-          <div>
-            <p>
-              <b>Davido</b> sent you a private message
-              <i
-                >"Hey, I thought you said we are supposed to meet up today, I
-                went there but you were not there, just wanted to know where you
-                have..."</i
-              >
-            </p>
-            <p>5 hours ago</p>
-          </div>
-        </div>
-        <div id="new">
-          <img src="../../src/images/VictorSam.png" alt="avatar image" />
-          <div>
-            <p>
-              <b>Micheal Joe</b> accepted your request to join the group
-              <i>"Programming Hub"</i>
-            </p>
-            <p>12 hours ago</p>
-          </div>
-        </div>
-        <div>
-          <img src="../../src/images/samuel john.png" alt="avatar image" />
-          <div>
-            <p>
-              <b>John Doe</b> is inviting you to their live class on "Active
-              programmers" page
-            </p>
-            <p>14 hours ago</p>
-          </div>
-        </div>
-        <div id="new">
-          <img src="../../src/images/AryraStar.png" alt="avatar image" />
-          <div>
-            <p>
-              <b>Aryya Star</b> Liked your post
-              <i>"My best moments of the year were from you, Aryya Star..."</i>
-            </p>
-            <p>15 hours ago</p>
-          </div>
-        </div>
-        <div>
-          <img src="../../src/images/Camera.png" alt="avatar image" />
-          <div>
-            <p>
-              <b>Max Williams</b> invites you to join a group challenge to know
-              who the best photoshop designer is...
-            </p>
-            <p>23 hours ago</p>
-          </div>
-        </div>
-        <div>
-          <img src="../../src/images/Asake.png" alt="avatar image" />
-          <div>
-            <p><b>Asake</b> Liked your post <i>"We are all one"</i></p>
-            <p>1 day ago</p>
-          </div>
-        </div>
-        <div id="new">
-          <img src="../../src/images/Aman.png" alt="avatar image" />
-          <div>
-            <p>
-              <b>Samuel Wilson & Jessica Maxwell</b> are newly married today,
-              <i>congratulate them</i>
-            </p>
-            <p>2 days ago</p>
-          </div>
-        </div>
-        <div id="new">
-          <img src="../../src/images/Abhilash.png" alt="avatar image" />
-          <div>
-            <p>
-              <b>Abhilash</b> birthday is today. Wish her well or send her a
-              gift
-            </p>
-            <p>3 days ago</p>
-          </div>
+          <div class="groupnames">
+            <div>
+              <img src="../../src/images/group icon.png" alt="group icon" />
+              <span>SRM University of ....</span>
+            </div>
+            <div>
+              <img src="../../src/images/group icon.png" alt="group icon" />
+              <span>IIT Madras</span>
+            </div>
+            <div>
+              <img src="../../src/images/group icon.png" alt="group icon" />
+              <span>SRMIST RMP</span>
+            </div>
+            <div>
+              <img src="../../src/images/group icon.png" alt="group icon" />
+              <span>The Chennia Intern</span>
+            </div>
+            <div>
+              <img src="../../src/images/group icon.png" alt="group icon" />
+              <span>Python Community</span>
+            </div>
+            <div>
+              <img src="../../src/images/group icon.png" alt="group icon" />
+              <span>Standford University</span>
+            </div>
+            <div>
+              <img src="../../src/images/group icon.png" alt="group icon" />
+              <span>Memes</span>
+            </div>
+          </div> -->
+          <h2 class="coming_soon">coming soon</h2>
         </div>
       </div>
-      <div></div>
+      <div class="all">
+        <div class="top-side">
+          <p>Notifications</p>
+          <p onclick="markAsRead()" class="mark"><i>Mark all as read</i></p>
+        </div>
+        <div class="notify">
+          <div id="new">
+            <img src="../../src/images/Hani.png" alt="avatar image" />
+            <div>
+              <p>
+                <b>Michelle</b> Liked your recent post <i>"We are all one"</i>
+              </p>
+              <p>one minute ago</p>
+            </div>
+          </div>
+          <div>
+            <img src="../../src/images/love.png" alt="avatar image" />
+            <div>
+              <p><b>Samson</b> started following you</p>
+              <p>2 hours ago</p>
+            </div>
+          </div>
+          <div id="new">
+            <img src="../../src/images/Davido.png" alt="avatar image" />
+            <div>
+              <p>
+                <b>Davido</b> sent you a private message
+                <i
+                  >"Hey, I thought you said we are supposed to meet up today, I
+                  went there but you were not there, just wanted to know where
+                  you have..."</i
+                >
+              </p>
+              <p>5 hours ago</p>
+            </div>
+          </div>
+          <div id="new">
+            <img src="../../src/images/VictorSam.png" alt="avatar image" />
+            <div>
+              <p>
+                <b>Micheal Joe</b> accepted your request to join the group
+                <i>"Programming Hub"</i>
+              </p>
+              <p>12 hours ago</p>
+            </div>
+          </div>
+          <div>
+            <img src="../../src/images/samuel john.png" alt="avatar image" />
+            <div>
+              <p>
+                <b>John Doe</b> is inviting you to their live class on "Active
+                programmers" page
+              </p>
+              <p>14 hours ago</p>
+            </div>
+          </div>
+          <div id="new">
+            <img src="../../src/images/AryraStar.png" alt="avatar image" />
+            <div>
+              <p>
+                <b>Aryya Star</b> Liked your post
+                <i
+                  >"My best moments of the year were from you, Aryya Star..."</i
+                >
+              </p>
+              <p>15 hours ago</p>
+            </div>
+          </div>
+          <div>
+            <img src="../../src/images/Camera.png" alt="avatar image" />
+            <div>
+              <p>
+                <b>Max Williams</b> invites you to join a group challenge to
+                know who the best photoshop designer is...
+              </p>
+              <p>23 hours ago</p>
+            </div>
+          </div>
+          <div>
+            <img src="../../src/images/Asake.png" alt="avatar image" />
+            <div>
+              <p><b>Asake</b> Liked your post <i>"We are all one"</i></p>
+              <p>1 day ago</p>
+            </div>
+          </div>
+          <div id="new">
+            <img src="../../src/images/Aman.png" alt="avatar image" />
+            <div>
+              <p>
+                <b>Samuel Wilson & Jessica Maxwell</b> are newly married today,
+                <i>congratulate them</i>
+              </p>
+              <p>2 days ago</p>
+            </div>
+          </div>
+          <div id="new">
+            <img src="../../src/images/Abhilash.png" alt="avatar image" />
+            <div>
+              <p>
+                <b>Abhilash</b> birthday is today. Wish her well or send her a
+                gift
+              </p>
+              <p>3 days ago</p>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
     </div>
   </body>
   <script src="./index.js"></script>

@@ -4,6 +4,10 @@
   --transiton: ease 1s linear;
 }
 
+.coming_soon {
+  text-align: center;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -421,10 +425,9 @@ a:visited {
   width: 2em;
 }
 
-.all .upper > div p{
+.all .upper > div p {
   opacity: 1;
 }
-
 
 @media only screen and (max-width: 768px) {
   nav {
