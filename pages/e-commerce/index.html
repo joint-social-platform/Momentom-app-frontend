@@ -19,41 +19,19 @@
       class="relative flex size-full min-h-screen flex-col bg-[#1a1122] dark justify-between group/design-root overflow-x-hidden"
       style="font-family: 'Work Sans', 'Noto Sans', sans-serif"
     >
-      <img
-        src="../../src/images/nav_logo.png"
-        alt="nav_logo"
-        class="momentum_logo"
-      />
       <div>
         <div class="flex items-center bg-[#1a1122] p-4 pb-2 justify-between">
-          <h2
-            class="text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pl-12"
-          >
-            Momentom App
-          </h2>
-          <div class="flex w-12 items-center justify-end">
-            <button
-              class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 bg-transparent text-white gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0"
+          <div class="momentum_heading">
+            <img
+              src="../../src/images/nav_logo.png"
+              alt="nav_logo"
+              class="momentum_logo"
+            />
+            <h2
+              class="text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pl-12"
             >
-              <div
-                class="text-white"
-                data-icon="ShoppingCart"
-                data-size="24px"
-                data-weight="regular"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24px"
-                  height="24px"
-                  fill="currentColor"
-                  viewBox="0 0 256 256"
-                >
-                  <path
-                    d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z"
-                  ></path>
-                </svg>
-              </div>
-            </button>
+              Momentom
+            </h2>
           </div>
         </div>
         <div class="px-4 py-3">
@@ -117,6 +95,32 @@
                 Store List
               </p>
             </a>
+
+            <div class="flex w-12 items-center justify-end">
+              <button
+                class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 bg-transparent text-white gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0"
+              >
+                <div
+                  class="text-white"
+                  data-icon="ShoppingCart"
+                  data-size="24px"
+                  data-weight="regular"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24px"
+                    height="24px"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                    class="cart"
+                  >
+                    <path
+                      d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z"
+                    ></path>
+                  </svg>
+                </div>
+              </button>
+            </div>
           </div>
         </div>
         <div
@@ -289,10 +293,10 @@
       </div>
       <div>
         <div
-          class="flex gap-2 border-t border-[#362447] bg-[#261a32] px-4 pb-3 pt-2"
+          class="flex gap-2 border-t border-[#362447] bg-[#261a32] px-4 pb-3 pt-2 footer_icon"
         >
           <a
-            class="just flex flex-1 flex-col items-center justify-end gap-1 rounded-full text-white"
+            class="just flex flex-col items-center justify-end gap-1 rounded-full text-white"
             href="#"
           >
             <div
@@ -320,7 +324,7 @@
             </p>
           </a>
           <a
-            class="just flex flex-1 flex-col items-center justify-end gap-1 text-[#ad93c8]"
+            class="just flex flex-col items-center justify-end gap-1 text-[#ad93c8]"
             href="http://momentomapp.lovestoblog.com/dashboard/"
           >
             <div
@@ -348,7 +352,7 @@
             </p>
           </a>
           <a
-            class="just flex flex-1 flex-col items-center justify-end gap-1 text-[#ad93c8]"
+            class="just flex flex-col items-center justify-end gap-1 text-[#ad93c8]"
             href="http://momentbuyandsell.infinityfreeapp.com/my-account/"
           >
             <div
@@ -376,7 +380,7 @@
             </p>
           </a>
           <a
-            class="just flex flex-1 flex-col items-center justify-end gap-1 text-[#ad93c8]"
+            class="just flex flex-col items-center justify-end gap-1 text-[#ad93c8]"
             href="http://momentomstore.lovestoblog.com/shop/"
           >
             <div
@@ -404,7 +408,7 @@
             </p>
           </a>
           <a
-            class="just flex flex-1 flex-col items-center justify-end gap-1 text-[#ad93c8]"
+            class="just flex flex-col items-center justify-end gap-1 text-[#ad93c8]"
             href="http://momentomapp.lovestoblog.com/my-account/"
           >
             <div
@@ -428,7 +432,7 @@
             <p
               class="text-[#ad93c8] text-xs font-medium leading-normal tracking-[0.015em]"
             >
-              Create vendor's Account
+              Create vendor's Acct
             </p>
           </a>
         </div>
